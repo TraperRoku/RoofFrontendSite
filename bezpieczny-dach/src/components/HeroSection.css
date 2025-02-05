@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Montserrat+Narrow:wght@700&family=Open+Sans&display=swap');
+.hero {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    min-height: 550px;
+    padding: 2rem; 
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 30%, /* Biały odcień z lewej */
+        rgba(255, 255, 255, 0) 60% /* Przezroczysty z prawej */
+    ), url('../components/photos/backgroundUnderNav.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.hero-content {
+    max-width: 50%; 
+    padding: 1rem;
+    border-radius: 8px; 
+    margin-left: 10%; 
+    
+}
+.hero-content p {
+    font-size: 1.5rem;
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase; /* Duże litery */
+    letter-spacing: 1px; /* Odstęp między literami */
+    margin-bottom: 0.5rem; /* Odstęp od nagłówka */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-family: 'Montserrat Narrow', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase; /* Duże litery */
+    line-height: 1.2; /* Odstęp między liniami */
+}
+.hero-content {
+    max-width: 100%;
+}
+
+.hero-content h2 {
+    font-size: 2rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem; /* Odstęp między przyciskami */
+    margin-top: 2rem; /* Odstęp od tekstu */
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.75rem 1.5rem; /* Wewnętrzny odstęp */
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px; /* Zaokrąglone rogi */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #ff5722; /* Kolor pomarańczowy */
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #e64a19; 
+    transform: translateY(-2px); 
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333; 
+}
+
+.btn-secondary:hover {
+    background-color: #333; 
+    color: white;
+    transform: translateY(-2px); 
+}

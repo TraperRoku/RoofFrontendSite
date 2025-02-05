@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Montserrat+Narrow:wght@700&family=Open+Sans&display=swap');
+
+.header {
+    background-color: white;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.logo-container {
+    flex-shrink: 0;
+    height: 80px; 
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo {
+    height: 110px; 
+    width: auto;
+    max-height: 110px;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ff5722;
+}
+
+.btn-primary {
+    background-color: #ff5722;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+}
+
+.mobile-menu-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .header {
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .btn-primary {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .logo {
+        height: 50px;
+    }
+
+    .mobile-menu-button {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        transition: right 0.3s ease;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .nav-menu a {
+        font-size: 1.2rem;
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+}
