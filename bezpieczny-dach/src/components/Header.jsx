@@ -13,6 +13,11 @@ function Header() {
         setIsMenuOpen(false);
     };
 
+    const handlePhoneClick = () => {
+        closeMenu();
+        window.location.href = 'tel:+48518144882';
+    };
+
     return (
         <header className="header">
             <div className="logo-container">
@@ -34,8 +39,7 @@ function Header() {
                     <a href="#realization" onClick={closeMenu}>Realizacje</a>
                     <a href="#contact" onClick={closeMenu}>Kontakt</a>
                 </div>
-                <button className="btn-primary" a href="#contact" onClick={closeMenu}>
-            
+                <button className="btn-primary" onClick={handlePhoneClick}>
                     Zadzwoń do nas +48 518 144 882
                 </button>
             </nav>

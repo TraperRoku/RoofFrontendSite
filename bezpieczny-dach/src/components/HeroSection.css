@@ -1,35 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Montserrat+Narrow:wght@700&family=Open+Sans&display=swap');
+
 .hero {
     display: flex;
-    align-items: center; 
-    justify-content: flex-start; 
+    align-items: center;
+    justify-content: flex-start;
     min-height: 550px;
-    padding: 3rem; 
+    padding: 3rem;
     background-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 1) 45%, 
-        rgba(255, 255, 255, 0) 60% 
-    ), url('../components/photos_to_deploy/flatRoofMirror.jpg'); 
-    background-size: 100% cover;
-    background-position: right; 
+        rgba(255, 255, 255, 1) 49%,
+        rgba(255, 255, 255, 0) 60%
+    ), url('../components/photos_to_deploy/flatRoofMirror.jpg');
+    background-size: contain;
+    background-position: right;
     background-repeat: no-repeat;
+    position: relative;
 }
 
 .hero-content {
-    max-width: 50%; 
-    padding: 1rem;
-    border-radius: 8px; 
-    margin-left: 10%; 
-    
+    max-width: 50%;
+    padding: 2rem;
+    margin-left: 10%;
+    position: relative;
+    z-index: 2;
 }
+
 .hero-content p {
     font-size: 1.5rem;
     color: #333;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
-    text-transform: uppercase; /* Duże litery */
-    letter-spacing: 1px; /* Odstęp między literami */
-    margin-bottom: 0.5rem; /* Odstęp od nagłówka */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
 }
 
 .hero-content h1 {
@@ -38,57 +41,107 @@
     color: #333;
     font-family: 'Montserrat Narrow', sans-serif;
     font-weight: 700;
-    text-transform: uppercase; /* Duże litery */
-    line-height: 1.2; /* Odstęp między liniami */
-}
-.hero-content {
-    max-width: 100%;
-}
-
-.hero-content h2 {
-    font-size: 2rem;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
+    text-transform: uppercase;
+    line-height: 1.2;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1rem; /* Odstęp między przyciskami */
-    margin-top: 2rem; /* Odstęp od tekstu */
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .btn-primary, .btn-secondary {
-    padding: 0.75rem 1.5rem; /* Wewnętrzny odstęp */
+    padding: 0.75rem 1.5rem;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-transform: uppercase;
     border: none;
-    border-radius: 4px; /* Zaokrąglone rogi */
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-primary {
-    background-color: #ff5722; /* Kolor pomarańczowy */
+    background-color: #ff5722;
     color: white;
 }
 
 .btn-primary:hover {
-    background-color: #e64a19; 
-    transform: translateY(-2px); 
+    background-color: #e64a19;
+    transform: translateY(-2px);
 }
 
 .btn-secondary {
     background-color: transparent;
     color: #333;
-    border: 2px solid #333; 
+    border: 2px solid #333;
 }
 
 .btn-secondary:hover {
-    background-color: #333; 
+    background-color: #333;
     color: white;
-    transform: translateY(-2px); 
+    transform: translateY(-2px);
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+    .hero-content {
+        max-width: 60%;
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 400px; /* Nieco mniejsza wysokość */
+        padding: 1.5rem;
+        background-size: cover; /* Zapewni pełne pokrycie tła */
+        background-position: 70% center; /* Lekkie przesunięcie dla lepszej kompozycji */
+    }
+    
+    .hero-content {
+        max-width: 90%; /* Nieco węższa kolumna tekstu */
+        padding: 1.5rem;
+        margin: 0 auto; /* Centrowanie */
+        backdrop-filter: blur(2px); /* Subtelne rozmycie tła dla lepszej czytelności */
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem; /* Optymalny rozmiar dla mobile */
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+        letter-spacing: 0.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        min-height: 380px;
+        padding: 1rem;
+        background-position: 60% center; /* Korygujemy pozycję obrazu */
+    }
+    
+    .hero-content {
+        padding: 1.2rem;
+        backdrop-filter: none; /* Wyłączamy rozmycie na najmniejszych ekranach */
+    }
+    
+    .hero-content h1 {
+        font-size: 1.7rem;
+        line-height: 1.3;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        padding: 0.65rem 1rem; /* Mniejsze przyciski */
+        font-size: 0.9rem;
+    }
 }
