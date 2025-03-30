@@ -36,7 +36,7 @@ function Header() {
                 </div>
                 <button className="btn-primary" a href="#contact" onClick={closeMenu}>
             
-                    Zadzwoń do nas +48 555 555 555
+                    Zadzwoń do nas +48 518 144 882
                 </button>
             </nav>
         </header>

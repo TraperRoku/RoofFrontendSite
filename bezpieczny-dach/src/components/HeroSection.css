@@ -4,14 +4,15 @@
     align-items: center; 
     justify-content: flex-start; 
     min-height: 550px;
-    padding: 2rem; 
+    padding: 3rem; 
     background-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 1) 30%, /* Biały odcień z lewej */
-        rgba(255, 255, 255, 0) 60% /* Przezroczysty z prawej */
-    ), url('../components/photos/backgroundUnderNav.jpg'); 
-    background-size: cover; 
-    background-position: center; 
+        rgba(255, 255, 255, 1) 45%, 
+        rgba(255, 255, 255, 0) 60% 
+    ), url('../components/photos_to_deploy/flatRoofMirror.jpg'); 
+    background-size: 100% cover;
+    background-position: right; 
+    background-repeat: no-repeat;
 }
 
 .hero-content {

@@ -50,8 +50,8 @@ function ContactSection() {
       <div className="contact-container">
         <h2>Skontaktuj się z nami</h2>
         <div className="contact-info">
-          <p><strong>Telefon:</strong> +48 123 456 789</p>
-          <p><strong>Email:</strong> kontakt@dekarskapomoc.pl</p>
+          <p><strong>Telefon:</strong> +48 518 144 882</p>
+          <p><strong>Email:</strong> bezpiecznydach@gmail.com</p>
         </div>
         
         <form onSubmit={handleSubmit}>
@@ -102,7 +102,7 @@ function ContactSection() {
               zgodnie z przepisami rozporządzenia Parlamentu Europejskiego i Rady (UE) 2016/679 
               z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem 
               danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia 
-              dyrektywy 95/46/WE. Żądanie usunięcia danych proszę kierować na adres info@dekarskapomoc.pl
+              dyrektywy 95/46/WE. Żądanie usunięcia danych proszę kierować na adres bezpiecznydach@gmail.com
             </label>
           </div>
           
