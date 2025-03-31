@@ -187,11 +187,12 @@
 @media (max-width: 768px) {
 
     .header {
-        height: 60px; /* Mniejsza wysokość na telefonie */
+        height: 70px; /* Mniejsza wysokość na telefonie */
+        padding: 0.5rem 5%;
     }
     
     .logo {
-        height: 50px; /* Mniejsze logo na telefonie */
+        height: 65px; /* Mniejsze logo na telefonie */
     }
 
     .nav-menu {
