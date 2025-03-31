@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Montserrat+Narrow:wght@700&family=Open+Sans&display=swap');
 
+/* Zmodyfikuj istniejące style .hero */
 .hero {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     min-height: 90vh;
+    padding-top: 80px; /* Dodaj tę linię - dostosuj wartość do wysokości Twojego headeru */
     padding: rem;
     background-image: linear-gradient(
         to right,
@@ -16,7 +18,6 @@
     background-repeat: no-repeat;
     position: relative;
 }
-
 .hero-content {
     max-width: 50%;
     padding: 2rem;
@@ -104,8 +105,10 @@
         background-size: cover;
         background-position: center;
         min-height: 100vh;
+        padding-top: 80px; /* Dodaj tę linię */
     }
-    
+    /* ... reszta istniejących stylów ... */
+
     .hero-content {
         max-width: 100%;
         margin-left: 0;

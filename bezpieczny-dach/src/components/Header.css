@@ -177,28 +177,40 @@
     }
 }
 
-/* In Header.css - Update the mobile navigation */
+/* Dodaj te style do istniejącego pliku Header.css */
 @media (max-width: 768px) {
     .nav-menu {
-        /* ... existing styles ... */
-        z-index: 1001; /* Ensure it appears above other content */
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease;
+        padding: 2rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
     
-    .nav-menu a {
+    .nav-menu.active {
+        right: 0;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .mobile-menu-button {
         display: block;
+    }
+    
+    .btn-primary {
         width: 100%;
         text-align: center;
-        font-size: 1.2rem;
-        padding: 1.2rem 0;
-        border-bottom: 1px solid #eee;
-    }
-    
-    .nav-menu a:last-child {
-        border-bottom: none;
-    }
-    
-    body.menu-open {
-        overflow: hidden; /* Prevent scrolling when menu is open */
     }
 }
 
