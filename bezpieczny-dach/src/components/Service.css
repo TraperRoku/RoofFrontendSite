@@ -77,21 +77,17 @@
     }
 }
 
+/* In Service.css - Enhance mobile appearance */
 @media (max-width: 768px) {
     .service {
-        padding: 3rem 5%;
+        padding: 5rem 1rem 3rem;
     }
-
-    .service h2 {
-        font-size: 2rem;
+    
+    .service-item {
+        margin-bottom: 1.5rem;
     }
-
-    .service-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .service > p {
-        font-size: 1rem;
+    
+    .service-item img {
+        height: 180px;
     }
 }

@@ -99,24 +99,25 @@ button[type="submit"]:hover {
     transform: translateY(-2px);
 }
 
+/* In ContactSection.css - Improve mobile styling */
 @media (max-width: 768px) {
-    .contact {
-        padding: 3rem 0;
-    }
-    
-    .contact h2 {
-        font-size: 2rem;
-    }
-    
-    .contact-container {
-        padding: 0 1rem;
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 16px; /* Prevents iOS zoom on focus */
     }
     
     .consent-group {
-        gap: 0.5rem;
+        align-items: flex-start;
     }
     
     .consent-group label {
         font-size: 0.8rem;
+    }
+    
+    button[type="submit"] {
+        width: 100%;
+        padding: 0.8rem;
     }
 }

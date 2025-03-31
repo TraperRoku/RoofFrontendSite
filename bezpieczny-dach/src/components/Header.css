@@ -6,40 +6,39 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 10%;
+    padding: 0.5rem 10%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
+  box-sizing: border-box;
     z-index: 1000;
-    box-sizing: border-box;
+  
 }
 
 .logo-container {
     flex-shrink: 0;
-    height: 80px; 
+    height: 80px;
     display: flex;
     align-items: center;
-    
 }
 
 .logo {
-    height: 110px; 
-    width: auto;
-    max-height: 110px;
-    object-fit: contain;
+    height: 60px;
+    transition: transform 0.3s;
+  }
+
+.logo:hover {
+    transform: scale(1.05); /* Efekt powiększenia */
 }
 
 .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-}
+    gap: 1.5rem;
+  }
 
 .nav-links {
     display: flex;
     align-items: center;
+   
     gap: 2rem;
 }
 
@@ -51,11 +50,28 @@
     font-weight: 700;
     font-size: 0.9rem;
     padding: 0.5rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
 }
 
 .nav-menu a:hover {
     color: #ff5722;
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ff5722;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
 }
 
 .btn-primary {
@@ -69,13 +85,45 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     white-space: nowrap;
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary:hover {
     background-color: #e64a19;
     transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+.btn-primary:focus:not(:active)::after {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
 }
 
 .mobile-menu-button {
@@ -84,6 +132,7 @@
     border: none;
     padding: 0.5rem;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .hamburger {
@@ -128,53 +177,41 @@
     }
 }
 
+/* In Header.css - Update the mobile navigation */
 @media (max-width: 768px) {
-    .header {
-        padding: 1rem;
-    }
-
-    .logo {
-        height: 50px;
-    }
-
-    .mobile-menu-button {
-        display: block;
-        z-index: 1001;
-    }
-
     .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-        flex-direction: column;
-        justify-content: center;
-        padding: 2rem;
-        transition: right 0.3s ease;
+        /* ... existing styles ... */
+        z-index: 1001; /* Ensure it appears above other content */
     }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
-    }
-
+    
     .nav-menu a {
+        display: block;
+        width: 100%;
+        text-align: center;
         font-size: 1.2rem;
-        width: 100%;
-        text-align: center;
-        padding: 1rem;
+        padding: 1.2rem 0;
+        border-bottom: 1px solid #eee;
     }
+    
+    .nav-menu a:last-child {
+        border-bottom: none;
+    }
+    
+    body.menu-open {
+        overflow: hidden; /* Prevent scrolling when menu is open */
+    }
+}
 
+@media (max-width: 480px) {
+    .logo {
+        height: 40px;
+    }
+    
     .btn-primary {
-        width: 100%;
-        text-align: center;
+        padding: 0.8rem;
+    }
+    
+    .nav-menu {
         padding: 1rem;
     }
 }

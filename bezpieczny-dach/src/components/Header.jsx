@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Header.css';
 import logo from '../components/photos/logo.png';
 
@@ -17,6 +17,19 @@ function Header() {
         closeMenu();
         window.location.href = 'tel:+48518144882';
     };
+
+    // In Header.jsx - Prevent body scrolling when menu is open
+useEffect(() => {
+    if (isMenuOpen) {
+        document.body.classList.add('menu-open');
+    } else {
+        document.body.classList.remove('menu-open');
+    }
+    
+    return () => {
+        document.body.classList.remove('menu-open');
+    };
+}, [isMenuOpen]);
 
     return (
         <header className="header">

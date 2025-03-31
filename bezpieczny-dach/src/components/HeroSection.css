@@ -4,8 +4,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    min-height: 550px;
-    padding: 3rem;
+    min-height: 90vh;
+    padding: rem;
     background-image: linear-gradient(
         to right,
         rgba(255, 255, 255, 1) 49%,
@@ -93,29 +93,34 @@
     }
 }
 
+/* In HeroSection.css - Update the mobile media queries */
 @media (max-width: 768px) {
     .hero {
-        min-height: 400px; /* Nieco mniejsza wysokość */
-        padding: 1.5rem;
-        background-size: cover; /* Zapewni pełne pokrycie tła */
-        background-position: 70% center; /* Lekkie przesunięcie dla lepszej kompozycji */
+        background-image: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.8) 100%
+        ), url('../components/photos_to_deploy/flatRoofMirror.jpg');
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
     }
     
     .hero-content {
-        max-width: 90%; /* Nieco węższa kolumna tekstu */
-        padding: 1.5rem;
-        margin: 0 auto; /* Centrowanie */
-        backdrop-filter: blur(2px); /* Subtelne rozmycie tła dla lepszej czytelności */
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+        padding-top: 120px; /* Account for fixed header */
     }
     
-    .hero-content h1 {
-        font-size: 2rem; /* Optymalny rozmiar dla mobile */
-        margin-bottom: 0.75rem;
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
     }
     
-    .hero-content p {
-        font-size: 1.1rem;
-        letter-spacing: 0.5px;
+    .hero-buttons button {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
 
