@@ -18,18 +18,24 @@ function Header() {
         window.location.href = 'tel:+48518144882';
     };
 
-// W Header.jsx w useEffect:
-useEffect(() => {
-    if (isMenuOpen) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'visible';
-    }
-    
-    return () => {
-        document.body.style.overflow = 'visible';
-    };
-}, [isMenuOpen]);
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.classList.add('no-scroll');
+        } else {
+            document.body.classList.remove('no-scroll');
+        }
+    }, [isMenuOpen]);
 
     return (
         <header className="header">
@@ -37,7 +43,12 @@ useEffect(() => {
                 <img src={logo} alt="Dekarska Pomoc Logo" className="logo" />
             </div>
             
-            <button className="mobile-menu-button" onClick={toggleMenu}>
+            <button 
+                className="mobile-menu-button" 
+                onClick={toggleMenu}
+                aria-expanded={isMenuOpen}
+                aria-label="Menu"
+            >
                 <span className={`hamburger ${isMenuOpen ? 'active' : ''}`}>
                     <span className="line"></span>
                     <span className="line"></span>
@@ -45,17 +56,17 @@ useEffect(() => {
                 </span>
             </button>
 
-        <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-    <div className="nav-links">
-        <a href="#home" onClick={closeMenu}>Strona główna</a>
-        <a href="#services" onClick={closeMenu}>Usługi</a>
-        <a href="#realization" onClick={closeMenu}>Realizacje</a>
-        <a href="#contact" onClick={closeMenu}>Kontakt</a>
-    </div>
-    <button className="btn-primary" onClick={handlePhoneClick}>
-        Zadzwoń do nas +48 518 144 882
-    </button>
-</nav>
+            <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+                <div className="nav-links">
+                    <a href="#home" onClick={closeMenu}>Strona główna</a>
+                    <a href="#services" onClick={closeMenu}>Usługi</a>
+                    <a href="#realization" onClick={closeMenu}>Realizacje</a>
+                    <a href="#contact" onClick={closeMenu}>Kontakt</a>
+                </div>
+                <button className="btn-primary" onClick={handlePhoneClick}>
+                    Zadzwoń do nas +48 518 144 882
+                </button>
+            </nav>
         </header>
     );
 }
