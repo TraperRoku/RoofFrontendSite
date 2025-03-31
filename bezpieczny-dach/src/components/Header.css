@@ -10,41 +10,42 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 10%;
+    padding: 1rem 10%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
     width: 100%;
-  box-sizing: border-box;
+    top: 0;
+    left: 0;
     z-index: 1000;
-    height: 150px; /* Zwiększ wysokość */
-    padding: 0 10%;
-  
+    box-sizing: border-box;
 }
 
 .logo-container {
     flex-shrink: 0;
-    height: 80px;
+    height: 80px; 
     display: flex;
     align-items: center;
+    
 }
-
 .logo {
-    height: 120px;
-    transition: transform 0.3s;
-  }
+    height: 110px; 
+    width: auto;
+    max-height: 110px;
+    object-fit: contain;
+}
 
 .logo:hover {
     transform: scale(1.05); /* Efekt powiększenia */
 }
 
 .nav-menu {
-    gap: 1.5rem;
-  }
-
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 .nav-links {
     display: flex;
     align-items: center;
-   
     gap: 2rem;
 }
 
@@ -56,8 +57,7 @@
     font-weight: 700;
     font-size: 0.9rem;
     padding: 0.5rem;
-    transition: all 0.3s ease;
-    position: relative;
+    transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
