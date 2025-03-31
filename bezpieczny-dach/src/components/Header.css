@@ -191,7 +191,7 @@
     }
     
     .logo {
-        height: 30px; /* Mniejsze logo na telefonie */
+        height: 50px; /* Mniejsze logo na telefonie */
     }
 
     .nav-menu {
@@ -218,7 +218,7 @@
     .nav-links {
         flex-direction: column;
         width: 100%;
-        gap: 1.5rem;
+        gap: 1rem;
         padding: 0 20px;
     }
     
@@ -230,12 +230,9 @@
     
   .btn-primary {
         margin: 20px auto;
-        width: calc(100% - 40px);
+        width: calc(99%);
     }
-    .hamburger {
-        position: relative;
-        z-index: 1002;
-    }
+  
 }
 
 @media (max-width: 480px) {
