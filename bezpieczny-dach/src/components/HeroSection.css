@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Montserrat+Narrow:wght@700&family=Open+Sans&display=swap');
 
-/* Zmodyfikuj istniejące style .hero */
 .hero {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     min-height: 60vh;
-    padding-top: 100px;
-    padding: rem;
+    padding: 3rem;
     background-image: linear-gradient(
         to right,
-        rgba(255, 255, 255, 1) 49%,
+        rgba(255, 255, 255, 1) 50%,
         rgba(255, 255, 255, 0) 60%
     ), url('../components/photos_to_deploy/flatRoofMirror.jpg');
     background-size: contain;
-    background-position: right;
+    background-position: right ;
     background-repeat: no-repeat;
     position: relative;
+    margin-top: 80px; /* Kompensacja dla fixed header */
 }
 .hero-content {
     max-width: 50%;
