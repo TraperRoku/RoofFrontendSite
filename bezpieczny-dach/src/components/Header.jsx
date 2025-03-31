@@ -18,16 +18,16 @@ function Header() {
         window.location.href = 'tel:+48518144882';
     };
 
-    // In Header.jsx - Prevent body scrolling when menu is open
+// W Header.jsx w useEffect:
 useEffect(() => {
     if (isMenuOpen) {
-        document.body.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
     } else {
-        document.body.classList.remove('menu-open');
+        document.body.style.overflow = 'visible';
     }
     
     return () => {
-        document.body.classList.remove('menu-open');
+        document.body.style.overflow = 'visible';
     };
 }, [isMenuOpen]);
 
@@ -45,17 +45,17 @@ useEffect(() => {
                 </span>
             </button>
 
-            <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-                <div className="nav-links">
-                    <a href="#home" onClick={closeMenu}>Strona główna</a>
-                    <a href="#services" onClick={closeMenu}>Usługi</a>
-                    <a href="#realization" onClick={closeMenu}>Realizacje</a>
-                    <a href="#contact" onClick={closeMenu}>Kontakt</a>
-                </div>
-                <button className="btn-primary" onClick={handlePhoneClick}>
-                    Zadzwoń do nas +48 518 144 882
-                </button>
-            </nav>
+        <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+    <div className="nav-links">
+        <a href="#home" onClick={closeMenu}>Strona główna</a>
+        <a href="#services" onClick={closeMenu}>Usługi</a>
+        <a href="#realization" onClick={closeMenu}>Realizacje</a>
+        <a href="#contact" onClick={closeMenu}>Kontakt</a>
+    </div>
+    <button className="btn-primary" onClick={handlePhoneClick}>
+        Zadzwoń do nas +48 518 144 882
+    </button>
+</nav>
         </header>
     );
 }

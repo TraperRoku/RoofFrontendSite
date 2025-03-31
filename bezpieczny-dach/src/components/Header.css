@@ -181,20 +181,26 @@
 
 /* Dodaj te style do istniejącego pliku Header.css */
 @media (max-width: 768px) {
+
+    .header {
+        height: 70px; /* Mniejsza wysokość na telefonie */
+    }
+    
+    .logo {
+        height: 50px; /* Mniejsze logo na telefonie */
+    }
+
     .nav-menu {
-        position: fixed;
+        height: 100vh;
+        width: 70%; /* Szerokość menu mobilnego */
         top: 0;
         right: -100%;
-        width: 80%;
-        height: 80px;
-        padding: 0 5%;
         background-color: white;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: right 0.3s ease;
-        padding: 2rem;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        justify-content: flex-start; /* Zmiana z center na flex-start */
+        padding-top: 80px; /* Dodaj przestrzeń od góry */
+        overflow-y: auto; /* Dodaj scroll jeśli potrzeba */
     }
     
     .nav-menu.active {
@@ -202,37 +208,28 @@
     }
     
     .nav-links {
-        flex-direction: column;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        width: 100%;
+        padding: 0 20px;
     }
     
     .mobile-menu-button {
         display: block;
     }
-    .logo {
-        height: 60px; /* Mniejsze logo na mobile, ale wciąż większe niż było */
-    }
     
     .btn-primary {
-        width: 100%;
-        text-align: center;
+        margin-top: 20px;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        height: 70px;
+    .header {
+        height: 60px;
     }
     
-    .btn-primary {
-        padding: 0.8rem;
-    }
     .logo {
-        height: 50px;
-    }
-    
-    .nav-menu {
-        padding: 1rem;
+        height: 40px;
     }
 }

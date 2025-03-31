@@ -105,7 +105,7 @@
         background-size: cover;
         background-position: center;
         min-height: 100vh;
-        padding-top: 80px; /* Dodaj tę linię */
+        padding-top: 70px; /* Dodaj tę linię */
     }
     /* ... reszta istniejących stylów ... */
 
@@ -113,7 +113,8 @@
         max-width: 100%;
         margin-left: 0;
         text-align: center;
-        padding-top: 120px; /* Account for fixed header */
+        padding-top: 30px;
+        /* Account for fixed header */
     }
     
     .hero-buttons {
@@ -141,7 +142,8 @@
     .hero {
         min-height: 380px;
         padding: 1rem;
-        background-position: 60% center; /* Korygujemy pozycję obrazu */
+        background-position: 60% center; 
+        padding-top: 60px;
     }
     
     .hero-content {
