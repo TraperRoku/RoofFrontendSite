@@ -34,7 +34,9 @@ function ContactSection() {
         setFormData({
           name: '',
           email: '',
+          numerTelefonu: '',
           message: '',
+          
           consent: false
         });
       } else {
@@ -76,6 +78,16 @@ function ContactSection() {
               required 
             />
           </div>
+          <div className="form-group">
+            <input 
+              type="text" 
+              name="numerTelefonu"
+              value={formData.numerTelefonu}
+              onChange={handleChange}
+              placeholder="Twój numer telefonu" 
+              required 
+            />
+          </div>
           
           <div className="form-group">
             <textarea 
@@ -86,6 +98,7 @@ function ContactSection() {
               required
             ></textarea>
           </div>
+       
           
           <div className="form-group consent-group">
             <input 
