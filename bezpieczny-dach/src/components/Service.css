@@ -90,4 +90,12 @@
     .service-item img {
         height: 180px;
     }
+    .service-grid {
+        grid-template-columns: 1fr; /* Zmiana z 2 na 1 kolumnę */
+        gap: 1.5rem;
+    }
+    
+    .service-item {
+        margin-bottom: 1rem;
+    }
 }
