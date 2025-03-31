@@ -149,7 +149,7 @@
 }
 
 .hamburger .line {
-    width: 25px;
+    width: 35px;
     height: 2px;
     background-color: #333;
     transition: all 0.3s ease;
@@ -187,7 +187,7 @@
 @media (max-width: 768px) {
 
     .header {
-        height: 50px; /* Mniejsza wysokość na telefonie */
+        height: 60px; /* Mniejsza wysokość na telefonie */
     }
     
     .logo {
@@ -213,6 +213,7 @@
     
     .nav-menu.active {
         right: 0;
+        width: 80%;
     }
     
     .nav-links {
