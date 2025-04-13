@@ -24,29 +24,31 @@ import img15 from '../components/photos_to_deploy/15.jpg';
 
 function Realization() {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedAlt, setSelectedAlt] = useState("");
 
   const images = [
-     { src: img1, alt: 'Realizacja dachu 1' },
-     { src: img2, alt: 'Realizacja dachu 2' },
-     { src: img3, alt: 'Realizacja dachu 3' },
-     { src: img4, alt: 'Realizacja dachu 4' },
-     { src: img5, alt: 'Realizacja dachu 5' },
-     { src: img6, alt: 'Realizacja dachu 6' },
-     { src: img7, alt: 'Realizacja dachu 7' },
-     { src: img8, alt: 'Realizacja dachu 8' },
-     { src: img9, alt: 'Realizacja dachu 9' },
-     { src: img10, alt: 'Realizacja dachu 10' },
-     { src: img11, alt: 'Realizacja dachu 11' },
-     { src: img12, alt: 'Realizacja dachu 12' },
-     { src: img13, alt: 'Realizacja dachu 13' },
-     { src: img14, alt: 'Realizacja dachu 14' },
-     { src: img15, alt: 'Realizacja dachu 15' },
+     { src: img1, alt: 'Naprawa dachu płaskiego w Szczecinie - wysokiej jakości hydroizolacja' },
+     { src: img2, alt: 'Renowacja dachu spadzistego w Szczecinie - wymiana dachówki ceramicznej' },
+     { src: img3, alt: 'Montaż nowego dachu z blachodachówki w Szczecinie - realizacja Bezpieczny Dach' },
+     { src: img4, alt: 'Pokrycie dachu gontem bitumicznym w Szczecinie - profesjonalna usługa dekarska' },
+     { src: img5, alt: 'Naprawa przeciekającego dachu w Szczecinie - uszczelnianie połaci dachowej' },
+     { src: img6, alt: 'Instalacja systemu rynnowego na dachu w Szczecinie - kompleksowa usługa' },
+     { src: img7, alt: 'Dach przemysłowy w Szczecinie - wykonanie izolacji termicznej i przeciwwilgociowej' },
+     { src: img8, alt: 'Montaż okien dachowych Velux w Szczecinie - profesjonalna instalacja' },
+     { src: img9, alt: 'Dach mansardowy w Szczecinie - realizacja Bezpieczny Dach z pełną gwarancją' },
+     { src: img10, alt: 'Wymiana pokrycia dachowego na domu jednorodzinnym w Szczecinie - dachówka betonowa' },
+     { src: img11, alt: 'Konserwacja dachu i czyszczenie rynien w Szczecinie - kompleksowa obsługa' },
+     { src: img12, alt: 'Dach z blachy na rąbek stojący w Szczecinie - nowoczesne rozwiązanie' },
+     { src: img13, alt: 'Naprawa kominów i obróbek blacharskich w Szczecinie - fachowa realizacja' },
+     { src: img14, alt: 'Termoizolacja dachu poddasza w Szczecinie - energooszczędne rozwiązania' },
+     { src: img15, alt: 'Modernizacja starego dachu w Szczecinie - kompleksowa realizacja z gwarancją' },
     
   ];
 
   
-  const handleImageClick = (imageSrc) => {
-    setSelectedImage(imageSrc);
+  const handleImageClick = (image) => {
+    setSelectedImage(image.src);
+    setSelectedAlt(image.alt);
   };
 
   const handleCloseModal = () => {
@@ -56,17 +58,17 @@ function Realization() {
   return (
     <section id="realization" className="realization">
       <div className="realization-container">
-        <h2>Nasze Realizacje</h2>
-        <p>Od ponad 15 lat tworzymy dachy, które nie tylko chronią domy, ale stają się ich prawdziwą ozdobą.
+        <h2>Nasze Realizacje Dachów w Szczecinie</h2>
+        <p>Od ponad 15 lat tworzymy dachy w Szczecinie i okolicach, które nie tylko chronią domy, ale stają się ich prawdziwą ozdobą.
            Każdy projekt to dla nas coś więcej niż zlecenie – to okazja, by pokazać nasze umiejętności i rzemiosło.
             Dzięki pasji, doświadczeniu i bliskiej współpracy z klientami powstają dachy, które zachwycają estetyką i służą przez lata. 
             Z dumą prezentujemy nasze realizacje – najlepszy dowód na to, że zawsze dajemy z siebie 110%. 
-            Sprawdź nasze projekty i przekonaj się sam!</p>
+            Sprawdź nasze projekty dachów w Szczecinie i przekonaj się sam!</p>
 
         <div className="gallery-grid">
           {images.map((image, index) => (
-            <div key={index} className="gallery-item" onClick={() => handleImageClick(image.src)}>
-              <img src={image.src} alt={image.alt} />
+            <div key={index} className="gallery-item" onClick={() => handleImageClick(image)}>
+              <img src={image.src} alt={image.alt} loading="lazy" />
               <div className="gallery-item-overlay">
                 <span>Kliknij, aby powiększyć</span>
               </div>
@@ -78,7 +80,7 @@ function Realization() {
           <div className="modal" onClick={handleCloseModal}>
             <div className="modal-content">
               <span className="close-button">&times;</span>
-              <img src={selectedImage} alt="Powiększone zdjęcie" />
+              <img src={selectedImage} alt={selectedAlt} />
             </div>
           </div>
         )}
