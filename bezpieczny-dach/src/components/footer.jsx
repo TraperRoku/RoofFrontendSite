@@ -1,4 +1,4 @@
-// Footer.js
+
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
@@ -16,7 +16,7 @@ function Footer() {
         <div className="footer-section">
           <h4>Kontakt</h4>
           <p>
-            <i className="fas fa-map-marker-alt"></i> Ul. Dekarska 15, 70-000 Szczecin<br />
+            <i className="fas fa-map-marker-alt"></i> Mosty 9D, 72-132 Mosty<br />
             <i className="fas fa-phone"></i> +48 518 144 882<br />
             <i className="fas fa-envelope"></i> bezpiecznydach@gmail.com
           </p>
@@ -37,7 +37,6 @@ function Footer() {
           <h4>Godziny otwarcia</h4>
           <p>
             Całodobowo 00:00 - 24:00<br />
-            Dzwonić w nagłych wypadkach
           </p>
         </div>
       </div>
