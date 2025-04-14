@@ -5,6 +5,7 @@ import Service from './components/Service';
 import ContactSection from './components/ContactSection';
 import Realization from './components/Realization';
 import RepairSection from './components/RepairSection';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Realization/>
       <RepairSection />
       <ContactSection />
+      <Footer></Footer>
     
     </div>
   );

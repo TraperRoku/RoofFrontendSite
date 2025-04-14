@@ -1,4 +1,7 @@
+// Header.js
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './Header.css';
 import logo from '../components/photos/logo.png';
 
@@ -63,6 +66,19 @@ function Header() {
                     <a href="#realization" onClick={closeMenu}>Realizacje</a>
                     <a href="#contact" onClick={closeMenu}>Kontakt</a>
                 </div>
+                
+                {/* Dodana ikona Facebooka w headerze */}
+                <div className="header-social">
+                  <a 
+                    href="https://www.facebook.com/profile.php?id=61575175164575" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                  >
+                    <FontAwesomeIcon icon={faFacebookF} />
+                  </a>
+                </div>
+                
                 <button className="btn-primary" onClick={handlePhoneClick}>
                     Zadzwoń do nas +48 518 144 882
                 </button>
