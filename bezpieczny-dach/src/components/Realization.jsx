@@ -115,22 +115,55 @@ function Realization() {
   return (
     <section id="realization" className="realization">
       <div className="realization-container">
-        <h2>Nasze Realizacje Dachów w Szczecinie</h2>
-        <p>Od ponad 15 lat tworzymy dachy w Szczecinie i okolicach, które nie tylko chronią domy, ale stają się ich prawdziwą ozdobą.
-           Każdy projekt to dla nas coś więcej niż zlecenie – to okazja, by pokazać nasze umiejętności i rzemiosło.
-            Dzięki pasji, doświadczeniu i bliskiej współpracy z klientami powstają dachy, które zachwycają estetyką i służą przez lata. 
-            Z dumą prezentujemy nasze realizacje – najlepszy dowód na to, że zawsze dajemy z siebie 110%. 
-            Sprawdź nasze projekty dachów w Szczecinie i przekonaj się sam!</p>
+        <div className="section-header">
+          <h2>NASZE REALIZACJE - DOWÓD NASZYCH UMIEJĘTNOŚĆI DEKARSKICH</h2>
+          <div className="underline"></div>
+          <p className="section-subtitle">
+            <strong>Ponad setki wykonanych dachów !</strong> Każde zdjęcie to historia 
+            <span className="highlight"> perfekcyjnego wykonania</span>, <span className="highlight">dbałości o szczegóły</span> i 
+            <span className="highlight"> zadowolonego klienta</span>. Zobacz, jak zmieniamy zwykłe dachy w 
+            <strong> trwałe, piękne i bezproblemowe konstrukcje</strong>.
+          </p>
+        </div>
+
+        <div className="stats-container">
+          <div className="stat-item">
+            <div className="stat-number">15+</div>
+            <div className="stat-label">lat doświadczenia</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">500+</div>
+            <div className="stat-label">zrealizowanych dachów</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">99%</div>
+            <div className="stat-label">zadowolonych klientów</div>
+          </div>
+        </div>
 
         <div className="gallery-grid">
           {images.map((image, index) => (
             <div key={index} className="gallery-item" onClick={() => handleImageClick(image)}>
-              <img src={image.src} alt={image.alt} loading="lazy" />
+              <img 
+                src={image.src} 
+                alt={image.alt} 
+                loading="lazy"
+                className="gallery-image" 
+              />
               <div className="gallery-item-overlay">
-                <span>Kliknij, aby powiększyć</span>
+                <div className="overlay-content">
+                  <span className="zoom-icon">🔍</span>
+                  <span className="overlay-text">Zobacz szczegóły realizacji</span>
+                </div>
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="cta-section">
+          <h3>CHCESZ TAKI DACH? ZADZWOŃ TERAZ!</h3>
+          <p>Nasi konsultanci czekają, aby omówić Twój projekt i przedstawić bezpłatną wycenę</p>
+          <a href="tel:+48518144882" className="cta-button">ZADZWOŃ: 518 144 882</a>
         </div>
 
         {selectedImage && (

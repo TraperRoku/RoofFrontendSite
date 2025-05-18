@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600;700&display=swap');
+
+.dachy-plaskie-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px; /* Increased padding */
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .breadcrumbs {
+    margin-bottom: 30px; /* Increased margin */
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .breadcrumbs span {
+    color: #e74c3c;
+    cursor: pointer;
+  }
+  /* Dodaj do CSS */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.emergency-button {
+  animation: pulse 2s infinite;
+}
+
+/* Hover efekt dla kart */
+.system-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+  
+  /* Hero Section */
+  .hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 70px; /* Increased margin */
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    flex: 1;
+    padding: 50px; /* Increased padding */
+    min-width: 300px;
+  }
+  
+  .hero-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #e74c3c;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  
+  /* Benefits Section */
+  .benefits-section {
+    margin: 80px 0; /* Increased margin */
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  
+  .benefits-section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 50px; /* Increased margin */
+    position: relative;
+  }
+  
+  .benefits-section h2:after {
+    content: "";
+    display: block;
+    width: 100px;
+    
+    height: 3px;
+    background: #e74c3c;
+    margin: 15px auto;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+  }
+  
+  .benefit-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    height: 100%; /* Makes all cards the same height */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .benefit-icon {
+    font-size: 2rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+  }
+  
+  .benefit-card h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 1.9rem;
+  }
+  
+  .benefit-card p {
+    flex-grow: 1; /* Makes text take available space, aligning content */
+  }
+  
+  /* Gallery Section */
+  .gallery-section {
+    margin: 80px 0; 
+  /* Increased margin */
+  padding-top: 50px;
+  }
+  
+  .gallery-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .gallery-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px; /* Increased margin */
+    font-size: 1.1rem;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.05);
+  }
+  
+  .gallery-item p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Emergency Section */
+  .emergency-section {
+    background-color: #e74c3c;
+    color: white;
+    padding: 50px; /* Increased padding */
+    border-radius: 10px;
+    margin: 80px 0; /* Increased margin */
+    text-align: center;
+  }
+  
+  .emergency-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .emergency-button {
+    display: inline-block;
+    background: white;
+    color: #e74c3c;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    margin-top: 25px; /* Increased margin */
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .emergency-button:hover {
+    background: #f8f9fa;
+    transform: scale(1.05);
+  }
+  
+  /* Systems Section */
+  .systems-section {
+    margin: 80px 0; /* Increased margin */
+  }
+  
+  .systems-section h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 50px; /* Increased margin */
+  }
+  
+  .systems-section p {
+    text-align: center;
+    margin-bottom: 50px; /* Increased margin */
+    font-size: 1.1rem;
+  }
+  
+  .system-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 60px; /* Increased margin */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .system-card.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .system-image {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .system-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 300px;
+  }
+  
+  .system-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px; 
+  }
+  
+  .system-card h3 {
+    color: #e74c3c;
+    font-size: 2.2rem;
+    margin-bottom: 25px; 
+  }
+  
+  .system-card ul {
+    margin: 25px 0;
+    padding-left: 20px;
+    font-size: 1.3rem;
+    list-style: none; /* Removed default bullet points */
+  }
+  
+  .system-card li {
+    margin-bottom: 15px;
+    
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .system-card li:before {
+    content: "•";
+    color: #e74c3c;
+    
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+  
+  .system-cta {
+    font-weight: bold;
+
+    margin-top: 30px; 
+  }
+  
+  .system-cta a {
+    color: #e74c3c;
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Guarantee Section */
+  .guarantee-section {
+    background-color: #2c3e50;
+    color: white;
+    padding: 60px 30px; /* Increased padding */
+    border-radius: 10px;
+    font-size: 1.4rem;
+    margin: 80px 0; /* Increased margin */
+    text-align: center;
+  }
+  
+  .guarantee-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px; /* Increased margin */
+  }
+  
+  .guarantee-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .guarantee-badge {
+    background: #e74c3c;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .guarantee-years {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  
+  .guarantee-text {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .guarantee-text-content {
+    flex: 1;
+    min-width: 300px;
+    text-align: left;
+    padding: 30px; /* Increased padding */
+  }
+  
+  .guarantee-text-content ul {
+    margin: 20px 0;
+    padding-left: 20px;
+    list-style: none; /* Removed default bullet points */
+  }
+  
+  .guarantee-text-content li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+  }
+  
+  .guarantee-text-content li:before {
+    content: "•";
+    color: #e74c3c;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+  
+  /* Contact CTA */
+  .contact-cta {
+    text-align: center;
+    margin: 80px 0; /* Increased margin */
+  }
+  
+  .contact-cta h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px; /* Increased margin */
+  }
+  
+  .contact-cta p {
+    margin-bottom: 40px; /* Increased margin */
+    font-size: 1.1rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px; /* Increased gap */
+  }
+  
+  .cta-button, .cta-button-primary, .cta-button-secondary {
+    display: inline-block;
+    padding: 18px 35px; /* Increased padding */
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-align: center;
+  }
+  
+  .cta-button, .cta-button-primary {
+    background: #e74c3c;
+    color: white;
+    border: 2px solid #e74c3c;
+  }
+  
+  .cta-button-secondary {
+    background: transparent;
+    color: #e74c3c;
+    border: 2px solid #e74c3c;
+  }
+  
+  .cta-button:hover, .cta-button-primary:hover {
+    background: #c0392b;
+    transform: scale(1.05);
+  }
+  
+  .cta-button-secondary:hover {
+    background: #f8f9fa;
+    transform: scale(1.05);
+  }
+  
+  /* Responsywność */
+  @media (max-width: 768px) {
+    .hero-section h1 {
+      font-size: 1.8rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+    
+    .benefits-grid, .gallery-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .system-card, .system-card.reverse {
+      flex-direction: column;
+    }
+    
+    .system-image {
+      width: 100%;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-button, .cta-button-primary, .cta-button-secondary {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .highlight-phone {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .highlight-phone:hover {
+    color: #c0392b;
+    text-decoration: underline;
+  }
+  
+  .comparison-table {
+    overflow-x: auto;
+    margin: 40px 0;
+  }
+  
+  .comparison-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .comparison-table th, .comparison-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .comparison-table th {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .comparison-table tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }

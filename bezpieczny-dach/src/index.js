@@ -5,7 +5,8 @@ import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-document.title = "BezpiecznyDach"; 
+document.title = "Bezpieczny Dach – Fachowa Naprawa Dachów Szczecin i okolice";
+
 
 
 root.render(

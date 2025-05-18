@@ -1,9 +1,10 @@
-// Header.js
+
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './Header.css';
 import logo from '../components/photos/logo.png';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,13 +62,16 @@ function Header() {
 
             <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                 <div className="nav-links">
-                    <a href="#home" onClick={closeMenu}>Strona główna</a>
-                    <a href="#services" onClick={closeMenu}>Usługi</a>
-                    <a href="#realization" onClick={closeMenu}>Realizacje</a>
-                    <a href="#contact" onClick={closeMenu}>Kontakt</a>
+                    
+                    <Link to="/#home" onClick={closeMenu}>Strona główna</Link>
+                    <Link to="/dachy-plaskie" onClick={closeMenu}>Dachy płaskie</Link>
+                    <Link to="/#services" onClick={closeMenu}>Usługi</Link>
+                    <Link to="/#realization" onClick={closeMenu}>Realizacje</Link>
+                    <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
+                  
                 </div>
                 
-                {/* Dodana ikona Facebooka w headerze */}
+            
                 <div className="header-social">
                   <a 
                     href="https://www.facebook.com/profile.php?id=61575175164575" 

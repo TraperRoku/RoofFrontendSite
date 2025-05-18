@@ -7,38 +7,71 @@ import imgPut from '../components/photos/roofReno.jpg';
 const services = [
   { 
     src: imgFix, 
-    alt: 'Naprawa dachów',
-    title: 'Dachy płaskie',
-    description: 'Pofesjonalna naprawa i konserwacja dachów płaskich, zapewniająca trwałość i odporność na warunki atmosferyczne.'
+    alt: 'Profesjonalna naprawa dachów płaskich w Szczecinie',
+    title: 'DACHY PŁASKIE',
+    description: 'SPECJALIZACJA: Naprawy i renowacje dachów płaskich. Stosujemy wyłącznie certyfikowane membrany EPDM i PVC najwyższej jakości.',
+    features: [
+      'Natychmiastowa naprawa przecieków',
+      'Pełna wymiana pokrycia',
+      'Zielone dachy i tarasy'
+    ]
   },
   { 
     src: imgBuild, 
-    alt: 'Remonty dachów',
-    title: 'Systemy Rynnowe',
-    description: 'Montaż i serwis systemów rynnowych, które skutecznie chronią budynek przed wilgocią i zalaniem.'
+    alt: 'Montaż systemów rynnowych w Szczecinie',
+    title: 'SYSTEMY RYNOWE',
+    description: 'BEZPIECZNE ODPROWADZANIE WODY: Montujemy wyłącznie systemy od najlepszych producentów, które wytrzymają nawet najsilniejsze ulewy.',
+    features: [
+      'Odporność na zalodzenie',
+      'Cicha praca'
+    ]
   },
   { 
     src: imgPut, 
-    alt: 'Krycie dachów',
-    title: 'Konserwacja i przeglądy dachów',
-    description: 'Regularne przeglądy i konserwacja dachów, które zapobiegają kosztownym naprawom i wydłużają żywotność pokrycia dachowego.'
+    alt: 'Profesjonalna konserwacja dachów Szczecin',
+    title: 'PRZEGLĄDY DACHÓW',
+    description: 'LEPIEJ ZAPOBIEGAĆ NIŻ NAPRAWIAĆ: nasze przeglądy dachów wykrywają usterki, zanim przerodzą się w kosztowne naprawy!',
+    features: [
+      'Bezinwazyjne badania',
+      'Raport z zaleceniami',
+      'Oszczędność do 70% na naprawach'
+    ]
   },
 ];
 
 function Service() {
   return (
     <section id="services" className="service">
-      <h2>Nasze Usługi</h2>
-      <p>Nasza specjalność to pokrycia dachowe z papy termozgrzewalnej, PVC i EPDM, ale oferujemy również szeroki wachlarz usług dekarskich
-      Bez względu na rodzaj materiału czy poziom skomplikowania, każde zlecenie wykonujemy z najwyższą precyzją, gwarantując trwałość i estetykę na długie lata.</p>
+      <div className="service-header">
+        <h2>DLACZEGO WARTO WYBRAĆ NASZE USŁUGI DEKARSKIE?</h2>
+        <p className="service-intro">
+          <strong>Jako jedyni w Szczecinie łączymy 15-letnie doświadczenie z nowoczesnymi technologiami! </strong>
+          Specjalizujemy się w najtrwalszych rozwiązaniach: <span className="highlight">membrany EPDM</span>, 
+          <span className="highlight"> ultracienkie PVC</span> i <span className="highlight">papa termozgrzewalna premium</span>. 
+          Każdy dach wykonujemy z precyzją godną mistrzów cechowych.
+        </p>
+      </div>
 
       <div className="service-grid">
         {services.map((service, index) => (
           <div key={index} className="service-item">
-            <img src={service.src} alt={service.alt} />
+            <div className="service-image-container">
+              <img src={service.src} alt={service.alt} className="service-image" />
+              <div className="service-overlay">
+                <h3>{service.title}</h3>
+              </div>
+            </div>
             <div className="service-content">
-              <h3>{service.title}</h3>
-              <p>{service.description}</p>
+              <p className="service-description">{service.description}</p>
+              <ul className="service-features">
+                {service.features.map((feature, i) => (
+                  <li key={i} className="feature-item">
+                    <span className="feature-icon">✓</span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
+            
             </div>
           </div>
         ))}
