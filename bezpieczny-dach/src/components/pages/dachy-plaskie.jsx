@@ -19,24 +19,21 @@ function DachyPlaskie(){
   return (
     <>
 <Helmet>
-  {/* Dodaj schema markup dla usługi */}
   <script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Bezpieczny Dach - Dachy Płaskie Szczecin",
-        "image": "https://www.bezpiecznydach.pl${dach7}",
-        "telephone": "+48518144882",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Szczecin",
-          "addressRegion": "Zachodniopomorskie"
-        },
-        "openingHours": "Mo-Su 07:00-20:00",
-        "priceRange": "$$"
-      }
-    `}
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Bezpieczny Dach - Dachy Płaskie Szczecin",
+      "image": "https://www.bezpiecznydach.pl/photos_to_deploy/14.jpg",
+      "telephone": "+48518144882",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Szczecin",
+        "addressRegion": "Zachodniopomorskie"
+      },
+      "openingHours": "Mo-Su 07:00-20:00",
+      "priceRange": "$$"
+    })}
   </script>
 </Helmet>
 
