@@ -19,42 +19,13 @@ function DachyPlaskie(){
   return (
     <>
 <Helmet>
-  <script type="application/ld+json">
-    {`
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Bezpieczny Dach - Dachy Płaskie Szczecin",
-      "image": "https://www.bezpiecznydach.pl/photos_to_deploy/14.jpg",
-      "url": "https://www.bezpiecznydach.pl/dachy-plaskie",
-      "telephone": "+48518144882",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "ul. Przykładowa 123",
-        "addressLocality": "Szczecin",
-        "addressRegion": "Zachodniopomorskie",
-        "postalCode": "70-000"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-        "opens": "07:00",
-        "closes": "20:00"
-      },
-      "priceRange": "$$"
-    }
-    `}
-  </script>
+  <title>Profesjonalne Dachy Płaskie Szczecin | ☎ 518 144 882</title>
+  <meta 
+    name="description" 
+    content="SPECJALIZUJEMY SIĘ w dachach płaskich w Szczecinie! Membrana EPDM, PVC, papa termozgrzewalna." 
+  />
+  <link rel="canonical" href="https://www.bezpiecznydach.pl/dachy-plaskie" />
 </Helmet>
-     <Helmet>
-        <title>Profesjonalne Dachy Płaskie Szczecin | ☎ 518 144 882</title>
-        <meta 
-          name="description" 
-          content="SPECJALIZUJEMY SIĘ w dachach płaskich w Szczecinie! Membrana EPDM, PVC, papa termozgrzewalna. NATYCHMIASTOWA naprawa przecieków! Zadzwoń TERAZ: 518 144 882" 
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.bezpiecznydach.pl/dachy-plaskie" />
-      </Helmet>
       
       <Header />
       
