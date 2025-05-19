@@ -20,23 +20,32 @@ function DachyPlaskie(){
     <>
 <Helmet>
   <script type="application/ld+json">
-    {JSON.stringify({
+    {`
+    {
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Bezpieczny Dach - Dachy Płaskie Szczecin",
       "image": "https://www.bezpiecznydach.pl/photos_to_deploy/14.jpg",
+      "url": "https://www.bezpiecznydach.pl/dachy-plaskie",
       "telephone": "+48518144882",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "ul. Przykładowa 123",
         "addressLocality": "Szczecin",
-        "addressRegion": "Zachodniopomorskie"
+        "addressRegion": "Zachodniopomorskie",
+        "postalCode": "70-000"
       },
-      "openingHours": "Mo-Su 07:00-20:00",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "07:00",
+        "closes": "20:00"
+      },
       "priceRange": "$$"
-    })}
+    }
+    `}
   </script>
 </Helmet>
-
      <Helmet>
         <title>Profesjonalne Dachy Płaskie Szczecin | ☎ 518 144 882</title>
         <meta 
