@@ -1,10 +1,14 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  
+
+  # Zezwól na dostęp do robots.txt i sitemap.xml
+  RewriteRule ^robots\.txt$ - [L]
+  RewriteRule ^sitemap\.xml$ - [L]
+
   # HTTP → HTTPS
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-  
+
   # Bez www → z www
   RewriteCond %{HTTP_HOST} ^bezpiecznydach\.pl [NC]
   RewriteRule ^(.*)$ https://www.bezpiecznydach.pl/$1 [L,R=301]
