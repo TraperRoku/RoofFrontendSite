@@ -1,3 +1,6 @@
+/* Dodaj te style do swojego pliku CSS */
+
+/* Reset i podstawowe style */
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +9,8 @@
 
 html, body {
   width: 100%;
-  overflow-x: hidden;
+  max-width: 100%; /* Dodaj to, aby zapobiec przekraczaniu szerokości */
+  overflow-x: hidden; /* Ukrywa poziomy scroll */
   scroll-behavior: smooth;
 }
 
@@ -16,46 +20,50 @@ body {
   color: #333;
   background-color: #f9f9f9;
   padding-top: 80px; /* Kompensacja dla fixed header */
-}
-body.menu-open {
-  overflow: hidden;
+  position: relative; /* Dodaj to dla lepszego kontrolowania overflow */
 }
 
-section {
-  width: 100%;
-  padding: 80px 0;
-  scroll-margin-top: 80px;
-}
-
+/* Dodatkowe poprawki dla responsywności */
 .container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow: hidden; /* Zapobiega wystawaniu elementów poza kontener */
 }
 
-img {
+/* Sprawdź te elementy - często powodują problemy */
+img, iframe, embed, object, video {
   max-width: 100%;
   height: auto;
+  display: block; /* Zapobiega niechcianym marginesom */
 }
 
-/* In App.css - Additional responsive fixes */
+/* Specjalne style dla mobile */
 @media (max-width: 768px) {
-  h1, h2 {
-      font-size: 1.8rem;
-  }
-  
-  p {
-      font-size: 1rem;
+  body {
+    padding-top: 60px; /* Mniejsza kompensacja dla mniejszego header */
   }
   
   section {
-      scroll-margin-top: 60px;
+    padding: 60px 0;
+    scroll-margin-top: 60px;
+  }
+  
+  /* Dodatkowe zabezpieczenie przed overflow */
+  .container {
+    padding: 0 15px;
   }
 }
 
 @media (max-width: 480px) {
   section {
-      padding: 40px 0;
+    padding: 40px 0;
+  }
+
+  .any-element {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
+

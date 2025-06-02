@@ -9,7 +9,13 @@
   RewriteCond %{HTTPS} off
   RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-  # Bez www → z www
-  RewriteCond %{HTTP_HOST} ^bezpiecznydach\.pl [NC]
-  RewriteRule ^(.*)$ https://www.bezpiecznydach.pl/$1 [L,R=301]
+  # Wszystkie wersje domeny na canonical z www i HTTPS
+  RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?(bezpiecznydach\.pl)$ [NC]
+  RewriteRule ^ https://www.%1%{REQUEST_URI} [L,R=301]
+
+  # Usuń podwójne ukośniki (opcjonalne)
+  RewriteCond %{THE_REQUEST} //
+  RewriteRule .* /$0 [R=301,L]
 </IfModule>
