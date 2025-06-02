@@ -4,21 +4,24 @@
     overflow: hidden;
 }
 
+
 .header {
-    background-color: white;
-    color: #333;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 10%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-sizing: border-box;
-   
+  background-color: white;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow: hidden; 
 }
 
 .logo-container {

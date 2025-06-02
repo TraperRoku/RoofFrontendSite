@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Montserrat+Narrow:wght@700&family=Open+Sans&display=swap');
 
+
 .hero {
     display: flex;
     align-items: center;
@@ -15,6 +16,7 @@
     background-position: right ;
     background-repeat: no-repeat;
     position: relative;
+    overflow: hidden;
     margin-top: 80px; /* Kompensacja dla fixed header */
 }
 .hero-content {
@@ -23,6 +25,7 @@
     margin-left: 10%;
     position: relative;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 .hero-content p {
@@ -93,7 +96,6 @@
     }
 }
 
-/* In HeroSection.css - Update the mobile media queries */
 @media (max-width: 768px) {
     .hero {
         background-image: linear-gradient(
@@ -104,17 +106,17 @@
         background-size: cover;
         background-position: center;
         min-height: 100vh;
-        padding-top: 70px; /* Dodaj tę linię */
+        padding: 1rem;
+        padding-top: 70px;
     }
-    /* ... reszta istniejących stylów ... */
-
+    
     .hero-content {
         max-width: 100%;
         margin-left: 0;
-        text-align: center;
-        padding-top: 30px;
-        /* Account for fixed header */
+        padding: 1.5rem;
     }
+    
+
     
     .hero-buttons {
         flex-direction: column;

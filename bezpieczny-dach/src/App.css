@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -42,7 +45,8 @@ img, iframe, embed, object, video {
 /* Specjalne style dla mobile */
 @media (max-width: 768px) {
   body {
-    padding-top: 60px; /* Mniejsza kompensacja dla mniejszego header */
+    padding-top: 60px; 
+    
   }
   
   section {
@@ -52,7 +56,7 @@ img, iframe, embed, object, video {
   
   /* Dodatkowe zabezpieczenie przed overflow */
   .container {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 

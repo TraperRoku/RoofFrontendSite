@@ -109,11 +109,11 @@ function DachyPlaskie(){
       <img src={dach7} alt="Papa termozgrzewalna" />
     </div>
     <div className="system-content">
-      <h3>SYSTEM Z PAPĄ TERMOZGRZEWALNĄ</h3>
+      <h3>SYSTEM Z PAPĄ<br></br> TERMOZGRZEWALNĄ</h3>
       <p><strong>Ekonomia i sprawdzona trwałość!</strong> Idealny gdy:</p>
       <ul>
         <li>Szukasz rozwiązania budżetowego</li>
-        <li>Masz prosty dach bez skomplikowanych detali</li>
+        <li>Masz prosty dach bez <br></br>skomplikowanych detali</li>
         <li>Zależy Ci na szybkiej realizacji</li>
       </ul>
       <p className="system-cta">Zadzwoń chętnie doradzimy: <a href="tel:+48518144882">518 144 882</a></p>
@@ -143,11 +143,11 @@ function DachyPlaskie(){
               <img src={dach6} alt="System balastowy EPDM" />
             </div>
             <div className="system-content">
-              <h3>SYSTEM BALASTOWY Z MEMBRANĄ PCV</h3>
+              <h3>SYSTEM BALASTOWY <br/>Z MEMBRANĄ PCV</h3>
               <p><strong>Dla wymagających klientów!</strong> Wybierz gdy:</p>
               <ul>
-                <li>Chcesz stworzyć taras użytkowy lub dach zielony</li>
-                <li>Wymagasz odporności na UV i uszkodzenia</li>
+                <li>Chcesz stworzyć taras użytkowy<br></br> lub dach zielony</li>
+                <li>Wymagasz odporności na UV<br></br> i uszkodzenia</li>
                 <li>Potrzebujesz dodatkowej izolacji</li>
               </ul>
               <p className="system-cta">Zapytaj o szczegóły: <a href="tel:+48518144882">518 144 882</a></p>

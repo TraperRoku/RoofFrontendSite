@@ -172,6 +172,11 @@
   letter-spacing: 0.5px;
   box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
   text-decoration: none;
+  display: inline-block; /* Zmień na inline-block */
+    max-width: 100%; /* Ogranicz maksymalną szerokość */
+    white-space: normal; /* Pozwól na zawijanie tekstu */
+    word-wrap: break-word; /* Zapobiegaj wychodzeniu poza kontener */
+    box-sizing: border-box;
 }
 
 .cta-button:hover {
