@@ -1,0 +1,195 @@
+/* Główne style */
+.docieplanie-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+/* Sekcja hero */
+.hero-sectionD {
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url('../photos_to_deploy/wool.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 40px;
+
+}
+
+.hero-sectionD h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+      font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    line-height: 1.2;
+
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #eee;
+  
+   
+}
+
+
+/* Sekcja benefitów */
+.benefits-section {
+  margin: 60px 0;
+  text-align: center;
+  
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Rodzaje izolacji */
+.insulation-types {
+  margin: 80px 0;
+}
+
+.types-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.type-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.type-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.type-card h3 {
+  background: #2c3e50;
+  color: white;
+  padding: 15px;
+  margin: 0;
+}
+
+.type-card ul {
+  padding: 20px;
+  list-style-type: none;
+}
+
+.type-card li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.type-card li:before {
+  content: "•";
+  color: #e74c3c;
+  position: absolute;
+  left: 0;
+}
+
+/* Projekty */
+.projects-section {
+  margin: 80px 0;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 15px;
+  margin: 0;
+  background: #f8f9fa;
+}
+
+.project-card p {
+  padding: 0 15px 15px;
+  margin: 0;
+}
+
+/* Przyciski */
+.cta-button, .cta-button-primary, .cta-button-secondary {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.cta-button, .cta-button-primary {
+  background: #e74c3c;
+  color: white;
+  border: 2px solid #e74c3c;
+}
+
+.cta-button-secondary {
+  background: transparent;
+  color: #e74c3c;
+  border: 2px solid #e74c3c;
+}
+
+.contact-cta {
+  text-align: center;
+  margin: 80px 0;
+  padding: 40px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 60px 20px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .benefits-grid, .types-grid, .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-cta {
+    padding: 30px 15px;
+  }
+}

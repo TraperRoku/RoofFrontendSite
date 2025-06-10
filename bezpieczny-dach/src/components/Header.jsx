@@ -65,7 +65,7 @@ function Header() {
                     
                     <Link to="/#home" onClick={closeMenu}>Strona główna</Link>
                     <Link to="/dachy-plaskie" onClick={closeMenu}>Dachy płaskie</Link>
-                    <Link to="/#services" onClick={closeMenu}>Usługi</Link>
+                    <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja</Link>
                     <Link to="/#realization" onClick={closeMenu}>Realizacje</Link>
                     <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
                   
