@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './Header.css';
-import logo from '../components/photos/logo.png';
+import logo from '../components/photos/logo.webp';
 import { Link } from 'react-router-dom';
 
 function Header() {
@@ -66,6 +66,7 @@ function Header() {
                     <Link to="/#home" onClick={closeMenu}>Strona główna</Link>
                     <Link to="/dachy-plaskie" onClick={closeMenu}>Dachy płaskie</Link>
                     <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja</Link>
+                    <Link to="/o-nas" onClick={closeMenu}>O nas</Link>
                     <Link to="/#realization" onClick={closeMenu}>Realizacje</Link>
                     <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
                   

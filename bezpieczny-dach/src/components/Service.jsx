@@ -1,6 +1,6 @@
 import React from 'react';
 import './Service.css';
-import imgFix from '../components/photos_to_deploy/1.jpg';
+import imgFix from '../components/photos_to_deploy/1.webp';
 import imgBuild from '../components/photos_to_deploy/17.webp';
 import imgPut from '../components/photos/roofReno.jpg';
 

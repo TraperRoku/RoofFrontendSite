@@ -1,21 +1,26 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # Zezwól na dostęp do robots.txt i sitemap.xml
-  RewriteRule ^robots\.txt$ - [L]
-  RewriteRule ^sitemap\.xml$ - [L]
+  # Zezwól na dostęp do ważnych plików SEO
+  RewriteRule ^(robots\.txt|sitemap\.xml|google[0-9a-f]+\.html)$ - [L]
 
-  # HTTP → HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # Wszystkie wersje domeny na canonical z www i HTTPS
-  RewriteCond %{HTTP_HOST} !^www\. [NC,OR]
-  RewriteCond %{HTTPS} off
+  # HTTP → HTTPS i canonical z www
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteCond %{HTTP_HOST} ^(?:www\.)?(bezpiecznydach\.pl)$ [NC]
   RewriteRule ^ https://www.%1%{REQUEST_URI} [L,R=301]
 
-  # Usuń podwójne ukośniki (opcjonalne)
-  RewriteCond %{THE_REQUEST} //
-  RewriteRule .* /$0 [R=301,L]
+  # Usuń podwójne ukośniki i kończące ukośniki
+  RewriteCond %{THE_REQUEST} \s/+(.*?)/+[?\s]
+  RewriteRule ^(.*?)/+$ /$1 [R=301,L]
+
+  # Cache-Control dla zasobów statycznych
+  <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|webp)$">
+    Header set Cache-Control "max-age=31536000, public"
+  </FilesMatch>
+</IfModule>
+
+# Kompresja GZIP
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
 </IfModule>

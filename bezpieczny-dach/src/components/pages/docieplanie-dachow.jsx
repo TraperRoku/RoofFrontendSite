@@ -5,9 +5,9 @@ import Header from '../Header'
 import Footer from '../footer'
 import '../pages/DocieplanieDachow.css';
 
-import wełna from '../photos_to_deploy/woolMineral.jpg';
-import pir from '../photos_to_deploy/plytyPir.jpg';
-import pur from '../photos_to_deploy/pur.jpg';
+import wełna from '../photos/woolMineral.jpg';
+import pir from '../photos/plytyPir.jpg';
+import pur from '../photos/pur.webp';
 
 function DocieplanieDachow() {
   return (
@@ -39,15 +39,19 @@ function DocieplanieDachow() {
         <section className="benefits-section">
           <h2>DLACZEGO WARTO DOCIEPLIĆ DACH?</h2>
           <div className="benefits-grid">
+            
             <div className="benefit-card">
+              <div className="benefit-icon">✓</div>
               <h3>Oszczędność energii</h3>
               <p>Nawet do 30% mniejsze straty ciepła przez dach, co znacząco obniża koszty ogrzewania.</p>
             </div>
             <div className="benefit-card">
+              <div className="benefit-icon">✓</div>
               <h3>Komfort całoroczny</h3>
               <p>Latem chłodniej, zimą cieplej - stabilna temperatura przez cały rok.</p>
             </div>
             <div className="benefit-card">
+              <div className="benefit-icon">✓</div>
               <h3>Ochrona konstrukcji</h3>
               <p>Zapobiega zawilgoceniu i rozwojowi pleśni, przedłużając żywotność dachu.</p>
             </div>

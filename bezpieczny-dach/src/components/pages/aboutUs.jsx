@@ -1,0 +1,292 @@
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Header from '../Header'
+import Footer from '../footer'
+import './AboutUs.css';
+import { Link } from 'react-router-dom';
+
+import zespol1 from '../photos_to_deploy/1.webp';
+import zespol2 from '../photos_to_deploy/7.webp';
+import zespol3 from '../photos_to_deploy/15.webp';
+import certyfikat1 from '../photos/solar.webp';
+import narzedzia from '../photos_to_deploy/11.webp';
+import realizacja1 from '../photos_to_deploy/18.webp';
+
+function ONas(){
+  return (
+    <>
+<Helmet>
+  <title>O Nas - Profesjonalni Dekarze Szczecin | 15 lat doświadczenia</title>
+  <meta 
+    name="description" 
+    content="Poznaj nasz zespół - 15 lat doświadczenia w dekarstwie, 1000+ zadowolonych klientów. Profesjonalne usługi dekarskie w Szczecinie." 
+  />
+  <link rel="canonical" href="https://www.bezpiecznydach.pl/o-nas" />
+</Helmet>
+      
+      <Header />
+      
+      <main className="o-nas-container">
+      
+        <section className="hero-section">
+          <div className="hero-content">
+            <h1>O NAS - EKSPERCI OD DACHÓW</h1>
+            <p className="hero-subtitle">15 lat doświadczenia | 1000+ zadowolonych klientów |<br></br> Najwyższa jakość usług</p>
+            <div className="hero-cta">
+              <a href="tel:+48518144882" className="cta-button">ZADZWOŃ TERAZ: 518 144 882</a>
+            </div>
+          </div>
+          <div className="hero-image">
+            <img src={zespol1} alt="Profesjonalny zespół dekarzy w Szczecinie" />
+          </div>
+        </section>
+
+        <section className="story-section">
+          <h2>NASZA HISTORIA</h2>
+          <div className="story-content">
+            <div className="story-text">
+              <p>Firma <strong>BezpiecznyDach</strong> powstała w 2009 roku z pasją do tworzenia niezawodnych dachów. Przez 15 lat rozwijaliśmy nasze umiejętności, zdobywając zaufanie tysięcy klientów w Szczecinie i okolicach.</p>
+              <p>Zaczynaliśmy jako małe przedsiębiorstwo rodzinne, a dziś jesteśmy uznanym liderem w branży dekarskiej. Nasze doświadczenie to gwarancja jakości dla każdego klienta.</p>
+            </div>
+            <div className="story-image">
+              <img src={zespol2} alt="Historia firmy dekarskiej" />
+            </div>
+          </div>
+        </section>
+
+        <section className="values-section">
+          <h2>NASZE WARTOŚCI</h2>
+          <div className="values-grid">
+            <div className="value-card">
+              <div className="value-icon">🏆</div>
+              <h3>Jakość Przede Wszystkim</h3>
+              <p>Używamy wyłącznie materiałów najwyższej jakości od sprawdzonych producentów. Każda realizacja to nasza wizytówka.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">⚡</div>
+              <h3>Szybkość Reakcji</h3>
+              <p>Awaria dachu? Działamy w 24h! Rozumiemy, że przeciek to sytuacja kryzysowa wymagająca natychmiastowej interwencji.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">🤝</div>
+              <h3>Uczciwe Podejście</h3>
+              <p>Transparentne wyceny bez ukrytych kosztów. Co ustalamy, tego się trzymamy. Twoje zaufanie to nasz największy kapitał.</p>
+            </div>
+            <div className="value-card">
+              <div className="value-icon">🎯</div>
+              <h3>Profesjonalizm</h3>
+              <p>Każdy członek zespołu to doświadczony fachowiec. Stale podnosimy kwalifikacje, śledząc najnowsze trendy w dekastwie.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="team-section">
+          <h2>POZNAJ NAS BLIŻEJ</h2>
+          <div className="team-content">
+            <div className="team-stats">
+              <div className="stat-item">
+                <div className="stat-number">15</div>
+                <div className="stat-label">lat doświadczenia</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">1000+</div>
+                <div className="stat-label">zadowolonych klientów</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">24/7</div>
+                <div className="stat-label">serwis awaryjny</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">100%</div>
+                <div className="stat-label">gwarancja jakości</div>
+              </div>
+            </div>
+            <div className="team-image">
+              <img src={zespol3} alt="Nasz doświadczony zespół dekarzy" />
+            </div>
+          </div>
+        </section>
+
+        <section className="expertise-section">
+          <h2>NASZA SPECJALIZACJA</h2>
+          <p className="expertise-subtitle">Oferujemy kompleksowe usługi dekarskie na najwyższym poziomie</p>
+          
+          <div className="expertise-grid">
+            <div className="expertise-card">
+              <h3>Dachy Płaskie</h3>
+              <ul>
+                <li>Membrana EPDM i PVC</li>
+                <li>Papa termozgrzewalna</li>
+                <li>Systemy balastowe</li>
+                <li>Dachy zielone i tarasy</li>
+              </ul>
+            </div>
+            <div className="expertise-card">
+              <h3>Dachy Skośne</h3>
+              <ul>
+                <li>Dachówka ceramiczna i betonowa</li>
+                <li>Blachodachówka</li>
+                <li>Pokrycia z blachy</li>
+                <li>Gonty bitumiczne</li>
+              </ul>
+            </div>
+            <div className="expertise-card">
+              <h3>Naprawy i Remonty</h3>
+              <ul>
+                <li>Naprawa przecieków</li>
+                <li>Wymiana pokryć</li>
+                <li>Renowacja dachów</li>
+                <li>Modernizacja izolacji</li>
+              </ul>
+            </div>
+            <div className="expertise-card">
+              <h3>Usługi Dodatkowe</h3>
+              <ul>
+                <li>Oczyszczanie dachów</li>
+                <li>Montaż systemów rynnowych</li>
+                <li>Instalacja świetlików</li>
+                <li>Przygotowanie pod fotowoltaikę</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="certificates-section">
+          <h2>CERTYFIKATY I UPRAWNIENIA</h2>
+          <div className="certificates-content">
+            <div className="certificates-text">
+              <p>Posiadamy wszystkie niezbędne certyfikaty i uprawnienia do wykonywania prac dekarskich. Jesteśmy autoryzowanymi wykonawcami wiodących producentów materiałów budowlanych.</p>
+              <ul>
+                <li>Certyfikat ISO 9001:2015</li>
+                <li>Uprawnienia budowlane</li>
+                <li>Autoryzacja producentów EPDM</li>
+                <li>Certyfikat BHP</li>
+                <li>Ubezpieczenie OC działalności</li>
+              </ul>
+            </div>
+            <div className="certificates-image">
+              <img src={certyfikat1} alt="Certyfikaty i uprawnienia firmy dekarskiej" />
+            </div>
+          </div>
+        </section>
+
+        <section className="equipment-section">
+          <div className="equipment-content">
+            <div className="equipment-image">
+              <img src={narzedzia} alt="Profesjonalny sprzęt dekarski" />
+            </div>
+            <div className="equipment-text">
+              <h2>NOWOCZESNY SPRZĘT</h2>
+              <p>Inwestujemy w najnowocześniejsze narzędzia i technologie, które pozwalają nam wykonywać prace szybko, bezpiecznie i z najwyższą precyzją.</p>
+              <ul>
+                <li>Profesjonalne narzędzia do spawania membran</li>
+                <li>Systemy bezpieczeństwa pracy na wysokości</li>
+                <li>Nowoczesne urządzenia diagnostyczne</li>
+                <li>Własny transport i dźwigi</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="process-section">
+          <h2>JAK PRACUJEMY?</h2>
+          <div className="process-steps">
+            <div className="process-step">
+              <div className="step-number">1</div>
+              <h3>Kontakt i Wycena</h3>
+              <p>Skontaktuj się z nami telefonicznie lub przez formularz. Umówimy się na bezpłatny przegląd dachu i przygotujemy szczegółową wycenę.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">2</div>
+              <h3>Planowanie Prac</h3>
+              <p>Ustalamy harmonogram prac dopasowany do Twoich potrzeb. Zabezpieczamy wszystkie materiały i przygotowujemy plac budowy.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">3</div>
+              <h3>Realizacja</h3>
+              <p>Wykonujemy prace zgodnie z najwyższymi standardami, zachowując porządek i bezpieczeństwo. Regularnie informujemy o postępach.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">4</div>
+              <h3>Odbiór i Gwarancja</h3>
+              <p>Po zakończeniu prac przeprowadzamy wspólny odbiór. Wydajemy gwarancję i instrukcję konserwacji dachu.</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="testimonials-section">
+          <h2>CO MÓWIĄ O NAS KLIENCI?</h2>
+          <div className="testimonials-grid">
+            <div className="testimonial-card">
+              <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p>"Szybka reakcja na awarie, profesjonalna obsługa. Po 3 latach dach wciąż bez problemów. Polecam!"</p>
+              <div className="testimonial-author">- Anna K., Szczecin</div>
+            </div>
+            <div className="testimonial-card">
+              <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p>"Uczciwa wycena, terminowa realizacja. Panowie zostawili po sobie idealny porządek. Bardzo profesjonalnie."</p>
+              <div className="testimonial-author">- Marek P., Police</div>
+            </div>
+            <div className="testimonial-card">
+              <div className="testimonial-stars">⭐⭐⭐⭐⭐</div>
+              <p>"Naprawili przeciek w 24h! Świetny kontakt, rzetelne podejście. Będę polecać znajomym."</p>
+              <div className="testimonial-author">- Tomasz W., Stargard</div>
+            </div>
+          </div>
+        </section>
+
+        <section className="why-us-section">
+          <h2>DLACZEGO WARTO NAS WYBRAĆ?</h2>
+          <div className="why-us-content">
+            <div className="why-us-image">
+              <img src={realizacja1} alt="Nasze realizacje dachowe" />
+            </div>
+            <div className="why-us-list">
+              <div className="why-us-item">
+                <div className="why-us-icon">✓</div>
+                <div>
+                  <h3>Doświadczenie</h3>
+                  <p>15 lat na rynku dekarskim - setki udanych realizacji</p>
+                </div>
+              </div>
+              <div className="why-us-item">
+                <div className="why-us-icon">✓</div>
+                <div>
+                  <h3>Gwarancja</h3>
+                  <p>Długoterminowa gwarancja na materiały i wykonanie</p>
+                </div>
+              </div>
+              <div className="why-us-item">
+                <div className="why-us-icon">✓</div>
+                <div>
+                  <h3>Dostępność</h3>
+                  <p>Serwis awaryjny 24/7 - zawsze możesz na nas liczyć</p>
+                </div>
+              </div>
+              <div className="why-us-item">
+                <div className="why-us-icon">✓</div>
+                <div>
+                  <h3>Jakość</h3>
+                  <p>Tylko sprawdzone materiały od renomowanych producentów</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="contact-cta">
+          <h2>GOTOWY NA WSPÓŁPRACĘ?</h2>
+          <p>Skontaktuj się z nami już dziś - otrzymasz bezpłatną wycenę w 24h!</p>
+          <div className="cta-buttons">
+            <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>
+            <Link to="/#contact" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+}
+
+export default ONas;
