@@ -136,17 +136,14 @@ function Realization() {
               tabIndex={0}
               aria-label={`Pokaż zdjęcie: ${imageAlts[index]}`}
             >
-              <picture>
-                <source srcSet={src.replace(/\.(jpg|jpeg|png)$/, '.webp')} type="image/webp" />
-                <img
-                  src={src}
-                  alt={imageAlts[index]}
-                  loading="lazy"
-                  className="gallery-image"
-                  width="400"
-                  height="300"
-                />
-              </picture>
+      <img
+  src={src}
+  alt={imageAlts[index]}
+  loading="lazy"
+  className="gallery-image"
+  width="400"
+  height="300"
+/>
               <div className="gallery-item-overlay">
                 <div className="overlay-content">
                   <span className="zoom-icon">🔍</span>
