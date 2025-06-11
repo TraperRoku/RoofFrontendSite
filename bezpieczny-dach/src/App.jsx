@@ -13,6 +13,7 @@ import { Helmet } from 'react-helmet';
 import { useLocation } from 'react-router-dom';
 import DocieplanieDachow from './components/pages/docieplanie-dachow';
 import AboutUs from './components/pages/aboutUs';
+import Wykonawstwo from './components/pages/wykonawstwo';
 
 function ScrollToHashElement() {
   const location = useLocation();
@@ -66,6 +67,7 @@ function App() {
         <Route path="/dachy-plaskie" element={<DachyPlaskie />} />
         <Route path="/docieplanie-dachow" element={<DocieplanieDachow />} />
          <Route path="/o-nas" element={<AboutUs />} />
+         <Route path="/wykonawstwo" element={<Wykonawstwo />} />
       </Routes>
     </Router>
   );
