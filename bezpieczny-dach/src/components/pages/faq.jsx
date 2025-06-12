@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, Phone, MapPin, Clock, Shield, CheckCircle } from 'lucide-react';
 import Footer from '../footer';
 import Header from '../Header';
 import './FAQ.css'; 
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import hero from '../photos_to_deploy/40.webp';
 import dachPlaski from '../realizacje/thumbs/41.webp';
@@ -22,8 +23,9 @@ const images = {
   konserwacja: konserwacja,
   awaria: awaria,
   kosztorys: kosztorys,
-  foto : foto
+  foto: foto
 };
+
 const faqData = [
   {
     id: 1,
@@ -147,11 +149,17 @@ const faqData = [
   tips: ['Idealna powierzchnia dla PV', 'Pomoc w dofinansowaniach', 'Montaż pod klucz']
 }
 ];
+
 const categories = ['Wszystkie', 'Koszty i Wycena', 'Materiały', 'Konserwacja', 'Awarie'];
 
 function FAQ() {
   const [activeCategory, setActiveCategory] = useState('Wszystkie');
   const [openFAQ, setOpenFAQ] = useState(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const filteredFAQ = activeCategory === 'Wszystkie' 
     ? faqData 
@@ -161,8 +169,33 @@ function FAQ() {
     setOpenFAQ(openFAQ === id ? null : id);
   };
 
+  const generateSchemaMarkup = () => {
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqData.map(faq => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${faq.answer} ${faq.tips.join(' ')}`
+        }
+      }))
+    };
+  };
+
   return (
     <div className="faq-container">
+      <Helmet>
+        <title>Baza wiedzy o dachach płaskich - najczęstsze pytania i odpowiedzi</title>
+        <meta name="description" content="Kompletny przewodnik po dachach płaskich - koszty, materiały, konserwacja i naprawy awaryjne. Eksperci z 15-letnim doświadczeniem odpowiadają na wszystkie pytania." />
+        <link rel="canonical" href="https://www.bezpiecznydach.pl/baza-wiedzy" />
+        <script type="application/ld+json">
+          {JSON.stringify(generateSchemaMarkup())}
+        </script>
+        <link rel="preload" href={images.hero} as="image" />
+      </Helmet>
+      
       <Header />
       
       <main className="faq-main">
@@ -179,6 +212,7 @@ function FAQ() {
               <a 
                 href="tel:+48518144882" 
                 className="cta-button"
+                aria-label="Zadzwoń do nas pod numer 518 144 882"
               >
                 MASZ PYTANIE? ZADZWOŃ: 518 144 882
               </a>
@@ -188,12 +222,15 @@ function FAQ() {
             <img 
               src={images.hero} 
               alt="Eksperci od dachów płaskich - Bezpieczny Dach Szczecin"
+              width="800"
+              height="600"
+              loading="eager"
             />
           </div>
         </section>
 
         {/* Quick Stats */}
-        <section className="stats-section">
+        <section className="stats-section" aria-label="Statystyki firmy">
           {[
             { icon: Shield, number: '15+', text: 'LAT DOŚWIADCZENIA' },
             { icon: CheckCircle, number: '1000+', text: 'ZADOWOLONYCH KLIENTÓW' },
@@ -201,7 +238,7 @@ function FAQ() {
             { icon: Phone, number: '100%', text: 'ZADOWOLENIE KLIENTÓW' }
           ].map((stat, index) => (
             <div key={index} className="stat-card">
-              <stat.icon size={40} className="stat-icon" />
+              <stat.icon size={40} className="stat-icon" aria-hidden="true" />
               <div className="stat-number">
                 {stat.number}
               </div>
@@ -213,16 +250,19 @@ function FAQ() {
         </section>
 
         {/* Category Filter */}
-        <section className="category-section">
+        <section className="category-section" aria-label="Filtruj pytania według kategorii">
           <h2 className="section-title">
             WYBIERZ KATEGORIĘ PYTAŃ
           </h2>
-          <div className="category-buttons">
+          <div className="category-buttons" role="tablist">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 className={`category-button ${activeCategory === category ? 'active' : ''}`}
+                role="tab"
+                aria-selected={activeCategory === category}
+                aria-controls={`${category}-tab`}
               >
                 {category}
               </button>
@@ -231,30 +271,39 @@ function FAQ() {
         </section>
 
         {/* FAQ Items */}
-        <section className="faq-items-section">
+        <section className="faq-items-section" id="faq-questions">
           <div className="faq-items-container">
             {filteredFAQ.map((faq) => (
               <div key={faq.id} className="faq-item">
                 <div 
                   onClick={() => toggleFAQ(faq.id)}
                   className={`faq-question ${openFAQ === faq.id ? 'active' : ''}`}
+                  role="button"
+                  tabIndex="0"
+                  aria-expanded={openFAQ === faq.id}
+                  aria-controls={`faq-answer-${faq.id}`}
+                  onKeyDown={(e) => e.key === 'Enter' && toggleFAQ(faq.id)}
                 >
                   <div>
                     <span className="faq-category">
                       {faq.category}
                     </span>
-                    <h3 className="faq-question-text">
+                    <h3 className="faq-question-text" id={`faq-question-${faq.id}`}>
                       {faq.question}
                     </h3>
                   </div>
                   {openFAQ === faq.id ? 
-                    <ChevronUp size={24} className="chevron-icon" /> : 
-                    <ChevronDown size={24} className="chevron-icon" />
+                    <ChevronUp size={24} className="chevron-icon" aria-hidden="true" /> : 
+                    <ChevronDown size={24} className="chevron-icon" aria-hidden="true" />
                   }
                 </div>
                 
                 {openFAQ === faq.id && (
-                  <div className="faq-answer">
+                  <div 
+                    id={`faq-answer-${faq.id}`}
+                    className="faq-answer"
+                    aria-labelledby={`faq-question-${faq.id}`}
+                  >
                     <div className="answer-content">
                       <div className="answer-text">
                         <p>
@@ -268,7 +317,7 @@ function FAQ() {
                           <ul>
                             {faq.tips.map((tip, index) => (
                               <li key={index}>
-                                <span className="tip-bullet">•</span>
+                                <span className="tip-bullet" aria-hidden="true">•</span>
                                 {tip}
                               </li>
                             ))}
@@ -280,6 +329,9 @@ function FAQ() {
                         <img 
                           src={faq.image} 
                           alt={faq.question}
+                          width="400"
+                          height="300"
+                          loading={isClient ? "lazy" : "eager"}
                         />
                       </div>
                     </div>
@@ -291,7 +343,7 @@ function FAQ() {
         </section>
 
         {/* Emergency CTA */}
-        <section className="emergency-cta">
+        <section className="emergency-cta" aria-label="Nagły wypadek - kontakt">
           <h2>
             NIE ZNALAZŁEŚ ODPOWIEDZI? ZADZWOŃ!
           </h2>
@@ -302,38 +354,40 @@ function FAQ() {
             <a 
               href="tel:+48518144882"
               className="cta-button-primary"
+              aria-label="Zadzwoń na numer alarmowy 518 144 882"
             >
               📞 ZADZWOŃ: 518 144 882
             </a>
-        <Link 
-  to="/#contact"
-  className="cta-button-secondary"
->
-  📧 FORMULARZ KONTAKTOWY
-</Link>
+            <Link 
+              to="/#contact"
+              className="cta-button-secondary"
+              aria-label="Przejdź do formularza kontaktowego"
+            >
+              📧 FORMULARZ KONTAKTOWY
+            </Link>
           </div>
         </section>
 
         {/* Contact Info */}
-        <section className="contact-info">
+        <section className="contact-info" aria-label="Dane kontaktowe">
           <h3>
             BEZPIECZNY DACH - TWÓJ PARTNER W SZCZECINIE
           </h3>
           <div className="contact-details">
             <div className="contact-item">
-              <Phone size={20} className="contact-icon" />
+              <Phone size={20} className="contact-icon" aria-hidden="true" />
               <span>518 144 882</span>
             </div>
             <div className="contact-item">
-              <MapPin size={20} className="contact-icon" />
+              <MapPin size={20} className="contact-icon" aria-hidden="true" />
               <span>Szczecin i okolice</span>
             </div>
             <div className="contact-item">
-              <Clock size={20} className="contact-icon" />
+              <Clock size={20} className="contact-icon" aria-hidden="true" />
               <span>7:00 - 20:00</span>
             </div>
             <div className="contact-item">
-              <CheckCircle size={20} className="contact-icon" />
+              <CheckCircle size={20} className="contact-icon" aria-hidden="true" />
               <span>Profesjonalne doradztwo</span>
             </div>
           </div>
@@ -342,7 +396,6 @@ function FAQ() {
 
       <Footer />
     </div>
-    
   );
 }
 
