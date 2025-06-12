@@ -142,8 +142,8 @@ const Wykonawstwo = () => {
             </div>
             <div className="advantage-card">
               <div className="advantage-icon">💰</div>
-              <h3>Gwarancja</h3>
-              <p>Długoletnia gwarancja na wykonane prace</p>
+              <h3>Gwarancja jakości</h3>
+              <p>Nasza firma gwarantuje zadowolenie klienta</p>
             </div>
           </div>
         </section>

@@ -39,4 +39,18 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://www.bezpiecznydach.pl/baza-wiedzy</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.bezpiecznydach.pl/realizacje</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
