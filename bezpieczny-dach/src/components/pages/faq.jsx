@@ -28,7 +28,7 @@ const faqData = [
   {
     id: 1,
     category: 'Koszty i Wycena',
-    question: 'Ile kosztuje wymiana dachu płaskiego w Szczecinie?',
+    question: 'Ile kosztuje wymiana dachu płaskiego ?',
     answer: 'Koszt wymiany dachu płaskiego zależy od wielu czynników: powierzchni dachu, wybranego materiału (papa termozgrzewalna 180-250 zł/m², membrana EPDM 250-350 zł/m², PCV 300-450 zł/m²), stanu konstrukcji oraz dostępności dachu. Oferujemy DARMOWĄ wycenę z dojazdem w Szczecinie i okolicach.',
     image: images.kosztorys,
     tips: ['Darmowa wycena w 24h', 'Rozłożenie płatności na raty', 'Profesjonalne doradztwo']
