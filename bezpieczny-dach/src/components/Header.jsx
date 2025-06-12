@@ -68,7 +68,8 @@ function Header() {
                     <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja</Link>
                     <Link to="/o-nas" onClick={closeMenu}>O nas</Link>
                     <Link to="/wykonawstwo" onClick={closeMenu}>Wykonawstwo</Link>
-                    <Link to="/#realization" onClick={closeMenu}>Realizacje</Link>
+                    <Link to="/baza-wiedzy" onClick={closeMenu}>Baza wiedzy</Link>
+                    <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                     <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
                   
                 </div>

@@ -101,7 +101,7 @@ function DocieplanieDachow() {
           <p>Specjalista od dociepleń odpowie na wszystkie pytania</p>
           <div className="cta-buttons">
             <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>
-            <Link to="/kontakt" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
+            <Link to="/#contact" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
           </div>
         </section>
       </main>

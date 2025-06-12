@@ -14,6 +14,8 @@ import { useLocation } from 'react-router-dom';
 import DocieplanieDachow from './components/pages/docieplanie-dachow';
 import AboutUs from './components/pages/aboutUs';
 import Wykonawstwo from './components/pages/wykonawstwo';
+import FAQ from './components/pages/faq';
+import Realizacje from './components/pages/realizacje';
 
 function ScrollToHashElement() {
   const location = useLocation();
@@ -68,6 +70,9 @@ function App() {
         <Route path="/docieplanie-dachow" element={<DocieplanieDachow />} />
          <Route path="/o-nas" element={<AboutUs />} />
          <Route path="/wykonawstwo" element={<Wykonawstwo />} />
+        <Route path="/baza-wiedzy" element={<FAQ />} />
+         <Route path="/realizacje" element={<Realizacje />} />
+
       </Routes>
     </Router>
   );

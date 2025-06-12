@@ -45,8 +45,10 @@ function ONas(){
           <h2>NASZA HISTORIA</h2>
           <div className="story-content">
             <div className="story-text">
-              <p>Firma <strong>BezpiecznyDach</strong> powstała w 2009 roku z pasją do tworzenia niezawodnych dachów. Przez 15 lat rozwijaliśmy nasze umiejętności, zdobywając zaufanie tysięcy klientów w Szczecinie i okolicach.</p>
-              <p>Zaczynaliśmy jako małe przedsiębiorstwo rodzinne, a dziś jesteśmy uznanym liderem w branży dekarskiej. Nasze doświadczenie to gwarancja jakości dla każdego klienta.</p>
+              <p>Od <strong>15 lat</strong> budujemy dachy z myślą o bezpieczeństwie i trwałości. Przez 15 lat rozwijaliśmy nasze umiejętności, zdobywając zaufanie klientów.</p>
+              <p>Jesteśmy małą, rodzinną firmą z doświadczeniem zdobywanym przez lata, również za granicą. 
+                Stawiamy na rzetelną pracę, solidne wykonanie i partnerskie podejście do klienta. Każdy dach traktujemy serio – jakby był naszym własnym.
+              </p>
             </div>
             <div className="story-image">
               <img src={zespol2} alt="Historia firmy dekarskiej" />
@@ -208,8 +210,8 @@ function ONas(){
             </div>
             <div className="process-step">
               <div className="step-number">4</div>
-              <h3>Odbiór i Gwarancja</h3>
-              <p>Po zakończeniu prac przeprowadzamy wspólny odbiór. Wydajemy gwarancję i instrukcję konserwacji dachu.</p>
+              <h3>Odbiór</h3>
+              <p>Po zakończeniu prac przeprowadzamy wspólny odbiór. Wydajemy instrukcję konserwacji dachu.</p>
             </div>
           </div>
         </section>
@@ -252,7 +254,7 @@ function ONas(){
               <div className="why-us-item">
                 <div className="why-us-icon">✓</div>
                 <div>
-                  <h3>Gwarancja</h3>
+                  <h3>Gwarancja jakości</h3>
                   <p>Długoterminowa gwarancja na materiały i wykonanie</p>
                 </div>
               </div>

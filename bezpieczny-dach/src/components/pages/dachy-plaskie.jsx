@@ -10,7 +10,7 @@ import dach2 from '../photos_to_deploy/9.webp';
 import dach3 from '../photos_to_deploy/3.webp';
 import dach4 from '../photos_to_deploy/23.webp';
 import dach5 from '../photos/solar.webp';
-import dach6 from '../photos/pcv.webp';
+import dach6 from '../photos/pcv.webp'; 
 import dach7 from '../photos_to_deploy/14.webp';
 
 
