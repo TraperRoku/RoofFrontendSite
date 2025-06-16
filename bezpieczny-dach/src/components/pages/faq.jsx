@@ -27,6 +27,15 @@ const images = {
 };
 
 const faqData = [
+
+  {
+  id: 16,
+  category: 'Koszty i Wycena',
+  question: 'Gdzie pracujemy?',
+  answer: 'Działamy głównie na terenie Szczecina i województwa zachodniopomorskiego, ale jesteśmy elastyczni – w przypadku dalszych lokalizacji zapraszamy do kontaktu telefonicznego. Zawsze staramy się znaleźć rozwiązanie dopasowane do potrzeb klienta.',
+  image: images.dachPlaski,
+  tips: ['Dach idealny pod fotowoltaikę', 'Doradzamy przy uzyskaniu dotacji', 'Kompleksowy montaż „pod klucz”']
+},
   {
     id: 1,
     category: 'Koszty i Wycena',
@@ -39,7 +48,7 @@ const faqData = [
     id: 2,
     category: 'Materiały',
     question: 'Czy papa termozgrzewalna to dobry wybór?',
-    answer: 'Papa termozgrzewalna to sprawdzone i ekonomiczne rozwiązanie, idealne dla prostych dachów bez skomplikowanych detali. Oferuje dobrą trwałość (10-15 lat) przy konkurencyjnej cenie. Szczególnie polecana dla garaży, magazynów i budynków gospodarczych.',
+    answer: 'Papa termozgrzewalna to sprawdzone i ekonomiczne rozwiązanie. Oferuje dobrą trwałość (10-15 lat) przy konkurencyjnej cenie. Szczególnie polecana dla garaży, magazynów i budynków gospodarczych.',
     image: images.papa,
     tips: ['Ekonomiczne rozwiązanie', 'Szybki montaż', 'Sprawdzona technologia']
   },
@@ -147,7 +156,8 @@ const faqData = [
   answer: 'Jak najbardziej – dachy płaskie są wręcz idealne do montażu paneli PV. Zapewniamy odpowiednie wzmocnienia i szczelność systemu.',
   image: images.foto,
   tips: ['Idealna powierzchnia dla PV', 'Pomoc w dofinansowaniach', 'Montaż pod klucz']
-}
+},
+
 ];
 
 const categories = ['Wszystkie', 'Koszty i Wycena', 'Materiały', 'Konserwacja', 'Awarie'];
@@ -155,11 +165,6 @@ const categories = ['Wszystkie', 'Koszty i Wycena', 'Materiały', 'Konserwacja',
 function FAQ() {
   const [activeCategory, setActiveCategory] = useState('Wszystkie');
   const [openFAQ, setOpenFAQ] = useState(null);
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   const filteredFAQ = activeCategory === 'Wszystkie' 
     ? faqData 
@@ -170,42 +175,87 @@ function FAQ() {
   };
 
   const generateSchemaMarkup = () => {
+    const mainEntities = faqData
+      .filter(faq => faq.category !== 'Awarie')
+      .slice(0, 10)
+      .map(faq => ({
+        "@type": "Question",
+        "name": faq.question.replace('?', ' w Szczecinie?'),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": `${faq.answer} ${faq.tips.join('. ')}. Specjalizujemy się w wykonawstwie dachów płaskich na terenie Szczecina i okolic.`
+        }
+      }));
+
     return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": faqData.map(faq => ({
-        "@type": "Question",
-        "name": faq.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": `${faq.answer} ${faq.tips.join(' ')}`
-        }
-      }))
+      "mainEntity": mainEntities,
+      "author": {
+        "@type": "Organization",
+        "name": "Bezpieczny Dach Szczecin",
+        "url": "https://www.bezpiecznydach.pl",
+        "sameAs": [
+          "https://www.facebook.com/bezpiecznydachszczecin",
+          "https://www.instagram.com/bezpiecznydachszczecin"
+        ]
+      }
     };
   };
 
   return (
     <div className="faq-container">
       <Helmet>
-        <title>Baza wiedzy o dachach płaskich - najczęstsze pytania i odpowiedzi</title>
-        <meta name="description" content="Kompletny przewodnik po dachach płaskich - koszty, materiały, konserwacja i naprawy awaryjne. Eksperci z 15-letnim doświadczeniem odpowiadają na wszystkie pytania." />
+        <title>FAQ o Dachach Płaskich - Eksperckie Odpowiedzi | Bezpieczny Dach Szczecin</title>
+        <meta name="description" content="Kompletny poradnik o dachach płaskich - koszty, materiały (papa, EPDM, PVC), konserwacja i naprawy awaryjne w Szczecinie. Eksperci z 15-letnim doświadczeniem." />
+        <meta name="keywords" content="dachy płaskie szczecin, papa termozgrzewalna, membrana EPDM, naprawa dachu, koszt wymiany dachu, konserwacja dachu płaskiego" />
         <link rel="canonical" href="https://www.bezpiecznydach.pl/baza-wiedzy" />
+        
+        {/* Social Media Meta Tags */}
+        <meta property="og:title" content="FAQ o Dachach Płaskich - Eksperckie Odpowiedzi | Bezpieczny Dach Szczecin" />
+        <meta property="og:description" content="Wszystko co musisz wiedzieć o dachach płaskich - od materiałów po awarie. Specjaliści z Szczecina odpowiadają na najczęstsze pytania." />
+        <meta property="og:url" content="https://www.bezpiecznydach.pl/baza-wiedzy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={images.hero} />
+        <meta property="og:site_name" content="Bezpieczny Dach Szczecin" />
+        
+     
+        
+        {/* Schema.org markup */}
         <script type="application/ld+json">
           {JSON.stringify(generateSchemaMarkup())}
         </script>
-        <link rel="preload" href={images.hero} as="image" />
+        
+        {/* Breadcrumb Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://www.bezpiecznydach.pl"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Baza wiedzy",
+              "item": "https://www.bezpiecznydach.pl/faq-dachy-plaskie"
+            }]
+          })}
+        </script>
       </Helmet>
       
       <Header />
       
       <main className="faq-main">
         {/* Hero Section */}
-        <section className="hero-section">
+        <section className="hero-section" itemScope itemType="https://schema.org/WPHeader">
           <div className="hero-content">
-            <h1 className="hero-title">
+            <h1 className="hero-title" itemProp="headline">
               BAZA WIEDZY - ODPOWIEDZI NA WSZYSTKIE PYTANIA!
             </h1>
-            <p className="hero-subtitle">
+            <p className="hero-subtitle" itemProp="description">
               15 lat doświadczenia | 1000+ zadowolonych klientów | Eksperci od dachów płaskich
             </p>
             <div>
@@ -213,6 +263,7 @@ function FAQ() {
                 href="tel:+48518144882" 
                 className="cta-button"
                 aria-label="Zadzwoń do nas pod numer 518 144 882"
+                itemProp="telephone"
               >
                 MASZ PYTANIE? ZADZWOŃ: 518 144 882
               </a>
@@ -225,12 +276,13 @@ function FAQ() {
               width="800"
               height="600"
               loading="eager"
+              itemProp="image"
             />
           </div>
         </section>
 
         {/* Quick Stats */}
-        <section className="stats-section" aria-label="Statystyki firmy">
+        <section className="stats-section" aria-label="Statystyki firmy" itemScope itemType="https://schema.org/Organization">
           {[
             { icon: Shield, number: '15+', text: 'LAT DOŚWIADCZENIA' },
             { icon: CheckCircle, number: '1000+', text: 'ZADOWOLONYCH KLIENTÓW' },
@@ -239,7 +291,7 @@ function FAQ() {
           ].map((stat, index) => (
             <div key={index} className="stat-card">
               <stat.icon size={40} className="stat-icon" aria-hidden="true" />
-              <div className="stat-number">
+              <div className="stat-number" itemProp="foundingDate">
                 {stat.number}
               </div>
               <div className="stat-text">
@@ -247,6 +299,21 @@ function FAQ() {
               </div>
             </div>
           ))}
+        </section>
+
+        {/* Introduction Section */}
+        <section className="intro-section">
+          <h2 className="section-title">Eksperckie porady o dachach płaskich w Szczecinie i w okolicach</h2>
+          <div className="intro-content">
+            <p>Jako <strong>specjaliści od dachów płaskich z 15-letnim doświadczeniem w Szczecinie i za </strong>, zebraliśmy odpowiedzi na najczęstsze pytania naszych klientów. W tej bazie wiedzy znajdziesz praktyczne informacje o:</p>
+            <ul className="benefits-list">
+              <li><strong>Kosztach wymiany i naprawy</strong> dachów płaskich w woj. zachodniopomorskim</li>
+              <li>Porównaniu <strong>papa termozgrzewalna vs membrana PVC/EPDM</strong></li>
+              <li><strong>Konserwacji</strong> - jak dbać o dach płaski przez cały rok</li>
+              <li>Postępowaniu w <strong>awaryjnych sytuacjach</strong> (przecieki, zalegająca woda)</li>
+            </ul>
+            <p>Nie znalazłeś odpowiedzi? <a href="tel:+48518144882" className="inline-link">Zadzwoń do naszych specjalistów: 518 144 882</a> - doradzimy bezpłatnie!</p>
+          </div>
         </section>
 
         {/* Category Filter */}
@@ -326,13 +393,14 @@ function FAQ() {
                       </div>
                       
                       <div className="answer-image">
-                        <img 
-                          src={faq.image} 
-                          alt={faq.question}
-                          width="400"
-                          height="300"
-                          loading={isClient ? "lazy" : "eager"}
-                        />
+                       <img 
+  src={faq.image} 
+  alt={`${faq.question.replace('?', '')} - porady ekspertów Bezpieczny Dach Szczecin`}
+  width="400"
+  height="300"
+  loading="lazy"
+  className="faq-image"
+/>
                       </div>
                     </div>
                   </div>

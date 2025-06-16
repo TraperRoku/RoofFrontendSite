@@ -40,11 +40,8 @@ function HomePage() {
     <div>
      
        <Helmet>
-       <title>Bezpieczny Dach - Naprawa dachów Szczecin | 15 lat doświadczenia</title>
-       <meta 
-         name="description" 
-         content="Naprawa dachów w Szczecinie i woj. zachodniopomorskim. 15 lat doświadczenia, darmowa wycena. Zadzwoń – działamy też poza regionem!" 
-       />
+       <title>Dekarz Szczecin ✔ 15 Lat Doświadczenia | Naprawa Dachów ☎ 518 144 882</title>
+      <meta name="description" content="Profesjonalne usługi dekarskie w Szczecinie i okolicach. Specjalizujemy się w dachach płaskich - papa, EPDM, PVC. Darmowa wycena, gwarancja jakości. Zadzwoń!"/>
      </Helmet>
 
      <ScrollToHashElement />
@@ -69,7 +66,7 @@ function App() {
         <Route path="/dachy-plaskie" element={<DachyPlaskie />} />
         <Route path="/docieplanie-dachow" element={<DocieplanieDachow />} />
          <Route path="/o-nas" element={<AboutUs />} />
-         <Route path="/wykonawstwo" element={<Wykonawstwo />} />
+         <Route path="/uslugi-dekarskie-szczecin" element={<Wykonawstwo />} />
         <Route path="/baza-wiedzy" element={<FAQ />} />
          <Route path="/realizacje" element={<Realizacje />} />
 

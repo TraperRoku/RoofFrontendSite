@@ -66,7 +66,7 @@ function Service() {
               <ul className="service-features">
                 {service.features.map((feature, i) => (
                   <li key={i} className="feature-item">
-                    <span className="feature-icon">✓</span>
+                    <span className="feature-icon" aria-label="Zaleta">✓</span>
                     {feature}
                   </li>
                 ))}

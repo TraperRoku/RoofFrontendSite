@@ -13,11 +13,9 @@ const Wykonawstwo = () => {
   return (
     <>
       <Helmet>
-        <title>Profesjonalne Usługi Dekarskie Szczecin | Bezpieczny Dach ☎ 518 144 882</title>
-        <meta 
-          name="description" 
-          content="Kompleksowe usługi dekarskie w Szczecinie i okolicach. Pokrycia dachowe, termoizolacje, naprawy dachów. Autoryzowani wykonawcy najlepszych marek." 
-        />
+      <title>Usługi dekarskie Szczecin – pokrycia dachowe, papa, izolacje | Bezpieczny Dach</title>
+<meta name="description" content="Usługi dekarskie w Szczecinie: papa termozgrzewalna, dachy płaskie, systemy balastowe, izolacje i remonty dachów. Bezpłatna wycena ☎ 518 144 882" />
+
         <link rel="canonical" href="https://www.bezpiecznydach.pl/wykonawstwo" />
       </Helmet>
 
@@ -27,7 +25,7 @@ const Wykonawstwo = () => {
         
         <section className="hero-sectionW">
           <div className="hero-contentW">
-            <h1>PROFESJONALNE WYKONAWSTWO DACHOWE</h1>
+            <h1>Usługi dekarskie w Szczecinie i w okolicach – pokrycia dachowe i naprawy dachów</h1>
             <p className="hero-subtitle">Kompleksowe usługi dekarskie w Szczecinie i okolicach</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button">ZADZWOŃ: 518 144 882</a>
@@ -36,7 +34,7 @@ const Wykonawstwo = () => {
         </section>
 
         <section className="services-overview">
-          <h2>PEŁEN ZAKRES USŁUG DEKARSKICH</h2>
+          <h2>Usługi dekarskie Szczecin – kompleksowa oferta</h2>
           <p className="section-intro">Jako doświadczona firma dekarska z wieloletnią tradycją, oferujemy kompleksowe rozwiązania dla Twojego dachu:</p>
           <div className="services-grid">
             <div className="service-card">
@@ -70,7 +68,7 @@ const Wykonawstwo = () => {
         </section>
 
         <section className="technologies-section">
-          <h2>PARTNERZY TECHNOLOGICZNI</h2>
+          <h2>Materiały i technologie dekarskie – ICOPAL, ROCKWOOL, FAKRO</h2>
           <p className="section-intro">Pracujemy wyłącznie na materiałach renomowanych producentów:</p>
           <div className="tech-grid">
             <div className="tech-card">
@@ -93,7 +91,7 @@ const Wykonawstwo = () => {
         </section>
 
         <section className="process-section">
-          <h2>JAK PRACUJEMY?</h2>
+          <h2>Etapy realizacji usług dekarskich w Szczecinie</h2>
           <div className="process-steps">
             <div className="process-step">
               <div className="step-number">1</div>
@@ -119,7 +117,7 @@ const Wykonawstwo = () => {
         </section>
 
         <section className="advantages-section">
-          <h2>DLACZEGO WARTO NAM ZAUFAĆ?</h2>
+          <h2>Dekarze Szczecin – dlaczego warto wybrać naszą firmę</h2>
           <div className="advantages-grid">
             <div className="advantage-card">
               <div className="advantage-icon">🏅</div>
@@ -145,7 +143,7 @@ const Wykonawstwo = () => {
         </section>
 
         <section className="projects-showcase">
-          <h2>NASZE REALIZACJE</h2>
+          <h2>Przykłady realizacji dachów płaskich i skośnych w Szczecinie</h2>
           <p className="section-intro">Zobacz przykłady naszych prac w Szczecinie i województwie zachodniopomorskim:</p>
           <div className="projects-grid">
             <div className="project-card">

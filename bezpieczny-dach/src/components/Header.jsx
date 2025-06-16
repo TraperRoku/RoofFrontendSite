@@ -67,7 +67,7 @@ function Header() {
                     <Link to="/dachy-plaskie" onClick={closeMenu}>Dachy płaskie</Link>
                     <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja</Link>
                     <Link to="/o-nas" onClick={closeMenu}>O nas</Link>
-                    <Link to="/wykonawstwo" onClick={closeMenu}>Wykonawstwo</Link>
+                    <Link to="/uslugi-dekarskie-szczecin" onClick={closeMenu}>Usługi dekarskie</Link>
                     <Link to="/baza-wiedzy" onClick={closeMenu}>Baza wiedzy</Link>
                     <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                     <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>

@@ -13,12 +13,44 @@ function DocieplanieDachow() {
   return (
     <>
       <Helmet>
-        <title>Profesjonalne Docieplanie Dachów Szczecin| ☎ 518 144 882</title>
-        <meta 
-          name="description" 
-          content="Specjalizujemy się w docieplaniu dachów w Szczecinie. Wełna, PIR, piana PUR. Oszczędność energii i większy komfort termiczny." 
-        />
+      <title>Profesjonalne Docieplanie Dachów w Szczecinie i okolic| Oszczędność Energii | ☎ 518 144 882</title>
+     <meta 
+         name="description" 
+         content="Profesjonalne docieplanie dachów w Szczecinie - wełna mineralna, płyty PIR, styropian. Oszczędź do 30% na ogrzewaniu! Darmowa wycena. ☎ 518 144 882" 
+      />
         <link rel="canonical" href="https://www.bezpiecznydach.pl/docieplanie-dachow" />
+
+<script type="application/ld+json">
+    {`
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Bezpieczny Dach Szczecin",
+        "image": "https://www.bezpiecznydach.pl/favicon.ico",
+        "telephone": "+48518144882",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Szczecin",
+          "addressRegion": "Zachodniopomorskie"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "07:00",
+          "closes": "18:00"
+        },
+        "priceRange": "$$"
+      }
+    `}
+  </script>
+
       </Helmet>
 
       <Header />
@@ -63,7 +95,7 @@ function DocieplanieDachow() {
           <h2>STOSUJEMY NAJLEPSZE MATERIAŁY IZOLACYJNE</h2>
           <div className="types-grid">
             <div className="type-card">
-              <img src={wełna} alt="Docieplenie wełną mineralną" />
+              <img src={wełna} alt="Docieplenie dachu wełną mineralną w Szczecinie i w okolicach" />
               <h3>WEŁNA MINERALNA</h3>
               <ul>
                 <li>Doskonała izolacja akustyczna</li>
@@ -73,7 +105,7 @@ function DocieplanieDachow() {
               </ul>
             </div>
             <div className="type-card">
-              <img src={pir} alt="Płyty PIR do docieplenia" />
+              <img src={pir} alt="Płyty PIR do docieplenia dachów w Szczecinie i w okolicach" />
               <h3>PŁYTY PIR</h3>
               <ul>
                 <li>Najwyższa izolacyjność termiczna</li>
@@ -83,7 +115,7 @@ function DocieplanieDachow() {
               </ul>
             </div>
             <div className="type-card">
-              <img src={pur} alt="Natrysk pianą PUR" />
+             <img src={pur} alt="Styropian do izolacji dachów płaskich Szczecin i w okolicach"  />
               <h3>STYROPIAN </h3>
       <ul>
         <li>Dobry stosunek ceny do jakości</li>
