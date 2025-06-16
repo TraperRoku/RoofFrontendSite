@@ -7,13 +7,13 @@ import '../pages/DocieplanieDachow.css';
 
 import wełna from '../photos/woolMineral.jpg';
 import pir from '../photos/plytyPir.jpg';
-import pur from '../photos/pur.webp';
+import pur from '../photos/ster.webp';
 
 function DocieplanieDachow() {
   return (
     <>
       <Helmet>
-        <title>Profesjonalne Docieplanie Dachów Szczecin | ☎ 518 144 882</title>
+        <title>Profesjonalne Docieplanie Dachów Szczecin| ☎ 518 144 882</title>
         <meta 
           name="description" 
           content="Specjalizujemy się w docieplaniu dachów w Szczecinie. Wełna, PIR, piana PUR. Oszczędność energii i większy komfort termiczny." 
@@ -27,7 +27,7 @@ function DocieplanieDachow() {
         {/* Sekcja hero */}
         <section className="hero-sectionD">
           <div className="hero-contentD">
-            <h1>DOCIEPLANIE DACHÓW SZCZECIN</h1>
+            <h1>DOCIEPLANIE DACHÓW</h1>
             <p className="hero-subtitle">Zwiększ komfort i zmniejsz rachunki za ogrzewanie nawet o 30%!</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button">ZADZWOŃ: 518 144 882</a>
@@ -84,14 +84,13 @@ function DocieplanieDachow() {
             </div>
             <div className="type-card">
               <img src={pur} alt="Natrysk pianą PUR" />
-              <h3>PIANA PUR</h3>
-              <ul>
-                <li>Bezspoinowa izolacja</li>
-                <li>Idealna dla skomplikowanych kształtów</li>
-                <li>Szybki montaż</li>
-               
-              </ul>
-            </div>
+              <h3>STYROPIAN </h3>
+      <ul>
+        <li>Dobry stosunek ceny do jakości</li>
+        <li>Odporny na wilgoć i ściskanie</li>
+        <li>Popularny wybór przy dachach płaskich</li>
+      </ul>
+    </div>
           </div>
         </section>
 

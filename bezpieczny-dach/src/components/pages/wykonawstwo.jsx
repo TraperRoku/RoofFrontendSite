@@ -42,17 +42,17 @@ const Wykonawstwo = () => {
             <div className="service-card">
               <h3>Pokrycia dachowe</h3>
               <ul>
-                <li>Dachówka ceramiczna i betonowa</li>
-                <li>Blachodachówka i blacha trapezowa</li>
-                <li>Pokrycia z gontu bitumicznego</li>
-                <li>Dachy płaskie - PVC, EPDM</li>
+                <li>Papa termozgrzewalna</li>
+                <li>PVC</li>
+                <li>EPDM</li>
+                
               </ul>
             </div>
             <div className="service-card">
               <h3>Termoizolacje</h3>
               <ul>
                 <li>Docieplanie poddaszy</li>
-                <li>Izolacje pianą PUR</li>
+                <li>Izolacja styropianem</li>
                 <li>Systemy z wełny mineralnej</li>
                 <li>Izolacje nakrokwiowe</li>
               </ul>
@@ -75,14 +75,10 @@ const Wykonawstwo = () => {
           <div className="tech-grid">
             <div className="tech-card">
               <div className="tech-icon">🏆</div>
-              <h3>BRAAS</h3>
-              <p className="tech-description">Wiodący producent dachówek w Polsce</p>
+              <h3>ICOPAL</h3>
+              <p className="tech-description">Wiodący producent papy w Polsce</p>
             </div>
-            <div className="tech-card">
-              <div className="tech-icon">🛡️</div>
-              <h3>RHEINZINK</h3>
-              <p className="tech-description">Innowacyjne pokrycia z tytan-cynku</p>
-            </div>
+          
             <div className="tech-card">
               <div className="tech-icon">⚡</div>
               <h3>ROCKWOOL</h3>
@@ -171,7 +167,7 @@ const Wykonawstwo = () => {
             <p>Skontaktuj się z nami, aby omówić Twój projekt i otrzymać bezpłatną wycenę</p>
             <div className="cta-buttons">
               <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>
-              <Link to="/kontakt" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
+              <Link to="/#contact" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
             </div>
           </div>
         </section>

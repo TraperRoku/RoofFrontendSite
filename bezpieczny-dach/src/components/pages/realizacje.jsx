@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Header from '../Header';
@@ -11,79 +11,113 @@ function Realizacje() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [loadedCount, setLoadedCount] = useState(0);
 
+  // Ładowanie obrazów w partiach
   useEffect(() => {
+    const batchSize = 10; // Ładuj 10 obrazów na raz
+    const totalImages = 91;
+    let cancelled = false;
+
+    const loadBatch = async (start, end) => {
+      const batch = [];
+      for (let i = start; i <= end; i++) {
+        try {
+          const [thumb, full] = await Promise.all([
+            import(`../realizacje/thumbs/${i}.webp`),
+            import(`../realizacje/thumbs/${i}f.webp`)
+          ]);
+          
+          batch.push({
+            id: i,
+            thumb: thumb.default,
+            full: full.default,
+            title: `Realizacja ${i}`,
+            alt: `Profesjonalne docieplenie dachu - realizacja ${i}`
+          });
+        } catch (err) {
+          console.warn(`Nie znaleziono zdjęcia ${i}.webp`);
+        }
+      }
+      return batch;
+    };
+
     const loadImages = async () => {
       try {
-        const images = [];
-        for (let i = 1; i <= 91; i++) {
-          try {
-            const thumb = await import(`../realizacje/thumbs/${i}.webp`);
-            const full = await import(`../realizacje/thumbs/${i}f.webp`);
-            
-            images.push({
-              id: i,
-              thumb: thumb.default,
-              full: full.default,
-              title: `Realizacja ${i}`,
-              alt: `Profesjonalne docieplenie dachu - realizacja ${i}`
-            });
-          } catch (err) {
-            console.warn(`Nie znaleziono zdjęcia ${i}.webp lub ${i}f.webp`);
-          }
-        }
-        setGalleryImages(images);
-      } catch (error) {
-        setError('Wystąpił problem podczas ładowania galerii');
-        console.error('Błąd ładowania zdjęć:', error);
-      } finally {
+        setIsLoading(true);
+        
+        // Najpierw pierwsza partia dla szybkiego podglądu
+        const firstBatch = await loadBatch(1, Math.min(batchSize, totalImages));
+        if (cancelled) return;
+        
+        setGalleryImages(firstBatch);
+        setLoadedCount(firstBatch.length);
         setIsLoading(false);
+
+        // Reszta w tle
+        for (let i = batchSize + 1; i <= totalImages; i += batchSize) {
+          const batchEnd = Math.min(i + batchSize - 1, totalImages);
+          const newBatch = await loadBatch(i, batchEnd);
+          if (cancelled) return;
+          
+          setGalleryImages(prev => [...prev, ...newBatch]);
+          setLoadedCount(prev => prev + newBatch.length);
+          await new Promise(resolve => setTimeout(resolve, 100)); // Małe opóźnienie
+        }
+      } catch (error) {
+        if (!cancelled) {
+          setError('Wystąpił problem podczas ładowania galerii');
+          console.error('Błąd ładowania zdjęć:', error);
+          setIsLoading(false);
+        }
       }
     };
 
     loadImages();
+    return () => { cancelled = true; };
   }, []);
 
-  const openImage = (image, index) => {
+  const openImage = useCallback((image, index) => {
     setSelectedImage(image);
     setCurrentImageIndex(index);
     document.body.style.overflow = 'hidden';
-  };
+  }, []);
 
-  const closeImage = () => {
+  const closeImage = useCallback(() => {
     setSelectedImage(null);
     document.body.style.overflow = 'auto';
-  };
+  }, []);
 
-  const goToPrevious = () => {
-    const newIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
-    setSelectedImage(galleryImages[newIndex]);
-    setCurrentImageIndex(newIndex);
-  };
-
-  const goToNext = () => {
-    const newIndex = (currentImageIndex + 1) % galleryImages.length;
-    setSelectedImage(galleryImages[newIndex]);
-    setCurrentImageIndex(newIndex);
-  };
+const goToPrevious = useCallback(() => {
+  setCurrentImageIndex(prev => {
+    const newIndex = (prev - 1 + galleryImages.length) % galleryImages.length;
+    return newIndex;
+  });
+  setSelectedImage(galleryImages[(currentImageIndex - 1 + galleryImages.length) % galleryImages.length]);
+}, [galleryImages, currentImageIndex]);
+const goToNext = useCallback(() => {
+  setCurrentImageIndex(prev => {
+    const newIndex = (prev + 1) % galleryImages.length;
+    return newIndex;
+  });
+  setSelectedImage(galleryImages[(currentImageIndex + 1) % galleryImages.length]);
+}, [galleryImages, currentImageIndex]);
 
   // Obsługa klawiatury
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!selectedImage) return;
       
-      if (e.key === 'Escape') {
-        closeImage();
-      } else if (e.key === 'ArrowLeft') {
-        goToPrevious();
-      } else if (e.key === 'ArrowRight') {
-        goToNext();
+      switch (e.key) {
+        case 'Escape': closeImage(); break;
+        case 'ArrowLeft': goToPrevious(); break;
+        case 'ArrowRight': goToNext(); break;
       }
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage, currentImageIndex, galleryImages, goToPrevious, goToNext]);
+  }, [selectedImage, closeImage, goToPrevious, goToNext]);
 
   return (
     <>

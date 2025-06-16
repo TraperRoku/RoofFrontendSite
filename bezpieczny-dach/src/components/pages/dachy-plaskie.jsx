@@ -10,8 +10,9 @@ import dach2 from '../photos_to_deploy/9.webp';
 import dach3 from '../photos_to_deploy/3.webp';
 import dach4 from '../photos_to_deploy/23.webp';
 import dach5 from '../photos/solar.webp';
-import dach6 from '../photos/pcv.webp'; 
+import dach6 from '../realizacje/thumbs/73f.webp'; 
 import dach7 from '../photos_to_deploy/14.webp';
+import dach8 from '../photos/EPDM.webp';
 
 
 
@@ -55,8 +56,8 @@ function DachyPlaskie(){
             </div>
             <div className="benefit-card">
               <div className="benefit-icon">✓</div>
-              <h3>Membrana PCV Premium</h3>
-              <p>Używamy tylko certyfikowanych materiałów od najlepszych producentów</p>
+              <h3>Sprawdzone Materiały Od Renomowanych Producentów</h3>
+              <p>Używamy wyłącznie certyfikowanych rozwiązań od uznanych dostawców – gwarancja trwałości i jakości.</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-icon">✓</div>
@@ -111,7 +112,7 @@ function DachyPlaskie(){
       <p><strong>Ekonomia i sprawdzona trwałość!</strong> Idealny gdy:</p>
       <ul>
         <li>Szukasz rozwiązania budżetowego</li>
-        <li>Masz prosty dach bez <br></br>skomplikowanych detali</li>
+       <li>Cenisz solidność i sprawdzone technologie</li>
         <li>Zależy Ci na szybkiej realizacji</li>
       </ul>
       <p className="system-cta">Zadzwoń chętnie doradzimy: <a href="tel:+48518144882">518 144 882</a></p>
@@ -122,10 +123,10 @@ function DachyPlaskie(){
           
           <div className="system-card">
             <div className="system-image">
-              <img src={dach3} alt="System klejony EPDM" />
+              <img src={dach8} alt="System klejony EPDM" />
             </div>
             <div className="system-content">
-              <h3>SYSTEM KLEJONY EPDM</h3>
+              <h3>SYSTEM EPDM</h3>
               <p><strong>Ulubiony wybór klientów!</strong> Idealny gdy:</p>
               <ul>
                 <li>Masz skomplikowany kształt dachu</li>
@@ -141,7 +142,7 @@ function DachyPlaskie(){
               <img src={dach6} alt="System balastowy EPDM" />
             </div>
             <div className="system-content">
-              <h3>SYSTEM BALASTOWY <br/>Z MEMBRANĄ PCV</h3>
+              <h3>MEMBRANA PCV</h3>
               <p><strong>Dla wymagających klientów!</strong> Wybierz gdy:</p>
               <ul>
                 <li>Chcesz stworzyć taras użytkowy<br></br> lub dach zielony</li>

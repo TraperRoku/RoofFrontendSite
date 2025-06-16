@@ -30,8 +30,8 @@ const faqData = [
   {
     id: 1,
     category: 'Koszty i Wycena',
-    question: 'Ile kosztuje wymiana dachu płaskiego ?',
-    answer: 'Koszt wymiany dachu płaskiego zależy od wielu czynników: powierzchni dachu, wybranego materiału (papa termozgrzewalna 180-250 zł/m², membrana EPDM 250-350 zł/m², PCV 300-450 zł/m²), stanu konstrukcji oraz dostępności dachu. Oferujemy DARMOWĄ wycenę z dojazdem w Szczecinie i okolicach.',
+    question: 'Ile kosztuje wymiana dachu płaskiego?',
+    answer: 'Koszt wymiany dachu płaskiego zależy od wielu czynników: powierzchni dachu, wybranego materiału, stanu konstrukcji oraz dostępności dachu. Oferujemy DARMOWĄ wycenę z dojazdem.',
     image: images.kosztorys,
     tips: ['Darmowa wycena w 24h', 'Rozłożenie płatności na raty', 'Profesjonalne doradztwo']
   },
@@ -95,18 +95,18 @@ const faqData = [
 {
   id: 9,
   category: 'Materiały',
-  question: 'Czy można położyć nową warstwę na starą papę?',
-  answer: 'Tak, ale pod warunkiem, że stara warstwa jest stabilna i nieprzemakalna. Przed montażem nowej warstwy wykonujemy próbę szczelności i ocenę przyczepności. W niektórych przypadkach konieczne jest usunięcie starej papy.',
+  question: 'Czy trzeba zrywać starą papę przed położeniem nowej warstwy?',
+  answer: 'Nie zawsze. Jeśli istniejąca papa jest w dobrym stanie, możemy zastosować nową warstwę bez jej usuwania, co przyspiesza i obniża koszt prac. Przed decyzją wykonujemy dokładną ocenę techniczną, aby mieć pewność, że nowa warstwa będzie trwała i szczelna.',
   image: images.papa,
-  tips: ['Audyt stanu dachu', 'Możliwość nadbudowy', 'Bezpieczeństwo najważniejsze']
+  tips: ['Ocena techniczna przed pracą', 'Oszczędność czasu i pieniędzy', 'Bezpieczne i sprawdzone rozwiązania']
 },
 {
   id: 10,
   category: 'Materiały',
-  question: 'Jaki materiał jest najlepszy pod taras na dachu płaskim?',
-  answer: 'Najlepiej sprawdza się membrana PCV lub EPDM – są odporne na UV i elastyczne, a dodatkowo można je zabezpieczyć warstwą ochronną pod wykończenie tarasu. Pamiętaj o odpowiednim drenażu!',
+  question: 'Jaki materiał jest najlepszy na dach płaski?',
+  answer: 'Wszystko zależy od potrzeb i budżetu. Papa termozgrzewalna to sprawdzone i ekonomiczne rozwiązanie. Membrana PCV zapewnia wysoką trwałość i odporność na UV. EPDM to materiał wyjątkowo elastyczny i długowieczny. Każdy z nich ma swoje zalety – pomożemy dobrać najlepszy wariant do Twojego dachu.',
   image: images.membrana,
-  tips: ['PCV – odporność na UV', 'EPDM – elastyczność', 'Taras = dodatkowe obciążenie']
+  tips: ['Papa – ekonomiczne i trwałe', 'PCV – odporność na UV', 'EPDM – elastyczność i żywotność']
 },
 {
   id: 11,
@@ -120,7 +120,7 @@ const faqData = [
   id: 12,
   category: 'Materiały',
   question: 'Czy izolacja termiczna jest wliczona w cenę dachu?',
-  answer: 'To zależy od projektu – przy kompleksowej renowacji proponujemy również montaż ocieplenia, np. z płyt PIR lub styropianu dachowego. Koszt ustalamy indywidualnie.',
+  answer: 'To zależy od projektu – przy kompleksowej renowacji proponujemy również montaż ocieplenia, np. z płyt PIR, wełny mineralnej lub styropianu dachowego. Koszt ustalamy indywidualnie.',
   image: images.dachPlaski,
   tips: ['Ocieplenie poprawia komfort', 'Możliwość dopłaty z programu Czyste Powietrze', 'Indywidualna wycena']
 },

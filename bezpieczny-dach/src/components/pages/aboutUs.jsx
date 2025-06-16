@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 import zespol1 from '../photos_to_deploy/1.webp';
 import zespol2 from '../photos_to_deploy/7.webp';
-import zespol3 from '../photos_to_deploy/15.webp';
+import zespol3 from '../photos_to_deploy/31.webp';
 import certyfikat1 from '../photos/solar.webp';
 import narzedzia from '../photos_to_deploy/11.webp';
 import realizacja1 from '../photos_to_deploy/18.webp';
@@ -47,7 +47,7 @@ function ONas(){
             <div className="story-text">
               <p>Od <strong>15 lat</strong> budujemy dachy z myślą o bezpieczeństwie i trwałości. Przez 15 lat rozwijaliśmy nasze umiejętności, zdobywając zaufanie klientów.</p>
               <p>Jesteśmy małą, rodzinną firmą z doświadczeniem zdobywanym przez lata, również za granicą. 
-                Stawiamy na rzetelną pracę, solidne wykonanie i partnerskie podejście do klienta. Każdy dach traktujemy serio – jakby był naszym własnym.
+                Stawiamy na rzetelną pracę, solidne wykonanie i partnerskie podejście do klienta
               </p>
             </div>
             <div className="story-image">
@@ -56,6 +56,62 @@ function ONas(){
           </div>
         </section>
 
+        <section className="process-section">
+          <h2>JAK PRACUJEMY?</h2>
+          <div className="process-steps">
+            <div className="process-step">
+              <div className="step-number">1</div>
+              <h3>Kontakt i Wycena</h3>
+              <p>Skontaktuj się z nami telefonicznie lub przez formularz. Umówimy się na bezpłatny przegląd dachu i przygotujemy szczegółową wycenę.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">2</div>
+              <h3>Planowanie Prac</h3>
+              <p>Ustalamy harmonogram prac dopasowany do Twoich potrzeb. Zabezpieczamy wszystkie materiały i przygotowujemy plac budowy.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">3</div>
+              <h3>Realizacja</h3>
+              <p>Wykonujemy prace zgodnie z najwyższymi standardami, zachowując porządek i bezpieczeństwo. Regularnie informujemy o postępach.</p>
+            </div>
+            <div className="process-step">
+              <div className="step-number">4</div>
+              <h3>Odbiór</h3>
+              <p>Po zakończeniu prac przeprowadzamy wspólny odbiór. Wydajemy instrukcję konserwacji dachu.</p>
+            </div>
+          </div>
+        </section>
+
+
+        <section className="team-section">
+          <h2>POZNAJ NAS BLIŻEJ</h2>
+          <div className="team-content">
+            <div className="team-stats">
+              <div className="stat-item">
+                <div className="stat-number">15</div>
+                <div className="stat-label">lat doświadczenia</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">1000+</div>
+                <div className="stat-label">zadowolonych klientów</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">24/7</div>
+                <div className="stat-label">serwis awaryjny</div>
+              </div>
+              <div className="stat-item">
+                <div className="stat-number">100%</div>
+                <div className="stat-label">gwarancja jakości</div>
+              </div>
+            </div>
+            <div className="team-image">
+              <img src={zespol3} alt="Nasz doświadczony zespół dekarzy" />
+            </div>
+          </div>
+        </section>
+
+
+        
         <section className="values-section">
           <h2>NASZE WARTOŚCI</h2>
           <div className="values-grid">
@@ -82,29 +138,15 @@ function ONas(){
           </div>
         </section>
 
-        <section className="team-section">
-          <h2>POZNAJ NAS BLIŻEJ</h2>
-          <div className="team-content">
-            <div className="team-stats">
-              <div className="stat-item">
-                <div className="stat-number">15</div>
-                <div className="stat-label">lat doświadczenia</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">1000+</div>
-                <div className="stat-label">zadowolonych klientów</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">24/7</div>
-                <div className="stat-label">serwis awaryjny</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number">100%</div>
-                <div className="stat-label">gwarancja jakości</div>
-              </div>
+        <section className="certificates-section">
+          <h2>CERTYFIKATY I UPRAWNIENIA</h2>
+          <div className="certificates-content">
+            <div className="certificates-text">
+              <p>Posiadamy wszystkie niezbędne certyfikaty i uprawnienia do wykonywania prac dekarskich. Jesteśmy autoryzowanymi wykonawcami wiodących producentów materiałów budowlanych.</p>
+       
             </div>
-            <div className="team-image">
-              <img src={zespol3} alt="Nasz doświadczony zespół dekarzy" />
+            <div className="certificates-image">
+              <img src={certyfikat1} alt="Certyfikaty i uprawnienia firmy dekarskiej" />
             </div>
           </div>
         </section>
@@ -146,31 +188,14 @@ function ONas(){
               <ul>
                 <li>Oczyszczanie dachów</li>
                 <li>Montaż systemów rynnowych</li>
-                <li>Instalacja świetlików</li>
+                <li>Instalacja świetlików i wyłazów</li>
                 <li>Przygotowanie pod fotowoltaikę</li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section className="certificates-section">
-          <h2>CERTYFIKATY I UPRAWNIENIA</h2>
-          <div className="certificates-content">
-            <div className="certificates-text">
-              <p>Posiadamy wszystkie niezbędne certyfikaty i uprawnienia do wykonywania prac dekarskich. Jesteśmy autoryzowanymi wykonawcami wiodących producentów materiałów budowlanych.</p>
-              <ul>
-                <li>Certyfikat ISO 9001:2015</li>
-                <li>Uprawnienia budowlane</li>
-                <li>Autoryzacja producentów EPDM</li>
-                <li>Certyfikat BHP</li>
-                <li>Ubezpieczenie OC działalności</li>
-              </ul>
-            </div>
-            <div className="certificates-image">
-              <img src={certyfikat1} alt="Certyfikaty i uprawnienia firmy dekarskiej" />
-            </div>
-          </div>
-        </section>
+       
 
         <section className="equipment-section">
           <div className="equipment-content">
@@ -190,33 +215,11 @@ function ONas(){
           </div>
         </section>
 
-        <section className="process-section">
-          <h2>JAK PRACUJEMY?</h2>
-          <div className="process-steps">
-            <div className="process-step">
-              <div className="step-number">1</div>
-              <h3>Kontakt i Wycena</h3>
-              <p>Skontaktuj się z nami telefonicznie lub przez formularz. Umówimy się na bezpłatny przegląd dachu i przygotujemy szczegółową wycenę.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">2</div>
-              <h3>Planowanie Prac</h3>
-              <p>Ustalamy harmonogram prac dopasowany do Twoich potrzeb. Zabezpieczamy wszystkie materiały i przygotowujemy plac budowy.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">3</div>
-              <h3>Realizacja</h3>
-              <p>Wykonujemy prace zgodnie z najwyższymi standardami, zachowując porządek i bezpieczeństwo. Regularnie informujemy o postępach.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">4</div>
-              <h3>Odbiór</h3>
-              <p>Po zakończeniu prac przeprowadzamy wspólny odbiór. Wydajemy instrukcję konserwacji dachu.</p>
-            </div>
-          </div>
-        </section>
+         
 
-        <section className="testimonials-section">
+        
+
+        {/* <section className="testimonials-section">
           <h2>CO MÓWIĄ O NAS KLIENCI?</h2>
           <div className="testimonials-grid">
             <div className="testimonial-card">
@@ -235,7 +238,7 @@ function ONas(){
               <div className="testimonial-author">- Tomasz W., Stargard</div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="why-us-section">
           <h2>DLACZEGO WARTO NAS WYBRAĆ?</h2>
