@@ -1,73 +1,378 @@
-/* Dodaj te style do swojego pliku CSS */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600;700&display=swap');
 
-/* Reset i podstawowe style */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* SEO Content Section */
+.seo-content {
+    padding: 8rem 5%;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.seo-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(231, 76, 60, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.seo-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Main heading */
+.seo-content h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    position: relative;
+    display: inline-block;
     width: 100%;
-    max-width: 100%;
-  overflow-x: hidden;
 }
 
-html, body {
-  width: 100%;
-  max-width: 100%; /* Dodaj to, aby zapobiec przekraczaniu szerokości */
-  overflow-x: hidden; /* Ukrywa poziomy scroll */
-  scroll-behavior: smooth;
+.seo-content h2:after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background: #e74c3c;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
-  padding-top: 80px; /* Kompensacja dla fixed header */
-  position: relative; /* Dodaj to dla lepszego kontrolowania overflow */
+/* Intro paragraph */
+.seo-content > div > div:first-child p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #34495e;
+    font-weight: 400;
+    text-align: center;
+    max-width: 1050px;
+    margin: 0 auto;
 }
 
-/* Dodatkowe poprawki dla responsywności */
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  overflow: hidden; /* Zapobiega wystawaniu elementów poza kontener */
+.seo-content strong {
+    color: #e74c3c;
+    font-weight: 700;
+    padding: 0 2px;
 }
 
-/* Sprawdź te elementy - często powodują problemy */
-img, iframe, embed, object, video {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Zapobiega niechcianym marginesom */
+/* Services Grid */
+.seo-content > div > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 50px;
 }
 
-/* Specjalne style dla mobile */
-@media (max-width: 768px) {
-  body {
-    padding-top: 60px; 
+.seo-content > div > div:nth-child(2) > div {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.seo-content > div > div:nth-child(2) > div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.seo-content > div > div:nth-child(2) > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.seo-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #e74c3c;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.seo-content > div > div:nth-child(2) > div > p {
+    font-family: 'Open Sans', sans-serif;
+    color: #34495e;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.seo-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.seo-content li {
+    font-family: 'Open Sans', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.seo-content li::before {
+    content: '✓';
+    color: #e74c3c;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+/* FAQ Section */
+.seo-content > div > div:nth-child(3) {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.seo-content > div > div:nth-child(3)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+.seo-content > div > div:nth-child(3) h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.seo-content > div > div:nth-child(3) h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #e74c3c;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.seo-content > div > div:nth-child(3) > div > div {
+    margin-bottom: 25px;
+    padding: 20px;
+    border-left: 4px solid #e74c3c;
+    background: #f8f9fa;
+    border-radius: 0 8px 8px 0;
+    transition: all 0.3s ease;
+}
+
+.seo-content > div > div:nth-child(3) > div > div:hover {
+    background: #ecf0f1;
+    transform: translateX(5px);
+}
+
+.seo-content > div > div:nth-child(3) h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #e74c3c;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.seo-content > div > div:nth-child(3) p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #34495e;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Location section */
+.seo-content > div > div:nth-child(4) {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.seo-content > div > div:nth-child(4) h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.seo-content > div > div:nth-child(4) p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Guarantee section */
+.seo-content > div > div:nth-child(5) {
+    background: linear-gradient(135deg, #e8f5e8, #d5f4e6);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(39, 174, 96, 0.1);
+    border: 2px solid rgba(39, 174, 96, 0.1);
+}
+
+.seo-content > div > div:nth-child(5) h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #27ae60;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.seo-content > div > div:nth-child(5) p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.seo-content > div > div:nth-child(5) > div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.seo-content > div > div:nth-child(5) > div > div {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #27ae60;
+    font-size: 0.95rem;
+    padding: 8px 15px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(39, 174, 96, 0.1);
+    transition: all 0.3s ease;
+}
+
+.seo-content > div > div:nth-child(5) > div > div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .seo-content {
+        padding: 6rem 5%;
+    }
     
-  }
-  
-  section {
-    padding: 60px 0;
-    scroll-margin-top: 60px;
-  }
-  
-  /* Dodatkowe zabezpieczenie przed overflow */
-  .container {
-    padding: 0 10px;
-  }
+    .seo-content > div > div:nth-child(2) {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .seo-content h2 {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .seo-content {
+        padding: 5rem 3%;
+    }
+    
+    .seo-content h2 {
+        font-size: 1.7rem;
+    }
+    
+    .seo-content > div > div:nth-child(2) {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto 50px auto;
+    }
+    
+    .seo-content > div > div:nth-child(2) > div {
+        padding: 25px;
+    }
+    
+    .seo-content > div > div:nth-child(3) {
+        padding: 30px 20px;
+    }
+    
+    .seo-content > div > div:nth-child(5) > div {
+        gap: 15px;
+    }
+    
+    .seo-content > div > div:nth-child(5) > div > div {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
 }
 
 @media (max-width: 480px) {
-  section {
-    padding: 40px 0;
-  }
-
-  .any-element {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
+    .seo-content h2 {
+        font-size: 1.5rem;
+    }
+    
+    .seo-content > div > div:first-child p,
+    .seo-content > div > div:nth-child(4) p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    
+    .seo-content > div > div:nth-child(2) > div {
+        padding: 20px;
+    }
+    
+    .seo-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .seo-content > div > div:nth-child(3) h2 {
+        font-size: 1.6rem;
+    }
+    
+    .seo-content > div > div:nth-child(4) h2 {
+        font-size: 1.6rem;
+    }
+    
+    .seo-content > div > div:nth-child(5) h3 {
+        font-size: 1.3rem;
+    }
 }
-

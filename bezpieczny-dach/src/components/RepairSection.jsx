@@ -19,7 +19,7 @@ function RepairSection() {
           
           <div className="benefits-grid">
             <div className="benefit-card">
-              <div className="benefit-icon">✓</div>
+              <div className="benefit-icony">✓</div>
               <div className="benefit-content">
                 <h3>Gwarancja jakości</h3>
                 <p>Wszystkie naprawy dachów objęte są wieloletnią gwarancją</p>
@@ -27,7 +27,7 @@ function RepairSection() {
             </div>
             
             <div className="benefit-card">
-              <div className="benefit-icon">✓</div>
+              <div className="benefit-icony">✓</div>
               <div className="benefit-content">
                 <h3>Darmowa wycena</h3>
                 <p>Bezpłatnie przyjedziemy i przygotujemy kosztorys</p>
@@ -35,7 +35,7 @@ function RepairSection() {
             </div>
             
             <div className="benefit-card">
-              <div className="benefit-icon">✓</div>
+              <div className="benefit-icony">✓</div>
               <div className="benefit-content">
                 <h3>Szybki termin realizacji</h3>
                 <p>Naprawimy Twój dach w Szczecinie w ekspresowym tempie</p>
@@ -43,7 +43,7 @@ function RepairSection() {
             </div>
             
             <div className="benefit-card">
-              <div className="benefit-icon">✓</div>
+              <div className="benefit-icony">✓</div>
               <div className="benefit-content">
                 <h3>Indywidualne podejście</h3>
                 <p>Dopasowujemy rozwiązania do Twoich potrzeb i budżetu</p>
@@ -52,14 +52,14 @@ function RepairSection() {
             
             
             <div className="benefit-card">
-              <div className="benefit-icon">✓</div>
+              <div className="benefit-icony">✓</div>
               <div className="benefit-content">
                 <h3>Doświadczony zespół</h3>
                 <p>Nad każdym projektem pracują wykwalifikowani dekarze ze Szczecina</p>
               </div>
             </div>
             <div className="benefit-card">
-              <div className="benefit-icon">✓</div>
+              <div className="benefit-icony">✓</div>
               <div className="benefit-content">
                 <h3>Obsługa awarii 24/7</h3>
                 <p>Szybka pomoc w przypadku nagłych uszkodzeń dachu – nawet w weekendy</p>

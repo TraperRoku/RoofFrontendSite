@@ -1,373 +1,226 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { useState, useCallback, useEffect } from 'react';
+import './Realization.css';
 import { Link } from 'react-router-dom';
-import Header from './Header';
-import Footer from './footer';
-import './pages/Realizacje.css';
 
-function Realizacje() {
-  const [galleryImages, setGalleryImages] = useState([]);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [setLoadedCount] = useState(0);
+const importAll = (r) =>
+  r
+    .keys()
+    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+    .map(r);
 
-  // Enhanced image loading with better error handling
-  useEffect(() => {
-    const batchSize = 10;
-    const totalImages = 91;
-    let cancelled = false;
+const imagesContext = require.context(
+  '../components/photos_to_deploy/',
+  false,
+  /\.(jpg|jpeg|png|webp)$/
+);
 
-    const loadBatch = async (start, end) => {
-      const batch = [];
-      for (let i = start; i <= end; i++) {
-        try {
-          const [thumb, full] = await Promise.all([
-            import(`../realizacje/thumbs/${i}.webp`),
-            import(`../realizacje/thumbs/${i}f.webp`)
-          ]);
-          
-          batch.push({
-            id: i,
-            thumb: thumb.default,
-            full: full.default,
-            title: `Realizacja nr ${i} - Bezpieczny Dach Szczecin`,
-            alt: `Profesjonalne docieplenie dachu w Szczecinie - realizacja ${i}`,
-            description: `Zdjęcie przedstawiające wykonaną przez nas usługę docieplenia dachu w województwie zachodniopomorskim`
-          });
-        } catch (err) {
-          console.warn(`Nie znaleziono zdjęcia ${i}.webp`);
-        }
-      }
-      return batch;
-    };
+const imageFiles = importAll(imagesContext);
 
-    const loadImages = async () => {
-      try {
-        setIsLoading(true);
-        
-        // First batch for quick preview
-        const firstBatch = await loadBatch(1, Math.min(batchSize, totalImages));
-        if (cancelled) return;
-        
-        setGalleryImages(firstBatch);
-        setLoadedCount(firstBatch.length);
-        setIsLoading(false);
+const imageAlts = [
+  'Naprawa dachu płaskiego w Szczecinie - wysokiej jakości hydroizolacja',
+  'Renowacja dachu spadzistego w Szczecinie - wymiana dachówki ceramicznej',
+  'Montaż nowego dachu z blachodachówki w Szczecinie - realizacja Bezpieczny Dach',
+  'Pokrycie dachu gontem bitumicznym w Szczecinie - profesjonalna usługa dekarska',
+  'Naprawa przeciekającego dachu w Szczecinie - uszczelnianie połaci dachowej',
+  'Instalacja systemu rynnowego na dachu w Szczecinie - kompleksowa usługa',
+  'Dach przemysłowy w Szczecinie - wykonanie izolacji termicznej i przeciwwilgociowej',
+  'Montaż okien dachowych Velux w Szczecinie - profesjonalna instalacja',
+  'Dach mansardowy w Szczecinie - realizacja Bezpieczny Dach z pełną gwarancją',
+  'Wymiana pokrycia dachowego na domu jednorodzinnym w Szczecinie - dachówka betonowa',
+  'Konserwacja dachu i czyszczenie rynien w Szczecinie - kompleksowa obsługa',
+  'Dach z blachy na rąbek stojący w Szczecinie - nowoczesne rozwiązanie',
+  'Naprawa kominów i obróbek blacharskich w Szczecinie - fachowa realizacja',
+  'Termoizolacja dachu poddasza w Szczecinie - energooszczędne rozwiązania',
+  'Modernizacja starego dachu w Szczecinie - kompleksowa realizacja z gwarancją',
+  'Montaż dachówki ceramicznej na nowym domu w Szczecinie - solidne wykonanie',
+  'Naprawa dachu garażowego w Szczecinie - estetyczne wykończenie',
+  'Renowacja połaci dachowej z papy - bezpieczny i trwały efekt',
+  'Wymiana starego pokrycia dachowego - nowoczesny wygląd budynku',
+  'Kompleksowy remont dachu w budynku wielorodzinnym w Szczecinie',
+  'Usuwanie przecieków i izolacja dachu z gwarancją szczelności',
+  'Bezpieczny montaż pokrycia dachu w trudnych warunkach',
+  'Naprawa dachu nad tarasem w Szczecinie - odporność na wilgoć',
+  'Termomodernizacja dachu - energooszczędna inwestycja w dom',
+  'Pokrycie dachu garażu blachą trapezową - szybka realizacja',
+  'Profesjonalna naprawa połaci dachowej po wichurze',
+  'Wymiana starej dachówki na nową - efekt odświeżonego dachu',
+  'Zabezpieczenie dachu przed zimą - uszczelnianie i konserwacja',
+  'Montaż pokrycia dachowego z dachówki cementowej - trwałość i estetyka',
+  'Dachy skośne w Szczecinie - solidna konstrukcja i wykończenie',
+  'Naprawa i malowanie elementów metalowych dachu',
+  'Realizacja dachu z płyt warstwowych - przemysłowa estetyka',
+  'Instalacja nowego systemu odwodnienia dachu - funkcjonalność i styl',
+  'Dachy z blachy trapezowej - ekonomiczne rozwiązania dekarskie',
+  'Zadaszenie nad wejściem - eleganckie i praktyczne rozwiązanie',
+  'Konstrukcja więźby dachowej w nowym budynku - precyzja montażu',
+  'Docieplanie dachu nad poddaszem użytkowym w Szczecinie',
+  'Montaż obróbek blacharskich i wykończenie kalenicy',
+  'Odnawianie dachu z blachodachówki po latach użytkowania',
+  'Instalacja dachu z papy termozgrzewalnej - technologia na lata',
+  'Przebudowa dachu dwuspadowego - zmiana kąta nachylenia',
+  'Finalna realizacja nowego dachu nad budynkiem mieszkalnym'
+];
 
-        // Load remaining images in background
-        for (let i = batchSize + 1; i <= totalImages; i += batchSize) {
-          const batchEnd = Math.min(i + batchSize - 1, totalImages);
-          const newBatch = await loadBatch(i, batchEnd);
-          if (cancelled) return;
-          
-          setGalleryImages(prev => [...prev, ...newBatch]);
-          setLoadedCount(prev => prev + newBatch.length);
-          await new Promise(resolve => setTimeout(resolve, 100));
-        }
-      } catch (error) {
-        if (!cancelled) {
-          setError('Wystąpił problem podczas ładowania galerii');
-          console.error('Błąd ładowania zdjęć:', error);
-          setIsLoading(false);
-        }
-      }
-    };
+function Realization() {
+  const [currentImageIndex, setCurrentImageIndex] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    loadImages();
-    return () => { cancelled = true; };
-  }, []);
-
-  const openImage = useCallback((image, index) => {
-    setSelectedImage(image);
+  const handleImageClick = useCallback((index) => {
     setCurrentImageIndex(index);
+    setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
   }, []);
 
-  const closeImage = useCallback(() => {
-    setSelectedImage(null);
+  const handleCloseModal = useCallback(() => {
+    setIsModalOpen(false);
     document.body.style.overflow = 'auto';
   }, []);
 
-  const goToPrevious = useCallback(() => {
-    setCurrentImageIndex(prev => {
-      const newIndex = (prev - 1 + galleryImages.length) % galleryImages.length;
-      return newIndex;
-    });
-    setSelectedImage(galleryImages[(currentImageIndex - 1 + galleryImages.length) % galleryImages.length]);
-  }, [galleryImages, currentImageIndex]);
+  const handleNext = useCallback(() => {
+    setCurrentImageIndex((prev) => (prev + 1) % imageFiles.length);
+  }, []);
 
-  const goToNext = useCallback(() => {
-    setCurrentImageIndex(prev => {
-      const newIndex = (prev + 1) % galleryImages.length;
-      return newIndex;
-    });
-    setSelectedImage(galleryImages[(currentImageIndex + 1) % galleryImages.length]);
-  }, [galleryImages, currentImageIndex]);
+  const handlePrev = useCallback(() => {
+    setCurrentImageIndex((prev) => (prev - 1 + imageFiles.length) % imageFiles.length);
+  }, []);
 
-  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (!selectedImage) return;
-      
-      switch (e.key) {
-        case 'Escape': closeImage(); break;
-        case 'ArrowLeft': goToPrevious(); break;
-        case 'ArrowRight': goToNext(); break;
-      }
+      if (!isModalOpen) return;
+      if (e.key === 'Escape') handleCloseModal();
+      if (e.key === 'ArrowRight') handleNext();
+      if (e.key === 'ArrowLeft') handlePrev();
     };
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage, closeImage, goToPrevious, goToNext]);
-
-  // Generate schema markup for images
-  const generateImageSchema = () => {
-    return {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "itemListElement": galleryImages.slice(0, 10).map((image, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "ImageObject",
-          "contentUrl": image.full,
-          "description": image.description,
-          "name": image.title
-        }
-      }))
-    };
-  };
+  }, [isModalOpen, handleCloseModal, handleNext, handlePrev]);
 
   return (
-    <>
-      <Helmet>
-        <title>Realizacje Dociepleń Dachów w Szczecinie | Bezpieczny Dach</title>
-        <meta 
-          name="description" 
-          content="Zobacz nasze realizacje dociepleń dachów w Szczecinie i okolicach. Ponad 90 wykonanych projektów - dachy płaskie, skośne, zielone. Profesjonalne wykonanie i zadowoleni klienci." 
-        />
-        <meta name="keywords" content="realizacje dociepleń dachów Szczecin, zdjęcia dachów płaskich, wykonane dachy Szczecin, galeria prac dekarskich, przykłady dociepleń" />
-        <link rel="canonical" href="https://www.bezpiecznydach.pl/realizacje" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Realizacje Dociepleń Dachów w Szczecinie | Bezpieczny Dach" />
-        <meta property="og:description" content="Zobacz nasze realizacje dociepleń dachów w Szczecinie. Ponad 90 wykonanych projektów - profesjonalne wykonanie i zadowoleni klienci." />
-        <meta property="og:url" content="https://www.bezpiecznydach.pl/realizacje" />
-        <meta property="og:image" content={galleryImages[0]?.full || ''} />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Realizacje Dociepleń Dachów w Szczecinie | Bezpieczny Dach" />
-        <meta name="twitter:description" content="Zobacz nasze realizacje dociepleń dachów w Szczecinie. Ponad 90 wykonanych projektów - profesjonalne wykonanie i zadowoleni klienci." />
-        <meta name="twitter:image" content={galleryImages[0]?.full || ''} />
-        
-        {/* Schema.org markup */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Realizacje Dociepleń Dachów w Szczecinie",
-            "description": "Galeria realizacji dociepleń dachów wykonanych przez Bezpieczny Dach w Szczecinie",
-            "publisher": {
-              "@type": "LocalBusiness",
-              "name": "Bezpieczny Dach Szczecin",
-              "image": galleryImages[0]?.full || '',
-              "telephone": "+48518144882",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Szczecin",
-                "addressRegion": "Zachodniopomorskie"
-              }
-            }
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(generateImageSchema())}
-        </script>
-      </Helmet>
-
-      <Header />
-
-      <main className="realizacje-container">
-        {/* Enhanced Hero Section */}
-        <section className="hero-sectionR" aria-label="Galeria realizacji">
-          <div className="hero-contentR">
-            <h1>NASZE REALIZACJE W SZCZECINIE</h1>
-            <p className="hero-subtitle">Ponad 90 profesjonalnie wykonanych dociepleń dachów w województwie zachodniopomorskim</p>
-            <div className="hero-stats">
-              <div className="stat-item">
-                <span className="stat-number">15+</span>
-                <span className="stat-text">lat doświadczenia</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">90+</span>
-                <span className="stat-text">zrealizowanych projektów</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-number">100%</span>
-                <span className="stat-text">zadowolonych klientów</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Gallery Section with Better Structure */}
-        <section className="gallery-section" itemScope itemType="https://schema.org/ImageGallery">
-          <div className="section-header">
-            <h2>GALERIA NASZYCH PRAC</h2>
-            <p className="gallery-description">Kliknij w zdjęcie, aby zobaczyć szczegóły realizacji</p>
-          </div>
+    <section id="realization" className="realization">
+      <div className="realization-container">
+        <div className="section-header">
+          <h2>NASZE REALIZACJE - DOWÓD NASZYCH UMIEJĘTNOŚĆI DEKARSKICH</h2>
           
-          {isLoading ? (
-            <div className="loading-spinner" aria-live="polite">Ładowanie galerii...</div>
-          ) : error ? (
-            <div className="error-message" role="alert">{error}</div>
-          ) : (
-            <>
-              <div className="gallery-grid">
-                {galleryImages.map((image, index) => (
-                  <figure 
-                    key={image.id} 
-                    className="gallery-item"
-                    onClick={() => openImage(image, index)}
-                    itemScope
-                    itemType="https://schema.org/ImageObject"
-                  >
-                    <img 
-                      src={image.thumb} 
-                      alt={image.alt} 
-                      className="gallery-thumb"
-                      loading="lazy"
-                      width="400"
-                      height="300"
-                      itemProp="thumbnail"
-                    />
-                    <div className="image-overlay">
-                      <span className="zoom-icon" aria-hidden="true">🔍</span>
-                      <figcaption className="sr-only">{image.title}</figcaption>
-                    </div>
-                    <meta itemProp="description" content={image.description} />
-                  </figure>
-                ))}
-              </div>
-              
-              {/* SEO - Hidden image list for crawlers */}
-              <div className="seo-image-list" aria-hidden="true" style={{ display: 'none' }}>
-                {galleryImages.map((image) => (
-                  <img 
-                    key={`seo-${image.id}`} 
-                    src={image.full} 
-                    alt={image.alt}
-                    title={image.title}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </section>
+          <p className="section-subtitle">
+            <strong>Ponad setki wykonanych dachów!</strong> Każde zdjęcie to historia
+            <span className="highlight"> perfekcyjnego wykonania</span>, <span className="highlight">dbałości o szczegóły</span> i
+            <span className="highlight"> zadowolonego klienta</span>. Zobacz, jak zmieniamy zwykłe dachy w
+            <strong> trwałe, piękne i bezproblemowe konstrukcje</strong>.
+          </p>
+        </div>
 
-        {/* Testimonials Section */}
-        <section className="testimonials-section">
-          <h2>OPINIE NASZYCH KLIENTÓW</h2>
-          <div className="testimonials-grid">
-            <div className="testimonial-card">
-              <blockquote>
-                "Profesjonalne podejście i terminowa realizacja. Dach po dociepleniu wygląda idealnie, a w domu jest znacznie cieplej."
-              </blockquote>
-              <cite>- Anna, Szczecin</cite>
-            </div>
-            <div className="testimonial-card">
-              <blockquote>
-                "Zależało mi na dobrej izolacji dachu płaskiego. Ekipa Bezpieczny Dach wykonała pracę perfekcyjnie, z dbałością o szczegóły."
-              </blockquote>
-              <cite>- Marek, Police</cite>
-            </div>
+        <div className="stats-container">
+          <div className="stat-item">
+            <div className="stat-number">15+</div>
+            <div className="stat-label">lat doświadczenia</div>
           </div>
-        </section>
-      </main>
-
-      {/* Enhanced CTA Section */}
-      <section className="contact-cta" aria-label="Kontakt">
-        <div className="cta-container">
-          <h2>CHCESZ TAKI EFEKT U SIEBIE?</h2>
-          <p>Skontaktuj się z nami, aby omówić Twój projekt docieplenia dachu</p>
-          <div className="cta-content">
-            <div className="cta-benefits">
-              <ul>
-                <li>Darmowa wycena z dojazdem</li>
-                <li>Gwarancja na wykonane prace</li>
-                <li>Profesjonalne doradztwo</li>
-                <li>Możliwość finansowania</li>
-              </ul>
-            </div>
-            <div className="cta-buttons">
-              <a href="tel:+48518144882" className="cta-button-primary">
-                <span aria-hidden="true">📞</span> ZADZWOŃ: 518 144 882
-              </a>
-              <Link to="/#contact" className="cta-button-secondary">
-                <span aria-hidden="true">✉️</span> FORMULARZ KONTAKTOWY
-              </Link>
-            </div>
+          <div className="stat-item">
+            <div className="stat-number">500+</div>
+            <div className="stat-label">zrealizowanych dachów</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">99%</div>
+            <div className="stat-label">zadowolonych klientów</div>
           </div>
         </div>
-      </section>
 
-      {/* Image Modal */}
-      {selectedImage && (
-        <div className="image-modal" onClick={closeImage} role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button 
-              className="close-button" 
-              onClick={closeImage}
-              aria-label="Zamknij podgląd zdjęcia"
+        <div className="gallery-grid">
+          {imageFiles.map((src, index) => (
+            <div
+              key={index}
+              className="gallery-item"
+              onClick={() => handleImageClick(index)}
+              role="button"
+              tabIndex={0}
+              aria-label={`Pokaż zdjęcie: ${imageAlts[index]}`}
             >
-              &times;
-            </button>
-            
-            <button 
-              className="nav-button prev-button" 
-              onClick={(e) => {
-                e.stopPropagation();
-                goToPrevious();
-              }}
-              aria-label="Poprzednie zdjęcie"
-            >
-              &larr;
-            </button>
-            
-            <div className="image-container">
-              <img 
-                src={selectedImage.full} 
-                alt={selectedImage.alt} 
-                className="modal-image"
-                width="1200"
-                height="900"
-                itemProp="contentUrl"
-              />
-              <p className="image-title">
-                {selectedImage.title} <span>({currentImageIndex + 1}/{galleryImages.length})</span>
-              </p>
+      <img
+  src={src}
+  alt={imageAlts[index]}
+  loading="lazy"
+  className="gallery-image"
+  width="400"
+  height="400"
+/>
+              <div className="gallery-item-overlay">
+                <div className="overlay-content">
+                  <span className="zoom-icon">🔍</span>
+                  <span className="overlay-text">Zobacz szczegóły realizacji</span>
+                </div>
+                
+              </div>
             </div>
-            
-            <button 
-              className="nav-button next-button" 
-              onClick={(e) => {
-                e.stopPropagation();
-                goToNext();
-              }}
-              aria-label="Następne zdjęcie"
-            >
-              &rarr;
-            </button>
-          </div>
+          ))}
         </div>
-      )}
+    <Link to="/realizacje" className="see-more-button">ZOBACZ WIĘCEJ REALIZACJI →</Link>
+        <div className="cta-section">
+          <h3>CHCESZ TAKI DACH? ZADZWOŃ TERAZ!</h3>
+          <p>Nasi konsultanci czekają, aby omówić Twój projekt i przedstawić bezpłatną wycenę</p>
+          <a href="tel:+48518144882" className="cta-button">ZADZWOŃ: 518 144 882</a>
+        </div>
 
-      <Footer />
-    </>
+        {isModalOpen && (
+          <div className="modal" onClick={handleCloseModal}>
+            <div
+              className="modal-content"
+              onClick={(e) => e.stopPropagation()}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-image-title"
+            >
+              <span
+                className="close-button"
+                onClick={handleCloseModal}
+                aria-label="Zamknij"
+              >
+                &times;
+              </span>
+
+              <picture>
+                <source
+                  srcSet={imageFiles[currentImageIndex].replace(/\.(jpg|jpeg|png)$/, '.webp')}
+                  type="image/webp"
+                />
+                <img
+                  src={imageFiles[currentImageIndex]}
+                  alt={imageAlts[currentImageIndex]}
+                  id="modal-image-title"
+                />
+              </picture>
+
+              <div className="modal-navigation">
+                <button
+                  className="nav-button prev-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handlePrev();
+                  }}
+                  aria-label="Poprzednie zdjęcie"
+                >
+                  &#10094;
+                </button>
+                <button
+                  className="nav-button next-button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleNext();
+                  }}
+                  aria-label="Następne zdjęcie"
+                >
+                  &#10095;
+                </button>
+              </div>
+
+              <div className="image-description">
+                {imageAlts[currentImageIndex]}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
-export default Realizacje;
+export default Realization;

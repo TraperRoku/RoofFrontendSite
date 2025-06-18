@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, Phone, MapPin, Clock, Shield, CheckCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, Phone, MapPin, Clock, Shield, CheckCircle, CheckCheckIcon, PhoneCall } from 'lucide-react';
 import Footer from '../footer';
 import Header from '../Header';
 import './FAQ.css'; 
@@ -305,7 +305,7 @@ function FAQ() {
         <section className="intro-section">
           <h2 className="section-title">Eksperckie porady o dachach płaskich w Szczecinie i w okolicach</h2>
           <div className="intro-content">
-            <p>Jako <strong>specjaliści od dachów płaskich z 15-letnim doświadczeniem w Szczecinie i za </strong>, zebraliśmy odpowiedzi na najczęstsze pytania naszych klientów. W tej bazie wiedzy znajdziesz praktyczne informacje o:</p>
+            <p>Jako <strong>specjaliści od dachów płaskich z 15-letnim doświadczeniem w Szczecinie i za granicą </strong>, zebraliśmy odpowiedzi na najczęstsze pytania naszych klientów. W tej bazie wiedzy znajdziesz praktyczne informacje o:</p>
             <ul className="benefits-list">
               <li><strong>Kosztach wymiany i naprawy</strong> dachów płaskich w woj. zachodniopomorskim</li>
               <li>Porównaniu <strong>papa termozgrzewalna vs membrana PVC/EPDM</strong></li>
@@ -455,15 +455,28 @@ function FAQ() {
               <span>7:00 - 20:00</span>
             </div>
             <div className="contact-item">
+              <CheckCheckIcon size={20} className="contact-icon" aria-hidden="true" />
+              <span>Profesjonalizm</span>
+            </div>
+              <div className="contact-item">
               <CheckCircle size={20} className="contact-icon" aria-hidden="true" />
-              <span>Profesjonalne doradztwo</span>
+              <span>Elastyczność</span>
+            </div>
+              <div className="contact-item">
+              <PhoneCall size={20} className="contact-icon" aria-hidden="true" />
+              <span>Dzwoń śmiało</span>
             </div>
           </div>
         </section>
+      
       </main>
 
-      <Footer />
+      
+     
+        <Footer />
+  
     </div>
+    
   );
 }
 

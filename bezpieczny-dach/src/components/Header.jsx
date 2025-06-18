@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './Header.css';
@@ -13,9 +12,17 @@ function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const closeMenu = () => {
+    const scrollToTop = useCallback(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }, []);
+
+    const closeMenu = useCallback(() => {
         setIsMenuOpen(false);
-    };
+        scrollToTop();
+    }, [scrollToTop]);
 
     const handlePhoneClick = () => {
         closeMenu();
@@ -31,7 +38,7 @@ function Header() {
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
-    }, []);
+    }, [closeMenu]); // Added closeMenu to dependencies
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -62,7 +69,6 @@ function Header() {
 
             <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                 <div className="nav-links">
-                    
                     <Link to="/#home" onClick={closeMenu}>Strona główna</Link>
                     <Link to="/dachy-plaskie" onClick={closeMenu}>Dachy płaskie</Link>
                     <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja</Link>
@@ -71,10 +77,8 @@ function Header() {
                     <Link to="/baza-wiedzy" onClick={closeMenu}>Baza wiedzy</Link>
                     <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                     <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
-                  
                 </div>
                 
-            
                 <div className="header-social">
                   <a 
                     href="https://www.facebook.com/profile.php?id=61575175164575" 

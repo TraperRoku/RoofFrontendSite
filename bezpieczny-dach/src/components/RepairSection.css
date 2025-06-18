@@ -39,7 +39,7 @@
 
 .intro-text strong {
   color: #e74c3c;
-  font-weight: 600;
+  font-weight: 900;
 }
 
 .benefits-section {
@@ -87,9 +87,9 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-.benefit-icon {
+.benefit-icony {
   background-color: #e74c3c;
-  color: white;
+  color: rgb(255, 255, 255);
   width: 36px;
   height: 36px;
   border-radius: 50%;
