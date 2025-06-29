@@ -327,11 +327,11 @@ function DachyPlaskie(){
             <p><strong>Bezpieczny Dach</strong> świadczy usługi w dzielnicach:</p>
             <p>Centrum, Pogodno, Gumieńce, Żelechowa, Skolwin, Dąbie, Turzyn, Niebuszewo, Północ, Prawobrzeże, Bukowo, Warszewo, Majowe, Słoneczne, Zdroje, Klucz, Podjuchy, Osów, Głębokie, Golęcino, Krzekowo, Zawadzkiego, Drzetowo, Świerczewo oraz wszystkich okolicach: Police, Goleniów, Stargard, Dobra, Mierzyn, Wołczkowo, Dołuje, Lubieszyn, Przecław, Ustowo, Kobylanka, Nowe Warpno, Stepnica, Trzebież, Tanowo, Kliniska Wielkie i inne miejscowości regionu.!</p>
             <ul>
-              <li>🏠 <strong>Dachy płaskie Szczecin</strong> - kompleksowa obsługa</li>
-              <li>🔧 <strong>Papa termozgrzewalna Szczecin</strong> - montaż i wymiana</li>
-              <li>⚡ <strong>Naprawa dachów Szczecin</strong> - serwis 24/7</li>
-              <li>🔄 <strong>Remont dachu Szczecin</strong> - modernizacja</li>
-              <li>🆕 <strong>Wymiana dachu Szczecin</strong> - nowe pokrycia</li>
+              <li>🏠 <strong>Dachy płaskie Szczecin</strong> </li>
+              <li>🔧 <strong>Papa termozgrzewalna Szczecin</strong> </li>
+              <li>⚡ <strong>Naprawa dachów Szczecin</strong> </li>
+              <li>🔄 <strong>Remont dachu Szczecin</strong> </li>
+              <li>🆕 <strong>Wymiana dachu Szczecin</strong> </li>
             </ul>
           </div>
         </section>

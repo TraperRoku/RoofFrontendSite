@@ -18,6 +18,7 @@ import Wykonawstwo from './components/pages/wykonawstwo';
 import FAQ from './components/pages/faq';
 import Realizacje from './components/pages/realizacje';
 import './App.css'
+import PapaTermozgrzewalnaSzczecin from './components/pages/papaTermozgrzewalna';
 
 function ScrollToHashElement() {
   const location = useLocation();
@@ -296,6 +297,7 @@ function App() {
         <Route path="/uslugi-dekarskie-szczecin" element={<Wykonawstwo />} />
         <Route path="/baza-wiedzy" element={<FAQ />} />
         <Route path="/realizacje" element={<Realizacje />} />
+        <Route path='papatermozgrzewalna-Szczecin' element ={<PapaTermozgrzewalnaSzczecin/>} />
       </Routes>
     </Router>
   );

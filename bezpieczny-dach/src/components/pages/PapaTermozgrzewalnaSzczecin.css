@@ -1,0 +1,356 @@
+/* Import fonts from DachyPlaskie.css or define them if not already imported globally */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
+
+
+:root {
+  --primary-color:   #e74c3c; /* Czerwony profesjonalny */
+  --secondary-color: #1976D2; /* Niebieski dla kontrastu */
+  --dark-color: #767575;
+  --light-color: #f5f5f5;
+  --accent-color: #FFC107;
+  --success-color: #388E3C;
+  --font-main: 'Open Sans', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+}
+
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: var(--dark-color);
+    background: linear-gradient(135deg, #fff 0%, var(--light-color) 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style for hero section */
+
+
+
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero p {
+    font-family: var(--font-main);
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: var(--primary-color);
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    background: var(--light-color);
+}
+
+/* Sections common styles */
+.services, .benefits, .why-choose-us-section, .contact {
+    padding: 80px 0;
+    background: white;
+}
+
+.why-choose-us-section {
+    background: var(--light-color); /* Specific background for this section */
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color));
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-family: var(--font-main);
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(231, 76, 60, 0.1); /* Using primary color RGB for consistency */
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color));
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(231, 76, 60, 0.2); /* Using primary color RGB for consistency */
+    border-color: var(--primary-color);
+}
+
+.service-card h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    font-family: var(--font-main);
+    color: var(--dark-color);
+    line-height: 1.7;
+}
+
+/* Benefits section styles */
+.benefits {
+    background: linear-gradient(135deg, #fff8f5 0%, var(--light-color) 100%); /* Adjusted with variable */
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.1); /* Using primary color RGB for consistency */
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.2); /* Using primary color RGB for consistency */
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.benefit-item h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.benefit-item p {
+    font-family: var(--font-main);
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* Related services section styles (formerly keywords-section) */
+.related-services-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    
+}
+
+.related-services-section h2{
+
+    color: white;
+    
+}
+
+
+.related-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.related-service-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
+}
+
+.related-service-card:hover {
+    background: rgba(255,255,255,0.2);
+    transform: translateY(-5px);
+}
+
+.related-service-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.related-service-card p {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Contact section styles */
+.contact {
+    text-align: center;
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.contact-card {
+    background: linear-gradient(135deg, var(--light-color) 0%, var(--light-color) 100%);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 2px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(231, 76, 60, 0.2); /* Using primary color RGB for consistency */
+}
+
+.contact-card h4 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.contact-card p {
+    font-family: var(--font-main);
+    color: var(--dark-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Floating contact button */
+.floating-contact {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3); /* Using primary color RGB for consistency */
+    z-index: 1000;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.floating-contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(231, 76, 60, 0.4); /* Using primary color RGB for consistency */
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3); }
+    50% { box-shadow: 0 8px 25px rgba(231, 76, 60, 0.6); }
+    100% { box-shadow: 0 8px 25px rgba(231, 76, 60, 0.3); }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
