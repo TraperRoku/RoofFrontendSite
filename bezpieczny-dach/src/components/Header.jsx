@@ -142,7 +142,7 @@ function Header() {
             <nav className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
                 <div className="mobile-menu-header">
                     <span className="mobile-menu-title">Menu nawigacji</span>
-                    <button className="mobile-menu-close" onClick={closeMenu} aria-label="Zamknij menu">×</button>
+        
                 </div>
                 
                 <div className="mobile-nav-links">
@@ -153,7 +153,7 @@ function Header() {
                         <Link to="/papatermozgrzewalna-Szczecin" onClick={closeMenu} className="featured">🔧 Papa Termozgrzewalna</Link>
                         <Link to="/uslugi-dekarskie-szczecin" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
-                        <Link to="/kontakt" onClick={closeMenu}>Kontakt</Link>
+                        <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
                     </div>
                     
                     <div className="mobile-nav-group">

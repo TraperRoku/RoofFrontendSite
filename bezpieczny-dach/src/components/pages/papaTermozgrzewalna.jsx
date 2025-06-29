@@ -59,9 +59,9 @@ function PapaTermozgrzewalnaSzczecin() {
       <Header />
 
       <main>
-        <section className="hero">
+        <section className="hero2">
           <div className="container">
-            <div className="hero-content">
+            <div className="hero-content2">
               <h1>Papa Termozgrzewalna w Szczecinie</h1>
               <p>Specjalizujemy się w profesjonalnym montażu, naprawie i renowacji dachów z papy termozgrzewalnej na terenie Szczecina i okolic. Dzięki wieloletniemu doświadczeniu i wykorzystaniu materiałów najwyższej jakości, zapewniamy szczelne i trwałe pokrycia dachowe.</p>
               <Link to="/#contact" className="cta-button">Darmowa Wycena</Link>

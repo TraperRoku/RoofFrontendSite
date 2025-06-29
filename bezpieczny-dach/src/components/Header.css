@@ -260,18 +260,7 @@
     border-radius: 1px;
 }
 
-.hamburger.active .line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
 
-.hamburger.active .line:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-10px);
-}
-
-.hamburger.active .line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-}
 
 /* Mobile Menu */
 .mobile-menu-overlay {
