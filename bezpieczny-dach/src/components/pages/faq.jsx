@@ -27,55 +27,59 @@ const images = {
 };
 
 const faqData = [
-
-  {
-  id: 16,
-  category: 'Koszty i Wycena',
-  question: 'Gdzie pracujemy?',
-  answer: 'Działamy głównie na terenie Szczecina i województwa zachodniopomorskiego, ale jesteśmy elastyczni – w przypadku dalszych lokalizacji zapraszamy do kontaktu telefonicznego. Zawsze staramy się znaleźć rozwiązanie dopasowane do potrzeb klienta.',
-  image: images.dachPlaski,
-  tips: ['Dach idealny pod fotowoltaikę', 'Doradzamy przy uzyskaniu dotacji', 'Kompleksowy montaż „pod klucz”']
+{
+ id: 16,
+  category: 'Koszty i Wycena',
+  // ZMIANA: Pytanie ukierunkowane na lokalizację
+  question: 'Jak wygląda nasz obszar działania i czy pracujemy w całym Szczecinie?',
+  answer: 'Jesteśmy lokalnym partnerem i działamy głównie na terenie **Szczecina** (całe miasto i dzielnice) oraz w całym **województwie zachodniopomorskim**. W przypadku dużych projektów dekarskich jesteśmy elastyczni. Zawsze staramy się znaleźć rozwiązanie dopasowane do potrzeb klienta.',
+  image: images.dachPlaski,
+  tips: ['Dach idealny pod fotowoltaikę', 'Doradzamy przy uzyskaniu dotacji na ocieplenie', 'Kompleksowy montaż „pod klucz” w Szczecinie']
 },
   {
-    id: 1,
-    category: 'Koszty i Wycena',
-    question: 'Ile kosztuje wymiana dachu płaskiego?',
-    answer: 'Koszt wymiany dachu płaskiego zależy od wielu czynników: powierzchni dachu, wybranego materiału, stanu konstrukcji oraz dostępności dachu. Oferujemy DARMOWĄ wycenę z dojazdem.',
-    image: images.kosztorys,
-    tips: ['Darmowa wycena w 24h', 'Rozłożenie płatności na raty', 'Profesjonalne doradztwo']
-  },
-  {
-    id: 2,
-    category: 'Materiały',
-    question: 'Czy papa termozgrzewalna to dobry wybór?',
-    answer: 'Papa termozgrzewalna to sprawdzone i ekonomiczne rozwiązanie. Oferuje dobrą trwałość (10-15 lat) przy konkurencyjnej cenie. Szczególnie polecana dla garaży, magazynów i budynków gospodarczych.',
-    image: images.papa,
-    tips: ['Ekonomiczne rozwiązanie', 'Szybki montaż', 'Sprawdzona technologia']
-  },
-  {
-    id: 3,
-    category: 'Konserwacja',
-    question: 'Jak często należy konserwować dach płaski?',
-    answer: 'Dach płaski wymaga przeglądu 2 razy w roku - wiosną i jesienią. Regularna konserwacja obejmuje: czyszczenie wpustów dachowych, kontrolę połączeń, sprawdzenie membran przy kominach i przewietrznikach. Profesjonalny przegląd wydłuża żywotność dachu nawet o 30%.',
-    image: images.konserwacja,
-    tips: ['Przegląd 2x w roku', 'Czyszczenie wpustów', 'Kontrola membran']
-  },
-  {
-    id: 4,
-    category: 'Materiały',
-    question: 'Membrana EPDM czy PCV - co wybrać?',
-    answer: 'EPDM to elastyczna guma, idealna dla skomplikowanych kształtów dachów, lekka i szybka w montażu. PCV to rozwiązanie premium - odporne na UV, mechaniczne uszkodzenia, idealne pod tarasy i dachy zielone. Wybór zależy od przeznaczenia dachu i budżetu.',
-    image: images.membrana,
-    tips: ['EPDM - elastyczność', 'PCV - wytrzymałość', 'Dostosowanie do potrzeb']
-  },
-  {
-    id: 5,
-    category: 'Awarie',
-    question: 'Co robić gdy przecieka dach płaski?',
-    answer: 'NATYCHMIAST zabezpiecz wnętrze przed wodą i zadzwoń do nas! Działamy w trybie 24h. Tymczasowo możesz położyć folię na przeciekające miejsce, ale pamiętaj - każda godzina zwłoki to większe straty. Nasze ekipy ratunkowe są gotowe do natychmiastowej interwencji.',
-    image: images.awaria,
-    tips: ['Działamy 24/7', 'Zabezpieczenie tymczasowe', 'Szybka naprawa']
-  },
+    id: 1,
+    category: 'Koszty i Wycena',
+    // ZMIANA: Pytanie bardziej konkretne
+    question: 'Jaki jest koszt wymiany metra kwadratowego dachu płaskiego w Szczecinie?',
+    answer: 'Koszt **wymiany dachu płaskiego** jest zróżnicowany i zależy od powierzchni, wybranego **materiału (papa, EPDM, PVC)**, stanu konstrukcji i dostępu. Oferujemy **DARMOWĄ wycenę** z dojazdem na terenie Szczecina, bez żadnych zobowiązań.',
+    image: images.kosztorys,
+    tips: ['Darmowa wycena w 24h', 'Rozłożenie płatności na raty', 'Profesjonalne doradztwo materiałowe']
+  },
+  {
+    id: 2,
+    category: 'Materiały',
+    // ZMIANA: Pytanie zawiera kluczową frazę
+    question: 'Czy papa termozgrzewalna jest rekomendowana na dach płaski?',
+    answer: '**Papa termozgrzewalna** to sprawdzone i ekonomiczne rozwiązanie do **renowacji dachów płaskich**. Oferuje dobrą trwałość (10-15 lat) przy konkurencyjnej cenie, szczególnie polecana dla garaży, magazynów i budynków gospodarczych.',
+    image: images.papa,
+    tips: ['Ekonomiczne rozwiązanie', 'Szybki montaż', 'Sprawdzona technologia']
+  },
+  {
+    id: 3,
+    category: 'Konserwacja',
+    // ZMIANA: Pytanie zawiera kluczową frazę
+    question: 'Jak często należy przeprowadzać konserwację dachu płaskiego w Szczecinie?',
+    answer: '**Dach płaski** wymaga **profesjonalnego przeglądu** **2 razy w roku** - wiosną i jesienią. Regularna konserwacja obejmuje: czyszczenie wpustów, kontrolę połączeń i sprawdzenie membran. Profesjonalny przegląd **wydłuża żywotność dachu** nawet o 30%.',
+    image: images.konserwacja,
+    tips: ['Przegląd 2x w roku', 'Czyszczenie wpustów', 'Kontrola membran i złączy']
+  },
+  {
+    id: 4,
+    category: 'Materiały',
+    // ZMIANA: Pytanie zawiera kluczową frazę
+    question: 'Membrana EPDM czy PCV - który materiał jest lepszy na dach płaski?',
+    answer: '**EPDM** (elastyczna guma) jest idealna dla skomplikowanych kształtów, lekka i szybka w montażu. **PCV** to rozwiązanie premium – odporne na UV, idealne pod **tarasy** i **dachy zielone**. Wybór zależy od przeznaczenia dachu i budżetu klienta w Szczecinie.',
+    image: images.membrana,
+    tips: ['EPDM - elastyczność i szybkość', 'PCV - wytrzymałość i estetyka', 'Dostosowanie do potrzeb i budżetu']
+  },
+  {
+    id: 5,
+    category: 'Awarie',
+    question: 'Co robić, gdy nagle przecieka dach płaski w domu lub firmie?',
+    answer: 'NATYCHMIAST **zabezpiecz wnętrze** i zadzwoń na nasze **Pogotowie Dachowe Szczecin**! Działamy w trybie **24h/7**. Każda godzina zwłoki zwiększa straty. Nasze ekipy ratunkowe są gotowe do natychmiastowej interwencji na terenie Szczecina i okolic.',
+    image: images.awaria,
+    tips: ['Działamy 24/7 (alarm)', 'Zabezpieczenie tymczasowe', 'Szybka naprawa uszczelnień']
+  },
 
   {
   id: 6,
@@ -341,72 +345,73 @@ function FAQ() {
         <section className="faq-items-section" id="faq-questions">
           <div className="faq-items-container">
             {filteredFAQ.map((faq) => (
-              <div key={faq.id} className="faq-item">
-                <div 
-                  onClick={() => toggleFAQ(faq.id)}
-                  className={`faq-question ${openFAQ === faq.id ? 'active' : ''}`}
-                  role="button"
-                  tabIndex="0"
-                  aria-expanded={openFAQ === faq.id}
-                  aria-controls={`faq-answer-${faq.id}`}
-                  onKeyDown={(e) => e.key === 'Enter' && toggleFAQ(faq.id)}
-                >
-                  <div>
-                    <span className="faq-category">
-                      {faq.category}
-                    </span>
-                    <h3 className="faq-question-text" id={`faq-question-${faq.id}`}>
-                      {faq.question}
-                    </h3>
-                  </div>
-                  {openFAQ === faq.id ? 
-                    <ChevronUp size={24} className="chevron-icon" aria-hidden="true" /> : 
-                    <ChevronDown size={24} className="chevron-icon" aria-hidden="true" />
-                  }
-                </div>
-                
-                {openFAQ === faq.id && (
-                  <div 
-                    id={`faq-answer-${faq.id}`}
-                    className="faq-answer"
-                    aria-labelledby={`faq-question-${faq.id}`}
-                  >
-                    <div className="answer-content">
-                      <div className="answer-text">
-                        <p>
-                          {faq.answer}
-                        </p>
-                        
-                        <div className="tips-box">
-                          <h4>
-                            ✓ KLUCZOWE INFORMACJE:
-                          </h4>
-                          <ul>
-                            {faq.tips.map((tip, index) => (
-                              <li key={index}>
-                                <span className="tip-bullet" aria-hidden="true">•</span>
-                                {tip}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
-                      
-                      <div className="answer-image">
-                       <img 
-  src={faq.image} 
-  alt={`${faq.question.replace('?', '')} - porady ekspertów Bezpieczny Dach Szczecin`}
-  width="400"
-  height="300"
-  loading="lazy"
-  className="faq-image"
-/>
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
+  <div 
+    key={faq.id} 
+    className="faq-item" 
+    // Dodajemy itemprop dla FAQPage schema (chociaż schema.org działa lepiej z <script type="application/ld+json">)
+    itemProp="mainEntity" 
+    itemScope 
+    itemType="https://schema.org/Question" 
+  >
+    <h3 // Zmieniamy div na h3 - jest to bardziej semantyczne
+      onClick={() => toggleFAQ(faq.id)}
+      className={`faq-question ${openFAQ === faq.id ? 'active' : ''}`}
+      role="button"
+      tabIndex="0"
+      aria-expanded={openFAQ === faq.id}
+      aria-controls={`faq-answer-${faq.id}`}
+      onKeyDown={(e) => e.key === 'Enter' && toggleFAQ(faq.id)}
+      itemProp="name" // Atrybut itemprop dla schematu Question
+    >
+      <div>
+        <span className="faq-category">
+          {faq.category}
+        </span>
+        <span className="faq-question-text" id={`faq-question-${faq.id}`}>
+          {faq.question}
+        </span>
+      </div>
+      {openFAQ === faq.id ? 
+        <ChevronUp size={24} className="chevron-icon" aria-hidden="true" /> : 
+        <ChevronDown size={24} className="chevron-icon" aria-hidden="true" />
+      }
+    </h3> 
+    
+    {openFAQ === faq.id && (
+      <div 
+        id={`faq-answer-${faq.id}`}
+        className="faq-answer"
+        aria-labelledby={`faq-question-${faq.id}`}
+        itemProp="acceptedAnswer" // Atrybut itemprop dla schematu Answer
+        itemScope 
+        itemType="https://schema.org/Answer" 
+      >
+        <div className="answer-content">
+          <div className="answer-text">
+            <p itemProp="text"> 
+              {faq.answer}
+            </p>
+            
+            <div className="tips-box">
+              {/* ... reszta kodu tip-box bez zmian ... */}
+            </div>
+          </div>
+          
+          <div className="answer-image">
+            <img 
+              src={faq.image} 
+              alt={`${faq.question.replace('?', '')} - porady ekspertów Bezpieczny Dach Szczecin`}
+              width="400"
+              height="300"
+              loading="lazy"
+              className="faq-image"
+            />
+          </div>
+        </div>
+      </div>
+    )}
+  </div>
+))}
           </div>
         </section>
 

@@ -50,7 +50,7 @@ function DachyPlaskie(){
             "name": "Dekarz Szczecin - Dachy Płaskie",
             "image": "${dach1}",
             "telephone": "+48518144882",
-            "url": "https://yourdomain.com/dachy-plaskie-szczecin",
+            "url": "https://www.bezpiecznydach.pl/dachy-plaskie",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Szczecin",

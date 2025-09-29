@@ -44,7 +44,19 @@
     margin: 0 auto;
     font-weight: 400;
 }
-
+.visually-hidden {
+    /* Ustawia element poza ekranem */
+    position: absolute;
+    /* Upewnia się, że element ma minimalny rozmiar, ale nadal istnieje */
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
 .highlight {
     color: #e74c3c;
     font-weight: 700;

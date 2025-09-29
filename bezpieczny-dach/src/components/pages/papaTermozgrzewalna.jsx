@@ -36,25 +36,51 @@ function PapaTermozgrzewalnaSzczecin() {
     }, observerOptions);
 
     // Obserwuj elementy do animacji
-    document.querySelectorAll('.service-card, .benefit-item, .related-service-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'all 0.6s ease';
-      observer.observe(el);
-    });
-
+ document.querySelectorAll(
+    '.service-card, .benefit-item, .related-service-card, .main-content-block h2, .main-content-block h3, .main-content-block p, .local-areas-section p'
+).forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'all 0.6s ease';
+    observer.observe(el);
+});
     // Czyszczenie obserwatora przy odmontowaniu komponentu
     return () => observer.disconnect();
   }, []);
 
   return (
     <>
-      <Helmet>
-        <title>Papa Termozgrzewalna Szczecin | Profesjonalny Montaż i Naprawa | Bezpieczny Dach</title>
-        <meta name="description" content="Szukasz ekspertów od papy termozgrzewalnej w Szczecinie? Oferujemy profesjonalny montaż, naprawy i renowacje dachów z papy. Szybka wycena, gwarancja jakości. Zadzwoń: 518-144-882." />
-        {/* Usunięto meta keywords - są przestarzałe dla SEO */}
-        {/* Możesz tutaj dodać schemę.org JSON-LD, wzorując się na docieplanie-dachow.jsx */}
-      </Helmet>
+     <Helmet>
+  <title>🏆 Papa Termozgrzewalna Szczecin ✅ Montaż | Naprawa | Dekarz 15 Lat Doświadczenia ☎️ 518-144-882</title>
+  <meta name="description" content="⭐ NAJLEPSZY DEKARZ SZCZECIN ⭐ Montaż, wymiana i naprawa papy termozgrzewalnej. Dachy płaskie, 15 lat doświadczenia, gwarancja jakości! Darmowa wycena ☎️ 518-144-882." />
+  
+  {/* Dodajemy kanoniczny, aby uniknąć problemów z duplikacją treści */}
+  <link rel="canonical" href="https://yourdomain.com/papa-termozgrzewalna-szczecin"/>
+  
+  {/* Dodanie Local Business Schema - KLUCZOWE dla usług lokalnych */}
+  <script type="application/ld+json">
+  {`
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Dekarz Szczecin - Papa Termozgrzewalna",
+      "image": "https://www.bezpiecznydach.pl/logo.webp", 
+      "telephone": "+48518144882",
+      "url": "https://www.bezpiecznydach.pl/papatermozgrzewalna-Szczecin",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Szczecin",
+        "addressRegion": "Zachodniopomorskie",
+        "addressCountry": "PL"
+      },
+      "openingHours": "Mo-Su 07:00-20:00",
+      "priceRange": "$$",
+      "description": "Profesjonalny dekarz w Szczecinie - montaż i naprawa papy termozgrzewalnej.",
+      "serviceType": ["Usługi dekarskie", "Papa termozgrzewalna", "Naprawa dachów płaskich"]
+    }
+  `}
+  </script>
+</Helmet>
 
       <Header />
 
@@ -64,30 +90,38 @@ function PapaTermozgrzewalnaSzczecin() {
             <div className="hero-content2">
               <h1>Papa Termozgrzewalna w Szczecinie</h1>
               <p>Specjalizujemy się w profesjonalnym montażu, naprawie i renowacji dachów z papy termozgrzewalnej na terenie Szczecina i okolic. Dzięki wieloletniemu doświadczeniu i wykorzystaniu materiałów najwyższej jakości, zapewniamy szczelne i trwałe pokrycia dachowe.</p>
-              <Link to="/#contact" className="cta-button">Darmowa Wycena</Link>
+              <a href="tel:518144882" className="cta-button">📞 Zadzwoń po Darmową Wycenę <br></br> (518-144-882)</a>
             </div>
           </div>
         </section>
 
-        <section className="related-services-section">
-          <div className="container">
-            <h2 className="section-title">Nasze Specjalizacje w Szczecinie</h2>
-            <div className="related-services-grid">
-              <div className="related-service-card">
-                <h3>🏢 System Balastowy na Dach Płaski Szczecin</h3>
-                <p>Profesjonalny montaż systemów balastowych na dachach płaskich. Nowoczesne rozwiązania zapewniające trwałość i niezawodność przez lata. Idealne dla budynków przemysłowych i mieszkalnych.</p>
-              </div>
-              <div className="related-service-card">
-                <h3>🏠 Dachy Płaskie Szczecin</h3>
-                <p>Kompleksowe usługi dla dachów płaskich - od projektu przez montaż po serwis. Wykorzystujemy najnowsze technologie i materiały najwyższej jakości. Gwarancja szczelności i trwałości.</p>
-              </div>
-              <div className="related-service-card">
-                <h3>🔧 Papa Termozgrzewalna Szczecin</h3>
-                <p>Montaż, naprawa i renowacja pokryć z papy termozgrzewalnej. Wieloletnie doświadczenie, certyfikowani fachowcy, najwyższa jakość wykonania. Szybka realizacja i konkurencyjne ceny.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <section className="main-content-block">
+  <div className="container">
+    <h2>Profesjonalny Montaż Papy Termozgrzewalnej w Szczecinie – Trwałość i Szczelność</h2>
+    <p>Szukasz sprawdzonego rozwiązania na **dach płaski w Szczecinie**? **Papa termozgrzewalna Szczecin** to najczęściej wybierany system, który gwarantuje doskonałą hydroizolację dachu na lata. Jako doświadczeni **dekarze Szczecin**, oferujemy kompleksowe **usługi dekarskie** związane z papą – od ułożenia nowej warstwy (papy modyfikowane SBS) po **szybką naprawę przecieków**. Wykonujemy **renowację dachów z papy** na budynkach mieszkalnych, halach i garażach. Nasze 15-letnie doświadczenie to gwarancja, że Twój dach będzie **bezpieczny**.</p>
+    
+    <h3>Jaki rodzaj papy na dach wybrać? (Papa SBS czy Oksydowana)</h3>
+    <p>Przygotowując **remont dachu Szczecin**, doradzamy najlepszy wybór materiałów. Papy termozgrzewalne modyfikowane **SBS** są bardziej elastyczne i odporne na niskie temperatury, co jest kluczowe w polskim klimacie. Stosujemy tylko certyfikowane **papy na dach Szczecin** od wiodących producentów, aby zapewnić najwyższą jakość wykonania każdej realizacji.</p>
+  </div>
+</section>
+
+     <div className="related-services-grid">
+    <div className="related-service-cards">
+        {/* Zmieniamy <h3> na <h4> (bo jest niżej) i dodajemy link do podstrony */}
+        <h4><Link to="/system-balastowy-szczecin">🏢 System Balastowy na Dach Płaski Szczecin</Link></h4>
+        <p>Profesjonalny montaż systemów balastowych na dachach płaskich...</p>
+    </div>
+    <div className="related-service-cards">
+        {/* Link do głównej podstrony o dachach płaskich */}
+        <h4><Link to="/dachy-plaskie-szczecin">🏠 Dachy Płaskie Szczecin</Link></h4>
+        <p>Kompleksowe usługi dla dachów płaskich - od projektu przez montaż po serwis...</p>
+    </div>
+    <div className="related-service-cards">
+        {/* Link do samego siebie (dla wzmocnienia) lub do formularza */}
+        <h4><Link to="/#contact">🔧 Naprawa Papy Termozgrzewalnej Szczecin - Szybka Wycena</Link></h4>
+        <p>Montaż, naprawa i renowacja pokryć z papy termozgrzewalnej...</p>
+    </div>
+</div>
 
         <section className="services">
           <div className="container">
@@ -185,10 +219,21 @@ function PapaTermozgrzewalnaSzczecin() {
           </div>
         </section>
 
+        <section className="local-areas-section">
+  <div className="container">
+    <h2 className="section-title">Obsługujemy Cały Szczecin i Okolice!</h2>
+    <p>Nasi dekarze dojeżdżają do klientów w **Szczecinie** (Centrum, Prawobrzeże, Gumieńce, Pogodno, Dąbie, Warszewo) oraz w okolicznych miejscowościach: Police, Goleniów, Stargard, Dobra, Mierzyn, Wołczkowo, Dołuje, Lubieszyn i Przecław. Bez względu na lokalizację, zapewniamy szybki dojazd i **darmową wycenę** montażu lub **naprawy papy termozgrzewalnej Szczecin**.</p>
+    
+    <Link to="/#contact" className="cta-button-small">SKONTAKTUJ SIĘ Z NAMI!</Link>
+  </div>
+</section>
+
         <section className="contact" id="contact">
           <div className="container">
             <h2 className="section-title">Skontaktuj się z Nami!</h2>
             <p className="section-subtitle">Potrzebujesz fachowca od papy termozgrzewalnej w Szczecinie? Chętnie odpowiemy na Twoje pytania i przygotujemy indywidualną ofertę.</p>
+            <a href="tel:518144882" className="cta-button">📞 Zadzwoń po Darmową Wycenę <br></br>(518-144-882)</a>
+            
             
             <div className="contact-info-grid">
               <div className="contact-card">

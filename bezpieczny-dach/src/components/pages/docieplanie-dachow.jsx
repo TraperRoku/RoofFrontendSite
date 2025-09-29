@@ -9,49 +9,80 @@ import wełna from '../photos/woolMineral.jpg';
 import pir from '../photos/plytyPir.jpg';
 import pur from '../photos/ster.webp';
 
-function DocieplanieDachow() {
-  return (
-    <>
-      <Helmet>
-      <title>Profesjonalne Docieplanie Dachów w Szczecinie i okolic| Oszczędność Energii | ☎ 518 144 882</title>
-     <meta 
-         name="description" 
-         content="Profesjonalne docieplanie dachów w Szczecinie - wełna mineralna, płyty PIR, styropian. Oszczędź do 30% na ogrzewaniu! Darmowa wycena. ☎ 518 144 882" 
-      />
-        <link rel="canonical" href="https://www.bezpiecznydach.pl/docieplanie-dachow" />
-
-<script type="application/ld+json">
-    {`
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Bezpieczny Dach Szczecin",
-        "image": "https://www.bezpiecznydach.pl/favicon.ico",
-        "telephone": "+48518144882",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Szczecin",
-          "addressRegion": "Zachodniopomorskie"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
+// Definicja danych strukturalnych JSON-LD
+const localBusinessSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bezpieczny Dach Szczecin - Docieplenia Dachów", // WZMOCNIENIE SEO
+    "image": "https://www.bezpiecznydach.pl/favicon.ico",
+    "telephone": "+48518144882",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Szczecin",
+        "addressRegion": "Zachodniopomorskie"
+    },
+    "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
             "Monday",
             "Tuesday",
             "Wednesday",
             "Thursday",
             "Friday",
             "Saturday"
-          ],
-          "opens": "07:00",
-          "closes": "18:00"
-        },
-        "priceRange": "$$"
-      }
-    `}
-  </script>
+        ],
+        "opens": "07:00",
+        "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "serviceType": ["Docieplanie dachów", "Termoizolacja dachu płaskiego", "Montaż płyt PIR"] // WZMOCNIENIE SEO
+});
 
-      </Helmet>
+const breadcrumbSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Strona Główna",
+            "item": "https://www.bezpiecznydach.pl/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Docieplanie Dachów",
+            "item": "https://www.bezpiecznydach.pl/docieplanie-dachow"
+        }
+    ]
+});
+
+
+function DocieplanieDachow() {
+  return (
+    <>
+      <Helmet>
+      {/* [SEO WZMOCNIENIE] Ulepszony Title: Dodano frazy kluczowe (Szczecin, PIR, Styropian) */}
+      <title>Docieplanie Dachów Szczecin ✅ Wełna, PIR, Styropian | Najlepsza Izolacja ☎ 518 144 882</title>
+     
+      {/* [SEO WZMOCNIENIE] Ulepszony Description: Więcej szczegółów o materiałach i korzyściach */}
+      <meta 
+         name="description" 
+         content="Profesjonalne docieplanie dachów płaskich w Szczecinie - wełna mineralna, płyty PIR, styropian. Oszczędź energię i zwiększ komfort. Darmowa wycena. Zadzwoń: 518 144 882" 
+      />
+        <link rel="canonical" href="https://www.bezpiecznydach.pl/docieplanie-dachow" />
+
+        {/* POPRAWIONA IMPLEMENTACJA JSON-LD: używamy dangerouslySetInnerHTML z JSON.stringify */}
+        <script 
+            type="application/ld+json" 
+            dangerouslySetInnerHTML={{ __html: localBusinessSchema }} 
+        />
+        <script 
+            type="application/ld+json" 
+            dangerouslySetInnerHTML={{ __html: breadcrumbSchema }} 
+        />
+        
+      </Helmet>
 
       <Header />
 
@@ -59,7 +90,7 @@ function DocieplanieDachow() {
         {/* Sekcja hero */}
         <section className="hero-sectionD">
           <div className="hero-contentD">
-            <h1>DOCIEPLANIE DACHÓW</h1>
+            <h1>DOCIEPLANIE DACHÓW PŁASKICH W SZCZECINIE</h1>
             <p className="hero-subtitle">Zwiększ komfort i zmniejsz rachunki za ogrzewanie nawet o 30%!</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button">ZADZWOŃ: 518 144 882</a>
@@ -69,7 +100,7 @@ function DocieplanieDachow() {
 
         {/* Dlaczego warto */}
         <section className="benefits-section">
-          <h2>DLACZEGO WARTO DOCIEPLIĆ DACH?</h2>
+          <h2>DLACZEGO WARTO ZAINWESTOWAĆ W TERMIOZOLACJĘ DACHU?</h2>
           <div className="benefits-grid">
             
             <div className="benefit-card">
@@ -92,7 +123,7 @@ function DocieplanieDachow() {
 
         {/* Rodzaje izolacji */}
         <section className="insulation-types">
-          <h2>STOSUJEMY NAJLEPSZE MATERIAŁY IZOLACYJNE</h2>
+          <h2>IZOLACJA DACHÓW PŁASKICH: WEŁNA, PŁYTY PIR, STYROPIAN</h2>
           <div className="types-grid">
             <div className="type-card">
               <img src={wełna} alt="Docieplenie dachu wełną mineralną w Szczecinie i w okolicach" />
@@ -116,7 +147,7 @@ function DocieplanieDachow() {
             </div>
             <div className="type-card">
              <img src={pur} alt="Styropian do izolacji dachów płaskich Szczecin i w okolicach"  />
-              <h3>STYROPIAN </h3>
+              <h3>STYROPIAN (NA DACHY PŁASKIE)</h3>
       <ul>
         <li>Dobry stosunek ceny do jakości</li>
         <li>Odporny na wilgoć i ściskanie</li>
@@ -128,7 +159,7 @@ function DocieplanieDachow() {
 
 
         <section className="contact-cta">
-          <h2>ZADZWOŃ PO DARMOWĄ WYCENĘ!</h2>
+          <h2>ZADZWOŃ PO DARMOWĄ WYCENĘ DOCIEPLENIA DACHU!</h2>
           <p>Specjalista od dociepleń odpowie na wszystkie pytania</p>
           <div className="cta-buttons">
             <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>

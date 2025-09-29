@@ -8,7 +8,7 @@ const services = [
   { 
     src: imgFix, 
     alt: 'Profesjonalna naprawa dachów płaskich w Szczecinie',
-    title: 'DACHY PŁASKIE',
+     title: 'DACHY PŁASKIE & PAPA TERMOZGRZEWALNA',
     description: 'SPECJALIZACJA: Naprawy i renowacje dachów płaskich. Stosujemy wyłącznie certyfikowane membrany EPDM i PVC najwyższej jakości.',
     features: [
       'Natychmiastowa naprawa przecieków',

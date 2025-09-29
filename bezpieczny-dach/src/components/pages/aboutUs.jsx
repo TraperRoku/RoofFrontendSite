@@ -12,16 +12,67 @@ import certyfikat1 from '../photos/solar.webp';
 import narzedzia from '../photos_to_deploy/11.webp';
 import realizacja1 from '../photos_to_deploy/18.webp';
 
+// [SEO WZMOCNIENIE] Definicja danych strukturalnych LocalBusiness
+const localBusinessSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Bezpieczny Dach Szczecin | Profesjonalna Firma Dekarska", // Pełniejsza nazwa dla SEO
+    "description": "Profesjonalne usługi dekarskie w Szczecinie. Naprawa, renowacja i montaż dachów płaskich i skośnych. 15 lat doświadczenia.",
+    "url": "https://www.bezpiecznydach.pl/o-nas",
+    "image": "https://www.bezpiecznydach.pl/favicon.ico",
+    "telephone": "+48518144882",
+    "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Szczecin",
+        "addressRegion": "Zachodniopomorskie"
+    },
+    "hasService": [
+        {
+            "@type": "Service",
+            "name": "Usługi Dekarskie Szczecin"
+        },
+        {
+            "@type": "Service",
+            "name": "Naprawa Dachów Płaskich"
+        },
+        {
+            "@type": "Service",
+            "name": "Docieplanie Dachów"
+        }
+    ]
+});
+
+// [SEO WZMOCNIENIE] Definicja danych strukturalnych AboutPage
+const aboutPageSchema = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "O firmie dekarskiej Bezpieczny Dach Szczecin",
+    "description": "Poznaj 15 lat naszej historii, wartości i specjalizację w dekarstwie w Szczecinie.",
+    "mainEntityOfPage": "https://www.bezpiecznydach.pl/o-nas"
+});
+
 function ONas(){
-  return (
-    <>
+  return (
+    <>
 <Helmet>
-  <title>O Nas - Profesjonalni Dekarze Szczecin | 15 lat doświadczenia</title>
-  <meta 
-    name="description" 
-    content="Poznaj nasz zespół - 15 lat doświadczenia w dekarstwie, 1000+ zadowolonych klientów. Profesjonalne usługi dekarskie w Szczecinie." 
+  {/* [SEO WZMOCNIENIE] Ulepszony Title: Więcej fraz kluczowych, w tym 'dekarze', 'dekarstwo' */}
+  <title>O Nas - Dekarze Szczecin | Naprawa Dachów | 15 Lat Doświadczenia | Bezpieczny Dach</title>
+  <meta 
+    name="description" 
+    content="Poznaj nasz zespół - lokalni dekarze w Szczecinie z 15-letnim doświadczeniem. Specjalizacja: dachy płaskie, remonty, docieplanie. Sprawdź, dlaczego nam zaufało 1000+ klientów." 
+  />
+  <link rel="canonical" href="https://www.bezpiecznydach.pl/o-nas" />
+  
+  {/* POPRAWNA IMPLEMENTACJA JSON-LD: LocalBusiness i AboutPage */}
+  <script 
+    type="application/ld+json" 
+    dangerouslySetInnerHTML={{ __html: localBusinessSchema }} 
   />
-  <link rel="canonical" href="https://www.bezpiecznydach.pl/o-nas" />
+  <script 
+    type="application/ld+json" 
+    dangerouslySetInnerHTML={{ __html: aboutPageSchema }} 
+  />
+
 </Helmet>
       
       <Header />
@@ -30,19 +81,19 @@ function ONas(){
       
         <section className="hero-section">
           <div className="hero-content">
-            <h1>O NAS - EKSPERCI OD DACHÓW</h1>
+           <h1>O NAS - LOKALNI EKSPERCI DEKARSCY W SZCZECINIE</h1>
             <p className="hero-subtitle">15 lat doświadczenia | 1000+ zadowolonych klientów |<br></br> Najwyższa jakość usług</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button">ZADZWOŃ TERAZ: 518 144 882</a>
             </div>
           </div>
           <div className="hero-image">
-            <img src={zespol1} alt="Profesjonalny zespół dekarzy w Szczecinie" />
+            <img src={zespol1} alt="Doświadczony zespół dekarzy w Szczecinie, gotowy do prac dachowych" />
           </div>
         </section>
 
         <section className="story-section">
-          <h2>NASZA HISTORIA</h2>
+         <h2>NASZA HISTORIA: 15 LAT DOŚWIADCZENIA W DEKARSTWIE</h2>
           <div className="story-content">
             <div className="story-text">
               <p>Od <strong>15 lat</strong> budujemy dachy z myślą o bezpieczeństwie i trwałości. Przez 15 lat rozwijaliśmy nasze umiejętności, zdobywając zaufanie klientów.</p>
@@ -84,7 +135,7 @@ function ONas(){
 
 
         <section className="team-section">
-          <h2>POZNAJ NAS BLIŻEJ</h2>
+          <h2>POZNAJ NASZ ZESPÓŁ DEKARZY W SZCZECINIE</h2>
           <div className="team-content">
             <div className="team-stats">
               <div className="stat-item">
@@ -152,7 +203,7 @@ function ONas(){
         </section>
 
         <section className="expertise-section">
-          <h2>NASZA SPECJALIZACJA</h2>
+           <h2>SPECJALIZACJA DEKARSKA: DACHY PŁASKIE I SKOŚNE</h2>
           <p className="expertise-subtitle">Oferujemy kompleksowe usługi dekarskie na najwyższym poziomie</p>
           
           <div className="expertise-grid">

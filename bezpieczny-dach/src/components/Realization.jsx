@@ -100,7 +100,12 @@ function Realization() {
     <section id="realization" className="realization">
       <div className="realization-container">
         <div className="section-header">
-          <h2>NASZE REALIZACJE - DOWÓD NASZYCH UMIEJĘTNOŚĆI DEKARSKICH</h2>
+          <h2>
+  NASZE REALIZACJE DEKARSKIE
+  <br></br>
+  W SZCZECINIE  
+    DOWÓD UMIEJĘTNOŚCI
+</h2>
           
           <p className="section-subtitle">
             <strong>Ponad setki wykonanych dachów!</strong> Każde zdjęcie to historia

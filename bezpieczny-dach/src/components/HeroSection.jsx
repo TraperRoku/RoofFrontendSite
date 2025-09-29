@@ -5,8 +5,16 @@ function HeroSection() {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-      <p>Budujemy i naprawiamy dachy</p>
-      <h1>Pełna oferta <br />usług dekarskich <br />dla Twojego domu</h1>
+       <p>Lokalny, Doświadczony Zespół - Szczecin i Okolice</p>
+      <h1>
+        <span className="highlight-seo">DEKARZ SZCZECIN:</span> 
+        <br />
+        DACHY PŁASKIE,
+        <br />
+        PAPA TERMOZGRZEWALNA
+        <br />
+        I GWARANCJA SZCZELNOŚCI
+      </h1>
             <div className="hero-buttons">
             <a href="#services">
             <button className="btn-primary">Poznaj naszą ofertę</button>

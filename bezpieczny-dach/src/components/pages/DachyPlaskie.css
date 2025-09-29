@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600;700&display=swap');
 
+/* --- Zmienne globalne --- */
 :root {
-  --primary-color:   #e74c3c; /* Czerwony profesjonalny */
+  --primary-color:   #e74c3c; /* Czerwony profesjonalny */
   --secondary-color: #1976D2; /* Niebieski dla kontrastu */
-  --dark-color: #767575;
+  --dark-color: #333; /* Ujednolicony ciemny kolor dla lepszego kontrastu, wcześniej #767575 */
   --light-color: #f5f5f5;
   --accent-color: #FFC107;
   --success-color: #388E3C;
   --font-main: 'Open Sans', sans-serif;
   --font-heading: 'Montserrat', sans-serif;
-
 }
 
-/* Reset i podstawowe style */
+/* --- Globalny Reset i Podstawowe Style --- */
 * {
   margin: 0;
   padding: 0;
@@ -27,18 +27,20 @@ body, .dachy-plaskie-container {
   background-color: #fff;
 }
 
-/* Nagłówki */
+/* --- Typografia (Nagłówki) --- */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   color: var(--dark-color);
   margin-bottom: 1rem;
   line-height: 1.3;
+  text-align: center; /* Dodane dla globalnego wyśrodkowania h2 i h3 */
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 800;
+  text-align: left; /* Przywrócenie wyrównania dla H1 w Hero */
 }
 
 h2 {
@@ -61,9 +63,10 @@ h2:after {
 
 h3 {
   font-size: 1.75rem;
+  text-align: inherit; /* Resetowanie globalnego wyśrodkowania dla kart */
 }
 
-/* Kontener główny */
+/* --- Kontener główny --- */
 .dachy-plaskie-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -71,7 +74,54 @@ h3 {
   overflow-x: hidden;
 }
 
-/* Sekcja hero */
+/* --- Przyciski CTA (Ujednolicone style) --- */
+.cta-button, .cta-button-primary, .cta-button-secondary, .emergency-button, .see-more-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-button, .cta-button-primary {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cta-button-secondary, .see-more-button {
+  background: white;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.cta-button:hover, .cta-button-primary:hover {
+  background: #B71C1C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.cta-button-secondary:hover, .see-more-button:hover {
+  background: var(--light-color);
+  transform: translateY(-2px);
+}
+
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* --- 1. Sekcja Hero --- */
 .hero-section {
   display: flex;
   flex-wrap: wrap;
@@ -115,46 +165,7 @@ h3 {
   font-weight: 600;
 }
 
-/* Przyciski CTA */
-.cta-button, .cta-button-primary, .cta-button-secondary {
-  display: inline-block;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.cta-button, .cta-button-primary {
-  background: var(--primary-color);
-  color: white;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.cta-button-secondary {
-  background: white;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
-}
-
-.cta-button:hover, .cta-button-primary:hover {
-  background: #B71C1C;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
-
-.cta-button-secondary:hover {
-  background: var(--light-color);
-  transform: translateY(-2px);
-}
-
-/* Sekcja benefitów */
+/* --- 2. Sekcja Benefitów --- */
 .benefits-section {
   margin: 5rem 0;
   text-align: center;
@@ -192,9 +203,10 @@ h3 {
   margin-bottom: 1rem;
 }
 
-/* Galeria */
+/* --- 3. Galeria --- */
 .gallery-section {
   margin: 5rem 0;
+  text-align: center; /* Wyrównanie nagłówka */
 }
 
 .gallery-grid {
@@ -234,9 +246,10 @@ h3 {
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
+  text-align: center;
 }
 
-/* Sekcja awaryjna */
+/* --- 4. Sekcja Awaryjna --- */
 .emergency-section {
   background: var(--primary-color);
   color: white;
@@ -274,16 +287,9 @@ h3 {
 }
 
 .emergency-button {
-  display: inline-block;
   background: white;
   color: var(--primary-color);
-  padding: 1rem 2rem;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border-radius: 4px;
   margin-top: 1.5rem;
-  text-decoration: none;
-  transition: all 0.3s;
   box-shadow: 0 4px 0 rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
@@ -295,15 +301,15 @@ h3 {
   box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
 
-/* Sekcja systemów */
+/* --- 5. Sekcja Systemów --- */
 .systems-section {
   margin: 5rem 0;
 }
-.systems-section p {
-  font-size: 2rem;
-  font-weight: bolder;
-  
 
+/* POPRAWIONE: Usunięty nadmiernie silny selektor na `p` */
+.systems-section p { 
+  font-size: 1.1rem; /* Przywrócenie normalnej wielkości */
+  font-weight: normal; /* Przywrócenie normalnej wagi */
 }
 
 .system-card {
@@ -336,20 +342,18 @@ h3 {
 .system-content {
   flex: 1;
   min-width: 300px;
-  padding: 3rem 2rem; /* Zmniejszyłem padding dla mniejszych ekranów */
+  padding: 3rem 2rem;
+}
+
+.system-card.reverse {
+  flex-direction: row-reverse; /* Odwraca kolejność obraz-tekst na dużych ekranach */
 }
 
 .system-card h3 {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
-  font-size: 1.5rem; /* Zmniejszony rozmiar czcionki */
+  font-size: 1.5rem;
   line-height: 1.3;
-}
-
-.system-card p {
-  font-size: 1.1rem; /* Mniejsza czcionka dla tekstu */
-  margin-bottom: 1rem;
-  line-height: 1.5;
 }
 
 .system-card ul {
@@ -363,22 +367,8 @@ h3 {
   position: relative;
   padding-left: 2rem;
   line-height: 1.5;
-  font-size: 1rem; /* Mniejsza czcionka dla listy */
+  font-size: 1rem;
 }
-
-.system-cta {
-  margin-top: 1.5rem;
-  font-weight: 600;
-}
-
-.system-cta a {
-  text-decoration: none;
-  color: var(--primary-color);
-  font-size: 1rem; /* Mniejsza czcionka dla CTA */
-  word-break: break-all; /* Zapobiega wychodzeniu poza ekran */
-}
-
-
 
 .system-card li:before {
   content: "✓";
@@ -390,15 +380,29 @@ h3 {
   font-weight: bold;
 }
 
+.system-cta {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
 
+.system-cta a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1rem;
+  word-break: break-all;
+}
+
+/* --- 6. Sekcja Obszarów Lokalnych (Lokalne SEO) --- */
+.local-seo-section {
+  text-align: center;
+  margin: 5rem 0;
+}
 
 .local-areas {
   background-color: #f9f9f9;
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-  font-family: var(--font-main);
-  color: var(--dark-color);
   line-height: 1.6;
   max-width: 100%;
   margin: 2rem auto;
@@ -441,75 +445,7 @@ h3 {
   font-weight: 600;
 }
 
-@media (max-width: 600px) {
-  .local-areas {
-    padding: 1.5rem;
-  }
-
-  .local-areas p,
-  .local-areas li {
-    font-size: 0.95rem;
-  }
-}
-.faq-section {
-  padding: 4rem 2rem;
-  background-color: #fff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.faq-section h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #e74c3c;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.faq-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.faq-item {
-  background: #fdfdfd;
-  border-left: 6px solid #e74c3c;
-  padding: 2rem 2rem;
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.faq-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item h3 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: #e74c3c;
-  font-weight: bold;
-}
-
-.faq-item p {
-  font-size: 1.25rem;
-  color: #333;
-  line-height: 1.8;
-}
-
-.faq-item strong {
-  color: #e74c3c;
-  font-weight: bold;
-}
-
-
-
-/* Sekcja gwarancji */
+/* --- 7. Sekcja Gwarancji --- */
 .guarantee-section {
   background: var(--dark-color);
   color: white;
@@ -580,6 +516,7 @@ h3 {
   position: relative;
   padding-left: 2rem;
   line-height: 1.5;
+  color: var(--light-color); /* Zmienione na jasny kolor dla lepszego kontrastu */
 }
 
 .guarantee-text-content li:before {
@@ -591,7 +528,72 @@ h3 {
   top: -0.5rem;
 }
 
-/* Sekcja kontaktowa */
+/* --- 8. Sekcja FAQ --- */
+.faq-section {
+  padding: 4rem 0; /* Zmieniony padding */
+  background-color: #fff;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--primary-color); /* Użycie zmiennej */
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* Usunięty zbędny selektor na font-family, który nadpisywał globalny */
+
+.faq-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Zmniejszony gap */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #fdfdfd;
+  border-left: 6px solid var(--primary-color);
+  padding: 1.5rem 2rem; /* Zmniejszony padding */
+  border-radius: 8px; /* Zmniejszony border-radius */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left; /* Wyrównanie treści */
+}
+
+.faq-item:hover {
+  transform: translateY(-4px); /* Zmniejszony ruch */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  font-size: 1.5rem; /* Zmniejszona czcionka */
+  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.faq-item p {
+  font-size: 1.1rem; /* Zmniejszona czcionka */
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.faq-item strong {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.see-more-button {
+  margin-top: 2.5rem;
+  display: inline-block;
+}
+
+/* --- 9. Sekcja Kontaktowa (Stopka CTA) --- */
 .contact-cta {
   text-align: center;
   margin: 5rem 0;
@@ -604,15 +606,13 @@ h3 {
   margin-bottom: 1.5rem;
 }
 
-.cta-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  margin-top: 2rem;
+.location-info {
+  margin-top: 1.5rem;
+  font-size: 1rem;
 }
 
-/* Responsywność */
+/* --- Responsywność (Media Queries) --- */
+
 @media (max-width: 1024px) {
   .dachy-plaskie-container {
     max-width: 95%;
@@ -636,7 +636,8 @@ h3 {
     padding: 1.5rem;
   }
   
-  .system-card {
+  /* Odwrócenie kolejności na mniejszych ekranach (dla lepszej logiki mobilnej) */
+  .system-card, .system-card.reverse { 
     flex-direction: column;
   }
   
@@ -703,7 +704,7 @@ h3 {
     gap: 1rem;
   }
   
-  .cta-button, .cta-button-primary, .cta-button-secondary {
+  .cta-button, .cta-button-primary, .cta-button-secondary, .emergency-button {
     width: 100%;
   }
   
@@ -715,7 +716,7 @@ h3 {
   .guarantee-years {
     font-size: 2.5rem;
   }
-    .local-areas ul {
+  .local-areas ul {
     grid-template-columns: 1fr;
   }
 }

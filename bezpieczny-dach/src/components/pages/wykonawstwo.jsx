@@ -13,29 +13,84 @@ const Wykonawstwo = () => {
   return (
     <>
       <Helmet>
-      <title>Usługi dekarskie Szczecin – pokrycia dachowe, papa, izolacje | Bezpieczny Dach</title>
-<meta name="description" content="Usługi dekarskie w Szczecinie: papa termozgrzewalna, dachy płaskie, systemy balastowe, izolacje i remonty dachów. Bezpłatna wycena ☎ 518 144 882" />
+        {/* WZMOCNIONY TYTUŁ DLA MAKSYMALIZACJI CTR */}
+        <title>⭐ Usługi Dekarskie Szczecin ✅ Papa | Dachy Płaskie | Remonty Dachów - 518 144 882</title>
+        {/* WZMOCNIONY OPIS: Użycie fraz kluczowych i CTA (numeru telefonu) */}
+        <meta
+          name="description"
+          content="Szukasz dekarza w Szczecinie? Oferujemy kompleksowe usługi dekarskie: papa termozgrzewalna, membrany PVC/EPDM, docieplenia i naprawy dachów. Szybka wycena. Zadzwoń: 518 144 882."
+        />
 
         <link rel="canonical" href="https://www.bezpiecznydach.pl/wykonawstwo" />
+
+        {/* STRUKTURA DANYCH LocalBusiness - KLUCZOWE DLA FIRMY LOKALNEJ */}
+        <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Bezpieczny Dach - Usługi Dekarskie Szczecin",
+            "image": "https://www.bezpiecznydach.pl/logo.webp", 
+            "telephone": "+48518144882",
+            "url": "https://www.bezpiecznydach.pl/uslugi-dekarskie-szczecin",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Szczecin",
+              "addressRegion": "Zachodniopomorskie",
+              "addressCountry": "PL"
+            },
+            "openingHours": "Mo-Su 07:00-20:00",
+            "priceRange": "$$",
+            "description": "Profesjonalne usługi dekarskie w Szczecinie. Dachy płaskie, papa termozgrzewalna i docieplenia.",
+            "serviceType": ["Usługi dekarskie", "Papa termozgrzewalna", "Docieplanie dachów"]
+          }
+        `}
+        </script>
       </Helmet>
 
       <Header />
 
       <div className="wykonawstwo-container">
-        
+        {/* HERO */}
         <section className="hero-sectionW">
           <div className="hero-contentW">
-            <h1>Usługi dekarskie w Szczecinie i w okolicach – pokrycia dachowe i naprawy dachów</h1>
+            <h1>Profesjonalne Usługi Dekarskie w Szczecinie – Dachy Płaskie i Papa Termozgrzewalna</h1>
             <p className="hero-subtitle">Kompleksowe usługi dekarskie w Szczecinie i okolicach</p>
             <div className="hero-cta">
-              <a href="tel:+48518144882" className="cta-button">ZADZWOŃ: 518 144 882</a>
+              <a href="tel:+48518144882" className="cta-button">
+                ZADZWOŃ PO DARMOWĄ WYCENĘ: 518 144 882
+              </a>
             </div>
           </div>
         </section>
 
+        {/* INTRO */}
+        <section className="intro-dekarskie">
+          <div className="intro-content">
+            <h2>Twoi zaufani dekarze w Szczecinie – kompleksowe remonty i montaż dachów</h2>
+            <p>
+              Jako specjaliści od <strong>usług dekarskich w Szczecinie</strong> i okolicach, koncentrujemy się na
+              zapewnieniu <strong>szczelnych i trwałych dachów</strong>. Nasze 15-letnie doświadczenie obejmuje zarówno{' '}
+              <strong>montaż papy termozgrzewalnej</strong> i nowoczesnych <strong>membran PVC/EPDM</strong> na{' '}
+              <strong>dachach płaskich</strong>, jak i zaawansowane <strong>docieplenia</strong>. Potrzebujesz szybkiej{' '}
+              <strong>naprawy dachu w Szczecinie</strong>? Zapewniamy fachową diagnozę przecieków i ekspresowe usunięcie
+              awarii. Wybierając nas, stawiasz na najwyższą jakość i gwarancję bezpieczeństwa Twojego dachu.
+            </p>
+            <div className="intro-highlights">
+              <span>✅ Papa Termozgrzewalna</span>
+              <span>✅ Docieplanie Dachów</span>
+              <span>✅ Naprawa Przecieków Szczecin</span>
+              <span>✅ Bezpłatna Wycena</span>
+            </div>
+          </div>
+        </section>
+
+        {/* SERVICES */}
         <section className="services-overview">
           <h2>Usługi dekarskie Szczecin – kompleksowa oferta</h2>
-          <p className="section-intro">Jako doświadczona firma dekarska z wieloletnią tradycją, oferujemy kompleksowe rozwiązania dla Twojego dachu:</p>
+          <p className="section-intro">
+            Jako doświadczona firma dekarska z wieloletnią tradycją, oferujemy kompleksowe rozwiązania dla Twojego dachu:
+          </p>
           <div className="services-grid">
             <div className="service-card">
               <h3>Pokrycia dachowe</h3>
@@ -43,7 +98,6 @@ const Wykonawstwo = () => {
                 <li>Papa termozgrzewalna</li>
                 <li>PVC</li>
                 <li>EPDM</li>
-                
               </ul>
             </div>
             <div className="service-card">
@@ -67,6 +121,7 @@ const Wykonawstwo = () => {
           </div>
         </section>
 
+        {/* TECHNOLOGIES */}
         <section className="technologies-section">
           <h2>Materiały i technologie dekarskie – ICOPAL, ROCKWOOL, FAKRO</h2>
           <p className="section-intro">Pracujemy wyłącznie na materiałach renomowanych producentów:</p>
@@ -76,7 +131,7 @@ const Wykonawstwo = () => {
               <h3>ICOPAL</h3>
               <p className="tech-description">Wiodący producent papy w Polsce</p>
             </div>
-          
+
             <div className="tech-card">
               <div className="tech-icon">⚡</div>
               <h3>ROCKWOOL</h3>
@@ -90,6 +145,7 @@ const Wykonawstwo = () => {
           </div>
         </section>
 
+        {/* PROCESS */}
         <section className="process-section">
           <h2>Etapy realizacji usług dekarskich w Szczecinie</h2>
           <div className="process-steps">
@@ -116,6 +172,7 @@ const Wykonawstwo = () => {
           </div>
         </section>
 
+        {/* ADVANTAGES */}
         <section className="advantages-section">
           <h2>Dekarze Szczecin – dlaczego warto wybrać naszą firmę</h2>
           <div className="advantages-grid">
@@ -142,36 +199,46 @@ const Wykonawstwo = () => {
           </div>
         </section>
 
+        {/* PROJECTS */}
         <section className="projects-showcase">
           <h2>Przykłady realizacji dachów płaskich i skośnych w Szczecinie</h2>
-          <p className="section-intro">Zobacz przykłady naszych prac w Szczecinie i województwie zachodniopomorskim:</p>
+          <p className="section-intro">
+            Zobacz przykłady naszych prac w Szczecinie i województwie zachodniopomorskim:
+          </p>
           <div className="projects-grid">
             <div className="project-card">
-  <img src={jeden} alt="Realizacja 1 - Dach" className="project-image" />
-</div>
+              <img src={jeden} alt="Realizacja 1 - Dach" className="project-image" />
+            </div>
             <div className="project-card">
-  <img src={dwa} alt="Realizacja 2 - Dach" className="project-image" />
-</div>
+              <img src={dwa} alt="Realizacja 2 - Dach" className="project-image" />
+            </div>
             <div className="project-card">
-  <img src={trzy} alt="Realizacja 3 - Dach" className="project-image" />
-</div>
+              <img src={trzy} alt="Realizacja 3 - Dach" className="project-image" />
+            </div>
           </div>
-          <Link to="/realizacje" className="see-more-button">ZOBACZ WIĘCEJ REALIZACJI →</Link>
+          <Link to="/realizacje" className="see-more-button">
+            ZOBACZ WIĘCEJ REALIZACJI →
+          </Link>
         </section>
 
+        {/* CTA */}
         <section className="cta-section">
           <div className="cta-content">
             <h2>ZAINTERESOWANY NASZYMI USŁUGAMI?</h2>
             <p>Skontaktuj się z nami, aby omówić Twój projekt i otrzymać bezpłatną wycenę</p>
             <div className="cta-buttons">
-              <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>
-              <Link to="/#contact" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
+              <a href="tel:+48518144882" className="cta-button-primary">
+                ZADZWOŃ: 518 144 882
+              </a>
+              <Link to="/#contact" className="cta-button-secondary">
+                FORMULARZ KONTAKTOWY
+              </Link>
             </div>
           </div>
         </section>
-
-        <Footer />
       </div>
+
+      <Footer />
     </>
   );
 };

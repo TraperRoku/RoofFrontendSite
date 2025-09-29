@@ -23,7 +23,7 @@
   margin-top: 80px; /* Kompensacja dla fixed header */
 }
 .hero-content {
-    max-width: 50%;
+    max-width: 60%;
     padding: 2rem;
     margin-left: 10%;
     position: relative;
@@ -41,6 +41,11 @@
     margin-bottom: 0.5rem;
 }
 
+.highlight-seo{
+    color: #ff5722; 
+   font-weight: 700;
+}
+
 .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -49,6 +54,7 @@
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1.2;
+    margin-left: -10%;
 }
 
 .hero-buttons {

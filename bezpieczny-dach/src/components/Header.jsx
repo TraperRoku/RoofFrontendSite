@@ -87,7 +87,7 @@ function Header() {
                         <Link to="/papatermozgrzewalna-Szczecin" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
                         <Link to="/uslugi-dekarskie-szczecin" className="nav-link" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" className="nav-link" onClick={closeMenu}>Realizacje</Link>
-                        <Link to="/kontakt" className="nav-link" onClick={closeMenu}>Kontakt</Link>
+                        <Link to="/#contact" className="nav-link" onClick={closeMenu}>Kontakt</Link>
                     </div>
                     <div className="nav-secondary">
                         <Link to="/docieplanie-dachow" className="nav-link-small" onClick={closeMenu}>Izolacja</Link>
