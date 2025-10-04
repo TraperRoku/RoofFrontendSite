@@ -217,9 +217,7 @@ function Realization() {
                 </button>
               </div>
 
-              <div className="image-description">
-                {imageAlts[currentImageIndex]}
-              </div>
+           
             </div>
           </div>
         )}

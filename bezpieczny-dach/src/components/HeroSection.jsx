@@ -13,7 +13,7 @@ function HeroSection() {
         <br />
         PAPA TERMOZGRZEWALNA
         <br />
-        I GWARANCJA SZCZELNOŚCI
+        EPDM, PVC
       </h1>
             <div className="hero-buttons">
             <a href="#services">
