@@ -344,18 +344,19 @@ function FAQ() {
         {/* FAQ Items */}
         <section className="faq-items-section" id="faq-questions">
           <div className="faq-items-container">
-            {filteredFAQ.map((faq) => (
-  <div 
-    key={faq.id} 
-    className="faq-item" 
-    // Dodajemy itemprop dla FAQPage schema (chociaż schema.org działa lepiej z <script type="application/ld+json">)
-    itemProp="mainEntity" 
-    itemScope 
-    itemType="https://schema.org/Question" 
-  >
-    <h3 // Zmieniamy div na h3 - jest to bardziej semantyczne
-      onClick={() => toggleFAQ(faq.id)}
-      className={`faq-question ${openFAQ === faq.id ? 'active' : ''}`}
+ {filteredFAQ.map((faq) => (
+    // KROK 1: Dodajemy klasę 'open' warunkowo do rodzica
+    <div 
+        key={faq.id} 
+        className={`faq-item ${openFAQ === faq.id ? 'open' : ''}`}
+        itemProp="mainEntity" 
+        itemScope 
+        itemType="https://schema.org/Question" 
+    >
+        <h3 
+            onClick={() => toggleFAQ(faq.id)}
+            className={`faq-question ${openFAQ === faq.id ? 'active' : ''}`}
+       
       role="button"
       tabIndex="0"
       aria-expanded={openFAQ === faq.id}

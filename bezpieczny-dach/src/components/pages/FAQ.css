@@ -335,16 +335,22 @@
 .answer-text {
   flex: 2;
   min-width: 300px;
+  overflow-wrap: break-word; /* zapobiega wychodzeniu słów poza ramkę */
+  word-break: break-word;
+  box-sizing: border-box;
 }
 
 .answer-text p {
   font-size: 1rem;
-  line-height: 1.7; /* Zwiększona line-height dla lepszej czytelności */
-  color: #444; /* Ciemniejszy tekst */
-  margin-bottom: 20px;
-  font-style: italic; /* Dodany styl dla odpowiedzi */
+  line-height: 1.6;
+  color: #444;
+  margin: 0 0 20px 0;
+  font-style: italic;
   border-left: 3px solid #e74c3c;
   padding-left: 15px;
+  background-color: #fff; /* ✅ daje tło, które nie „ucieka” */
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .tips-box {
@@ -563,9 +569,27 @@
     height: auto;
   }
 
-  .faq-answer {
-    padding: 20px !important;
-  }
+.faq-answer {
+  max-height: none !important;
+  overflow: visible !important;
+  padding: 25px !important;
+
+
+
+
+}
+
+/* NOWA KLASA DLA AKTYWNEJ ODPOWIEDZI */
+/* Jeśli React dodaje klasę 'active' do .faq-item, 
+   wtedy dodajemu styl dla .faq-item.open .faq-answer lub innej klasy: */
+
+/* Jeśli używasz klasy `open` na rodzicu `.faq-item` */
+.faq-item.open .faq-answer {
+    /* Ustawienie bardzo dużej wartości gwarantuje, 
+       że cała treść odpowiedzi zmieści się na telefonie */
+    max-height: 2000px; 
+    padding: 25px; /* Dodajemy górny padding, gdy jest otwarty */
+}
 }
 
 @media (max-width: 480px) {
