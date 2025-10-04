@@ -334,7 +334,7 @@
 
 .answer-text {
   flex: 2;
-  min-width: 300px;
+  min-width: 0px;
   overflow-wrap: break-word; /* zapobiega wychodzeniu słów poza ramkę */
   word-break: break-word;
   box-sizing: border-box;
@@ -569,16 +569,19 @@
     height: auto;
   }
 
+
+
 .faq-answer {
-  max-height: none !important;
-  overflow: visible !important;
-  padding: 25px !important;
-
-
-
-
+  /* Usuwamy górną linię, ponieważ jest w .faq-question.active */
+  padding: 0 25px 25px 25px;
+  /* Animacja odpowiedzi - PAMIĘTAJ! Prawidłowa animacja w React wymaga CSS Transitions lub bibliotek, 
+     ale poniższe style poprawiają estetykę samej odpowiedzi */
+  background-color: #f8f9fa; /* Lekkie szare tło dla odpowiedzi */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
 }
-
 /* NOWA KLASA DLA AKTYWNEJ ODPOWIEDZI */
 /* Jeśli React dodaje klasę 'active' do .faq-item, 
    wtedy dodajemu styl dla .faq-item.open .faq-answer lub innej klasy: */
