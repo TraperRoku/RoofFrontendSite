@@ -2,9 +2,9 @@
 
 /* --- Zmienne globalne --- */
 :root {
-  --primary-color:   #e74c3c; /* Czerwony profesjonalny */
-  --secondary-color: #1976D2; /* Niebieski dla kontrastu */
-  --dark-color: #333; /* Ujednolicony ciemny kolor dla lepszego kontrastu, wcześniej #767575 */
+  --primary-color:   #e74c3c;
+  --secondary-color: #1976D2;
+  --dark-color: #333;
   --light-color: #f5f5f5;
   --accent-color: #FFC107;
   --success-color: #388E3C;
@@ -34,13 +34,13 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--dark-color);
   margin-bottom: 1rem;
   line-height: 1.3;
-  text-align: center; /* Dodane dla globalnego wyśrodkowania h2 i h3 */
+  text-align: center;
 }
 
 h1 {
   font-size: 2.5rem;
   font-weight: 800;
-  text-align: left; /* Przywrócenie wyrównania dla H1 w Hero */
+  text-align: left;
 }
 
 h2 {
@@ -50,20 +50,9 @@ h2 {
   margin-bottom: 2rem;
 }
 
-h2:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: var(--primary-color);
-}
-
 h3 {
   font-size: 1.75rem;
-  text-align: inherit; /* Resetowanie globalnego wyśrodkowania dla kart */
+  text-align: inherit;
 }
 
 /* --- Kontener główny --- */
@@ -121,35 +110,45 @@ h3 {
   margin-top: 2rem;
 }
 
-/* --- 1. Sekcja Hero --- */
+/* --- 1. Sekcja Hero - POPRAWIONA --- */
 .hero-section {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
   background: linear-gradient(135deg, var(--light-color) 0%, #fff 100%);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   margin-bottom: 4rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  min-height: 500px;
 }
 
 .hero-content {
-  flex: 1;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-width: 300px;
 }
 
 .hero-image {
-  flex: 1;
-  min-width: 300px;
   position: relative;
+  min-width: 300px;
+  min-height: 400px;
+  overflow: hidden;
 }
 
 .hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover img {
+  transform: scale(1.05);
 }
 
 .hero-section h1 {
@@ -158,11 +157,16 @@ h3 {
   line-height: 1.2;
 }
 
-.hero-subtitle {
+.hero-subtitlee {
   font-size: 1.25rem;
-  color: var(--primary-color);
+ 
   margin-bottom: 2rem;
+  background-color:#e74c3c; 
   font-weight: 600;
+}
+
+.hero-cta {
+  margin-top: 1rem;
 }
 
 /* --- 2. Sekcja Benefitów --- */
@@ -206,7 +210,13 @@ h3 {
 /* --- 3. Galeria --- */
 .gallery-section {
   margin: 5rem 0;
-  text-align: center; /* Wyrównanie nagłówka */
+  text-align: center;
+}
+
+.gallery-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2rem;
 }
 
 .gallery-grid {
@@ -282,10 +292,6 @@ h3 {
   margin-bottom: 1.5rem;
 }
 
-.emergency-section h2:after {
-  background: white;
-}
-
 .emergency-button {
   background: white;
   color: var(--primary-color);
@@ -306,10 +312,9 @@ h3 {
   margin: 5rem 0;
 }
 
-/* POPRAWIONE: Usunięty nadmiernie silny selektor na `p` */
 .systems-section p { 
-  font-size: 1.1rem; /* Przywrócenie normalnej wielkości */
-  font-weight: normal; /* Przywrócenie normalnej wagi */
+  font-size: 1.1rem;
+  font-weight: normal;
 }
 
 .system-card {
@@ -346,7 +351,7 @@ h3 {
 }
 
 .system-card.reverse {
-  flex-direction: row-reverse; /* Odwraca kolejność obraz-tekst na dużych ekranach */
+  flex-direction: row-reverse;
 }
 
 .system-card h3 {
@@ -459,10 +464,6 @@ h3 {
   color: white;
 }
 
-.guarantee-section h2:after {
-  background: var(--accent-color);
-}
-
 .guarantee-content {
   display: flex;
   flex-wrap: wrap;
@@ -516,7 +517,7 @@ h3 {
   position: relative;
   padding-left: 2rem;
   line-height: 1.5;
-  color: var(--light-color); /* Zmienione na jasny kolor dla lepszego kontrastu */
+  color: var(--light-color);
 }
 
 .guarantee-text-content li:before {
@@ -530,7 +531,7 @@ h3 {
 
 /* --- 8. Sekcja FAQ --- */
 .faq-section {
-  padding: 4rem 0; /* Zmieniony padding */
+  padding: 4rem 0;
   background-color: #fff;
   margin: 5rem 0;
   text-align: center;
@@ -539,18 +540,16 @@ h3 {
 .faq-section h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: var(--primary-color); /* Użycie zmiennej */
+  color: var(--primary-color);
   text-transform: uppercase;
   font-weight: 800;
   letter-spacing: 1px;
 }
 
-/* Usunięty zbędny selektor na font-family, który nadpisywał globalny */
-
 .faq-grid {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* Zmniejszony gap */
+  gap: 1.5rem;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -558,27 +557,27 @@ h3 {
 .faq-item {
   background: #fdfdfd;
   border-left: 6px solid var(--primary-color);
-  padding: 1.5rem 2rem; /* Zmniejszony padding */
-  border-radius: 8px; /* Zmniejszony border-radius */
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  text-align: left; /* Wyrównanie treści */
+  text-align: left;
 }
 
 .faq-item:hover {
-  transform: translateY(-4px); /* Zmniejszony ruch */
+  transform: translateY(-4px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .faq-item h3 {
-  font-size: 1.5rem; /* Zmniejszona czcionka */
+  font-size: 1.5rem;
   margin-bottom: 0.75rem;
   color: var(--primary-color);
   font-weight: 700;
 }
 
 .faq-item p {
-  font-size: 1.1rem; /* Zmniejszona czcionka */
+  font-size: 1.1rem;
   color: var(--dark-color);
   line-height: 1.6;
 }
@@ -618,25 +617,53 @@ h3 {
     max-width: 95%;
   }
   
+  .hero-section {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .hero-image {
+    min-height: 350px;
+    order: 2;
+  }
+  
+  .hero-content {
+    order: 1;
+  }
+  
   .system-content {
     padding: 2rem;
   }
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
+  
   .hero-section h1 {
     font-size: 2rem;
+    text-align: center;
   }
   
   .hero-subtitle {
     font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .hero-content {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .hero-image {
+    min-height: 300px;
   }
   
   .benefit-card {
     padding: 1.5rem;
   }
   
-  /* Odwrócenie kolejności na mniejszych ekranach (dla lepszej logiki mobilnej) */
   .system-card, .system-card.reverse { 
     flex-direction: column;
   }
@@ -656,6 +683,10 @@ h3 {
 }
 
 @media (max-width: 600px) {
+  .hero-image {
+    min-height: 250px;
+  }
+  
   .local-areas {
     padding: 1.2rem;
     border-radius: 10px;
@@ -695,8 +726,16 @@ h3 {
     font-size: 1.6rem;
   }
   
+  .hero-section {
+    border-radius: 8px;
+  }
+  
   .hero-content {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .hero-image {
+    min-height: 220px;
   }
   
   .cta-buttons {
@@ -716,6 +755,7 @@ h3 {
   .guarantee-years {
     font-size: 2.5rem;
   }
+  
   .local-areas ul {
     grid-template-columns: 1fr;
   }

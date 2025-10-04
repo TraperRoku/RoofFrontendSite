@@ -25,14 +25,14 @@ function DachyPlaskie(){
         
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
         <meta name="googlebot" content="index, follow"/>
-        <link rel="canonical" href="https://yourdomain.com/dachy-plaskie-szczecin"/>
+        <link rel="canonical" href="https://www.bezpiecznydach.pl/dachy-plaskie"/>
         
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="🏆 DEKARZ SZCZECIN - Dachy Płaskie, Papa Termozgrzewalna | ☎️ 518-144-882"/>
         <meta property="og:description" content="⭐ Najlepszy dekarz w Szczecinie! Dachy płaskie, papa termozgrzewalna, EPDM, naprawy w 24H. 15 lat doświadczenia, gwarancja jakości!"/>
         <meta property="og:image" content={dach1}/>
-        <meta property="og:url" content="https://yourdomain.com/dachy-plaskie-szczecin"/>
+        <meta property="og:url" content="https://www.bezpiecznydach.pl/dachy-plaskie"/>
         <meta property="og:locale" content="pl_PL"/>
         
         {/* Twitter Meta Tags */}
@@ -132,7 +132,7 @@ function DachyPlaskie(){
         <section className="hero-section">
           <div className="hero-content">
             <h1>🏆 DEKARZ SZCZECIN - DACHY PŁASKIE, PAPA TERMOZGRZEWALNA | 15 LAT DOŚWIADCZENIA!</h1>
-            <p className="hero-subtitle">⭐ Najlepszy dekarz w Szczecinie ⭐ Naprawy w 24H | Gwarancja jakości | Darmowa wycena</p>
+            <p className="hero-subtitlee">⭐ Najlepszy dekarz w Szczecinie ⭐ Naprawy w 24H | Gwarancja jakości | Darmowa wycena</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button" itemProp="telephone">📞 ZADZWOŃ TERAZ: 518 144 882</a>
             </div>

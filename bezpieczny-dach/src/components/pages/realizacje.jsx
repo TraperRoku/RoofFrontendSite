@@ -6,138 +6,144 @@ import Footer from '../footer';
 import '../pages/Realizacje.css';
 
 function Realizacje() {
-  const [galleryImages, setGalleryImages] = useState([]);
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [loadedCount, setLoadedCount] = useState(0);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [loadProgress, setLoadProgress] = useState(0);
 
-  // Ładowanie obrazów w partiach
-  useEffect(() => {
-    const batchSize = 10;
-    const totalImages = 91;
-    let cancelled = false;
+  // Ładowanie obrazów z lepszą obsługą błędów
+  useEffect(() => {
+    const totalImages = 91;
+    let cancelled = false;
+    const loadedImages = [];
 
-    const loadBatch = async (start, end) => {
-      const batch = [];
-      for (let i = start; i <= end; i++) {
-        try {
-          const [thumb, full] = await Promise.all([
-            import(`../realizacje/thumbs/${i}.webp`),
-            import(`../realizacje/thumbs/${i}f.webp`)
-          ]);
-          
-          batch.push({
-            id: i,
-            thumb: thumb.default,
-            full: full.default,
-            // [SEO OPTYMALIZACJA] Bardziej opisowy title i alt dla każdego zdjęcia
-            title: `Realizacja dachu płaskiego w Szczecinie - Projekt ${i}`,
-            alt: `Papa termozgrzewalna, docieplenie dachu płaskiego w Szczecinie - ZDJĘCIE ${i}`
-          });
-        } catch (err) {
-          console.warn(`Nie znaleziono zdjęcia ${i}.webp`);
-        }
-      }
-      return batch;
-    };
+    const loadImage = async (i) => {
+      try {
+        const [thumb, full] = await Promise.all([
+          import(`../realizacje/thumbs/${i}.webp`),
+          import(`../realizacje/thumbs/${i}f.webp`)
+        ]);
+        
+        return {
+          id: i,
+          thumb: thumb.default,
+          full: full.default,
+          title: `Realizacja dachu płaskiego w Szczecinie - Projekt ${i}`,
+          alt: `Papa termozgrzewalna, docieplenie dachu płaskiego w Szczecinie - Zdjęcie ${i}`
+        };
+      } catch (err) {
+        console.warn(`Nie można załadować zdjęcia ${i}`);
+        return null;
+      }
+    };
 
-    const loadImages = async () => {
-      try {
-        setIsLoading(true);
-        
-        const firstBatch = await loadBatch(1, Math.min(batchSize, totalImages));
-        if (cancelled) return;
-        
-        setGalleryImages(firstBatch);
-        setLoadedCount(firstBatch.length);
-        setIsLoading(false);
+    const loadImages = async () => {
+      try {
+        setIsLoading(true);
+        setLoadProgress(0);
 
-        for (let i = batchSize + 1; i <= totalImages; i += batchSize) {
-          const batchEnd = Math.min(i + batchSize - 1, totalImages);
-          const newBatch = await loadBatch(i, batchEnd);
-          if (cancelled) return;
-          
-          setGalleryImages(prev => [...prev, ...newBatch]);
-          setLoadedCount(prev => prev + newBatch.length);
-          await new Promise(resolve => setTimeout(resolve, 100));
-        }
-      } catch (error) {
-        if (!cancelled) {
-          setError('Wystąpił problem podczas ładowania galerii');
-          console.error('Błąd ładowania zdjęć:', error);
-          setIsLoading(false);
-        }
-      }
-    };
+        // Ładuj wszystkie obrazy równolegle, ale w partiach
+        const batchSize = 10;
+        for (let i = 1; i <= totalImages; i += batchSize) {
+          if (cancelled) return;
+          
+          const batchEnd = Math.min(i + batchSize - 1, totalImages);
+          const batchPromises = [];
+          
+          for (let j = i; j <= batchEnd; j++) {
+            batchPromises.push(loadImage(j));
+          }
+          
+          const batchResults = await Promise.all(batchPromises);
+          const validImages = batchResults.filter(img => img !== null);
+          
+          loadedImages.push(...validImages);
+          
+          if (!cancelled) {
+            setGalleryImages([...loadedImages]);
+            setLoadProgress(Math.round((loadedImages.length / totalImages) * 100));
+          }
+          
+          // Małe opóźnienie między partiami
+          await new Promise(resolve => setTimeout(resolve, 50));
+        }
 
-    loadImages();
-    return () => { cancelled = true; };
-  }, []);
+        if (!cancelled) {
+          setIsLoading(false);
+          if (loadedImages.length === 0) {
+            setError('Nie znaleziono żadnych zdjęć w galerii');
+          }
+        }
+      } catch (error) {
+        if (!cancelled) {
+          setError('Wystąpił problem podczas ładowania galerii');
+          console.error('Błąd ładowania zdjęć:', error);
+          setIsLoading(false);
+        }
+      }
+    };
 
-  const openImage = useCallback((image, index) => {
-    setSelectedImage(image);
-    setCurrentImageIndex(index);
-    document.body.style.overflow = 'hidden';
-  }, []);
+    loadImages();
+    return () => { cancelled = true; };
+  }, []);
 
-  const closeImage = useCallback(() => {
-    setSelectedImage(null);
-    document.body.style.overflow = 'auto';
-  }, []);
+  const openImage = useCallback((image, index) => {
+    setSelectedImage(image);
+    setCurrentImageIndex(index);
+    document.body.style.overflow = 'hidden';
+  }, []);
 
-// Poprawka nawigacji, aby była bardziej czysta
-const navigate = useCallback((direction) => {
-  setGalleryImages(currentImages => {
-    const total = currentImages.length;
-    if (total === 0) return currentImages;
+  const closeImage = useCallback(() => {
+    setSelectedImage(null);
+    document.body.style.overflow = 'auto';
+  }, []);
 
-    setCurrentImageIndex(prev => {
-      let newIndex = prev + direction;
-      if (newIndex < 0) newIndex = total - 1;
-      if (newIndex >= total) newIndex = 0;
+  const navigate = useCallback((direction) => {
+    setCurrentImageIndex(prev => {
+      const total = galleryImages.length;
+      if (total === 0) return prev;
 
-      setSelectedImage(currentImages[newIndex]);
-      return newIndex;
-    });
-    return currentImages;
-  });
-}, []);
+      let newIndex = prev + direction;
+      if (newIndex < 0) newIndex = total - 1;
+      if (newIndex >= total) newIndex = 0;
 
-const goToPrevious = useCallback(() => navigate(-1), [navigate]);
-const goToNext = useCallback(() => navigate(1), [navigate]);
+      setSelectedImage(galleryImages[newIndex]);
+      return newIndex;
+    });
+  }, [galleryImages]);
 
-  // Obsługa klawiatury
-  useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (!selectedImage) return;
-      
-      switch (e.key) {
-        case 'Escape': closeImage(); break;
-        case 'ArrowLeft': goToPrevious(); break;
-        case 'ArrowRight': goToNext(); break;
-      }
-    };
+  const goToPrevious = useCallback(() => navigate(-1), [navigate]);
+  const goToNext = useCallback(() => navigate(1), [navigate]);
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [selectedImage, closeImage, goToPrevious, goToNext]);
+  // Obsługa klawiatury
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (!selectedImage) return;
+      
+      switch (e.key) {
+        case 'Escape': closeImage(); break;
+        case 'ArrowLeft': goToPrevious(); break;
+        case 'ArrowRight': goToNext(); break;
+        default: break;
+      }
+    };
 
-  return (
-    <>
-      <Helmet>
-        {/* [SEO OPTYMALIZACJA] Wzmocniony Title */}
-        <title>⭐ Realizacje Dachów Płaskich i Dociepleń | Dekarz Szczecin | Bezpieczny Dach</title>
-        
-        {/* [SEO OPTYMALIZACJA] Wzmocniony Description (frazy kluczowe) */}
-        <meta 
-          name="description" 
-          content="Galeria zrealizowanych projektów w Szczecinie. Zobacz montaż papy termozgrzewalnej, docieplenia dachów płaskich i renowacje. Sprawdź jakość naszych usług dekarskich." 
-        />
-        <link rel="canonical" href="https://www.bezpiecznydach.pl/realizacje" />
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedImage, closeImage, goToPrevious, goToNext]);
 
-        {/* [SEO OPTYMALIZACJA] Dodanie struktury danych BreadcrumbList */}
+  return (
+    <>
+      <Helmet>
+        <title>⭐ Realizacje Dachów Płaskich i Dociepleń | Dekarz Szczecin | Bezpieczny Dach</title>
+        <meta 
+          name="description" 
+          content="Galeria zrealizowanych projektów w Szczecinie. Zobacz montaż papy termozgrzewalnej, docieplenia dachów płaskich i renowacje. Sprawdź jakość naszych usług dekarskich." 
+        />
+        <link rel="canonical" href="https://www.bezpiecznydach.pl/realizacje" />
+
         <script type="application/ld+json">
         {`
         {
@@ -160,105 +166,145 @@ const goToNext = useCallback(() => navigate(1), [navigate]);
         }
         `}
         </script>
-      </Helmet>
+      </Helmet>
 
-      <Header />
+      <Header />
 
-      <main className="realizacje-container">
-        {/* Sekcja hero */}
-        <section className="hero-sectionR">
-          <div className="hero-contentR">
-            {/* [SEO OPTYMALIZACJA] Bardziej konkretny H1 */}
-            <h1>GALERIA ZREALIZOWANYCH <br></br>PROJEKTÓW <br></br> DEKARZ SZCZECIN</h1>
-            <p className="hero-subtitle">Zobacz przykłady naszych prac - **papa termozgrzewalna** i profesjonalne **docieplenia dachów płaskich** w Szczecinie i okolicach.</p>
-          </div>
-        </section>
+      <main className="realizacje-container">
+        {/* Sekcja hero */}
+        <section className="hero-sectionR">
+          <div className="hero-contentR">
+            <h1>GALERIA ZREALIZOWANYCH PROJEKTÓW<br />DEKARZ SZCZECIN</h1>
+            <p className="hero-subtitle">
+              Zobacz przykłady naszych prac - <strong>papa termozgrzewalna</strong> i profesjonalne{' '}
+              <strong>docieplenia dachów płaskich</strong> w Szczecinie i okolicach.
+            </p>
+          </div>
+        </section>
 
-        {/* Galeria */}
-        <section className="gallery-section">
-          {/* [SEO OPTYMALIZACJA] Bardziej konkretny H2 */}
-          <h2>NASZE PRACE: MONTAŻ PAPY I DOCIEPLENIA DACHÓW</h2>
-          <p className="gallery-description">Kliknij w zdjęcie, aby je powiększyć. Wszystkie projekty zrealizowane przez firmę Bezpieczny Dach.</p>
-          
-          {isLoading ? (
-            <div className="loading-spinner">Ładowanie galerii...</div>
-          ) : error ? (
-            <div className="error-message">{error}</div>
-          ) : (
-            <>
-              <div className="gallery-grid">
-                {galleryImages.map((image, index) => (
-                  <div 
-                    key={image.id} 
-                    className="gallery-item"
-                    onClick={() => openImage(image, index)}
-                  >
-                    <img 
-                      src={image.thumb} 
-                      alt={image.alt} 
-                      className="gallery-thumb"
-                      loading="lazy"
-                      width="400"
-                      height="300"
-                    />
-                    <div className="image-overlay">
-                      <span className="zoom-icon">🔍</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              
-              {/* [SEO OPTYMALIZACJA] Usunięty zbędny ukryty blok - atrybuty ALT są teraz w kodzie */}
-            </>
-          )}
-        </section>
-      </main>
+        {/* Galeria */}
+        <section className="gallery-section">
+          <h2>NASZE PRACE: MONTAŻ PAPY I DOCIEPLENIA DACHÓW</h2>
+          <p className="gallery-description">
+            Kliknij w zdjęcie, aby je powiększyć. Wszystkie projekty zrealizowane przez firmę Bezpieczny Dach.
+          </p>
+          
+          {isLoading ? (
+            <div className="loading-spinner">
+              <div className="spinner"></div>
+              <p>Ładowanie galerii... {loadProgress}%</p>
+              <div className="progress-bar">
+                <div className="progress" style={{ width: `${loadProgress}%` }}></div>
+              </div>
+            </div>
+          ) : error ? (
+            <div className="error-message">
+              <p>{error}</p>
+              <p>Prosimy spróbować ponownie później lub skontaktować się z nami.</p>
+            </div>
+          ) : galleryImages.length === 0 ? (
+            <div className="error-message">
+              <p>Brak dostępnych zdjęć w galerii.</p>
+            </div>
+          ) : (
+            <>
+             
+              <div className="gallery-grid">
+                {galleryImages.map((image, index) => (
+                  <div 
+                    key={image.id} 
+                    className="gallery-item"
+                    onClick={() => openImage(image, index)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        openImage(image, index);
+                      }
+                    }}
+                  >
+                    <img 
+                      src={image.thumb} 
+                      alt={image.alt} 
+                      className="gallery-thumb"
+                      loading="lazy"
+                      width="400"
+                      height="300"
+                    />
+                    <div className="image-overlay">
+                      <span className="zoom-icon">🔍</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
+        </section>
+      </main>
 
-      {/* Sekcja CTA - (OK) */}
-      <section className="contact-cta">
-        <div className="cta-container">
-          <h2>ZAINTERESOWANY NASZYMI USŁUGAMI?</h2>
-          <p>Skontaktuj się z nami, aby omówić Twój projekt</p>
-          <div className="cta-buttons">
-            <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>
-            <Link to="/#contact" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
-          </div>
-        </div>
-      </section>
+      {/* Sekcja CTA */}
+      <section className="contact-cta">
+        <div className="cta-container">
+          <h2>ZAINTERESOWANY NASZYMI USŁUGAMI?</h2>
+          <p>Skontaktuj się z nami, aby omówić Twój projekt</p>
+          <div className="cta-buttons">
+            <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>
+            <Link to="/#contact" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
+          </div>
+        </div>
+      </section>
 
-      {/* Modal z powiększonym zdjęciem */}
-      {selectedImage && (
-        <div className="image-modal" onClick={closeImage}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-button" onClick={closeImage}>&times;</button>
-            
-            <button className="nav-button prev-button" onClick={(e) => {
-              e.stopPropagation();
-              goToPrevious();
-            }}>&larr;</button>
-            
-            <div className="image-container">
-              <img 
-                src={selectedImage.full} 
-                alt={selectedImage.alt} 
-                className="modal-image"
-                width="1200"
-                height="900"
-              />
-              <p className="image-title">{selectedImage.title} ({currentImageIndex + 1}/{galleryImages.length})</p>
-            </div>
-            
-            <button className="nav-button next-button" onClick={(e) => {
-              e.stopPropagation();
-              goToNext();
-            }}>&rarr;</button>
-          </div>
-        </div>
-      )}
+      {/* Modal z powiększonym zdjęciem */}
+      {selectedImage && (
+        <div className="image-modal" onClick={closeImage}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button 
+              className="close-button" 
+              onClick={closeImage}
+              aria-label="Zamknij zdjęcie"
+            >
+              &times;
+            </button>
+            
+            <button 
+              className="nav-button prev-button" 
+              onClick={(e) => {
+                e.stopPropagation();
+                goToPrevious();
+              }}
+              aria-label="Poprzednie zdjęcie"
+            >
+              ‹
+            </button>
+            
+            <div className="image-container">
+              <img 
+                src={selectedImage.full} 
+                alt={selectedImage.alt} 
+                className="modal-image"
+              />
+              <div className="image-counter">
+                {currentImageIndex + 1} / {galleryImages.length}
+              </div>
+            </div>
+            
+            <button 
+              className="nav-button next-button" 
+              onClick={(e) => {
+                e.stopPropagation();
+                goToNext();
+              }}
+              aria-label="Następne zdjęcie"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      )}
 
-      <Footer />
-    </>
-  );
+      <Footer />
+    </>
+  );
 }
 
 export default Realizacje;

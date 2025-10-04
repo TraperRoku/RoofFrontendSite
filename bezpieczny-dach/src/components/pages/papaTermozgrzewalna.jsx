@@ -90,7 +90,7 @@ function PapaTermozgrzewalnaSzczecin() {
             <div className="hero-content2">
               <h1>Papa Termozgrzewalna w Szczecinie</h1>
               <p>Specjalizujemy się w profesjonalnym montażu, naprawie i renowacji dachów z papy termozgrzewalnej na terenie Szczecina i okolic. Dzięki wieloletniemu doświadczeniu i wykorzystaniu materiałów najwyższej jakości, zapewniamy szczelne i trwałe pokrycia dachowe.</p>
-              <a href="tel:518144882" className="cta-button">📞 Zadzwoń po Darmową Wycenę <br></br> (518-144-882)</a>
+              <a href="tel:518144882" className="cta-button">📞 Zadzwoń po Darmową Wycenę <br></br> 518 144 882</a>
             </div>
           </div>
         </section>
@@ -238,7 +238,7 @@ function PapaTermozgrzewalnaSzczecin() {
             <div className="contact-info-grid">
               <div className="contact-card">
                 <h4>📞 Telefon</h4>
-                <p>518-144-882</p>
+                <p>518 144 882</p>
               </div>
               
               <div className="contact-card">
