@@ -41,8 +41,8 @@ body {
   background-image: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 255, 255, 0.7) 50%,
-      rgba(255, 255, 255, 0.3) 100%
+      rgba(255, 255, 255, 0.7) 2%,
+      rgba(255, 255, 255, 0.3) 60%
     ),
      url('../realizacje/thumbs/23f.webp');
   background-size: cover;

@@ -261,7 +261,9 @@
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   margin-bottom: 20px;
   overflow: hidden;
+   border: 1px solid #f0f0f0; 
 }
+
 
 .faq-question {
   padding: 25px;
@@ -273,9 +275,25 @@
   transition: all 0.3s;
 }
 
+/* Wyróżnienie aktywnego pytania */
 .faq-question.active {
-  background-color: #f8f9fa;
+  background-color: #e74c3c; /* Kolor marki */
+  color: white; /* Biały tekst dla lepszego kontrastu */
+  border-bottom: 1px solid #c0392b; /* Linia oddzielająca od odpowiedzi */
 }
+
+.faq-question.active .faq-category {
+  color: white; /* Biały kolor dla kategorii w aktywnym pytaniu */
+}
+
+.faq-question.active .faq-question-text {
+  color: white; /* Biały kolor dla tekstu pytania w aktywnym pytaniu */
+}
+
+.faq-question.active .chevron-icon {
+  color: white; /* Biały kolor dla strzałki w aktywnym pytaniu */
+}
+
 
 .faq-category {
   font-size: 0.8rem;
@@ -299,8 +317,11 @@
 }
 
 .faq-answer {
+  /* Usuwamy górną linię, ponieważ jest w .faq-question.active */
   padding: 0 25px 25px 25px;
-  border-top: 1px solid #eee;
+  /* Animacja odpowiedzi - PAMIĘTAJ! Prawidłowa animacja w React wymaga CSS Transitions lub bibliotek, 
+     ale poniższe style poprawiają estetykę samej odpowiedzi */
+  background-color: #f8f9fa; /* Lekkie szare tło dla odpowiedzi */
 }
 
 .answer-content {
@@ -318,16 +339,20 @@
 
 .answer-text p {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
+  line-height: 1.7; /* Zwiększona line-height dla lepszej czytelności */
+  color: #444; /* Ciemniejszy tekst */
   margin-bottom: 20px;
+  font-style: italic; /* Dodany styl dla odpowiedzi */
+  border-left: 3px solid #e74c3c;
+  padding-left: 15px;
 }
 
 .tips-box {
-  background: #f8f9fa;
+  background: #ffffff; /* Zmienione tło na jaśniejsze */
   padding: 20px;
   border-radius: 8px;
-  border-left: 4px solid #e74c3c;
+  border: 1px solid #eee; /* Dodana ramka */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .tips-box h4 {
@@ -344,18 +369,20 @@
 }
 
 .tips-box li {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: #333;
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
 }
 
-.tip-bullet {
+.tips-box li::before {
+  content: "★"; /* Zmiana na gwiazdkę dla lepszego wyglądu */
   position: absolute;
   left: 0;
-  color: #e74c3c;
+  color: #2c3e50; /* Ciemny kolor, aby wyróżnić tipy */
   font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .answer-image {
@@ -368,7 +395,7 @@
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Większy cień */
 }
 
 /* Emergency CTA */
@@ -433,43 +460,78 @@
 }
 
 
+.contact-info {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Jasne tło */
+  border-radius: 10px;
+  
+}
+
 .contact-info h3 {
   font-family: 'Montserrat', Arial, sans-serif;
   font-weight: 900;
   margin-bottom: 30px;
   font-size: 1.5rem;
+  color: #2c3e50;
+  
+  /* DODATKOWE WŁAŚCIWOŚCI, ABY ZAGWARANTOWAĆ CENTROWANIE */
+  width: 100%; /* Upewnij się, że zajmuje całą dostępną szerokość */
+  display: block; /* Upewnij się, że jest blokiem */
+  text-align: center; /* Powinno teraz działać na 100% szerokości */
 }
-
 .contact-details {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  max-width: 800px;
+  /* Używamy auto-fit i większej minimalnej szerokości, 
+     aby na komputerach elementy były w jednej linii, a na telefonie się ładnie łamały */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 15px 10px; /* Zmniejszamy gap między kolumnami i wierszami */
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* Centrowanie na telefonie, lewe wyrównanie na większych ekranach */
+  justify-content: flex-start; 
   gap: 10px;
-  margin-left: 20px;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: white; /* Dodajemy tło do każdego elementu dla lepszej czytelności */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  font-weight: 600;
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 .contact-icon {
   color: #e74c3c;
-    margin-left: 45px;
+  margin-left: 15px; /* Stały lewy margines, aby ikony były wyrównane */
 }
 
-/* Animations */
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-
-/* Responsive Styles */
+/* Responsywność dla contact-details */
 @media (max-width: 768px) {
+  .contact-details {
+    grid-template-columns: 1fr; /* Na mniejszych ekranach jeden element na linię */
+    gap: 10px;
+  }
+  
+  .contact-item {
+    justify-content: flex-start; /* Wszystko wyrównane do lewej */
+    padding-left: 10px;
+  }
+
+  .contact-icon {
+    margin-left: 0; /* Usuwamy dodatkowy margines na telefonie */
+  }
+
   .faq-container {
     max-width: 95%;
     padding: 20px 10px;
