@@ -155,7 +155,7 @@ function Realization() {
         </div>
     <Link to="/realizacje" className="see-more-button">Zobacz więcej realizacji</Link>
         <div className="cta-section">
-          <h3>Chcesz taki dach? Zadzwoń teraz!</h3>
+          <h2>Chcesz taki dach? Zadzwoń teraz!</h2>
           <p>Nasi konsultanci czekają, aby omówić Twój projekt i przedstawić bezpłatną wycenę</p>
           <a href="tel:+48518144882" className="cta-button">Zadzwoń: 518 144 882</a>
         </div>
