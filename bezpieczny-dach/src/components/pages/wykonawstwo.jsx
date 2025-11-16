@@ -13,12 +13,10 @@ const Wykonawstwo = () => {
   return (
     <>
       <Helmet>
-        {/* WZMOCNIONY TYTUŁ DLA MAKSYMALIZACJI CTR */}
-        <title>⭐ Usługi Dekarskie Szczecin ✅ Papa | Dachy Płaskie | Remonty Dachów - 518 144 882</title>
-        {/* WZMOCNIONY OPIS: Użycie fraz kluczowych i CTA (numeru telefonu) */}
+        <title>Usługi dekarskie Szczecin - papa, remonty dachów | Bezpieczny Dach</title>
         <meta
           name="description"
-          content="Szukasz dekarza w Szczecinie? Oferujemy kompleksowe usługi dekarskie: papa termozgrzewalna, membrany PVC/EPDM, docieplenia i naprawy dachów. Szybka wycena. Zadzwoń: 518 144 882."
+          content="Kompleksowe usługi dekarskie w Szczecinie: papa termozgrzewalna, membrany PVC/EPDM, docieplenia i naprawy. Bezpłatna wycena i fachowe doradztwo."
         />
 
         <link rel="canonical" href="https://www.bezpiecznydach.pl/wykonawstwo" />
@@ -32,7 +30,7 @@ const Wykonawstwo = () => {
             "name": "Bezpieczny Dach - Usługi Dekarskie Szczecin",
             "image": "https://www.bezpiecznydach.pl/logo.webp", 
             "telephone": "+48518144882",
-            "url": "https://www.bezpiecznydach.pl/uslugi-dekarskie-szczecin",
+            "url": "https://www.bezpiechnydach.pl/wykonawstwo",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Szczecin",
@@ -54,11 +52,11 @@ const Wykonawstwo = () => {
         {/* HERO */}
         <section className="hero-sectionW">
           <div className="hero-contentW">
-            <h1>Profesjonalne Usługi Dekarskie w Szczecinie – Dachy Płaskie i Papa Termozgrzewalna</h1>
+            <h1>Profesjonalne usługi dekarskie w Szczecinie – dachy płaskie i papa termozgrzewalna</h1>
             <p className="hero-subtitle">Kompleksowe usługi dekarskie w Szczecinie i okolicach</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button">
-                ZADZWOŃ PO DARMOWĄ WYCENĘ: 518 144 882
+                Zadzwoń po darmową wycenę: 518 144 882
               </a>
             </div>
           </div>
@@ -77,10 +75,10 @@ const Wykonawstwo = () => {
               awarii. Wybierając nas, stawiasz na najwyższą jakość i gwarancję bezpieczeństwa Twojego dachu.
             </p>
             <div className="intro-highlights">
-              <span>✅ Papa Termozgrzewalna</span>
-              <span>✅ Docieplanie Dachów</span>
-              <span>✅ Naprawa Przecieków Szczecin</span>
-              <span>✅ Bezpłatna Wycena</span>
+              <span>Papa termozgrzewalna</span>
+              <span>Docieplanie dachów</span>
+              <span>Naprawa przecieków</span>
+              <span>Bezpłatna wycena</span>
             </div>
           </div>
         </section>
@@ -127,18 +125,18 @@ const Wykonawstwo = () => {
           <p className="section-intro">Pracujemy wyłącznie na materiałach renomowanych producentów:</p>
           <div className="tech-grid">
             <div className="tech-card">
-              <div className="tech-icon">🏆</div>
+              <div className="tech-icon" aria-hidden="true"></div>
               <h3>ICOPAL</h3>
               <p className="tech-description">Wiodący producent papy w Polsce</p>
             </div>
 
             <div className="tech-card">
-              <div className="tech-icon">⚡</div>
+              <div className="tech-icon" aria-hidden="true"></div>
               <h3>ROCKWOOL</h3>
               <p className="tech-description">Wełna mineralna najwyższej jakości</p>
             </div>
             <div className="tech-card">
-              <div className="tech-icon">🔧</div>
+              <div className="tech-icon" aria-hidden="true"></div>
               <h3>FAKRO</h3>
               <p className="tech-description">Nowoczesne okna dachowe</p>
             </div>
@@ -177,22 +175,22 @@ const Wykonawstwo = () => {
           <h2>Dekarze Szczecin – dlaczego warto wybrać naszą firmę</h2>
           <div className="advantages-grid">
             <div className="advantage-card">
-              <div className="advantage-icon">🏅</div>
+              <div className="advantage-icon" aria-hidden="true"></div>
               <h3>Doświadczenie</h3>
               <p>Ponad 15 lat na rynku usług dekarskich</p>
             </div>
             <div className="advantage-card">
-              <div className="advantage-icon">📝</div>
+              <div className="advantage-icon" aria-hidden="true"></div>
               <h3>Certyfikaty</h3>
               <p>Autoryzowani wykonawcy wiodących marek</p>
             </div>
             <div className="advantage-card">
-              <div className="advantage-icon">🛠️</div>
+              <div className="advantage-icon" aria-hidden="true"></div>
               <h3>Fachowość</h3>
               <p>Wykwalifikowani dekarze z uprawnieniami</p>
             </div>
             <div className="advantage-card">
-              <div className="advantage-icon">💰</div>
+              <div className="advantage-icon" aria-hidden="true"></div>
               <h3>Gwarancja jakości</h3>
               <p>Nasza firma gwarantuje zadowolenie klienta</p>
             </div>
@@ -217,21 +215,21 @@ const Wykonawstwo = () => {
             </div>
           </div>
           <Link to="/realizacje" className="see-more-button">
-            ZOBACZ WIĘCEJ REALIZACJI →
+            Zobacz realizacje
           </Link>
         </section>
 
         {/* CTA */}
         <section className="cta-section">
           <div className="cta-content">
-            <h2>ZAINTERESOWANY NASZYMI USŁUGAMI?</h2>
+            <h2>Zainteresowany usługami?</h2>
             <p>Skontaktuj się z nami, aby omówić Twój projekt i otrzymać bezpłatną wycenę</p>
             <div className="cta-buttons">
               <a href="tel:+48518144882" className="cta-button-primary">
-                ZADZWOŃ: 518 144 882
+                Zadzwoń: 518 144 882
               </a>
               <Link to="/#contact" className="cta-button-secondary">
-                FORMULARZ KONTAKTOWY
+                Formularz kontaktowy
               </Link>
             </div>
           </div>

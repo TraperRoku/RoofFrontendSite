@@ -8,8 +8,8 @@ const services = [
   { 
     src: imgFix, 
     alt: 'Profesjonalna naprawa dachów płaskich w Szczecinie',
-     title: 'DACHY PŁASKIE & PAPA TERMOZGRZEWALNA',
-    description: 'SPECJALIZACJA: Naprawy i renowacje dachów płaskich. Stosujemy wyłącznie certyfikowane membrany EPDM i PVC najwyższej jakości.',
+    title: 'Dachy płaskie i papa termozgrzewalna',
+    description: 'Specjalizacja: naprawy i renowacje dachów płaskich. Stosujemy wyłącznie certyfikowane membrany EPDM i PVC najwyższej jakości.',
     features: [
       'Natychmiastowa naprawa przecieków',
       'Pełna wymiana pokrycia',
@@ -19,8 +19,8 @@ const services = [
   { 
     src: imgBuild, 
     alt: 'Montaż systemów rynnowych w Szczecinie',
-    title: 'SYSTEMY RYNOWE',
-    description: 'BEZPIECZNE ODPROWADZANIE WODY: Montujemy wyłącznie systemy od najlepszych producentów, które wytrzymają nawet najsilniejsze ulewy.',
+    title: 'Systemy rynnowe',
+    description: 'Bezpieczne odprowadzanie wody: montujemy systemy od sprawdzonych producentów, odporne na intensywne opady.',
     features: [
       'Odporność na zalodzenie',
       'Cicha praca'
@@ -29,8 +29,8 @@ const services = [
   { 
     src: imgPut, 
     alt: 'Profesjonalna konserwacja dachów Szczecin',
-    title: 'PRZEGLĄDY DACHÓW',
-    description: 'LEPIEJ ZAPOBIEGAĆ NIŻ NAPRAWIAĆ: nasze przeglądy dachów wykrywają usterki, zanim przerodzą się w kosztowne naprawy!',
+    title: 'Przeglądy dachów',
+    description: 'Lepsze zapobieganie niż naprawa: nasze przeglądy wykrywają usterki zanim przerodzą się w kosztowne naprawy.',
     features: [
       'Bezinwazyjne badania',
       'Raport z zaleceniami',
@@ -43,12 +43,12 @@ function Service() {
   return (
     <section id="services" className="service">
       <div className="service-header">
-        <h2>DLACZEGO WARTO WYBRAĆ NASZE USŁUGI DEKARSKIE?</h2>
+        <h2>Dlaczego warto wybrać nasze usługi dekarskie?</h2>
         <p className="service-intro">
-          <strong>Jako jedyni w Szczecinie łączymy 15-letnie doświadczenie z nowoczesnymi technologiami! </strong>
-          Specjalizujemy się w najtrwalszych rozwiązaniach: <span className="highlight">membrany EPDM</span>, 
-          <span className="highlight"> ultracienkie PVC</span> i <span className="highlight">papa termozgrzewalna premium</span>. 
-          Każdy dach wykonujemy z precyzją godną mistrzów cechowych.
+          <strong>Łączymy 15 lat doświadczenia z nowoczesnymi technologiami.</strong>
+          Specjalizujemy się w trwałych rozwiązaniach: <span className="highlight">membrany EPDM</span>,
+          <span className="highlight"> ultracienkie PVC</span> i <span className="highlight">papa termozgrzewalna premium</span>.
+          Każdy dach wykonujemy z najwyższą dbałością o szczegóły.
         </p>
       </div>
 
@@ -66,7 +66,7 @@ function Service() {
               <ul className="service-features">
                 {service.features.map((feature, i) => (
                   <li key={i} className="feature-item">
-                    <span className="feature-icon" aria-label="Zaleta">✓</span>
+                    <span className="feature-icon" aria-hidden="true"></span>
                     {feature}
                   </li>
                 ))}

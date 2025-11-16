@@ -61,12 +61,12 @@ function SEOContent() {
           {/* Dachy płaskie */}
           <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
             <h3 style={{ color: '#e74c3c', fontSize: '1.5rem', marginBottom: '15px' }}>
-              Dachy Płaskie Szczecin - Papa Termozgrzewalna
+              <Link to="/dachy-plaskie" style={{ color: '#e74c3c', textDecoration: 'none' }}>Dachy Płaskie Szczecin - Papa Termozgrzewalna</Link>
             </h3>
             <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
-              Wykonujemy <strong>dachy płaskie w Szczecinie</strong> z zastosowaniem najwyższej jakości 
+              Wykonujemy <strong>dachy płaskie w Szczecinie i Gołeniowie</strong> z zastosowaniem najwyższej jakości 
               <strong> papy termozgrzewalnej</strong> i membran EPDM. Nasze <strong>systemy balastowe na dach płaski</strong> 
-              zapewniają trwałość na lata.
+              zapewniają trwałość na lata. <Link to="/dachy-plaskie" style={{ color: '#2980b9', fontWeight: 'bold' }}>Dowiedz się więcej o dachach płaskich</Link>.
             </p>
             <ul style={{ listStyle: 'none', padding: 0 }}>
               <li style={{ marginBottom: '8px' }}> Papa termozgrzewalna Szczecin - najwyższa jakość</li>
@@ -148,7 +148,7 @@ function SEOContent() {
               </p>
             </div>
           </div>
-         <Link to="/baza-wiedzy" className="see-more-button">ZOBACZ WIĘCEJ PYTAŃ →</Link>
+         <Link to="/baza-wiedzy" className="see-more-button">Zobacz więcej pytań</Link>
         </div>
        
 
@@ -173,10 +173,10 @@ function SEOContent() {
            Wszystkie zlecenia realizujemy z pełnym zaangażowaniem, wykorzystując wyłącznie sprawdzone, certyfikowane materiały najwyższej jakości. Jesteśmy ubezpieczeni i posiadamy wszystkie wymagane certyfikaty.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap' }}>
-            <div>✓ Gwarancja jakości wykonania</div>
-            <div>✓ Certyfikowane materiały</div>
-            <div>✓ Odpowiedzialność zawodowa</div>
-            <div>✓ Darmowa wycena</div>
+            <div><span className="feature-icon" aria-hidden="true"></span> Gwarancja jakości wykonania</div>
+            <div><span className="feature-icon" aria-hidden="true"></span> Certyfikowane materiały</div>
+            <div><span className="feature-icon" aria-hidden="true"></span> Odpowiedzialność zawodowa</div>
+            <div><span className="feature-icon" aria-hidden="true"></span> Darmowa wycena</div>
           </div>
         </div>
       </div>
@@ -188,15 +188,16 @@ function HomePage() {
   return (
     <div>
       <Helmet>
-        <title>Dekarz Szczecin ✔ Papa Termozgrzewalna | Dachy Płaskie ☎ 518 144 882</title>
-        <meta name="description" content="Profesjonalny dekarz Szczecin ✔ 15 lat doświadczenia ✔ Papa termozgrzewalna, dachy płaskie, naprawa dachów ✔ Systemy balastowe ✔ Darmowa wycena ☎ 518 144 882"/>
+          <title>Dekarz Szczecin — Papa termozgrzewalna | Dachy płaskie</title>
+          <meta name="description" content="Profesjonalny dekarz w Szczecinie z 15-letnim doświadczeniem. Papa termozgrzewalna, dachy płaskie i naprawa dachów. Darmowa wycena i szybka obsługa."/>
+                 <Link to="/faq" className="see-more-button">Zobacz więcej pytań</Link>
         
         {/* Dodatkowe meta tagi SEO */}
         <meta name="keywords" content="dekarz szczecin, papa termozgrzewalna szczecin, dachy płaskie szczecin, naprawa dachów szczecin, dekarze szczecin, systemy balastowe na dach płaski szczecin, papy termozgrzewalne szczecin, konstrukcja balastowa na dach płaski szczecin, usługi dekarskie szczecin, docieplanie budynków szczecin, naprawa izolacji dachu szczecin, modernizacja dachu płaskiego, papa na dach szczecin, wymiana dachu szczecin, remont dachu szczecin, dachy zielone szczecin, łaty dach szczecin, docieplenia szczecin"/>
         
         {/* Open Graph */}
         <meta property="og:title" content="Dekarz Szczecin - Papa Termozgrzewalna | Dachy Płaskie"/>
-        <meta property="og:description" content="Profesjonalny dekarz Szczecin - 15 lat doświadczenia. Papa termozgrzewalna, dachy płaskie, naprawa dachów. Darmowa wycena ☎ 518 144 882"/>
+          <meta property="og:description" content="Profesjonalny dekarz Szczecin - 15 lat doświadczenia. Papa termozgrzewalna, dachy płaskie, naprawa dachów. Darmowa wycena i szybka obsługa."/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://bezpiecznydach.pl"/>
         <meta property="og:locale" content="pl_PL"/>
@@ -294,10 +295,10 @@ function App() {
         <Route path="/dachy-plaskie" element={<DachyPlaskie />} />
         <Route path="/docieplanie-dachow" element={<DocieplanieDachow />} />
         <Route path="/o-nas" element={<AboutUs />} />
-        <Route path="/uslugi-dekarskie-szczecin" element={<Wykonawstwo />} />
-        <Route path="/baza-wiedzy" element={<FAQ />} />
+        <Route path="/wykonawstwo" element={<Wykonawstwo />} />
+        <Route path="/faq" element={<FAQ />} />
         <Route path="/realizacje" element={<Realizacje />} />
-        <Route path='papatermozgrzewalna-Szczecin' element ={<PapaTermozgrzewalnaSzczecin/>} />
+        <Route path="/papa-termozgrzewalna" element={<PapaTermozgrzewalnaSzczecin/>} />
       </Routes>
     </Router>
   );

@@ -142,12 +142,14 @@
 }
 
 .seo-content li::before {
-    content: '✓';
-    color: #e74c3c;
-    font-weight: bold;
+    content: '';
     position: absolute;
     left: 0;
-    top: 1px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background: #e74c3c;
+    border-radius: 50%;
 }
 
 /* FAQ Section */

@@ -144,10 +144,14 @@
 }
 
 .type-card li:before {
-  content: "•";
-  color: #e74c3c;
+  content: '';
   position: absolute;
   left: 0;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background: #e74c3c;
+  display: block;
 }
 
 /* Projekty */

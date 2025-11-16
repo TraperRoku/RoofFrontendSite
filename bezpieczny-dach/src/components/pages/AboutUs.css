@@ -317,12 +317,15 @@
 }
 
 .expertise-card li:before {
-    content: "•";
-    color: #e74c3c;
-    font-size: 1.2rem;
+    content: '';
     position: absolute;
     left: 0;
-    top: 5px;
+    top: 7px;
+    width: 8px;
+    height: 8px;
+    background: #e74c3c;
+    display: block;
+    border-radius: 50%;
 }
 
 /* Certificates Section */
@@ -380,12 +383,15 @@
 }
 
 .certificates-text li:before {
-    content: "✓";
-    color: #e74c3c;
-    font-weight: bold;
+    content: '';
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 12px;
+    width: 10px;
+    height: 10px;
+    background: #e74c3c;
+    border-radius: 50%;
+    display: block;
 }
 
 .certificates-image {
@@ -458,10 +464,15 @@
 }
 
 .equipment-text li:before {
-    content: "⚙️";
+    content: '';
     position: absolute;
     left: 0;
     top: 8px;
+    width: 10px;
+    height: 10px;
+    background: #2c3e50;
+    border-radius: 2px;
+    display: block;
 
 }
 

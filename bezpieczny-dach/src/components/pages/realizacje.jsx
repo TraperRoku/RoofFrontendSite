@@ -30,8 +30,8 @@ function Realizacje() {
           id: i,
           thumb: thumb.default,
           full: full.default,
-          title: `Realizacja dachu płaskiego w Szczecinie - Projekt ${i}`,
-          alt: `Papa termozgrzewalna, docieplenie dachu płaskiego w Szczecinie - Zdjęcie ${i}`
+          title: `Papa termozgrzewalna membrana EPDM realizacja ${i} Szczecin`,
+          alt: `Papa termozgrzewalna docieplenie dachu płaskiego membrana EPDM montaż realizacja ${i} Szczecin - Bezpieczny Dach`
         };
       } catch (err) {
         console.warn(`Nie można załadować zdjęcia ${i}`);
@@ -137,10 +137,10 @@ function Realizacje() {
   return (
     <>
       <Helmet>
-        <title>⭐ Realizacje Dachów Płaskich i Dociepleń | Dekarz Szczecin | Bezpieczny Dach</title>
+        <title>Realizacje dachów płaskich i dociepleń | Bezpieczny Dach Szczecin</title>
         <meta 
           name="description" 
-          content="Galeria zrealizowanych projektów w Szczecinie. Zobacz montaż papy termozgrzewalnej, docieplenia dachów płaskich i renowacje. Sprawdź jakość naszych usług dekarskich." 
+          content="Galeria zrealizowanych projektów: montaż papy termozgrzewalnej, docieplenia dachów płaskich i renowacje. Przykłady naszych realizacji w Szczecinie." 
         />
         <link rel="canonical" href="https://www.bezpiecznydach.pl/realizacje" />
 
@@ -174,7 +174,7 @@ function Realizacje() {
         {/* Sekcja hero */}
         <section className="hero-sectionR">
           <div className="hero-contentR">
-            <h1>GALERIA ZREALIZOWANYCH PROJEKTÓW<br />DEKARZ SZCZECIN</h1>
+            <h1>Galeria zrealizowanych projektów — dekarz Szczecin</h1>
             <p className="hero-subtitle">
               Zobacz przykłady naszych prac - <strong>papa termozgrzewalna</strong> i profesjonalne{' '}
               <strong>docieplenia dachów płaskich</strong> w Szczecinie i okolicach.
@@ -232,7 +232,7 @@ function Realizacje() {
                       height="300"
                     />
                     <div className="image-overlay">
-                      <span className="zoom-icon">🔍</span>
+                      <span className="zoom-icon" aria-hidden="true"></span>
                     </div>
                   </div>
                 ))}
@@ -245,11 +245,11 @@ function Realizacje() {
       {/* Sekcja CTA */}
       <section className="contact-cta">
         <div className="cta-container">
-          <h2>ZAINTERESOWANY NASZYMI USŁUGAMI?</h2>
+          <h2>Zainteresowany naszymi usługami?</h2>
           <p>Skontaktuj się z nami, aby omówić Twój projekt</p>
           <div className="cta-buttons">
-            <a href="tel:+48518144882" className="cta-button-primary">ZADZWOŃ: 518 144 882</a>
-            <Link to="/#contact" className="cta-button-secondary">FORMULARZ KONTAKTOWY</Link>
+            <a href="tel:+48518144882" className="cta-button-primary">Zadzwoń: 518 144 882</a>
+            <Link to="/#contact" className="cta-button-secondary">Formularz kontaktowy</Link>
           </div>
         </div>
       </section>

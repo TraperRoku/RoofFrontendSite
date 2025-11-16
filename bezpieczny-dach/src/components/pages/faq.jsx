@@ -29,56 +29,51 @@ const images = {
 const faqData = [
 {
  id: 16,
-  category: 'Koszty i Wycena',
-  // ZMIANA: Pytanie ukierunkowane na lokalizację
-  question: 'Jak wygląda nasz obszar działania i czy pracujemy w całym Szczecinie?',
-  answer: 'Jesteśmy lokalnym partnerem i działamy głównie na terenie **Szczecina** (całe miasto i dzielnice) oraz w całym **województwie zachodniopomorskim**. W przypadku dużych projektów dekarskich jesteśmy elastyczni. Zawsze staramy się znaleźć rozwiązanie dopasowane do potrzeb klienta.',
-  image: images.dachPlaski,
-  tips: ['Dach idealny pod fotowoltaikę', 'Doradzamy przy uzyskaniu dotacji na ocieplenie', 'Kompleksowy montaż „pod klucz” w Szczecinie']
+  category: 'Koszty i Wycena',
+  question: 'Jaki jest obszar Waszej działalności?',
+  answer: 'Działamy na terenie Szczecina i całego wojewódzwa zachodniopomorskiego. W przypadku większych projektów jesteśmy elastyczni i możemy rozszerzyć zasięg.',
+  image: images.dachPlaski,
+  tips: ['Szczecin i okolice', 'Doradztwo materiałowe', 'Montaż kompleksowy']
 },
   {
-    id: 1,
-    category: 'Koszty i Wycena',
-    // ZMIANA: Pytanie bardziej konkretne
-    question: 'Jaki jest koszt wymiany metra kwadratowego dachu płaskiego w Szczecinie?',
-    answer: 'Koszt **wymiany dachu płaskiego** jest zróżnicowany i zależy od powierzchni, wybranego **materiału (papa, EPDM, PVC)**, stanu konstrukcji i dostępu. Oferujemy **DARMOWĄ wycenę** z dojazdem na terenie Szczecina, bez żadnych zobowiązań.',
-    image: images.kosztorys,
-    tips: ['Darmowa wycena w 24h', 'Rozłożenie płatności na raty', 'Profesjonalne doradztwo materiałowe']
+  id: 1,
+  category: 'Koszty i Wycena',
+  question: 'Ile kosztuje wymiana metra kwadratowego dachu płaskiego?',
+  answer: 'Koszt zależy od materiału (papa, EPDM, PVC), stanu konstrukcji i dostępu. Oferujemy bezpłatną wycenę z bezpłatnym dojazdem w Szczecinie.',
+  image: images.kosztorys,
+  tips: ['Darmowa wycena w 24h', 'Możliwość rat', 'Doradztwo']
   },
   {
-    id: 2,
-    category: 'Materiały',
-    // ZMIANA: Pytanie zawiera kluczową frazę
-    question: 'Czy papa termozgrzewalna jest rekomendowana na dach płaski?',
-    answer: '**Papa termozgrzewalna** to sprawdzone i ekonomiczne rozwiązanie do **renowacji dachów płaskich**. Oferuje dobrą trwałość (10-15 lat) przy konkurencyjnej cenie, szczególnie polecana dla garaży, magazynów i budynków gospodarczych.',
+  id: 2,
+  category: 'Materiały',
+  question: 'Czy papa termozgrzewalna nadaje się do dachów płaskich?',
+  answer: 'Papa termozgrzewalna to sprawdzone i ekonomiczne rozwiązanie. Trwa 10-15 lat i polecamy ją szczególnie do garaży, magazynów i budynków gospodarczych.',
     image: images.papa,
     tips: ['Ekonomiczne rozwiązanie', 'Szybki montaż', 'Sprawdzona technologia']
   },
   {
-    id: 3,
-    category: 'Konserwacja',
-    // ZMIANA: Pytanie zawiera kluczową frazę
-    question: 'Jak często należy przeprowadzać konserwację dachu płaskiego w Szczecinie?',
-    answer: '**Dach płaski** wymaga **profesjonalnego przeglądu** **2 razy w roku** - wiosną i jesienią. Regularna konserwacja obejmuje: czyszczenie wpustów, kontrolę połączeń i sprawdzenie membran. Profesjonalny przegląd **wydłuża żywotność dachu** nawet o 30%.',
-    image: images.konserwacja,
-    tips: ['Przegląd 2x w roku', 'Czyszczenie wpustów', 'Kontrola membran i złączy']
+  id: 3,
+  category: 'Konserwacja',
+  question: 'Jak często należy przeprowadzać przegląd dachu płaskiego?',
+  answer: 'Dach płaski wymaga przeglądu 2 razy w roku - wiosną i jesienią. Obejmuje czyszczenie wpustów, kontrolę połączeń i sprawdzenie membran.',
+  image: images.konserwacja,
+  tips: ['Przegląd 2x w roku', 'Czyszczenie wpustów', 'Kontrola złączy']
   },
   {
-    id: 4,
-    category: 'Materiały',
-    // ZMIANA: Pytanie zawiera kluczową frazę
-    question: 'Membrana EPDM czy PCV - który materiał jest lepszy na dach płaski?',
-    answer: '**EPDM** (elastyczna guma) jest idealna dla skomplikowanych kształtów, lekka i szybka w montażu. **PCV** to rozwiązanie premium – odporne na UV, idealne pod **tarasy** i **dachy zielone**. Wybór zależy od przeznaczenia dachu i budżetu klienta w Szczecinie.',
-    image: images.membrana,
-    tips: ['EPDM - elastyczność i szybkość', 'PCV - wytrzymałość i estetyka', 'Dostosowanie do potrzeb i budżetu']
+  id: 4,
+  category: 'Materiały',
+  question: 'Co lepsze na dach: membrana EPDM czy PVC?',
+  answer: 'EPDM jest elastyczna i szybka w montażu. PVC to rozwiązanie premium - odporne na UV, idealne pod tarasy. Wybór zależy od przeznaczenia.',
+  image: images.membrana,
+  tips: ['EPDM - elastyczność', 'PVC - wytrzymałość', 'Dostosowanie do potrzeb']
   },
   {
-    id: 5,
-    category: 'Awarie',
-    question: 'Co robić, gdy nagle przecieka dach płaski w domu lub firmie?',
-    answer: 'NATYCHMIAST **zabezpiecz wnętrze** i zadzwoń na nasze **Pogotowie Dachowe Szczecin**! Działamy w trybie **24h/7**. Każda godzina zwłoki zwiększa straty. Nasze ekipy ratunkowe są gotowe do natychmiastowej interwencji na terenie Szczecina i okolic.',
-    image: images.awaria,
-    tips: ['Działamy 24/7 (alarm)', 'Zabezpieczenie tymczasowe', 'Szybka naprawa uszczelnień']
+  id: 5,
+  category: 'Awarie',
+  question: 'Co zrobić, gdy przecieka dach?',
+  answer: 'Zabezpiecz wnętrze i zadzwoń natychmiast. Pracujemy 24/7 i wyjeżdżamy ekspresowo w Szczecinie i okolicach.',
+  image: images.awaria,
+  tips: ['Działamy 24/7', 'Zabezpieczenie tymczasowe', 'Szybka naprawa']
   },
 
   {
@@ -108,10 +103,18 @@ const faqData = [
 {
   id: 9,
   category: 'Materiały',
-  question: 'Czy trzeba zrywać starą papę przed położeniem nowej warstwy?',
-  answer: 'Nie zawsze. Jeśli istniejąca papa jest w dobrym stanie, możemy zastosować nową warstwę bez jej usuwania, co przyspiesza i obniża koszt prac. Przed decyzją wykonujemy dokładną ocenę techniczną, aby mieć pewność, że nowa warstwa będzie trwała i szczelna.',
+  question: 'Czy trzeba zrywać starą papę?',
+  answer: 'Nie zawsze. Jeśli istniejąca papa jest w dobrym stanie, można położyć nową warstwę bez usuwania. Przeprowadzimy najpierw ocenę techniczną.',
   image: images.papa,
-  tips: ['Ocena techniczna przed pracą', 'Oszczędność czasu i pieniędzy', 'Bezpieczne i sprawdzone rozwiązania']
+  tips: ['Ocena techniczna', 'Oszczędność czasu', 'Rozwiązania sprawdzone']
+},
+{
+  id: 10,
+  category: 'Materiały',
+  question: 'Jaki materiał wybrać na dach płaski?',
+  answer: 'Wybór zależy od potrzeb i budżetu. Papa to ekonomiczne rozwiązanie. PVC zapewnia wysoką trwałość. EPDM to materiał elastyczny.',
+  image: images.membrana,
+  tips: ['Papa - ekonomiczna', 'PVC - trwała', 'EPDM - elastyczna']
 },
 {
   id: 10,
@@ -210,15 +213,15 @@ function FAQ() {
   return (
     <div className="faq-container">
       <Helmet>
-        <title>FAQ o Dachach Płaskich - Eksperckie Odpowiedzi | Bezpieczny Dach Szczecin</title>
-        <meta name="description" content="Kompletny poradnik o dachach płaskich - koszty, materiały (papa, EPDM, PVC), konserwacja i naprawy awaryjne w Szczecinie. Eksperci z 15-letnim doświadczeniem." />
-        <meta name="keywords" content="dachy płaskie szczecin, papa termozgrzewalna, membrana EPDM, naprawa dachu, koszt wymiany dachu, konserwacja dachu płaskiego" />
-        <link rel="canonical" href="https://www.bezpiecznydach.pl/baza-wiedzy" />
+        <title>FAQ - Dach płaski, papa, naprawa | Bezpieczny Dach Szczecin</title>
+        <meta name="description" content="Odpowiedzi eksperta na pytania o dachach płaskich: koszty, materiały, konserwacja, naprawy awaryjne. Szczecin i wojewódzwo zachodniopomorskie." />
+        <meta name="keywords" content="dach płaski, papa termozgrzewalna, EPDM, naprawa dachu, konserwacja, Szczecin" />
+        <link rel="canonical" href="https://www.bezpiecznydach.pl/faq" />
         
         {/* Social Media Meta Tags */}
-        <meta property="og:title" content="FAQ o Dachach Płaskich - Eksperckie Odpowiedzi | Bezpieczny Dach Szczecin" />
-        <meta property="og:description" content="Wszystko co musisz wiedzieć o dachach płaskich - od materiałów po awarie. Specjaliści z Szczecina odpowiadają na najczęstsze pytania." />
-        <meta property="og:url" content="https://www.bezpiecznydach.pl/baza-wiedzy" />
+        <meta property="og:title" content="FAQ - Dach płaski, papa, naprawa | Bezpieczny Dach Szczecin" />
+        <meta property="og:description" content="Odpowiedzi na pytania o dachach płaskich, materiałach, konserwacji i naprawach awaryjnych." />
+        <meta property="og:url" content="https://www.bezpiecznydach.pl/faq" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content={images.hero} />
         <meta property="og:site_name" content="Bezpieczny Dach Szczecin" />
@@ -257,10 +260,10 @@ function FAQ() {
         <section className="hero-section" itemScope itemType="https://schema.org/WPHeader">
           <div className="hero-content">
             <h1 className="hero-title" itemProp="headline">
-              BAZA WIEDZY - ODPOWIEDZI NA WSZYSTKIE PYTANIA!
+              FAQ - Odpowiedzi eksperta na pytania o dachach
             </h1>
             <p className="hero-subtitle" itemProp="description">
-              15 lat doświadczenia | 1000+ zadowolonych klientów | Eksperci od dachów płaskich
+              Porady od specjalistów z doświadczeniem na terenie Szczecina
             </p>
             <div>
               <a 
@@ -269,7 +272,7 @@ function FAQ() {
                 aria-label="Zadzwoń do nas pod numer 518 144 882"
                 itemProp="telephone"
               >
-                MASZ PYTANIE? ZADZWOŃ: 518 144 882
+                Zadzwoń: 518 144 882
               </a>
             </div>
           </div>
@@ -288,10 +291,10 @@ function FAQ() {
         {/* Quick Stats */}
         <section className="stats-section" aria-label="Statystyki firmy" itemScope itemType="https://schema.org/Organization">
           {[
-            { icon: Shield, number: '15+', text: 'LAT DOŚWIADCZENIA' },
-            { icon: CheckCircle, number: '1000+', text: 'ZADOWOLONYCH KLIENTÓW' },
-            { icon: Clock, number: '24/7', text: 'POGOTOWIE DACHOWE' },
-            { icon: Phone, number: '100%', text: 'ZADOWOLENIE KLIENTÓW' }
+            { icon: Shield, number: '15+', text: 'lat doświadczenia' },
+            { icon: CheckCircle, number: '1000+', text: 'zadowolonych klientów' },
+            { icon: Clock, number: '24/7', text: 'pogotowie dachowe' },
+            { icon: Phone, number: '100%', text: 'zadowolenie klientów' }
           ].map((stat, index) => (
             <div key={index} className="stat-card">
               <stat.icon size={40} className="stat-icon" aria-hidden="true" />
@@ -307,23 +310,23 @@ function FAQ() {
 
         {/* Introduction Section */}
         <section className="intro-section">
-          <h2 className="section-title">Eksperckie porady o dachach płaskich w Szczecinie i w okolicach</h2>
+          <h2 className="section-title">Odpowiedzi na pytania o dachach płaskich</h2>
           <div className="intro-content">
-            <p>Jako <strong>specjaliści od dachów płaskich z 15-letnim doświadczeniem w Szczecinie i za granicą </strong>, zebraliśmy odpowiedzi na najczęstsze pytania naszych klientów. W tej bazie wiedzy znajdziesz praktyczne informacje o:</p>
+            <p>Jako specjaliści od dachów płaskich, zebraliśmy odpowiedzi na najczęstsze pytania naszych klientów. W tej bazie wiedzy znajdziesz informacje o:</p>
             <ul className="benefits-list">
-              <li><strong>Kosztach wymiany i naprawy</strong> dachów płaskich w woj. zachodniopomorskim</li>
-              <li>Porównaniu <strong>papa termozgrzewalna vs membrana PVC/EPDM</strong></li>
-              <li><strong>Konserwacji</strong> - jak dbać o dach płaski przez cały rok</li>
-              <li>Postępowaniu w <strong>awaryjnych sytuacjach</strong> (przecieki, zalegająca woda)</li>
+              <li>Kosztach wymiany i naprawy dachów płaskich</li>
+              <li>Porównaniu materiałów: papa termozgrzewalna, membrana PVC i EPDM</li>
+              <li>Konserwacji i opiece przez cały rok</li>
+              <li>Postępowaniu w sytuacjach awaryjnych</li>
             </ul>
-            <p>Nie znalazłeś odpowiedzi? <a href="tel:+48518144882" className="inline-link">Zadzwoń do naszych specjalistów: 518 144 882</a> - doradzimy bezpłatnie!</p>
+            <p>Nie znalazłeś odpowiedzi? <a href="tel:+48518144882" className="inline-link">Zadzwoń do naszych specjalistów: 518 144 882</a></p>
           </div>
         </section>
 
         {/* Category Filter */}
         <section className="category-section" aria-label="Filtruj pytania według kategorii">
           <h2 className="section-title">
-            WYBIERZ KATEGORIĘ PYTAŃ
+            Kategorie pytań
           </h2>
           <div className="category-buttons" role="tablist">
             {categories.map((category) => (
@@ -419,25 +422,25 @@ function FAQ() {
         {/* Emergency CTA */}
         <section className="emergency-cta" aria-label="Nagły wypadek - kontakt">
           <h2>
-            NIE ZNALAZŁEŚ ODPOWIEDZI? ZADZWOŃ!
+            Potrzebujesz porad? Zadzwoń
           </h2>
           <p>
-            Nasi eksperci odpowiedzą na wszystkie pytania - od 7:00 do 20:00, 7 dni w tygodniu
+            Nasi specjaliści dostępni od poniedziałku do niedzieli, 7:00 - 20:00
           </p>
           <div className="cta-buttons">
             <a 
               href="tel:+48518144882"
               className="cta-button-primary"
-              aria-label="Zadzwoń na numer alarmowy 518 144 882"
+              aria-label="Zadzwoń na numer 518 144 882"
             >
-              📞 ZADZWOŃ: 518 144 882
+              Zadzwoń: 518 144 882
             </a>
             <Link 
               to="/#contact"
               className="cta-button-secondary"
               aria-label="Przejdź do formularza kontaktowego"
             >
-              📧 FORMULARZ KONTAKTOWY
+              Formularz kontaktowy
             </Link>
           </div>
         </section>
@@ -445,7 +448,7 @@ function FAQ() {
         {/* Contact Info */}
         <section className="contact-info" aria-label="Dane kontaktowe">
           <h3>
-            BEZPIECZNY DACH - TWÓJ PARTNER W SZCZECINIE
+            Bezpieczny Dach - Szczecin i okolice
           </h3>
           <div className="contact-details">
             <div className="contact-item">
@@ -458,19 +461,11 @@ function FAQ() {
             </div>
             <div className="contact-item">
               <Clock size={20} className="contact-icon" aria-hidden="true" />
-              <span>7:00 - 20:00</span>
+              <span>7:00 - 20:00, każdego dnia</span>
             </div>
             <div className="contact-item">
-              <CheckCheckIcon size={20} className="contact-icon" aria-hidden="true" />
-              <span>Profesjonalizm</span>
-            </div>
-              <div className="contact-item">
               <CheckCircle size={20} className="contact-icon" aria-hidden="true" />
-              <span>Elastyczność</span>
-            </div>
-              <div className="contact-item">
-              <PhoneCall size={20} className="contact-icon" aria-hidden="true" />
-              <span>Dzwoń śmiało</span>
+              <span>Profesjonalne usługi</span>
             </div>
           </div>
         </section>

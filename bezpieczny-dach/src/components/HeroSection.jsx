@@ -4,17 +4,17 @@ import './HeroSection.css';
 function HeroSection() {
   return (
     <section id="home" className="hero">
-      <div className="hero-content">
-       <p>Lokalny, Doświadczony Zespół - Szczecin i Okolice</p>
-      <h1>
-        <span className="highlight-seo">DEKARZ SZCZECIN:</span> 
-        <br />
-        DACHY PŁASKIE,
+            <div className="hero-content">
+             <p>Lokalny, doświadczony zespół — Szczecin i okolice</p>
+            <h1>
+              <span className="highlight-seo">Dekarz Szczecin:</span>
+              <br />
+              Dachy płaskie
         <br />
-        PAPA TERMOZGRZEWALNA
+              Papa termozgrzewalna
         <br />
-        EPDM, PVC
-      </h1>
+              EPDM i PVC
+            </h1>
             <div className="hero-buttons">
             <a href="#services">
             <button className="btn-primary">Poznaj naszą ofertę</button>
@@ -27,6 +27,14 @@ function HeroSection() {
         
       
       </div>
+
+      <div className="hero-cta-overlay" aria-hidden="false">
+        <a href="tel:+48518144882" className="hero-cta-link" aria-label="Zadzwoń teraz 518 144 882">
+          <span className="hero-cta-line1">Chcesz taki dach?</span>
+          <span className="hero-cta-line2">Zadzwoń teraz: 518 144 882</span>
+        </a>
+      </div>
+
     </section>
   );
 }

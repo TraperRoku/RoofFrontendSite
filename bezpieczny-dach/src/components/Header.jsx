@@ -84,15 +84,15 @@ function Header() {
                     <div className="nav-primary">
                         <Link to="/" className="nav-link" onClick={closeMenu}>Strona główna</Link>
                         <Link to="/dachy-plaskie" className="nav-link featured" onClick={closeMenu}>Dachy płaskie</Link>
-                        <Link to="/papatermozgrzewalna-Szczecin" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
-                        <Link to="/uslugi-dekarskie-szczecin" className="nav-link" onClick={closeMenu}>Usługi dekarskie</Link>
+                        <Link to="/papa-termozgrzewalna" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
+                        <Link to="/wykonawstwo" className="nav-link" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" className="nav-link" onClick={closeMenu}>Realizacje</Link>
                         <Link to="/#contact" className="nav-link" onClick={closeMenu}>Kontakt</Link>
                     </div>
                     <div className="nav-secondary">
                         <Link to="/docieplanie-dachow" className="nav-link-small" onClick={closeMenu}>Izolacja</Link>
                         <Link to="/o-nas" className="nav-link-small" onClick={closeMenu}>O nas</Link>
-                        <Link to="/baza-wiedzy" className="nav-link-small" onClick={closeMenu}>Baza wiedzy</Link>
+                        <Link to="/faq" className="nav-link-small" onClick={closeMenu}>Baza wiedzy</Link>
                     </div>
                 </nav>
 
@@ -149,9 +149,9 @@ function Header() {
                     <div className="mobile-nav-group">
                         <h4>Główne usługi</h4>
                         <Link to="/" onClick={closeMenu}>Strona główna</Link>
-                        <Link to="/dachy-plaskie" onClick={closeMenu} className="featured">🏢 Dachy płaskie Szczecin</Link>
-                        <Link to="/papatermozgrzewalna-Szczecin" onClick={closeMenu} className="featured">🔧 Papa Termozgrzewalna</Link>
-                        <Link to="/uslugi-dekarskie-szczecin" onClick={closeMenu}>Usługi dekarskie</Link>
+                        <Link to="/dachy-plaskie" onClick={closeMenu} className="featured">Dachy płaskie Szczecin</Link>
+                        <Link to="/papa-termozgrzewalna" onClick={closeMenu} className="featured">Papa termozgrzewalna</Link>
+                        <Link to="/wykonawstwo" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                         <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
                     </div>
@@ -161,7 +161,7 @@ function Header() {
                         <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                         <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja dachów</Link>
                         <Link to="/o-nas" onClick={closeMenu}>O nas</Link>
-                        <Link to="/baza-wiedzy" onClick={closeMenu}>Baza wiedzy</Link>
+                        <Link to="/faq" onClick={closeMenu}>Baza wiedzy</Link>
                     </div>
                 </div>
                 
