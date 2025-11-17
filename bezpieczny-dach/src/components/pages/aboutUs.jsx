@@ -80,9 +80,9 @@ function ONas(){
       <main className="o-nas-container">
       
         <section className="hero-section">
-          <div className="hero-content">
+          <div className="hero-content2">
            <h1>O nas — lokalni eksperci dekarscy w Szczecinie</h1>
-            <p className="hero-subtitle">15 lat doświadczenia | ponad 1000 zadowolonych klientów | najwyższa jakość usług</p>
+            <p className="hero-subtitle2">15 lat doświadczenia | ponad 1000 zadowolonych klientów | najwyższa jakość usług</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button">Zadzwoń: 518 144 882</a>
             </div>
@@ -268,28 +268,6 @@ function ONas(){
 
          
 
-        
-
-        {/* <section className="testimonials-section">
-          <h2>CO MÓWIĄ O NAS KLIENCI?</h2>
-          <div className="testimonials-grid">
-              <div className="testimonial-card">
-                <div className="testimonial-stars">Ocena: 5/5</div>
-              <p>"Szybka reakcja na awarie, profesjonalna obsługa. Po 3 latach dach wciąż bez problemów. Polecam!"</p>
-              <div className="testimonial-author">- Anna K., Szczecin</div>
-            </div>
-            <div className="testimonial-card">
-              <div className="testimonial-stars">Ocena: 5/5</div>
-              <p>"Uczciwa wycena, terminowa realizacja. Panowie zostawili po sobie idealny porządek. Bardzo profesjonalnie."</p>
-              <div className="testimonial-author">- Marek P., Police</div>
-            </div>
-            <div className="testimonial-card">
-              <div className="testimonial-stars">Ocena: 5/5</div>
-              <p>"Naprawili przeciek w 24h! Świetny kontakt, rzetelne podejście. Będę polecać znajomym."</p>
-              <div className="testimonial-author">- Tomasz W., Stargard</div>
-            </div>
-          </div>
-        </section> */}
 
         <section className="why-us-section">
           <h2>Dlaczego warto nas wybrać?</h2>

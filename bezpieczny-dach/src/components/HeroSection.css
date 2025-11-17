@@ -30,7 +30,9 @@
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1.2;
-  margin-left: -10%;
+  margin-left: 1%;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+
 }
 
 .hero-buttons {
@@ -94,6 +96,12 @@
     ), url('../components/photos/flatRoofMirror.jpg');
     background-position: center;
   }
+
+
+.hero-cta-link {
+
+margin-top: 610px;
+}
 
   .hero-content {
     max-width: 100%;

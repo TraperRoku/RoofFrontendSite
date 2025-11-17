@@ -187,10 +187,10 @@ function DachyPlaskie(){
       <Header />
       
       <main className="dachy-plaskie-container">
-        <section className="hero-section">
-          <div className="hero-content">
+        <section className="hero-section3">
+          <div className="hero-content3">
             <h1>Dachy płaskie w Szczecinie – profesjonalne wykonawstwo i remonty</h1>
-            <p className="hero-subtitlee">Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej. 15 lat doświadczenia w branży. Darmowa wycena.</p>
+            <p className="hero-subtitlee3">Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej. 15 lat doświadczenia w branży. Darmowa wycena.</p>
             <div className="hero-cta">
               <a href="tel:+48518144882" className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</a>
             </div>

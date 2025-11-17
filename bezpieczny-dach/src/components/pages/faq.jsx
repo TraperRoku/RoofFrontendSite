@@ -259,10 +259,10 @@ function FAQ() {
         {/* Hero Section */}
         <section className="hero-section" itemScope itemType="https://schema.org/WPHeader">
           <div className="hero-content">
-            <h1 className="hero-title" itemProp="headline">
+            <h1 className="hero-title1" itemProp="headline">
               FAQ - Odpowiedzi eksperta na pytania o dachach
             </h1>
-            <p className="hero-subtitle" itemProp="description">
+            <p className="hero-subtitle1" itemProp="description">
               Porady od specjalistów z doświadczeniem na terenie Szczecina
             </p>
             <div>

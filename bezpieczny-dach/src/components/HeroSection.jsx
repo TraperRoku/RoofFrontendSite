@@ -5,7 +5,7 @@ function HeroSection() {
   return (
     <section id="home" className="hero">
             <div className="hero-content">
-             <p>Lokalny, doświadczony zespół — Szczecin i okolice</p>
+             <h1>Lokalny, doświadczony zespół <br/> Szczecin, Goleniów, <br/> Stargard i okolice</h1>
             <h1>
               <span className="highlight-seo">Dekarz Szczecin:</span>
               <br />

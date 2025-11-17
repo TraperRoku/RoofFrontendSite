@@ -32,16 +32,17 @@
   min-width: 300px;
 }
 
-.hero-title {
+.hero-title1 {
   font-family: 'Montserrat', Arial, sans-serif;
-  font-weight: 900;
+  font-weight: 1200;
   font-size: 2.2rem;
   color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   line-height: 1.2;
+  padding-left: 20px;
 }
 
-.hero-subtitle {
+.hero-subtitle1 {
   font-size: 1.2rem;
   color: #e74c3c;
   margin-bottom: 25px;
