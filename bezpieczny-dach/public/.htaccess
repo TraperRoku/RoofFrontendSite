@@ -1,26 +1,41 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  Base /
 
-  # Zezwól na dostęp do ważnych plików SEO
+  # 1. NAPRAWA BŁĘDU SEO (To musi być na górze!)
+  # Przekieruj stary zaindeksowany link na nowy
+  RewriteRule ^papatermozgrzewalna-Szczecin$ https://www.bezpiecznydach.pl/papa-termozgrzewalna [R=301,L]
+
+  # 2. Zezwól na dostęp do ważnych plików SEO i zasobów
   RewriteRule ^(robots\.txt|sitemap\.xml|google[0-9a-f]+\.html)$ - [L]
 
-  # HTTP → HTTPS i canonical z www
+  # 3. Wymuś HTTPS i www (Canonical)
   RewriteCond %{HTTPS} off [OR]
   RewriteCond %{HTTP_HOST} !^www\. [NC]
   RewriteCond %{HTTP_HOST} ^(?:www\.)?(bezpiecznydach\.pl)$ [NC]
   RewriteRule ^ https://www.%1%{REQUEST_URI} [L,R=301]
 
-  # Usuń podwójne ukośniki i kończące ukośniki
+  # 4. Usuń kończące ukośniki (slash) dla czystości URL
+  RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{THE_REQUEST} \s/+(.*?)/+[?\s]
   RewriteRule ^(.*?)/+$ /$1 [R=301,L]
 
-  # Cache-Control dla zasobów statycznych
+  # 5. KLUCZOWE DLA REACTA (Fallback)
+  # Jeśli plik nie istnieje (np. /dachy-plaskie), załaduj index.html
+  # Dzięki temu działają podstrony po odświeżeniu
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
+
+# Cache-Control dla zasobów statycznych (Szybkość strony)
+<IfModule mod_headers.c>
   <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf|webp)$">
     Header set Cache-Control "max-age=31536000, public"
   </FilesMatch>
 </IfModule>
 
-# Kompresja GZIP
+# Kompresja GZIP (Szybkość strony)
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
 </IfModule>

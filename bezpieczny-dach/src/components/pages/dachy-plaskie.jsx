@@ -49,7 +49,7 @@ function DachyPlaskie(){
             "name": "Dachy Płaskie Szczecin - Bezpieczny Dach",
             "image": "${dach1}",
             "telephone": "+48518144882",
-            "url": "https://www.bezpiechnydach.pl/dachy-plaskie",
+            "url": "https://www.bezpiecznydach.pl/dachy-plaskie",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Szczecin",
