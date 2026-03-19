@@ -381,3 +381,37 @@
         font-size: 1.3rem;
     }
 }
+
+/* =============================================
+   MOBILE GLOBAL PATCH — dodaj na końcu App.css
+   =============================================
+   
+   Zapobiega chowaniu się treści pod stałym
+   dolnym paskiem telefonu na mobile.
+   ============================================= */
+
+/* Odstęp na dole na wszystkich stronach na mobile */
+@media (max-width: 992px) {
+  footer,
+  .footer {
+    padding-bottom: calc(58px + 1.5rem) !important; /* 58px = wysokość bottom bar */
+  }
+
+  /* Sekcja kontaktowa też musi mieć odstęp */
+  #contact,
+  .contact {
+    padding-bottom: calc(58px + 3rem) !important;
+  }
+
+  /* Ogólny margines na ostatnim elemencie przed stopką */
+  .repair-section {
+    margin-bottom: 58px;
+  }
+}
+
+/* Poprawki dla sekcji seo-content na mobile */
+@media (max-width: 768px) {
+  .seo-content {
+    padding: 3rem 1rem calc(58px + 2rem) !important;
+  }
+}

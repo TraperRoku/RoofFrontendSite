@@ -7,6 +7,7 @@ import Realization from './components/Realization';
 import RepairSection from './components/RepairSection';
 import Footer from './components/footer';
 import DachyPlaskie from './components/pages/dachy-plaskie';
+import Testimonials from './components/Testimonials';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -279,6 +280,7 @@ function HomePage() {
       <Service />
   
       <Realization/>
+      <Testimonials />
        <SEOContent />
       <RepairSection />
       <ContactSection />

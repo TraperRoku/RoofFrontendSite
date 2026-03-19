@@ -1,8 +1,8 @@
 // Header.js
 import React, { useState, useEffect, useCallback } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhone } from '@fortawesome/free-solid-svg-icons'; // faPhone z pakietu solid
-import { faFacebookF, faPhone as faPhoneBrands } from '@fortawesome/free-brands-svg-icons'; // faFacebookF i faPhone z pakietu brands (poprawione)
+import { faPhone, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './Header.css';
 import logo from '../components/photos/logo.webp';
 import { Link } from 'react-router-dom';
@@ -16,10 +16,7 @@ function Header() {
     };
 
     const scrollToTop = useCallback(() => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }, []);
 
     const closeMenu = useCallback(() => {
@@ -32,23 +29,16 @@ function Header() {
         window.location.href = 'tel:+48518144882';
     };
 
-    // Scroll detection for header shrinking
     useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-
+        const handleScroll = () => setIsScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     useEffect(() => {
         const handleResize = () => {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
+            if (window.innerWidth > 768) closeMenu();
         };
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, [closeMenu]);
@@ -59,16 +49,13 @@ function Header() {
         } else {
             document.body.classList.remove('no-scroll');
         }
-
-        return () => {
-            document.body.classList.remove('no-scroll');
-        };
+        return () => document.body.classList.remove('no-scroll');
     }, [isMenuOpen]);
 
     return (
         <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
             <div className="header-container">
-                {/* Logo Section */}
+                {/* Logo */}
                 <div className="logo-section">
                     <Link to="/" className="logo-link" onClick={closeMenu}>
                         <img src={logo} alt="Dekarska Pomoc - Dachy płaskie Szczecin" className="logo" />
@@ -96,7 +83,7 @@ function Header() {
                     </div>
                 </nav>
 
-                {/* Contact & Social Section */}
+                {/* Contact & Social */}
                 <div className="header-actions">
                     <div className="contact-info">
                         <span className="phone-label">Zadzwoń teraz:</span>
@@ -105,15 +92,14 @@ function Header() {
                             518 144 882
                         </a>
                     </div>
-                    
                     <div className="social-links">
-                        <a 
-                            href="https://www.facebook.com/profile.php?id=61575175164575" 
-                            target="_blank" 
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61575175164575"
+                            target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Facebook - Dekarska Pomoc Szczecin"
                             className="social-link"
-                            onClick={closeMenu} // Dodane onClick
+                            onClick={closeMenu}
                         >
                             <FontAwesomeIcon icon={faFacebookF} />
                         </a>
@@ -121,8 +107,8 @@ function Header() {
                 </div>
 
                 {/* Mobile Menu Button */}
-                <button 
-                    className="mobile-menu-toggle" 
+                <button
+                    className="mobile-menu-toggle"
                     onClick={toggleMenu}
                     aria-expanded={isMenuOpen}
                     aria-label="Toggle navigation menu"
@@ -135,16 +121,29 @@ function Header() {
                 </button>
             </div>
 
-            {/* Mobile Menu Overlay */}
+            {/* Mobile Overlay */}
             <div className={`mobile-menu-overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
 
             {/* Mobile Menu */}
             <nav className={`mobile-menu ${isMenuOpen ? 'active' : ''}`}>
                 <div className="mobile-menu-header">
-                    <span className="mobile-menu-title">Menu nawigacji</span>
-        
+                    <span className="mobile-menu-title">Menu</span>
+                    {/* ✕ PRZYCISK ZAMKNIĘCIA */}
+                    <button
+                        className="mobile-close-btn"
+                        onClick={closeMenu}
+                        aria-label="Zamknij menu"
+                    >
+                        <FontAwesomeIcon icon={faTimes} />
+                    </button>
                 </div>
-                
+
+                {/* Numer telefonu widoczny od razu w menu */}
+                <a href="tel:+48518144882" className="mobile-menu-phone-top" onClick={handlePhoneClick}>
+                    <FontAwesomeIcon icon={faPhone} />
+                    <span>518 144 882 — Zadzwoń teraz</span>
+                </a>
+
                 <div className="mobile-nav-links">
                     <div className="mobile-nav-group">
                         <h4>Główne usługi</h4>
@@ -155,30 +154,26 @@ function Header() {
                         <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                         <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
                     </div>
-                    
                     <div className="mobile-nav-group">
                         <h4>Informacje</h4>
-                        <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                         <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja dachów</Link>
                         <Link to="/o-nas" onClick={closeMenu}>O nas</Link>
                         <Link to="/faq" onClick={closeMenu}>Baza wiedzy</Link>
                     </div>
                 </div>
-                
+
                 <div className="mobile-menu-footer">
                     <div className="mobile-contact">
-                        <h4>Kontakt</h4>
                         <a href="tel:+48518144882" className="mobile-phone" onClick={handlePhoneClick}>
                             <FontAwesomeIcon icon={faPhone} />
                             +48 518 144 882
                         </a>
                         <p className="mobile-location">Szczecin i okolice</p>
                     </div>
-                    
                     <div className="mobile-social">
-                        <a 
-                            href="https://www.facebook.com/profile.php?id=61575175164575" 
-                            target="_blank" 
+                        <a
+                            href="https://www.facebook.com/profile.php?id=61575175164575"
+                            target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Facebook"
                             onClick={closeMenu}

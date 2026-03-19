@@ -51,6 +51,9 @@ function ContactSection() {
     <section id="contact" className="contact">
       <div className="contact-container">
         <h2>Skontaktuj się z nami</h2>
+          <strong style={{fontSize: '1.1rem'}}>
+    ⏱ Odpowiadamy w ciągu 2 godzin — bezpłatna wycena na miejscu
+  </strong>
         <div className="contact-info">
           <p><strong>Telefon:</strong> +48 518 144 882</p>
           <p><strong>Email:</strong> bezpiecznydach@gmail.com</p>
