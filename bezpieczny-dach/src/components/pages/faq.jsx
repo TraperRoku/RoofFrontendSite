@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, ChevronUp, Phone, MapPin, Clock, Shield, CheckCircle, CheckCheckIcon, PhoneCall } from 'lucide-react';
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp, Phone, MapPin, Clock, Shield, CheckCircle } from 'lucide-react';
 import Footer from '../footer';
 import Header from '../Header';
 import './FAQ.css'; 
