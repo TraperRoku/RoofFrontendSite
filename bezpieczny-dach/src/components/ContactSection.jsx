@@ -30,13 +30,19 @@ function ContactSection() {
       });
 
       if (response.ok) {
+        // Google Ads — śledzenie konwersji "Prośba o wycenę"
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', 'conversion', {
+            'send_to': 'AW-18028227969/0GuaCIHvsI0cEIHbw5RD'
+          });
+        }
+
         alert('Wiadomość została wysłana pomyślnie!');
         setFormData({
           name: '',
           email: '',
           numerTelefonu: '',
           message: '',
-          
           consent: false
         });
       } else {
@@ -51,9 +57,6 @@ function ContactSection() {
     <section id="contact" className="contact">
       <div className="contact-container">
         <h2>Skontaktuj się z nami</h2>
-          <strong style={{fontSize: '1.1rem'}}>
-    ⏱ Odpowiadamy w ciągu 2 godzin — bezpłatna wycena na miejscu
-  </strong>
         <div className="contact-info">
           <p><strong>Telefon:</strong> +48 518 144 882</p>
           <p><strong>Email:</strong> bezpiecznydach@gmail.com</p>
@@ -101,8 +104,7 @@ function ContactSection() {
               required
             ></textarea>
           </div>
-       
-          
+
           <div className="form-group consent-group">
             <input 
               type="checkbox" 
