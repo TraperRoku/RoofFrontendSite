@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../Header';
 import Footer from '../footer';
 import '../pages/Realizacje.css';
+import PhoneLink from '../PhoneLink';
 
 function Realizacje() {
   const [galleryImages, setGalleryImages] = useState([]);
@@ -248,7 +249,7 @@ function Realizacje() {
           <h2>Zainteresowany naszymi usługami?</h2>
           <p>Skontaktuj się z nami, aby omówić Twój projekt</p>
           <div className="cta-buttons">
-            <a href="tel:+48518144882" className="cta-button-primary">Zadzwoń: 518 144 882</a>
+            <PhoneLink className="cta-button-primary">Zadzwoń: 518 144 882</PhoneLink>
             <Link to="/#contact" className="cta-button-secondary">Formularz kontaktowy</Link>
           </div>
         </div>
