@@ -9,6 +9,7 @@ import Footer from './components/footer';
 import DachyPlaskie from './components/pages/dachy-plaskie';
 import Testimonials from './components/Testimonials';
 
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -23,6 +24,28 @@ import PapaTermozgrzewalnaSzczecin from './components/pages/papaTermozgrzewalna'
 
 function ScrollToHashElement() {
   const location = useLocation();
+  useEffect(() => {
+  const handleTelClick = (e) => {
+    const target = e.target.closest('a[href^="tel:"]');
+    if (!target) return;
+
+    // Ignoruj jeśli PhoneLink już obsłużył (ma data-tracked)
+    if (target.dataset.tracked) return;
+
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {
+        send_to: 'AW-18028227969/Na2aCIG8yKIcEIHbw5RD',
+      });
+      window.gtag('event', 'phone_click', {
+        event_category: 'contact',
+        event_label: target.href,
+      });
+    }
+  };
+
+  document.addEventListener('click', handleTelClick);
+  return () => document.removeEventListener('click', handleTelClick);
+}, []);
 
   useEffect(() => {
     if (location.hash) {
