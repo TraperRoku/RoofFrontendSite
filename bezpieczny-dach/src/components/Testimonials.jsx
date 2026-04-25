@@ -1,35 +1,44 @@
 import React from 'react';
 import '../components/Testimaniols.css';
+import PhoneLink from '../components/PhoneLink';
 
 const reviews = [
   {
     initial: 'F',
     name: 'Filip',
     rating: 5,
-    date: '3 miesiące temu',
+    date: '2026-02-11',
     text: 'Fachowa robota.',
   },
   {
     initial: 'B',
     name: 'Bogusia',
     rating: 5,
-    date: '3 tygodnie temu',
+    date: '2026-03-11',
     text: 'Fachowe doradztwo, szybka realizacja, wykonanie na wysokim poziomie, dbałość o szczegóły. Można się nie znać, a oddać dach w dobre ręce.',
   },
   {
     initial: 'K',
     name: 'Karol',
     rating: 5,
-    date: '2 miesiące temu',
+    date: '2026-01-28',
     text: 'Polecam, robota sprawnie wykonana i w terminie. Sympatyczny właściciel firmy.',
   },
   {
     initial: 'M',
     name: 'Marek',
     rating: 5,
-    date: '1 dzień temu',
+    date: '2026-03-17',
     text: 'Fachowo i szybko wykonana praca.',
   },
+ {
+    initial: 'I',
+    name: 'Iwona',
+    rating: 5,
+    date: '2026-04-25',
+    text: 'Profesjonalna firma , fachowo rzetelnie podjęcie prac w szybkim terminie .Polecam rzadkością jest w dzisiejszych czasach tak wysoki poziom wykonania prac pozostawiając po sobie solidne wykonanie czystość i spokój aż miło.',
+  },
+  
 ];
 
 const trustedClients = [
@@ -122,9 +131,9 @@ function Testimonials() {
           >
             ★ Oceń nas na Google
           </a>
-          <a href="tel:+48518144882" className="testimonials-cta-phone">
+          <PhoneLink className="testimonials-cta-phone">
             Zadzwoń po bezpłatną wycenę: 518 144 882
-          </a>
+          </PhoneLink>
         </div>
 
       </div>

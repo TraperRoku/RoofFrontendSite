@@ -1,5 +1,6 @@
 import React from 'react';
 import './RepairSection.css';
+import PhoneLink from './PhoneLink';
 
 function RepairSection() {
   return (
@@ -73,11 +74,10 @@ function RepairSection() {
         
         <div className="cta-box">
           <p>Potrzebujesz profesjonalnej naprawy dachu w Szczecinie?</p>
-          <div className="contact-info">Zadzwoń do nas: <a href="tel:+48518144882" className="phone-number">+48 518 144 882</a></div>
-
-         <a className="cta-button" href="tel:+48518144882">
-             Bezpłatna wycena
-        </a>
+         <div className="contact-info">
+  Zadzwoń do nas: <PhoneLink className="phone-number">+48 518 144 882</PhoneLink>
+</div>
+<PhoneLink className="cta-button">Bezpłatna wycena</PhoneLink>
         </div>
       </div>
     </section>

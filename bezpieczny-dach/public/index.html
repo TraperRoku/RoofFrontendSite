@@ -39,6 +39,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   
+  <script>
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof(url) != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18028227969/Na2aCIG8yKIcEIHbw5RD',
+      'event_callback': callback
+    });
+    return false;
+  }
+</script>
+
+
   <!-- Schema.org -->
   <script type="application/ld+json">
   {

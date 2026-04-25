@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../Header'
 import Footer from '../footer'
 import '../pages/DocieplanieDachow.css';
+import PhoneLink from '../PhoneLink';
 
 import wełna from '../photos/woolMineral.jpg';
 import pir from '../photos/plytyPir.jpg';
@@ -89,7 +90,7 @@ function DocieplanieDachow() {
             <h1>Docieplanie dachów płaskich w Szczecinie</h1>
             <p className="hero-subtitle">Zmniejsz koszty ogrzewania i zwiększ komfort całoroczny</p>
             <div className="hero-cta">
-              <a href="tel:+48518144882" className="cta-button">Zadzwoń: 518 144 882</a>
+              <PhoneLink className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
             </div>
           </div>
         </section>
@@ -156,7 +157,7 @@ function DocieplanieDachow() {
           <h2>Zamów darmową wycenę docieplenia dachu</h2>
           <p>Nasz specjalista odpowie na wszystkie Twoje pytania</p>
           <div className="cta-buttons">
-            <a href="tel:+48518144882" className="cta-button-primary">Zadzwoń: 518 144 882</a>
+            <PhoneLink className="cta-button-primary" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
             <Link to="/#contact" className="cta-button-secondary">Formularz kontaktowy</Link>
           </div>
         </section>

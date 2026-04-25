@@ -4,6 +4,7 @@ import Header from '../Header';
 import './Wykonawstwo.css';
 import Footer from '../footer';
 import { Link } from 'react-router-dom';
+import PhoneLink from '../PhoneLink';
 
 import jeden from '../photos_to_deploy/2.webp';
 import dwa from '../photos_to_deploy/3.webp';
@@ -55,9 +56,9 @@ const Wykonawstwo = () => {
             <h1>Profesjonalne usługi dekarskie w Szczecinie – dachy płaskie i papa termozgrzewalna</h1>
             <p className="hero-subtitle">Kompleksowe usługi dekarskie w Szczecinie i okolicach</p>
             <div className="hero-cta">
-              <a href="tel:+48518144882" className="cta-button">
+              <PhoneLink className="cta-button" itemProp="telephone">
                 Zadzwoń po darmową wycenę: 518 144 882
-              </a>
+              </PhoneLink>
             </div>
           </div>
         </section>
@@ -225,9 +226,7 @@ const Wykonawstwo = () => {
             <h2>Zainteresowany usługami?</h2>
             <p>Skontaktuj się z nami, aby omówić Twój projekt i otrzymać bezpłatną wycenę</p>
             <div className="cta-buttons">
-              <a href="tel:+48518144882" className="cta-button-primary">
-                Zadzwoń: 518 144 882
-              </a>
+            <PhoneLink className="cta-button-primary" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
               <Link to="/#contact" className="cta-button-secondary">
                 Formularz kontaktowy
               </Link>

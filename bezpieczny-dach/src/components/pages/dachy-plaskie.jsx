@@ -4,6 +4,7 @@ import Header from '../Header'
 import Footer from '../footer'
 import '../pages/DachyPlaskie.css';
 import { Link } from 'react-router-dom';
+import PhoneLink from '../PhoneLink'; 
 
 import dach1 from '../photos_to_deploy/8.webp';
 import dach2 from '../photos_to_deploy/9.webp';
@@ -192,7 +193,8 @@ function DachyPlaskie(){
             <h1>Dachy płaskie w Szczecinie – profesjonalne wykonawstwo i remonty</h1>
             <p className="hero-subtitlee3">Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej. 15 lat doświadczenia w branży. Darmowa wycena.</p>
             <div className="hero-cta">
-              <a href="tel:+48518144882" className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</a>
+             <PhoneLink className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
+
             </div>
           </div>
           <div className="hero-image">
@@ -278,7 +280,7 @@ function DachyPlaskie(){
           <div className="emergency-content">
             <h2>Uszkodzenie dachu – pomoc w terenie</h2>
             <p>Przeciek lub awaria na dachu? Zapraszamy do kontaktu niezwłocznie. Nasz zespół przyjeżdża szybko i diagnozuje problem profesjonalnie.</p>
-            <a href="tel:+48518144882" className="emergency-button" itemProp="telephone">Zadzwoń: 518 144 882</a>
+           <PhoneLink className="emergency-button" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
           </div>
         </section>
 
@@ -305,7 +307,7 @@ function DachyPlaskie(){
                 <li>Realizacja powinna być szybka</li>
                 <li>Planujesz powiększyć pokrycie lub wykonać naprawę</li>
               </ul>
-              <p className="system-cta"><strong>Papa termozgrzewalna</strong> – skonsultuj z nami: <a href="tel:+48518144882" itemProp="telephone">518 144 882</a></p>
+              <p className="system-cta"><strong>Papa termozgrzewalna</strong> – skonsultuj z nami: <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
             </div>
           </div>
           
@@ -328,7 +330,8 @@ function DachyPlaskie(){
                 <li>Preferujesz rozwiązanie lekkie i elastyczne</li>
                 <li>Chcesz długotrwałą ochronę</li>
               </ul>
-              <p className="system-cta"><strong>Membrana EPDM</strong> – dowiedz się więcej: <a href="tel:+48518144882" itemProp="telephone">518 144 882</a></p>
+              <p className="system-cta"><strong>Membrana EPDM</strong> – dowiedz się więcej: 
+              <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
             </div>
           </div>
 
@@ -351,7 +354,8 @@ function DachyPlaskie(){
                 <li>Chcesz połączyć uszczelnianie dachu z izolacją termiczną</li>
                 <li>Szukasz rozwiązania na wiele lat</li>
               </ul>
-              <p className="system-cta"><strong>Membrana PVC z izolacją</strong> – zainteresowany? <a href="tel:+48518144882" itemProp="telephone">518 144 882</a></p>
+              <p className="system-cta"><strong>Membrana PVC z izolacją</strong> – zainteresowany? 
+              <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
             </div>
           </div>
 
@@ -374,7 +378,8 @@ function DachyPlaskie(){
                 <li>Szukasz rozwiązania na dłuższy horyzont</li>
                 <li>Marzysz o redukcji kosztów energii</li>
               </ul>
-              <p className="system-cta"><strong>Remont z przygotowaniem pod PV</strong> – sprawdź możliwości: <a href="tel:+48518144882" itemProp="telephone">518 144 882</a></p>
+              <p className="system-cta"><strong>Remont z przygotowaniem pod PV</strong> – sprawdź możliwości: 
+              <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
             </div>
           </div>
         </section>
@@ -442,7 +447,7 @@ function DachyPlaskie(){
           <p>Doradcy dostępni od 7:00 do 20:00, siedem dni w tygodniu</p>
           <p><strong>Darmowa wycena • Konsultacja bez zobowiązań • Profesjonalne podejście</strong></p>
           <div className="cta-buttons">
-            <a href="tel:+48518144882" className="cta-button-primary" itemProp="telephone">Zadzwoń: 518 144 882</a>
+            <PhoneLink className="cta-button-primary" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
             <Link to="/#contact" className="cta-button-secondary">Formularz kontaktowy</Link>
           </div>
           <p className="location-info">Obsługujemy Szczecin i całe województwo zachodniopomorskie.</p>

@@ -5,6 +5,7 @@ import Header from '../Header';
 import './FAQ.css'; 
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import PhoneLink from '../PhoneLink';
 
 import hero from '../photos_to_deploy/40.webp';
 import dachPlaski from '../realizacje/thumbs/41.webp';
@@ -266,14 +267,9 @@ function FAQ() {
               Porady od specjalistów z doświadczeniem na terenie Szczecina
             </p>
             <div>
-              <a 
-                href="tel:+48518144882" 
-                className="cta-button"
-                aria-label="Zadzwoń do nas pod numer 518 144 882"
-                itemProp="telephone"
-              >
-                Zadzwoń: 518 144 882
-              </a>
+            <PhoneLink className="cta-button" aria-label="Zadzwoń do nas pod numer 518 144 882" itemProp="telephone">
+  Zadzwoń: 518 144 882
+</PhoneLink>
             </div>
           </div>
           <div className="hero-image">
@@ -319,7 +315,8 @@ function FAQ() {
               <li>Konserwacji i opiece przez cały rok</li>
               <li>Postępowaniu w sytuacjach awaryjnych</li>
             </ul>
-            <p>Nie znalazłeś odpowiedzi? <a href="tel:+48518144882" className="inline-link">Zadzwoń do naszych specjalistów: 518 144 882</a></p>
+            <p>Nie znalazłeś odpowiedzi? 
+              <PhoneLink className="inline-link" itemProp="telephone">Zadzwoń do naszych specjalistów: 518 144 882</PhoneLink></p>
           </div>
         </section>
 
@@ -428,13 +425,12 @@ function FAQ() {
             Nasi specjaliści dostępni od poniedziałku do niedzieli, 7:00 - 20:00
           </p>
           <div className="cta-buttons">
-            <a 
-              href="tel:+48518144882"
+            <PhoneLink
               className="cta-button-primary"
               aria-label="Zadzwoń na numer 518 144 882"
             >
               Zadzwoń: 518 144 882
-            </a>
+            </PhoneLink>
             <Link 
               to="/#contact"
               className="cta-button-secondary"

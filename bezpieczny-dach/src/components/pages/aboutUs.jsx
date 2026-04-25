@@ -4,6 +4,7 @@ import Header from '../Header'
 import Footer from '../footer'
 import './AboutUs.css';
 import { Link } from 'react-router-dom';
+import PhoneLink from '../PhoneLink';
 
 import zespol1 from '../photos_to_deploy/1.webp';
 import zespol2 from '../photos_to_deploy/7.webp';
@@ -84,7 +85,7 @@ function ONas(){
            <h1>O nas — lokalni eksperci dekarscy w Szczecinie</h1>
             <p className="hero-subtitle2">15 lat doświadczenia | ponad 1000 zadowolonych klientów | najwyższa jakość usług</p>
             <div className="hero-cta">
-              <a href="tel:+48518144882" className="cta-button">Zadzwoń: 518 144 882</a>
+              <PhoneLink className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
             </div>
           </div>
           <div className="hero-image">
@@ -312,7 +313,7 @@ function ONas(){
           <h2>Gotowy na współpracę?</h2>
           <p>Skontaktuj się z nami już dziś — otrzymasz bezpłatną wycenę w 24h.</p>
           <div className="cta-buttons">
-            <a href="tel:+48518144882" className="cta-button-primary">Zadzwoń: 518 144 882</a>
+           <PhoneLink className="cta-button-primary" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
             <Link to="/#contact" className="cta-button-secondary">Formularz kontaktowy</Link>
           </div>
         </section>

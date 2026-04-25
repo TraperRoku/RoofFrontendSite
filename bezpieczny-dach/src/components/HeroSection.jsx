@@ -1,14 +1,14 @@
 import React from 'react';
 import './HeroSection.css';
+import PhoneLink from './PhoneLink'; 
 
 function HeroSection() {
   return (
     <>
-      {/* Pasek telefonu widoczny od razu na mobile */}
-      <div className="mobile-top-phone-bar">
-        <a href="tel:+48518144882">
+     <div className="mobile-top-phone-bar">
+        <PhoneLink>  {/* ← było: <a href="tel:+48518144882"> */}
           📞 Zadzwoń teraz: <strong>518 144 882</strong>
-        </a>
+        </PhoneLink>
       </div>
 
       <section id="home" className="hero">
@@ -26,7 +26,9 @@ function HeroSection() {
 
           {/* Numer widoczny w hero na mobile */}
           <div className="hero-phone-mobile">
-            <a href="tel:+48518144882">📞 518 144 882 — Zadzwoń bezpłatnie</a>
+            <PhoneLink>
+              📞 518 144 882 — Zadzwoń bezpłatnie
+            </PhoneLink>
           </div>
 
           <div className="hero-buttons">
@@ -42,9 +44,9 @@ function HeroSection() {
 
       {/* Stały pasek dolny — "Zadzwoń" na mobile */}
       <div className="mobile-bottom-bar">
-        <a href="tel:+48518144882" className="mobile-bottom-call">
+        <PhoneLink className="mobile-bottom-call">  {/* ← było: <a href="tel:..." className="mobile-bottom-call"> */}
           📞 Zadzwoń: 518 144 882
-        </a>
+        </PhoneLink>
         <a href="#contact" className="mobile-bottom-contact">
           Napisz
         </a>

@@ -6,6 +6,7 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './Header.css';
 import logo from '../components/photos/logo.webp';
 import { Link } from 'react-router-dom';
+import PhoneLink from './PhoneLink';
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,10 +25,6 @@ function Header() {
         scrollToTop();
     }, [scrollToTop]);
 
-    const handlePhoneClick = () => {
-        closeMenu();
-        window.location.href = 'tel:+48518144882';
-    };
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -87,10 +84,10 @@ function Header() {
                 <div className="header-actions">
                     <div className="contact-info">
                         <span className="phone-label">Zadzwoń teraz:</span>
-                        <a href="tel:+48518144882" className="phone-number" onClick={closeMenu}>
+                        <PhoneLink className="phone-number" onClick={closeMenu} >
                             <FontAwesomeIcon icon={faPhone} />
                             518 144 882
-                        </a>
+                            </PhoneLink>
                     </div>
                     <div className="social-links">
                         <a
@@ -138,11 +135,11 @@ function Header() {
                     </button>
                 </div>
 
-                {/* Numer telefonu widoczny od razu w menu */}
-                <a href="tel:+48518144882" className="mobile-menu-phone-top" onClick={handlePhoneClick}>
-                    <FontAwesomeIcon icon={faPhone} />
-                    <span>518 144 882 — Zadzwoń teraz</span>
-                </a>
+                
+           <PhoneLink className="phone-number" onClick={closeMenu}>
+  <FontAwesomeIcon icon={faPhone} />
+  518 144 882
+</PhoneLink>
 
                 <div className="mobile-nav-links">
                     <div className="mobile-nav-group">
@@ -164,10 +161,10 @@ function Header() {
 
                 <div className="mobile-menu-footer">
                     <div className="mobile-contact">
-                        <a href="tel:+48518144882" className="mobile-phone" onClick={handlePhoneClick}>
-                            <FontAwesomeIcon icon={faPhone} />
-                            +48 518 144 882
-                        </a>
+                     <PhoneLink className="phone-number" onClick={closeMenu}>
+  <FontAwesomeIcon icon={faPhone} />
+  518 144 882
+</PhoneLink>
                         <p className="mobile-location">Szczecin i okolice</p>
                     </div>
                     <div className="mobile-social">

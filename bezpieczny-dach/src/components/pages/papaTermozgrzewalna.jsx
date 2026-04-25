@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import Header from '../Header'; 
 import Footer from '../footer'; 
+import PhoneLink from '../PhoneLink'; 
 import './PapaTermozgrzewalnaSzczecin.css'; 
 
 function PapaTermozgrzewalnaSzczecin() {
@@ -147,7 +148,7 @@ function PapaTermozgrzewalnaSzczecin() {
             <div className="hero-content2">
               <h1>Papa termozgrzewalna w Szczecinie</h1>
               <p>Specjalizujemy się w profesjonalnym montażu, naprawie i renowacji dachów z papy termozgrzewalnej na terenie Szczecina i okolic. Dzięki wieloletniemu doświadczeniu i wykorzystaniu materiałów najwyższej jakości, zapewniamy szczelne i trwałe pokrycia dachowe.</p>
-              <a href="tel:+48518144882" className="cta-button">Zadzwoń po darmową wycenę: 518 144 882</a>
+              <PhoneLink className="cta-button">Zadzwoń po darmową wycenę: 518 144 882</PhoneLink>
             </div>
           </div>
         </section>
@@ -286,7 +287,7 @@ function PapaTermozgrzewalnaSzczecin() {
           <div className="container">
             <h2 className="section-title">Skontaktuj się z nami</h2>
             <p className="section-subtitle">Potrzebujesz fachowca od papy termozgrzewalnej w Szczecinie? Chętnie odpowiemy na Twoje pytania i przygotujemy indywidualną ofertę.</p>
-            <a href="tel:+48518144882" className="cta-button">Zadzwoń po darmową wycenę: 518 144 882</a>
+            <PhoneLink className="cta-button">Zadzwoń po darmową wycenę: 518 144 882</PhoneLink>
             
             
             <div className="contact-info-grid">
@@ -316,9 +317,7 @@ function PapaTermozgrzewalnaSzczecin() {
 
       <Footer />
 
-      <Link to="tel:+48518144882" className="floating-contact">
-        Zadzwoń teraz
-      </Link>
+     <PhoneLink className="floating-contact">Zadzwoń teraz</PhoneLink>
     </>
   );
 }
