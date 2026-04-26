@@ -41,8 +41,11 @@
     margin-bottom: 1.5rem;
 }
 
+/* POPRAWKA: dodano input[type="tel"] do selektora — wcześniej pole telefonu
+   nie miało stylów i wyglądało inaczej niż pozostałe pola */
 .form-group input[type="text"],
 .form-group input[type="email"],
+.form-group input[type="tel"],
 .form-group textarea {
     width: 100%;
     padding: 1rem;
@@ -52,6 +55,10 @@
     font-size: 1rem;
     transition: border-color 0.3s ease;
     box-sizing: border-box;
+    background-color: #fff;
+    color: #333;
+    -webkit-appearance: none;
+    appearance: none;
 }
 
 .form-group textarea {
@@ -59,10 +66,13 @@
     resize: vertical;
 }
 
-.form-group input:focus,
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="tel"]:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: #ff5722;
+    box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.1);
 }
 
 .consent-group {
@@ -128,8 +138,10 @@ button[type="submit"]:hover {
         font-size: 1rem;
     }
     
+    /* POPRAWKA: font-size 16px zapobiega automatycznemu zoomowi na iOS */
     .form-group input[type="text"],
     .form-group input[type="email"],
+    .form-group input[type="tel"],
     .form-group textarea {
         padding: 0.8rem;
         font-size: 16px;

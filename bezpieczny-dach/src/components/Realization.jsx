@@ -17,6 +17,10 @@ const imagesContext = require.context(
 
 const imageFiles = importAll(imagesContext);
 
+// POPRAWKA: Limit zdjęć na stronie głównej — pokazujemy tylko 8
+// Reszta jest dostępna na /realizacje
+const HOME_GALLERY_LIMIT = 9;
+
 const imageAlts = [
   'Papa termozgrzewalna montaż na dachu płaskim Szczecin - Bezpieczny Dach',
   'Docieplenie dachu wełną mineralną Szczecin - realizacja Bezpieczny Dach',
@@ -66,6 +70,9 @@ function Realization() {
   const [currentImageIndex, setCurrentImageIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // POPRAWKA: Wyświetlamy tylko pierwsze 8 zdjęć na stronie głównej
+  const displayedImages = imageFiles.slice(0, HOME_GALLERY_LIMIT);
+
   const handleImageClick = useCallback((index) => {
     setCurrentImageIndex(index);
     setIsModalOpen(true);
@@ -78,12 +85,12 @@ function Realization() {
   }, []);
 
   const handleNext = useCallback(() => {
-    setCurrentImageIndex((prev) => (prev + 1) % imageFiles.length);
-  }, []);
+    setCurrentImageIndex((prev) => (prev + 1) % displayedImages.length);
+  }, [displayedImages.length]);
 
   const handlePrev = useCallback(() => {
-    setCurrentImageIndex((prev) => (prev - 1 + imageFiles.length) % imageFiles.length);
-  }, []);
+    setCurrentImageIndex((prev) => (prev - 1 + displayedImages.length) % displayedImages.length);
+  }, [displayedImages.length]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -127,7 +134,8 @@ function Realization() {
         </div>
 
         <div className="gallery-grid">
-          {imageFiles.map((src, index) => (
+          {/* POPRAWKA: slice do HOME_GALLERY_LIMIT (8 zdjęć) zamiast wszystkich */}
+          {displayedImages.map((src, index) => (
             <div
               key={index}
               className="gallery-item"
@@ -136,25 +144,26 @@ function Realization() {
               tabIndex={0}
               aria-label={`Pokaż zdjęcie: ${imageAlts[index]}`}
             >
-      <img
-  src={src}
-  alt={imageAlts[index]}
-  loading="lazy"
-  className="gallery-image"
-  width="400"
-  height="400"
-/>
+              <img
+                src={src}
+                alt={imageAlts[index]}
+                loading="lazy"
+                className="gallery-image"
+                width="400"
+                height="400"
+              />
               <div className="gallery-item-overlay">
                 <div className="overlay-content">
                   <span className="zoom-icon" aria-hidden="true"></span>
                   <span className="overlay-text">Zobacz szczegóły realizacji</span>
                 </div>
-                
               </div>
             </div>
           ))}
         </div>
-    <Link to="/realizacje" className="see-more-button">Zobacz więcej realizacji</Link>
+
+        <Link to="/realizacje" className="see-more-button">Zobacz więcej realizacji</Link>
+
         <div className="cta-section">
           <h2>Chcesz taki dach? Zadzwoń teraz!</h2>
           <p>Nasi konsultanci czekają, aby omówić Twój projekt i przedstawić bezpłatną wycenę</p>
@@ -180,11 +189,11 @@ function Realization() {
 
               <picture>
                 <source
-                  srcSet={imageFiles[currentImageIndex].replace(/\.(jpg|jpeg|png)$/, '.webp')}
+                  srcSet={displayedImages[currentImageIndex].replace(/\.(jpg|jpeg|png)$/, '.webp')}
                   type="image/webp"
                 />
                 <img
-                  src={imageFiles[currentImageIndex]}
+                  src={displayedImages[currentImageIndex]}
                   alt={imageAlts[currentImageIndex]}
                   id="modal-image-title"
                 />
@@ -212,8 +221,6 @@ function Realization() {
                   &#10095;
                 </button>
               </div>
-
-           
             </div>
           </div>
         )}

@@ -2,7 +2,6 @@
 
 /* SEO Content Section */
 
-
 .seo-content {
     padding: 8rem 5%;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
@@ -29,6 +28,25 @@
     z-index: 1;
 }
 
+/* =============================================
+   POPRAWKA: responsywny nagłówek SEO
+   Wcześniej był inline fontSize: '2.2rem' który
+   nie reagował na media queries — teraz klasa CSS
+   ============================================= */
+.seo-main-heading {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 1.8rem;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    padding: 0 10px;
+}
+
 /* Main heading */
 .seo-content h2 {
     font-family: 'Montserrat', sans-serif;
@@ -42,6 +60,8 @@
     position: relative;
     display: inline-block;
     width: 100%;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .seo-content h2:after {
@@ -315,6 +335,10 @@
     .seo-content h2 {
         font-size: 1.9rem;
     }
+
+    .seo-main-heading {
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -324,6 +348,11 @@
     
     .seo-content h2 {
         font-size: 1.7rem;
+    }
+
+    .seo-main-heading {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
     }
     
     .seo-content > div > div:nth-child(2) {
@@ -352,7 +381,14 @@
 
 @media (max-width: 480px) {
     .seo-content h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+    }
+
+    /* KLUCZOWA POPRAWKA: 1.2rem na najmniejszych ekranach */
+    .seo-main-heading {
+        font-size: 1.2rem;
+        letter-spacing: 0;
+        padding: 0 5px;
     }
     
     .seo-content > div > div:first-child p,
@@ -383,33 +419,25 @@
 }
 
 /* =============================================
-   MOBILE GLOBAL PATCH — dodaj na końcu App.css
-   =============================================
-   
-   Zapobiega chowaniu się treści pod stałym
-   dolnym paskiem telefonu na mobile.
+   MOBILE GLOBAL PATCH
    ============================================= */
 
-/* Odstęp na dole na wszystkich stronach na mobile */
 @media (max-width: 992px) {
   footer,
   .footer {
-    padding-bottom: calc(58px + 1.5rem) !important; /* 58px = wysokość bottom bar */
+    padding-bottom: calc(58px + 1.5rem) !important;
   }
 
-  /* Sekcja kontaktowa też musi mieć odstęp */
   #contact,
   .contact {
     padding-bottom: calc(58px + 3rem) !important;
   }
 
-  /* Ogólny margines na ostatnim elemencie przed stopką */
   .repair-section {
     margin-bottom: 58px;
   }
 }
 
-/* Poprawki dla sekcji seo-content na mobile */
 @media (max-width: 768px) {
   .seo-content {
     padding: 3rem 1rem calc(58px + 2rem) !important;

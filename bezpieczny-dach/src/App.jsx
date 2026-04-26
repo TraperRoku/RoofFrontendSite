@@ -29,7 +29,6 @@ function ScrollToHashElement() {
     const target = e.target.closest('a[href^="tel:"]');
     if (!target) return;
 
-    // Ignoruj jeśli PhoneLink już obsłużył (ma data-tracked)
     if (target.dataset.tracked) return;
 
     if (typeof window.gtag === 'function') {
@@ -61,7 +60,6 @@ function ScrollToHashElement() {
   return null;
 }
 
-// Dodaj nowy komponent z treścią SEO
 function SEOContent() {
   return (
     <section className="seo-content" style={{ padding: '60px 20px', backgroundColor: '#f8f9fa' }}>
@@ -69,8 +67,9 @@ function SEOContent() {
         
         {/* Sekcja główna - Dekarz Szczecin */}
         <div style={{ marginBottom: '50px' }}>
-          <h2 style={{ fontSize: '2.2rem', color: '#2c3e50', marginBottom: '20px', textAlign: 'center' }}>
-            Profesjonalny Dekarz Szczecin - 15 Lat Doświadczenia
+          {/* POPRAWKA: className zamiast inline fontSize — kontrolowane przez App.css na mobile */}
+          <h2 className="seo-main-heading" style={{ color: '#2c3e50', marginBottom: '20px', textAlign: 'center' }}>
+            Profesjonalny Dekarz Szczecin — 15 Lat Doświadczenia
           </h2>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.6', textAlign: 'center', marginBottom: '30px', color: '#5a6c7d' }}>
             Jesteśmy nową rodzinną firmą dekarską w Szczecinie z 15 letnim doświadczeniem w zawodzie, specjalizującą się w <strong>dachach płaskich</strong>, 
@@ -85,7 +84,7 @@ function SEOContent() {
           {/* Dachy płaskie */}
           <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
             <h3 style={{ color: '#e74c3c', fontSize: '1.5rem', marginBottom: '15px' }}>
-              <Link to="/dachy-plaskie" style={{ color: '#e74c3c', textDecoration: 'none' }}>Dachy Płaskie Szczecin - Papa Termozgrzewalna</Link>
+              <Link to="/dachy-plaskie" style={{ color: '#e74c3c', textDecoration: 'none' }}>Dachy Płaskie Szczecin — Papa Termozgrzewalna</Link>
             </h3>
             <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
               Wykonujemy <strong>dachy płaskie w Szczecinie i Gołeniowie</strong> z zastosowaniem najwyższej jakości 
@@ -103,7 +102,7 @@ function SEOContent() {
           {/* Naprawa dachów */}
           <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
             <h3 style={{ color: '#e74c3c', fontSize: '1.5rem', marginBottom: '15px' }}>
-              Naprawa Dachów Szczecin - Szybko i Profesjonalnie
+              Naprawa Dachów Szczecin — Szybko i Profesjonalnie
             </h3>
             <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
               Oferujemy <strong>naprawę dachów w Szczecinie</strong> oraz <strong>remont dachu</strong> z wykorzystaniem 
@@ -120,7 +119,7 @@ function SEOContent() {
           {/* Usługi dekarskie */}
           <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
             <h3 style={{ color: '#e74c3c', fontSize: '1.5rem', marginBottom: '15px' }}>
-              Usługi Dekarskie Szczecin - Pełen Zakres
+              Usługi Dekarskie Szczecin — Pełen Zakres
             </h3>
             <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
               Jako doświadczeni <strong>dekarze Szczecin</strong> oferujemy kompleksowe <strong>usługi dekarskie</strong> 
@@ -138,7 +137,7 @@ function SEOContent() {
         {/* Sekcja FAQ */}
         <div style={{ backgroundColor: 'white', padding: '40px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)', marginBottom: '50px' }}>
           <h2 style={{ textAlign: 'center', color: '#2c3e50', marginBottom: '30px' }}>
-            Najczęściej Zadawane Pytania - Dekarz Szczecin
+            Najczęściej Zadawane Pytania — Dekarz Szczecin
           </h2>
           
           <div style={{ display: 'grid', gap: '20px' }}>
@@ -172,14 +171,15 @@ function SEOContent() {
               </p>
             </div>
           </div>
-         <Link to="/baza-wiedzy" className="see-more-button">Zobacz więcej pytań</Link>
+          {/* POPRAWKA: zmieniono /baza-wiedzy na /faq */}
+          <Link to="/faq" className="see-more-button">Zobacz więcej pytań</Link>
         </div>
        
 
         {/* Lokalizacje */}
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <h2 style={{ color: '#2c3e50', marginBottom: '20px' }}>
-            Obszar Działania - Dekarze Szczecin i Okolice
+            Obszar Działania — Dekarze Szczecin i Okolice
           </h2>
           <p style={{ fontSize: '1.1rem', lineHeight: '1.6', color: '#5a6c7d' }}>
             Nasze usługi dekarskie obejmują <strong>Szczecin</strong> i całe <strong>województwo zachodniopomorskie</strong>. 
@@ -190,11 +190,10 @@ function SEOContent() {
         {/* Gwarancje i certyfikaty */}
         <div style={{ backgroundColor: '#e8f5e8', padding: '30px', borderRadius: '10px', textAlign: 'center' }}>
           <h3 style={{ color: '#27ae60', marginBottom: '15px' }}>
-            Gwarancja Jakości - Certyfikowani Dekarze Szczecin
+            Gwarancja Jakości — Certyfikowani Dekarze Szczecin
           </h3>
           <p style={{ lineHeight: '1.6', marginBottom: '20px' }}>
-           
-           Wszystkie zlecenia realizujemy z pełnym zaangażowaniem, wykorzystując wyłącznie sprawdzone, certyfikowane materiały najwyższej jakości. Jesteśmy ubezpieczeni i posiadamy wszystkie wymagane certyfikaty.
+            Wszystkie zlecenia realizujemy z pełnym zaangażowaniem, wykorzystując wyłącznie sprawdzone, certyfikowane materiały najwyższej jakości. Jesteśmy ubezpieczeni i posiadamy wszystkie wymagane certyfikaty.
           </p>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap' }}>
             <div><span className="feature-icon" aria-hidden="true"></span> Gwarancja jakości wykonania</div>
@@ -214,7 +213,6 @@ function HomePage() {
       <Helmet>
           <title>Dekarz Szczecin — Papa termozgrzewalna | Dachy płaskie</title>
           <meta name="description" content="Profesjonalny dekarz w Szczecinie z 15-letnim doświadczeniem. Papa termozgrzewalna, dachy płaskie i naprawa dachów. Darmowa wycena i szybka obsługa."/>
-                 <Link to="/faq" className="see-more-button">Zobacz więcej pytań</Link>
         
         {/* Dodatkowe meta tagi SEO */}
         <meta name="keywords" content="dekarz szczecin, papa termozgrzewalna szczecin, dachy płaskie szczecin, naprawa dachów szczecin, dekarze szczecin, systemy balastowe na dach płaski szczecin, papy termozgrzewalne szczecin, konstrukcja balastowa na dach płaski szczecin, usługi dekarskie szczecin, docieplanie budynków szczecin, naprawa izolacji dachu szczecin, modernizacja dachu płaskiego, papa na dach szczecin, wymiana dachu szczecin, remont dachu szczecin, dachy zielone szczecin, łaty dach szczecin, docieplenia szczecin"/>

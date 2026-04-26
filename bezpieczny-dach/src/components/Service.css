@@ -103,6 +103,7 @@
     text-align: left;
 }
 
+/* POPRAWKA: word-break i overflow-wrap żeby tytuł nie uciekał poza kontener */
 .service-overlay h3 {
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -111,6 +112,9 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 .service-content {
@@ -205,6 +209,12 @@
     .service-image-container {
         height: 220px;
     }
+
+    /* POPRAWKA: mniejszy font i spacing na mobile żeby nie ucinać */
+    .service-overlay h3 {
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -216,7 +226,9 @@
         font-size: 1rem;
     }
     
+    /* POPRAWKA: jeszcze mniejszy font na bardzo małych ekranach */
     .service-overlay h3 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        letter-spacing: 0;
     }
 }
