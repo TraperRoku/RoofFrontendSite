@@ -84,7 +84,16 @@ function SEOContent() {
           {/* Dachy płaskie */}
           <div style={{ backgroundColor: 'white', padding: '30px', borderRadius: '10px', boxShadow: '0 5px 15px rgba(0,0,0,0.1)' }}>
             <h3 style={{ color: '#e74c3c', fontSize: '1.5rem', marginBottom: '15px' }}>
-              <Link to="/dachy-plaskie" style={{ color: '#e74c3c', textDecoration: 'none' }}>Dachy Płaskie Szczecin — Papa Termozgrzewalna</Link>
+              <Link 
+  to="/dachy-plaskie" 
+  style={{ 
+    color: '#e74c3c', 
+    textDecoration: 'none', 
+    overflowWrap: 'break-word' 
+  }}
+>
+  Dachy Płaskie Szczecin — Papa Termozgrzewalna
+</Link>
             </h3>
             <p style={{ marginBottom: '15px', lineHeight: '1.6' }}>
               Wykonujemy <strong>dachy płaskie w Szczecinie i Gołeniowie</strong> z zastosowaniem najwyższej jakości 
