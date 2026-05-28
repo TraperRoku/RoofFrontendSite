@@ -10,7 +10,7 @@ import dach1 from '../photos_to_deploy/8.webp';
 import dach2 from '../photos_to_deploy/9.webp';
 import dach3 from '../photos_to_deploy/3.webp';
 import dach4 from '../photos_to_deploy/23.webp';
-import dach5 from '../photos/solar.webp';
+
 import dach6 from '../realizacje/thumbs/73f.webp'; 
 import dach7 from '../photos_to_deploy/14.webp';
 import dach8 from '../photos/EPDM.webp';
@@ -263,16 +263,7 @@ function DachyPlaskie(){
               />
               <p><strong>Zielony taras</strong> – praktyczne i estetyczne</p>
             </div>
-            <div className="gallery-item">
-              <img 
-                src={dach5} 
-                alt="Konstrukcja balastowa przygotowana pod panele fotowoltaiczne" 
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <p><strong>Przygotowanie pod fotowoltaikę</strong> – nowoczesne rozwiązanie</p>
-            </div>
+          
           </div>
         </section>
 
@@ -360,15 +351,7 @@ function DachyPlaskie(){
           </div>
 
           <div className="system-card">
-            <div className="system-image">
-              <img 
-                src={dach5} 
-                alt="Modernizacja dachu płaskiego Szczecin - przygotowanie pod panele fotowoltaiczne" 
-                loading="lazy"
-                width="500"
-                height="350"
-              />
-            </div>
+            
             <div className="system-content">
               <h3>Remont dachu z przygotowaniem pod fotowoltaikę</h3>
               <p><strong>Inwestycja w przyszłość budynku</strong>. Ten wariant warto wybrać gdy:</p>

@@ -9,7 +9,7 @@ import PhoneLink from '../PhoneLink';
 import zespol1 from '../photos_to_deploy/1.webp';
 import zespol2 from '../photos_to_deploy/7.webp';
 import zespol3 from '../photos_to_deploy/31.webp';
-import certyfikat1 from '../photos/solar.webp';
+
 import narzedzia from '../photos_to_deploy/11.webp';
 import realizacja1 from '../photos_to_deploy/18.webp';
 
@@ -189,7 +189,7 @@ function ONas(){
             </div>
           </div>
         </section>
-
+{/* Komentarz wewnątrz JSX 
         <section className="certificates-section">
           <h2>CERTYFIKATY I UPRAWNIENIA</h2>
           <div className="certificates-content">
@@ -202,7 +202,7 @@ function ONas(){
             </div>
           </div>
         </section>
-
+*/}
         <section className="expertise-section">
            <h2>SPECJALIZACJA DEKARSKA: DACHY PŁASKIE I SKOŚNE</h2>
           <p className="expertise-subtitle">Oferujemy kompleksowe usługi dekarskie na najwyższym poziomie</p>

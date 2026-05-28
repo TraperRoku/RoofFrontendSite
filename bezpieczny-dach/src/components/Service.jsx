@@ -3,6 +3,7 @@ import './Service.css';
 import imgFix from '../components/photos_to_deploy/1.webp';
 import imgBuild from '../components/photos/roofFix.jpg';
 import imgPut from '../components/photos/roofReno.jpg';
+import roofBuildGif from '../components/photos/roofBuild.gif';
 
 const services = [
   { 
@@ -49,8 +50,9 @@ function Service() {
           Specjalizujemy się głównie w <span className="highlight">papie termozgrzewnej premium</span> - mamy ogromne doświadczenie z tego materiału.
           Dodatkowo oferujemy rozwiązania z membran EPDM i PVC dla specjalnych zastosowań.
           Każdy dach wykonujemy z najwyższą dbałością o szczegóły.
-        </p>
-      </div>
+        </p>        <div className="service-gif-wrapper">
+          <img src={roofBuildGif} alt="zgifowany dach z papą termozgrzewalną" className="service-gif" />
+        </div>      </div>
 
       <div className="service-grid">
         {services.map((service, index) => (

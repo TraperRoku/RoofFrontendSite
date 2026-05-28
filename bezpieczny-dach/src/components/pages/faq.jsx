@@ -14,7 +14,7 @@ import membrana from '../realizacje/thumbs/69.webp';
 import konserwacja from '../realizacje/thumbs/62.webp';
 import awaria from '../realizacje/thumbs/21.webp';
 import kosztorys from '../realizacje/thumbs/54.webp';
-import foto from '../photos/solar.webp';
+
 
 const images = {
   hero: hero,
@@ -24,7 +24,7 @@ const images = {
   konserwacja: konserwacja,
   awaria: awaria,
   kosztorys: kosztorys,
-  foto: foto
+ 
 };
 
 const faqData = [
@@ -162,7 +162,7 @@ const faqData = [
   category: 'Materiały',
   question: 'Czy dach płaski nadaje się pod panele fotowoltaiczne?',
   answer: 'Jak najbardziej – dachy płaskie są wręcz idealne do montażu paneli PV. Zapewniamy odpowiednie wzmocnienia i szczelność systemu.',
-  image: images.foto,
+
   tips: ['Idealna powierzchnia dla PV', 'Pomoc w dofinansowaniach', 'Montaż pod klucz']
 },
 
