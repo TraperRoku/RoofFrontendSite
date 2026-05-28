@@ -13,7 +13,7 @@ import dach4 from '../photos_to_deploy/23.webp';
 
 import dach6 from '../realizacje/thumbs/73f.webp'; 
 import dach7 from '../photos_to_deploy/14.webp';
-import dach8 from '../photos/EPDM.webp';
+
 
 
 function DachyPlaskie(){
@@ -301,30 +301,9 @@ function DachyPlaskie(){
               <p className="system-cta"><strong>Papa termozgrzewalna</strong> – skonsultuj z nami: <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
             </div>
           </div>
-          
-          <div className="system-card">
-            <div className="system-image">
-              <img 
-                src={dach8} 
-                alt="System balastowy na dach płaski Szczecin - membrana EPDM" 
-                loading="lazy"
-                width="500"
-                height="350"
-              />
-            </div>
-            <div className="system-content">
-              <h3>System balastowy – membrana EPDM</h3>
-              <p><strong>Nowoczesna alternatywa dla dachów płaskich</strong>. Membrana EPDM idealnie się sprawdza gdy:</p>
-              <ul>
-                <li>Dach ma skomplikowaną geometrię</li>
-                <li>Planujesz montaż szybki i bez grzybiania</li>
-                <li>Preferujesz rozwiązanie lekkie i elastyczne</li>
-                <li>Chcesz długotrwałą ochronę</li>
-              </ul>
-              <p className="system-cta"><strong>Membrana EPDM</strong> – dowiedz się więcej: 
-              <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
-            </div>
-          </div>
+      
+         
+           
 
           <div className="system-card reverse">
             <div className="system-image">
