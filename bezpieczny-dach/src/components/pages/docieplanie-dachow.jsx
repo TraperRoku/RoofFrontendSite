@@ -7,7 +7,6 @@ import '../pages/DocieplanieDachow.css';
 import PhoneLink from '../PhoneLink';
 
 import wełna from '../photos/wool.webp';
-import pir from '../photos/plytyPir.jpg';
 import pur from '../photos/ster.jpg';
 
 // Definicja danych strukturalnych JSON-LD
