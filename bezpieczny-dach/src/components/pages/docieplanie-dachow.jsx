@@ -6,9 +6,9 @@ import Footer from '../footer'
 import '../pages/DocieplanieDachow.css';
 import PhoneLink from '../PhoneLink';
 
-import wełna from '../photos/woolMineral.jpg';
+import wełna from '../photos/wool.webp';
 import pir from '../photos/plytyPir.jpg';
-import pur from '../photos/ster.webp';
+import pur from '../photos/ster.jpg';
 
 // Definicja danych strukturalnych JSON-LD
 const localBusinessSchema = JSON.stringify({
@@ -131,15 +131,7 @@ function DocieplanieDachow() {
                 <li>Paroprzepuszczalna, pozwala dachu "oddychać"</li>
               </ul>
             </div>
-            <div className="type-card">
-              <img src={pir} alt="Płyty PIR do izolacji dachów płaskich" />
-              <h3>Płyty PIR</h3>
-              <ul>
-                <li>Najwyższa izolacyjność termiczna</li>
-                <li>Cienka warstwa – do 2 razy cieńsza niż wełna</li>
-                <li>Odporna na wilgoć i przepadającemu czasowi</li>
-              </ul>
-            </div>
+          
             <div className="type-card">
              <img src={pur} alt="Styropian do izolacji dachów płaskich"  />
               <h3>Styropian – ekonomiczny wybór</h3>

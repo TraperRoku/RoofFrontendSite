@@ -1,7 +1,7 @@
 import React from 'react';
 import './Service.css';
 import imgFix from '../components/photos_to_deploy/1.webp';
-import imgBuild from '../components/photos_to_deploy/17.webp';
+import imgBuild from '../components/photos/roofFix.jpg';
 import imgPut from '../components/photos/roofReno.jpg';
 
 const services = [
@@ -9,7 +9,7 @@ const services = [
     src: imgFix, 
     alt: 'Profesjonalna naprawa dachów płaskich w Szczecinie',
     title: 'Dachy płaskie i papa termozgrzewalna',
-    description: 'Specjalizacja: naprawy i renowacje dachów płaskich. Stosujemy wyłącznie certyfikowane membrany EPDM i PVC najwyższej jakości.',
+    description: 'Specjalizacja: naprawy i renowacje dachów płaskich. Głównie pracujemy z papą termozgrzewalna - mamy duże doświadczenie z tego materiału.',
     features: [
       'Natychmiastowa naprawa przecieków',
       'Pełna wymiana pokrycia',
@@ -46,8 +46,8 @@ function Service() {
         <h2>Dlaczego warto wybrać nasze usługi dekarskie?</h2>
         <p className="service-intro">
           <strong>Łączymy 15 lat doświadczenia z nowoczesnymi technologiami.</strong>
-          Specjalizujemy się w trwałych rozwiązaniach: <span className="highlight">membrany EPDM</span>,
-          <span className="highlight"> ultracienkie PVC</span> i <span className="highlight">papa termozgrzewalna premium</span>.
+          Specjalizujemy się głównie w <span className="highlight">papie termozgrzewnej premium</span> - mamy ogromne doświadczenie z tego materiału.
+          Dodatkowo oferujemy rozwiązania z membran EPDM i PVC dla specjalnych zastosowań.
           Każdy dach wykonujemy z najwyższą dbałością o szczegóły.
         </p>
       </div>
