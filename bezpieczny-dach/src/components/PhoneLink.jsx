@@ -8,15 +8,14 @@ const GTAG_PHONE_CONVERSION = 'AW-18028227969/Na2aCIG8yKIcEIHbw5RD';
 
 function PhoneLink({ children, className, onClick: extraOnClick, ...props }) {
   const handleClick = (e) => {
-    // 1. Najpierw wywołaj dodatkowy handler (np. zamknięcie menu)
-    if (extraOnClick) extraOnClick(e);
+  if (extraOnClick) extraOnClick(e);
 
-    // 2. Wyślij zdarzenie konwersji Google Ads — BEZ preventDefault
-    //    Link tel: zachowuje się normalnie (przeglądarka otwiera tel: URL)
-    //    gtag wysyła zdarzenie asynchronicznie w tle
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'conversion', {
-        send_to: GTAG_PHONE_CONVERSION,
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'conversion', {
+      send_to: GTAG_PHONE_CONVERSION,
+      event_callback: function() {
+        
+      }
       });
     }
 
