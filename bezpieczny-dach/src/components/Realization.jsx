@@ -143,6 +143,12 @@ function Realization() {
               role="button"
               tabIndex={0}
               aria-label={`Pokaż zdjęcie: ${imageAlts[index]}`}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  event.preventDefault();
+                  handleImageClick(index);
+                }
+              }}
             >
               <img
                 src={src}
@@ -195,6 +201,7 @@ function Realization() {
                 <img
                   src={displayedImages[currentImageIndex]}
                   alt={imageAlts[currentImageIndex]}
+                  className="modal-image"
                   id="modal-image-title"
                 />
               </picture>

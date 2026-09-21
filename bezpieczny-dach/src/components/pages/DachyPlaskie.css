@@ -665,6 +665,7 @@ h3 {
 @media (max-width: 768px) {
   .hero-section3 {
     grid-template-columns: 1fr;
+    margin-top: 1.5rem;
   }
   
   .hero-section3 h1 {

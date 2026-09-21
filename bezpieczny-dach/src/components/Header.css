@@ -204,6 +204,24 @@
 .mobile-menu-phone-top:hover { background: #e64a19; }
 .mobile-menu-phone-top svg { font-size: 1rem; }
 
+.mobile-menu .phone-number {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 0;
+  border-radius: 0;
+  background: var(--accent);
+  color: #ffffff !important;
+  font-size: 1.05rem;
+}
+
+.mobile-menu .phone-number:hover {
+  background: #e64a19;
+  color: #ffffff !important;
+}
+
 /* ---- Nav links ---- */
 .mobile-nav-links { flex: 1; padding: 1rem 0; overflow-y: auto; }
 .mobile-nav-group { margin-bottom: 1.5rem; }

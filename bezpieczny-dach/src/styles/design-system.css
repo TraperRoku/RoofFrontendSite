@@ -1142,6 +1142,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 @media (max-width: 768px) {
   .landing-hero { padding: var(--space-12) 0 var(--space-12); }
+  .landing--naprawa .landing-hero {
+    padding-top: calc(var(--space-16) + var(--space-8));
+  }
   .landing-hero__cta .btn { width: 100%; }
   .landing-section { padding: var(--space-12) 0; }
   .landing-section--alt { padding: var(--space-12) 0; }

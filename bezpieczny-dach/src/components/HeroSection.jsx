@@ -5,12 +5,6 @@ import PhoneLink from './PhoneLink';
 function HeroSection() {
   return (
     <>
-     <div className="mobile-top-phone-bar">
-        <PhoneLink>  {/* ← było: <a href="tel:+48518144882"> */}
-          📞 Zadzwoń teraz: <strong>518 144 882</strong>
-        </PhoneLink>
-      </div>
-
       <section id="home" className="hero">
         <div className="hero-content">
           <h1>Lokalny, doświadczony zespół<br />Szczecin, Goleniów,<br />Stargard i okolice</h1>

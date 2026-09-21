@@ -410,8 +410,8 @@ margin-top: 610px;
    ============================================= */
 @media (max-width: 992px) {
   .hero {
-    /* Miejsce na pasek z numerem telefonu pod headerem */
-    margin-top: calc(65px + 38px);
+    /* Header ma już miejsce zarezerwowane przez globalny main. */
+    margin-top: 0;
   }
 }
 

@@ -231,12 +231,56 @@
     text-align: center;
 }
 
+.modal-content picture {
+    display: block;
+}
+
 .modal-image {
     max-width: 100%;
     max-height: 80vh;
     object-fit: contain;
     border-radius: 8px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.modal-navigation {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    background: rgba(15, 28, 51, 0.82);
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+    pointer-events: auto;
+    transform: translateY(-50%);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.prev-button {
+    left: 24px;
+}
+
+.next-button {
+    right: 24px;
+}
+
+.nav-button:hover {
+    background: #e74c3c;
+    transform: translateY(-50%) scale(1.06);
 }
 
 .image-caption {
@@ -315,6 +359,20 @@
     
     .cta-section h3 {
         font-size: 1.3rem;
+    }
+
+    .nav-button {
+        width: 44px;
+        height: 44px;
+        font-size: 1.6rem;
+    }
+
+    .prev-button {
+        left: 10px;
+    }
+
+    .next-button {
+        right: 10px;
     }
 }
 

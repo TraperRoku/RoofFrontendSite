@@ -136,12 +136,6 @@ function Header() {
                     </button>
                 </div>
 
-                
-           <PhoneLink className="phone-number" onClick={closeMenu}>
-  <FontAwesomeIcon icon={faPhone} />
-  518 144 882
-</PhoneLink>
-
                 <div className="mobile-nav-links">
                     <div className="mobile-nav-group">
                         <h4>Główne usługi</h4>
@@ -163,10 +157,6 @@ function Header() {
 
                 <div className="mobile-menu-footer">
                     <div className="mobile-contact">
-                     <PhoneLink className="phone-number" onClick={closeMenu}>
-  <FontAwesomeIcon icon={faPhone} />
-  518 144 882
-</PhoneLink>
                         <p className="mobile-location">Szczecin i okolice</p>
                     </div>
                     <div className="mobile-social">
