@@ -298,7 +298,7 @@ function RemontDachuZPapy() {
             <ul className="landing-hero__trust">
               <li>Ocena i przygotowanie podłoża przed ułożeniem nowego systemu</li>
               <li>Prowadzimy remonty z inspektorem nadzoru i odbiorami częściowymi</li>
-              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · Jednostka Wojskowa WSM Szczecin · Durable</li>
+              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · TBS Drawsko Pomorskie · Jednostka Wojskowa WSM Szczecin · Durable</li>
             </ul>
           </div>
         </section>
@@ -432,6 +432,10 @@ function RemontDachuZPapy() {
               </li>
               <li>
                 <strong>TBS Goleniów</strong>
+                <span>Towarzystwo Budownictwa Społecznego</span>
+              </li>
+              <li>
+                <strong>TBS Drawsko Pomorskie</strong>
                 <span>Towarzystwo Budownictwa Społecznego</span>
               </li>
               <li>

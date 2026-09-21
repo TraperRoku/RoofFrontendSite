@@ -100,6 +100,11 @@ function HomeTrustStrip() {
             <span>Towarzystwo Budownictwa Społecznego</span>
           </li>
           <li className="home-trust-strip__item">
+            <div className="home-trust-strip__icon" aria-hidden="true">🏢</div>
+            <strong>TBS Drawsko Pomorskie</strong>
+            <span>Towarzystwo Budownictwa Społecznego</span>
+          </li>
+          <li className="home-trust-strip__item">
             <div className="home-trust-strip__icon" aria-hidden="true">🎖️</div>
             <strong>Jednostka Wojskowa WSM</strong>
             <span>Szczecin — obiekty wojskowe</span>
@@ -352,7 +357,7 @@ function HomePage() {
           property="og:description"
           content={
             'Specjalistyczne wykonawstwo dachów płaskich dla B2B. Hale, bloki, obiekty ' +
-            `publiczne — głównie pow. ${MIN_AREA_M2} m². Referencje: Atlas Ward, MG Project, DUNA, TBS Goleniów, WSM Szczecin, Durable.`
+            `publiczne — głównie pow. ${MIN_AREA_M2} m². Referencje: Atlas Ward, MG Project, DUNA, TBS Goleniów, TBS Drawsko Pomorskie, WSM Szczecin, Durable.`
           }
         />
 

@@ -86,6 +86,7 @@ const PapaTermozgrzewalna = () => {
             <span>🏗️ MG Project — Generalny Wykonawca</span>
             <span>🏗️ DUNA — Generalny Wykonawca</span>
             <span>🏢 TBS Goleniów</span>
+            <span>🏢 TBS Drawsko Pomorskie</span>
             <span>🎖️ Jednostka Wojskowa (WSM)</span>
           </div>
         </section>

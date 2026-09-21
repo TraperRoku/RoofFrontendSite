@@ -307,7 +307,7 @@ function NaprawaDachuPlaskiego() {
             <ul className="landing-hero__trust">
               <li>Odkrywki kontrolne i ocena stanu izolacji przed wyceną</li>
               <li>Pracujemy jako podwykonawca generalnego wykonawcy</li>
-              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · Jednostka Wojskowa WSM Szczecin</li>
+              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · TBS Drawsko Pomorskie · Jednostka Wojskowa WSM Szczecin</li>
             </ul>
           </div>
         </section>
@@ -476,6 +476,10 @@ function NaprawaDachuPlaskiego() {
               </li>
               <li>
                 <strong>TBS Goleniów</strong>
+                <span>Towarzystwo Budownictwa Społecznego</span>
+              </li>
+              <li>
+                <strong>TBS Drawsko Pomorskie</strong>
                 <span>Towarzystwo Budownictwa Społecznego</span>
               </li>
               <li>

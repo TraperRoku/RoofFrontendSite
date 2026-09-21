@@ -303,7 +303,7 @@ function OcieplenieDachuPlaskiego() {
             <ul className="landing-hero__trust">
               <li>Obliczenia cieplne i dobór grubości izolacji pod wymagania techniczne</li>
               <li>Jedna ekipa: ocieplenie + nowe krycie papą = nie ma winnego przy problemie</li>
-              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · Jednostka Wojskowa WSM Szczecin · Durable</li>
+              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · TBS Drawsko Pomorskie · Jednostka Wojskowa WSM Szczecin · Durable</li>
             </ul>
           </div>
         </section>
@@ -466,6 +466,10 @@ function OcieplenieDachuPlaskiego() {
               </li>
               <li>
                 <strong>TBS Goleniów</strong>
+                <span>Towarzystwo Budownictwa Społecznego</span>
+              </li>
+              <li>
+                <strong>TBS Drawsko Pomorskie</strong>
                 <span>Towarzystwo Budownictwa Społecznego</span>
               </li>
               <li>

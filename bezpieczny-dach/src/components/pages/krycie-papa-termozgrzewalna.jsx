@@ -302,7 +302,7 @@ function KryciePapaTermozgrzewalna() {
             <ul className="landing-hero__trust">
               <li>Pełna dokumentacja powykonawcza (DWU, karty materiałowe)</li>
               <li>Pracujemy z inspektorami nadzoru i generalnymi wykonawcami</li>
-              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · Jednostka Wojskowa WSM Szczecin · Durable</li>
+              <li>Atlas Ward · MG Project · DUNA · TBS Goleniów · TBS Drawsko Pomorskie · Jednostka Wojskowa WSM Szczecin · Durable</li>
             </ul>
           </div>
         </section>
@@ -470,6 +470,10 @@ function KryciePapaTermozgrzewalna() {
               </li>
               <li>
                 <strong>TBS Goleniów</strong>
+                <span>Towarzystwo Budownictwa Społecznego</span>
+              </li>
+              <li>
+                <strong>TBS Drawsko Pomorskie</strong>
                 <span>Towarzystwo Budownictwa Społecznego</span>
               </li>
               <li>

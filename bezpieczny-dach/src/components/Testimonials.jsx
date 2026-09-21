@@ -74,6 +74,7 @@ const trustedClients = [
   { name: 'MG Project', desc: 'Generalny Wykonawca' },
   { name: 'DUNA', desc: 'Generalny Wykonawca' },
   { name: 'TBS Goleniów', desc: 'Towarzystwo Budownictwa Społecznego' },
+  { name: 'TBS Drawsko Pomorskie', desc: 'Towarzystwo Budownictwa Społecznego' },
   { name: 'Durable', desc: 'Serwis dachów — Przecław, Szczecin' },
   { name: 'Jednostka Wojskowa', desc: 'Szczecin — WSM' },
 ];
