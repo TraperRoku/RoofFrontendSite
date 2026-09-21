@@ -1,5 +1,12 @@
 @import './styles/design-system.css';
 
+html,
+body,
+#root {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* ============================================================
    GLOBAL LAYOUT - Homepage & Content Pages (non-landings)
    ============================================================ */

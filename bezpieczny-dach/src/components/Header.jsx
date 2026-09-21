@@ -71,11 +71,11 @@ function Header() {
                         <Link to="/naprawa-dachu-plaskiego" className="nav-link featured" onClick={closeMenu}>Naprawa dachu</Link>
                         <Link to="/krycie-papa-termozgrzewalna" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
                         <Link to="/remont-dachu-z-papy" className="nav-link featured" onClick={closeMenu}>Remonty dachów</Link>
-                        <Link to="/wykonawstwo" className="nav-link" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" className="nav-link" onClick={closeMenu}>Realizacje</Link>
-                        <Link to="/#contact" className="nav-link" onClick={closeMenu}>Kontakt</Link>
                     </div>
                     <div className="nav-secondary">
+                        <Link to="/wykonawstwo" className="nav-link-small" onClick={closeMenu}>Usługi dekarskie</Link>
+                        <Link to="/#contact" className="nav-link-small" onClick={closeMenu}>Kontakt</Link>
                         <Link to="/ocieplenie-dachu-plaskiego" className="nav-link-small" onClick={closeMenu}>Izolacja</Link>
                         <Link to="/o-nas" className="nav-link-small" onClick={closeMenu}>O nas</Link>
                         <Link to="/faq" className="nav-link-small" onClick={closeMenu}>Baza wiedzy</Link>
@@ -85,7 +85,6 @@ function Header() {
                 {/* Contact & Social */}
                 <div className="header-actions">
                     <div className="contact-info">
-                        <span className="phone-label">Zadzwoń teraz:</span>
                         <PhoneLink className="phone-number" onClick={closeMenu} >
                             <FontAwesomeIcon icon={faPhone} />
                             518 144 882
