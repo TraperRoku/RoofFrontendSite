@@ -24,45 +24,45 @@ const HOME_GALLERY_LIMIT = 9;
 const imageAlts = [
   'Papa termozgrzewalna montaż na dachu płaskim Szczecin - Bezpieczny Dach',
   'Docieplenie dachu wełną mineralną Szczecin - realizacja Bezpieczny Dach',
-  'Membrana EPDM na dachu płaskim Szczecin - profesjonalna instalacja',
+  'Papa termozgrzewalna SBS na dachu płaskim Szczecin - profesjonalny montaż',
   'Papa termozgrzewalna uszczelnianie dachu płaskiego Szczecin',
   'Docieplanie dachu płaskiego styropianem Szczecin - Bezpieczny Dach',
   'System rynnowy na dachu - odwodnienie dachu płaskiego Szczecin',
-  'Izolacja termiczna dachu przemysłowego Szczecin - membrana PVC',
-  'Membrana PVC montaż na dachu płaskim Szczecin - Bezpieczny Dach',
-  'Papa termozgrzewalna dach mansardowy Szczecin - gwarancja 10 lat',
-  'Docieplenie dachu wełną mineralną PIR - remont domu Szczecin',
+  'Izolacja termiczna dachu płaskiego przemysłowego Szczecin - papa termozgrzewalna SBS',
+  'Papa termozgrzewalna SBS montaż na dachu płaskim Szczecin - Bezpieczny Dach',
+  'Papa termozgrzewalna na dachu płaskim Szczecin - gwarancja 10 lat',
+  'Docieplenie dachu wełną mineralną PIR - remont budynku Szczecin',
   'Naprawa dachu czyszczenie rynien Szczecin - konserwacja',
-  'Membrana EPDM system balastowy Szczecin - dachy płaskie',
+  'Papa termozgrzewalna SBS system balastowy Szczecin - dachy płaskie',
   'Papa termozgrzewalna naprawa kominów Szczecin - obróbka blacharskie',
   'Docieplenie dachu PIR płyty izolacyjne Szczecin - oszczędność energii',
   'Modernizacja dachu płaskiego papa termozgrzewalna Szczecin',
   'Docieplanie dachu wełną mineralną budynek Szczecin - montaż',
-  'Membrana PVC naprawa dachu garażu Szczecin - Bezpieczny Dach',
+  'Papa termozgrzewalna SBS naprawa dachu płaskiego Szczecin - Bezpieczny Dach',
   'Papa termozgrzewalna renowacja dachu płaskiego Szczecin',
   'Docieplenie dachu z styropianem modernizacja budynku',
   'Remont dachu wielorodzinnego papa termozgrzewalna Szczecin',
-  'Naprawa przecieków dachu izolacja membrana Szczecin',
-  'System balastowy membrana EPDM przygotowanie panele fotowoltaika',
+  'Naprawa przecieków dachu izolacja papa termozgrzewalna Szczecin',
+  'System balastowy papa termozgrzewalna SBS przygotowanie pod panele fotowoltaiczne Szczecin',
   'Docieplanie dachu nad tarasem wełna mineralna Szczecin',
   'Papa termozgrzewalna docieplenie energooszczędne Szczecin',
-  'Pokrycie dachu trapezowe membrana PVC Szczecin - Bezpieczny Dach',
+  'Pokrycie dachu płaskiego trapezowego papa termozgrzewalna SBS Szczecin - Bezpieczny Dach',
   'Naprawa dachu po wichurze uszczelnianie papa Szczecin',
   'Docieplenie dachu styropianem wymiana pokrycia dachowego',
-  'Membrana EPDM zabezpieczenie dachu przed zimą Szczecin',
-  'Papa termozgrzewalna montaż dachówka cementowa - połaci dachowe',
-  'Dachy skośne remonty papa termozgrzewalna Szczecin - solidne',
+  'Papa termozgrzewalna SBS zabezpieczenie dachu płaskiego przed zimą Szczecin',
+  'Papa termozgrzewalna SBS na dachu płaskim Szczecin - profesjonalny montaż',
+  'Papa termozgrzewalna SBS remonty dachów płaskich Szczecin - solidne wykonanie',
   'Naprawa elementów metalowych dachu obróbka blacharska',
-  'Membrana PVC realizacja dachu z płyt warstwowych Szczecin',
+  'Papa termozgrzewalna SBS realizacja dachu z płyt warstwowych Szczecin',
   'Docieplenie dachu systemy odwodnienia Szczecin - funkcjonalność',
   'Papa termozgrzewalna dachy trapezowe rozwiązania ekonomiczne',
-  'Zadaszenie wejścia membrana EPDM rozwiązanie eleganckie Szczecin',
-  'Konstrukcja dachu więźba dachowa montaż precyzyjny Szczecin',
-  'Docieplanie dachu poddasza użytkowego wełna mineralna Szczecin',
-  'Papa termozgrzewalna obróbka blacharskie kalenica dachu',
-  'Modernizacja dachu blachodachówka papa termozgrzewalna Szczecin',
+  'Zadaszenie wejścia papa termozgrzewalna SBS rozwiązanie eleganckie Szczecin',
+  'Ocieplenie dachu płaskiego płytami PIR Szczecin - precyzyjny montaż',
+  'Docieplanie dachu płaskiego wełną mineralną Szczecin - precyzyjny montaż',
+  'Papa termozgrzewalna SBS obróbki blacharskie na dachu płaskim Szczecin',
+  'Modernizacja dachu płaskiego papa termozgrzewalna SBS Szczecin',
   'Instalacja dachu papy termozgrzewalnej gwarancja 15 lat',
-  'Docieplenie dachu dwuspadowego remont zmiana nachylenia',
+  'Docieplenie dachu płaskiego płyty PIR remont uszczelnienie Szczecin',
   'Papa termozgrzewalna nowy dach budynek mieszkalny Szczecin'
 ];
 
@@ -111,7 +111,7 @@ function Realization() {
           <h2>Nasze realizacje dekarskie w Szczecinie — dowód umiejętności</h2>
 
           <p className="section-subtitle">
-            <strong>Ponad setki wykonanych dachów.</strong> Każde zdjęcie to historia
+            <strong>700+ zrealizowanych projektów B2B.</strong> Każde zdjęcie to historia
             <span className="highlight"> perfekcyjnego wykonania</span>, <span className="highlight">dbałości o szczegóły</span> i
             <span className="highlight"> zadowolonego klienta</span>. Zobacz, jak zmieniamy zwykłe dachy w
             <strong> trwałe, estetyczne i bezproblemowe konstrukcje</strong>.
@@ -124,8 +124,8 @@ function Realization() {
             <div className="stat-label">lat doświadczenia</div>
           </div>
           <div className="stat-item">
-            <div className="stat-number">500+</div>
-            <div className="stat-label">zrealizowanych dachów</div>
+            <div className="stat-number">700+</div>
+            <div className="stat-label">zrealizowanych projektów B2B</div>
           </div>
           <div className="stat-item">
             <div className="stat-number">99%</div>

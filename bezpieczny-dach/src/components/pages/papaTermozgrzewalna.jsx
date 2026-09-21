@@ -1,325 +1,175 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
-import Header from '../Header'; 
-import Footer from '../footer'; 
-import PhoneLink from '../PhoneLink'; 
-import './PapaTermozgrzewalnaSzczecin.css'; 
+import Header from '../Header'; // Przywrócone Twoje pełne, główne menu
+import ContactSection from '../ContactSection';
+import PhoneLink from '../PhoneLink';
+import { canonical } from '../../seo/site';
+import './PapaTermozgrzewalnaSzczecin.css';
 
-function PapaTermozgrzewalnaSzczecin() {
-  useEffect(() => {
-    // Logika płynnego przewijania
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetElement = document.querySelector(this.getAttribute('href'));
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
+const FAQ_ITEMS = [
+  {
+    question: "Czy da się kryć nową papą na istniejącym pokryciu bez jego demontażu?",
+    answer: "Tak, jeśli stare podłoże jest suche, stabilne, a warstw papy nie jest zbyt wiele (zwykle max. 2-3). Wymaga to jednak starannego przygotowania, ścięcia pęcherzy i zagruntowania. Weryfikujemy to podczas darmowej wizji lokalnej poprzez odkrywki."
+  },
+  {
+    question: "Czy wystawiacie dokumentację powykonawczą i karty materiałowe?",
+    answer: "Tak. Przy inwestycjach dla wspólnot, TBS-ów czy firm budowlanych przekazujemy pełną dokumentację wbudowanych materiałów (karty techniczne, DWU), co jest kluczowe dla odbiorów budowlanych."
+  },
+  {
+    question: "Czy pracujecie jako podwykonawca generalnego wykonawcy?",
+    answer: "Tak. Mamy doświadczenie w procesach przetargowych i realizacji dużych kontraktów. Znamy standardy BHP, harmonogramowania i obrotu dokumentacją wymaganą przez generalnych wykonawców."
+  }
+];
 
-    // Logika animacji po scrollu
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Obserwuj elementy do animacji
- document.querySelectorAll(
-    '.service-card, .benefit-item, .related-service-card, .main-content-block h2, .main-content-block h3, .main-content-block p, .local-areas-section p'
-).forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'all 0.6s ease';
-    observer.observe(el);
-});
-    // Czyszczenie obserwatora przy odmontowaniu komponentu
-    return () => observer.disconnect();
-  }, []);
+const PapaTermozgrzewalna = () => {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQ_ITEMS.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
 
   return (
-    <>
-     <Helmet>
-  <title>Papa termozgrzewalna Szczecin i Goleniów — montaż, naprawa, uszczelnianie | Bezpieczny Dach</title>
-  <meta name="description" content="Specjalizujemy się w montażu i naprawie papy termozgrzewalnej w Szczecinie i Goleniowie. Profesjonalne uszczelnianie dachów płaskich, 15 lat doświadczenia, darmowa wycena. Zadzwoń: 518 144 882" />
-  
-  <link rel="canonical" href="https://www.bezpiechnydach.pl/papa-termozgrzewalna"/>
-  
-  <script type="application/ld+json">
-  {`
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Papa Termozgrzewalna - Bezpieczny Dach Szczecin",
-      "image": "https://www.bezpiecznydach.pl/logo.webp", 
-      "telephone": "+48518144882",
-      "url": "https://www.bezpiechnydach.pl/papa-termozgrzewalna",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Szczecin",
-        "addressRegion": "Zachodniopomorskie",
-        "addressCountry": "PL"
-      },
-      "openingHours": "Mo-Su 07:00-20:00",
-      "priceRange": "$$",
-      "description": "Profesjonalne usługi montażu, naprawy i renowacji dachów z papy termozgrzewalnej w Szczecinie.",
-      "serviceType": ["Montaż papy termozgrzewalnej", "Naprawa dachów", "Renowacja pokryć dachowych"]
-    }
-  `}
-  </script>
+    <div className="landing-page">
+      <Helmet>
+        <title>Krycie dachu papą termozgrzewalną — Szczecin i zachodniopomorskie | Bezpieczny Dach</title>
+        <meta name="description" content="Krycie dachów płaskich papą termozgrzewalną SBS. Hale, bloki, obiekty użyteczności publicznej. Zlecenia od 150 m². Audyt techniczny na obiekcie. 518 144 882" />
+        <link rel="canonical" href={canonical('/papa-termozgrzewalna')} />
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+      </Helmet>
 
-  <script type="application/ld+json">
-  {`
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Jak długo trwa papa termozgrzewalna?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Papa termozgrzewalna trwa około 15-20 lat przy prawidłowej instalacji i regularnym serwisie. Naszych klientów chronimy 10-letnią gwarancją na wykonanie."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Czy papa termozgrzewalna wymaga konserwacji?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Rekomendujemy roczną inspekcję i czyszczenie rynien. Profilaktyka to klucz do długowieczności dachu. Oferujemy usługi konserwacyjne w Szczecinie i Goleniowie."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Czy mogę położyć papę termozgrzewalną na starym pokryciu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "W wielu przypadkach tak, ale zawsze przeprowadzamy inspekcję. Jeśli stare pokrycie jest w dobrym stanie, możemy położyć nową papę na wierzchu – to oszczędza czas i koszty demontażu."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Jaka jest cena papy termozgrzewalnej?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Cena zależy od powierzchni dachu, rodzaju papy i stanu podłoża. Oferujemy darmową wycenę – skontaktuj się telefonicznie: 518 144 882."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Czy papa termozgrzewalna jest odporna na mróz?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Tak, nowoczesne papy termozgrzewalne modyfikowane SBS są odporne na mróz i zmiany temperatury. Idealne dla klimatu polskiego."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Jak mogę zgłosić awarię dachu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Zadzwoń pod numer 518 144 882 lub prześlij SMS. Oferujemy szybką interwencję w przypadku przecieków i awaryjnych uszkodzeń dachu."
-          }
-        }
-      ]
-    }
-  `}
-  </script>
-</Helmet>
-
+      {/* Twoje standardowe Menu Główne */}
       <Header />
 
-      <main>
-        <section className="hero2">
-          <div className="container">
-            <div className="hero-content2">
-              <h1>Papa termozgrzewalna w Szczecinie</h1>
-              <p>Specjalizujemy się w profesjonalnym montażu, naprawie i renowacji dachów z papy termozgrzewalnej na terenie Szczecina i okolic. Dzięki wieloletniemu doświadczeniu i wykorzystaniu materiałów najwyższej jakości, zapewniamy szczelne i trwałe pokrycia dachowe.</p>
-              <PhoneLink className="cta-button">Zadzwoń po darmową wycenę: 518 144 882</PhoneLink>
-            </div>
-          </div>
-        </section>
-
-        <section className="main-content-block">
-  <div className="container">
-    <h2>Profesjonalny montaż papy termozgrzewalnej w Szczecinie – szczelność i trwałość</h2>
-    <p>Szukasz sprawdzonego rozwiązania na dach płaski? Papa termozgrzewalna to najczęściej wybierany system, który gwarantuje doskonałą hydroizolację dachu na lata. Oferujemy kompleksowe usługi związane z papą – od ułożenia nowej warstwy po szybką naprawę przecieków. Wykonujemy renowację dachów z papy na budynkach mieszkalnych, halach i garażach. Nasze 15-letnie doświadczenie to gwarancja bezpieczności Twojego dachu.</p>
-    
-    <h3>Jakie rodzaje papy na dach dostępne są w ofercie?</h3>
-    <p>Przygotowując remont dachu, doradzamy najlepszy wybór materiałów. Papy termozgrzewalne modyfikowane SBS są bardziej elastyczne i odporne na niskie temperatury, co jest kluczowe w polskim klimacie. Stosujemy tylko certyfikowane papy od wiodących producentów, aby zapewnić najwyższą jakość wykonania każdej realizacji.</p>
-  </div>
-</section>
-
-     <div className="related-services-grid">
-    <div className="related-service-cards">
-        <h4><Link to="/dachy-plaskie">Dachy płaskie w Szczecinie</Link></h4>
-        <p>Kompleksowe usługi dla dachów płaskich - od projektu poprzez montaż po serwis.</p>
-    </div>
-    <div className="related-service-cards">
-        <h4><Link to="/docieplanie-dachow">Docieplanie dachów</Link></h4>
-        <p>Izolacja termiczna dachów płaskich – wełna, płyty PIR i styropian.</p>
-    </div>
-    <div className="related-service-cards">
-        <h4><Link to="/#contact">Naprawa papy termozgrzewalnej – szybka wycena</Link></h4>
-        <p>Montaż, naprawa i renowacja pokryć z papy termozgrzewalnej.</p>
-    </div>
-</div>
-
-        <section className="services">
-          <div className="container">
-            <h2 className="section-title">Nasze usługi w zakresie papy termozgrzewalnej</h2>
-            <p className="section-subtitle">Oferujemy kompleksowe rozwiązania dla Twojego dachu</p>
+      <main className="seo-content">
+        {/* SEKCJA HERO */}
+        <section className="seo-intro" style={{ padding: '60px 20px', textAlign: 'center', backgroundColor: '#f8f9fa' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <h1 style={{ fontSize: '2.5rem', marginBottom: '20px' }}>
+              Krycie dachu papą termozgrzewalną — Szczecin i województwo zachodniopomorskie
+            </h1>
+            <p className="seo-lead" style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#555' }}>
+              Kompleksowe wykonawstwo pokryć z papy termozgrzewalnej SBS na dachach płaskich. Realizujemy inwestycje przemysłowe, hale, dachy bloków i obiektów użyteczności publicznej.
+            </p>
             
-            <div className="services-grid">
-              <div className="service-card">
-                <h3>Montaż nowych pokryć z papy termozgrzewalnej</h3>
-                <p>Realizujemy kompleksowy montaż papy termozgrzewalnej na nowo budowanych obiektach. Od przygotowania podłoża, przez precyzyjne zgrzewanie warstw, aż po wykończenie – dbamy o każdy szczegół, by Twój dach był niezawodny.</p>
-              </div>
-              
-              <div className="service-card">
-                <h3>Naprawa i renowacja dachów z papy</h3>
-                <p>Zajmujemy się profesjonalną naprawą przecieków, pęknięć i innych uszkodzeń dachów pokrytych papą. Oferujemy również pełne renowacje starych pokryć, przywracając im pełną funkcjonalność i estetykę. Szybka interwencja w przypadku awarii.</p>
-              </div>
-              
-              <div className="service-card">
-                <h3>Wymiana starych pokryć na papę termozgrzewalną</h3>
-                <p>Jeśli Twój stary dach wymaga wymiany, papa termozgrzewalna jest doskonałym wyborem. Przeprowadzamy demontaż istniejącego pokrycia i profesjonalnie instalujemy nowe, trwałe warstwy papy.</p>
-              </div>
+            {/* Miękki filtr (wpuszczamy garaże, ale pozycjonujemy się wyżej) */}
+            <div className="qualification-block" style={{ backgroundColor: '#e8f4fd', border: '1px solid #b8daff', padding: '15px', fontWeight: 'bold', color: '#004085', marginBottom: '30px', borderRadius: '5px' }}>
+              Główny profil działalności: zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.
+            </div>
+
+            <ul className="seo-list trust-list" style={{ listStyle: 'none', padding: 0, marginBottom: '40px', fontSize: '1.1rem', textAlign: 'left', display: 'inline-block' }}>
+              <li style={{ marginBottom: '10px' }}>✓ Wystawiamy pełną dokumentację powykonawczą i karty materiałowe</li>
+              <li style={{ marginBottom: '10px' }}>✓ Pracujemy w systemie odbiorów częściowych i końcowych</li>
+              <li style={{ marginBottom: '10px' }}>✓ Działamy jako sprawdzony podwykonawca generalnych wykonawców</li>
+            </ul>
+
+            <div className="hero-cta" style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <PhoneLink className="btn-primary" style={{ padding: '15px 30px', fontSize: '1.2rem', backgroundColor: '#e74c3c', color: '#fff', textDecoration: 'none', borderRadius: '5px', fontWeight: 'bold' }} />
+              <a href="#wycena" className="btn-secondary" style={{ padding: '15px 30px', fontSize: '1.2rem', border: '2px solid #e74c3c', color: '#e74c3c', textDecoration: 'none', borderRadius: '5px', fontWeight: 'bold' }}>
+                Zamów audyt techniczny
+              </a>
             </div>
           </div>
         </section>
 
-        <section className="benefits">
-          <div className="container">
-            <h2 className="section-title">Dlaczego papa termozgrzewalna?</h2>
-            <p className="section-subtitle">Poznaj zalety tego nowoczesnego rozwiązania</p>
+        {/* ZAUFALI NAM (Zaktualizowane o Generalnych Wykonawców) */}
+        <section className="trust-badges" style={{ padding: '40px 20px', backgroundColor: '#fff', borderBottom: '1px solid #eee', textAlign: 'center' }}>
+          <h2 style={{ fontSize: '1.5rem', color: '#666', marginBottom: '20px' }}>Pracujemy m.in. dla generalnych wykonawców i instytucji:</h2>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', flexWrap: 'wrap', fontWeight: 'bold', fontSize: '1.2rem', alignItems: 'center' }}>
+            <span>🏗️ Atlas Ward — Generalny Wykonawca</span>
+            <span>🏗️ MG Project — Generalny Wykonawca</span>
+            <span>🏗️ DUNA — Generalny Wykonawca</span>
+            <span>🏢 TBS Goleniów</span>
+            <span>🎖️ Jednostka Wojskowa (WSM)</span>
+          </div>
+        </section>
+
+        {/* ZAKRES WYKONAWCZY */}
+        <section className="seo-grid-section" style={{ padding: '60px 20px' }}>
+          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Zakres wykonawstwa technicznego</h2>
+            <div className="seo-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
+              
+              <div className="seo-card" style={{ padding: '30px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px' }}>
+                <h3 style={{ color: '#e74c3c' }}>Nowe pokrycia dwuwarstwowe</h3>
+                <p>Układamy systemowe pokrycia z papy podkładowej i nawierzchniowej modyfikowanej SBS. W zależności od specyfiki podłoża stosujemy zgrzewanie na całej powierzchni lub precyzyjne mocowanie mechaniczne.</p>
+              </div>
+
+              <div className="seo-card" style={{ padding: '30px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px' }}>
+                <h3 style={{ color: '#e74c3c' }}>Pokrycia na izolacji termicznej</h3>
+                <p>Wykonujemy krycie bezpośrednio na warstwach dociepleniowych: styropapie, płytach PIR lub twardej wełnie mineralnej, rygorystycznie dobierając układ warstw do wymaganego współczynnika przenikania ciepła (U).</p>
+              </div>
+
+              <div className="seo-card" style={{ padding: '30px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px' }}>
+                <h3 style={{ color: '#e74c3c' }}>Obróbki blacharskie i detale</h3>
+                <p>Zapewniamy szczelność w newralgicznych punktach dachu. Wykonujemy profesjonalne obróbki kominów, attyk, wpustów dachowych, wyłazów, świetlików oraz dylatacji konstrukcyjnych.</p>
+              </div>
+
+              <div className="seo-card" style={{ padding: '30px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px' }}>
+                <h3 style={{ color: '#e74c3c' }}>Praca na zróżnicowanym podłożu</h3>
+                <p>Dopasowujemy technologię aplikacji papy do rodzaju stropu. Posiadamy doświadczenie w kryciu podłoży betonowych, blachy trapezowej, a także w renowacji na starych powłokach bitumicznych po ich uprzednim przygotowaniu.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        {/* PROCES REALIZACJI ZLECENIA */}
+        <section className="seo-process" style={{ padding: '60px 20px', backgroundColor: '#f8f9fa' }}>
+          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Jak prowadzimy zlecenie od wyceny po odbiór</h2>
             
-            <div className="benefits-grid">
-              <div className="benefit-item">
-                <div className="benefit-icon" aria-hidden="true"></div>
-                <h4>Wyjątkowa szczelność</h4>
-                <p>Papa termozgrzewalna tworzy jednolitą, bezszwową powierzchnię, skutecznie chroniąc przed wodą i wilgocią.</p>
-              </div>
-              
-              <div className="benefit-item">
-                <div className="benefit-icon" aria-hidden="true"></div>
-                <h4>Trwałość na lata</h4>
-                <p>Odporna na zmienne warunki atmosferyczne, promieniowanie UV i uszkodzenia mechaniczne.</p>
-              </div>
-              
-              <div className="benefit-item">
-                <div className="benefit-icon" aria-hidden="true"></div>
-                <h4>Szybki montaż</h4>
-                <p>Technologia zgrzewania pozwala na sprawną i efektywną instalację.</p>
-              </div>
-              
-              <div className="benefit-item">
-                <div className="benefit-icon" aria-hidden="true"></div>
-                <h4>Wszechstronność</h4>
-                <p>Idealna zarówno dla dachów płaskich, jak i o niewielkim spadku, na budynkach mieszkalnych, przemysłowych i usługowych.</p>
-              </div>
-              
-              <div className="benefit-item">
-                <div className="benefit-icon" aria-hidden="true"></div>
-                <h4>Ekonomiczne rozwiązanie</h4>
-                <p>Oferuje doskonały stosunek jakości do ceny.</p>
-              </div>
-              
-              <div className="benefit-item">
-                <div className="benefit-icon" aria-hidden="true"></div>
-                <h4>Gwarancja jakości</h4>
-                <p>Udzielamy gwarancji na wykonane usługi i używamy tylko sprawdzonych materiałów.</p>
-              </div>
+            <div style={{ marginBottom: '30px', paddingLeft: '20px', borderLeft: '4px solid #e74c3c' }}>
+              <h3 style={{ marginBottom: '10px' }}>1. Wizja lokalna i inwentaryzacja</h3>
+              <p>Zawsze weryfikujemy stan faktyczny na obiekcie. Wykonujemy pomiary powierzchni i – jeśli to konieczne – odkrywki kontrolne, aby ocenić stan podłoża i zawilgocenie głębszych warstw.</p>
             </div>
-          </div>
-        </section>
-
-        <section className="why-choose-us-section">
-          <div className="container">
-            <h2 className="section-title">Dlaczego wybrać nas?</h2>
-            <div className="services-grid">
-              <div className="service-card">
-                <h3>Doświadczenie</h3>
-                <p>Ponad 15 lat w branży dekarskiej, setki zrealizowanych projektów w Szczecinie i okolicach.</p>
-              </div>
-              
-              <div className="service-card">
-                <h3>Certyfikowani fachowcy</h3>
-                <p>Nasi dekarze posiadają niezbędne kwalifikacje i regularnie uczestniczą w szkoleniach.</p>
-              </div>
-              
-              <div className="service-card">
-                <h3>Materiały najwyższej jakości</h3>
-                <p>Pracujemy wyłącznie na sprawdzonych produktach od renomowanych producentów.</p>
-              </div>
-              
-              <div className="service-card">
-                <h3>Darmowa wycena</h3>
-                <p>Zapewniamy bezpłatną i niezobowiązującą wycenę prac.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="local-areas-section">
-  <div className="container">
-    <h2 className="section-title">Obsługujemy cały Szczecin i okolice</h2>
-    <p>Nasi dekarze dojeżdżają do klientów w Szczecinie (Centrum, Prawobrzeże, Gumieńce, Pogodno, Dąbie, Warszewo) oraz w okolicznych miejscowościach: Police, Goleniów, Stargard, Dobra, Mierzyn, Wołczkowo, Dołuje, Lubieszyn i Przecław. Bez względu na lokalizację, zapewniamy szybki dojazd i darmową wycenę montażu lub naprawy papy termozgrzewalnej.</p>
-    
-    <Link to="/#contact" className="cta-button-small">Skontaktuj się z nami</Link>
-  </div>
-</section>
-
-        <section className="contact" id="contact">
-          <div className="container">
-            <h2 className="section-title">Skontaktuj się z nami</h2>
-            <p className="section-subtitle">Potrzebujesz fachowca od papy termozgrzewalnej w Szczecinie? Chętnie odpowiemy na Twoje pytania i przygotujemy indywidualną ofertę.</p>
-            <PhoneLink className="cta-button">Zadzwoń po darmową wycenę: 518 144 882</PhoneLink>
             
-            
-            <div className="contact-info-grid">
-              <div className="contact-card">
-                <h4>Telefon</h4>
-                <p>518 144 882</p>
-              </div>
-              
-              <div className="contact-card">
-                <h4>Obszar działania</h4>
-                <p>Szczecin i okolice</p>
-              </div>
-              
-              <div className="contact-card">
-                <h4>Dostępność</h4>
-                <p>Pon-Pt: 7:00-20:00<br/>Sobota: 8:00-14:00</p>
-              </div>
-              
-              <div className="contact-card">
-                <h4>Awarie</h4>
-                <p>Interwencje 24/7</p>
-              </div>
+            <div style={{ marginBottom: '30px', paddingLeft: '20px', borderLeft: '4px solid #e74c3c' }}>
+              <h3 style={{ marginBottom: '10px' }}>2. Transparentny kosztorys techniczny</h3>
+              <p>Przedkładamy ofertę z czytelnym rozbiciem na koszty materiałowe i robociznę. Wskazujemy konkretny układ warstw i rodzaj zastosowanej papy termozgrzewalnej wraz z parametrami technicznymi.</p>
+            </div>
+
+            <div style={{ marginBottom: '30px', paddingLeft: '20px', borderLeft: '4px solid #e74c3c' }}>
+              <h3 style={{ marginBottom: '10px' }}>3. Harmonogram i realizacja</h3>
+              <p>Pracujemy zgodnie z ustalonym grafikiem. Na dużych inwestycjach (wspólnoty, hale) jesteśmy przygotowani do pracy z inspektorem nadzoru i stosujemy protokoły odbiorów częściowych dla poszczególnych etapów (np. po paroizolacji).</p>
+            </div>
+
+            <div style={{ paddingLeft: '20px', borderLeft: '4px solid #e74c3c' }}>
+              <h3 style={{ marginBottom: '10px' }}>4. Odbiór końcowy i dokumentacja</h3>
+              <p>Przekazujemy kompletny dach wraz z pełną dokumentacją powykonawczą. Dostarczamy karty techniczne wbudowanych materiałów (DWU) oraz wystawiamy pisemną gwarancję na szczelność.</p>
             </div>
           </div>
         </section>
+
+        {/* FAQ TECHNICZNE */}
+        <section className="seo-faq" style={{ padding: '60px 20px' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <h2 style={{ textAlign: 'center', marginBottom: '40px' }}>Często zadawane pytania techniczne</h2>
+            <div className="seo-faq-list">
+              {FAQ_ITEMS.map((faq, idx) => (
+                <div key={idx} className="seo-faq-item" style={{ padding: '20px', marginBottom: '20px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '8px' }}>
+                  <h3 style={{ fontSize: '1.2rem', marginBottom: '10px' }}>{faq.question}</h3>
+                  <p style={{ color: '#555' }}>{faq.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SEKCJA KONTAKTOWA */}
+        <div id="wycena">
+          <ContactSection />
+        </div>
+
       </main>
-
-      <Footer />
-
-     <PhoneLink className="floating-contact">Zadzwoń teraz</PhoneLink>
-    </>
+    </div>
   );
-}
+};
 
-export default PapaTermozgrzewalnaSzczecin;
+export default PapaTermozgrzewalna;

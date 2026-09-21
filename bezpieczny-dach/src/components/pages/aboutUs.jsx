@@ -18,7 +18,7 @@ const localBusinessSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Bezpieczny Dach Szczecin | Profesjonalna Firma Dekarska", // Pełniejsza nazwa dla SEO
-    "description": "Profesjonalne usługi dekarskie w Szczecinie. Naprawa, renowacja i montaż dachów płaskich i skośnych. 15 lat doświadczenia.",
+    "description": "Profesjonalne usługi dekarskie w Szczecinie. Specjalizacja w dachach płaskich: papa termozgrzewalna SBS, naprawy, remonty i ocieplenia. 15 lat doświadczenia, 700+ zrealizowanych projektów B2B.",
     "url": "https://www.bezpiecznydach.pl/o-nas",
     "image": "https://www.bezpiecznydach.pl/favicon.ico",
     "telephone": "+48518144882",
@@ -83,7 +83,7 @@ function ONas(){
         <section className="hero-section">
           <div className="hero-content2">
            <h1>O nas — lokalni eksperci dekarscy w Szczecinie</h1>
-            <p className="hero-subtitle2">15 lat doświadczenia | ponad 1000 zadowolonych klientów | najwyższa jakość usług</p>
+            <p className="hero-subtitle2">15 lat doświadczenia | 700+ zrealizowanych projektów B2B | najwyższa jakość usług</p>
             <div className="hero-cta">
               <PhoneLink className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
             </div>
@@ -144,12 +144,12 @@ function ONas(){
                 <div className="stat-label">lat doświadczenia</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">1000+</div>
-                <div className="stat-label">zadowolonych klientów</div>
+                <div className="stat-number">700+</div>
+                <div className="stat-label">zrealizowanych projektów B2B</div>
               </div>
               <div className="stat-item">
-                <div className="stat-number">24/7</div>
-                <div className="stat-label">serwis awaryjny</div>
+                <div className="stat-number">24h</div>
+                <div className="stat-label">reakcja na zgłoszenie</div>
               </div>
               <div className="stat-item">
                 <div className="stat-number">100%</div>
@@ -204,26 +204,17 @@ function ONas(){
         </section>
 */}
         <section className="expertise-section">
-           <h2>SPECJALIZACJA DEKARSKA: DACHY PŁASKIE I SKOŚNE</h2>
-          <p className="expertise-subtitle">Oferujemy kompleksowe usługi dekarskie na najwyższym poziomie</p>
+           <h2>SPECJALIZACJA DEKARSKA: WYŁĄCZNIE DACHY PŁASKIE</h2>
+              <p className="expertise-subtitle">Naszą główną specjalizacją są systemy z papy termozgrzewalnej SBS. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.</p>
           
           <div className="expertise-grid">
             <div className="expertise-card">
               <h3>Dachy Płaskie</h3>
               <ul>
-                <li>Membrana EPDM i PVC</li>
-                <li>Papa termozgrzewalna</li>
-                <li>Systemy balastowe</li>
-                <li>Dachy zielone i tarasy</li>
-              </ul>
-            </div>
-            <div className="expertise-card">
-              <h3>Dachy Skośne</h3>
-              <ul>
-                <li>Dachówka ceramiczna i betonowa</li>
-                <li>Blachodachówka</li>
-                <li>Pokrycia z blachy</li>
-                <li>Gonty bitumiczne</li>
+                <li>Papa termozgrzewalna SBS dwuwarstwowa</li>
+                <li>Naprawy i uszczelnianie przecieków</li>
+                <li>Ocieplenie styropapą / płytami PIR / wełną twardą</li>
+                <li>Odbiór techniczny z dokumentacją powykonawczą</li>
               </ul>
             </div>
             <div className="expertise-card">
@@ -281,7 +272,7 @@ function ONas(){
                 <div className="why-us-icon" aria-hidden="true"></div>
                 <div>
                   <h3>Doświadczenie</h3>
-                  <p>15 lat na rynku dekarskim - setki udanych realizacji</p>
+                  <p>15 lat na rynku dekarskim — 700+ zrealizowanych projektów B2B</p>
                 </div>
               </div>
               <div className="why-us-item">
@@ -295,7 +286,7 @@ function ONas(){
                 <div className="why-us-icon" aria-hidden="true"></div>
                 <div>
                   <h3>Dostępność</h3>
-                  <p>Serwis awaryjny 24/7 - zawsze możesz na nas liczyć</p>
+                  <p>Wyjazd na obiekt w ciągu 24 godzin roboczych dla zleceń od 150 m²</p>
                 </div>
               </div>
               <div className="why-us-item">

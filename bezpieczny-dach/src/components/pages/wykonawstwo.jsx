@@ -17,7 +17,7 @@ const Wykonawstwo = () => {
         <title>Usługi dekarskie Szczecin - papa, remonty dachów | Bezpieczny Dach</title>
         <meta
           name="description"
-          content="Kompleksowe usługi dekarskie w Szczecinie: papa termozgrzewalna, membrany PVC/EPDM, docieplenia i naprawy. Bezpłatna wycena i fachowe doradztwo."
+          content="Kompleksowe usługi dekarskie w Szczecinie: papa termozgrzewalna SBS, remonty i ocieplenia dachów płaskich, naprawy. Bezpłatna wizja lokalna i fachowe doradztwo dla inwestycji od 150 m²."
         />
 
         <link rel="canonical" href="https://www.bezpiecznydach.pl/wykonawstwo" />
@@ -31,17 +31,17 @@ const Wykonawstwo = () => {
             "name": "Bezpieczny Dach - Usługi Dekarskie Szczecin",
             "image": "https://www.bezpiecznydach.pl/logo.webp", 
             "telephone": "+48518144882",
-            "url": "https://www.bezpiechnydach.pl/wykonawstwo",
+            "url": "https://www.bezpiecznydach.pl/wykonawstwo",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Szczecin",
               "addressRegion": "Zachodniopomorskie",
               "addressCountry": "PL"
             },
-            "openingHours": "Mo-Su 07:00-20:00",
-            "priceRange": "$$",
-            "description": "Profesjonalne usługi dekarskie w Szczecinie. Dachy płaskie, papa termozgrzewalna i docieplenia.",
-            "serviceType": ["Usługi dekarskie", "Papa termozgrzewalna", "Docieplanie dachów"]
+            "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-14:00"],
+            "priceRange": "$$$",
+            "description": "Profesjonalne usługi dekarskie w Szczecinie. Dachy płaskie, papa termozgrzewalna SBS i docieplenia.",
+            "serviceType": ["Usługi dekarskie", "Papa termozgrzewalna SBS", "Docieplanie dachów płaskich"]
           }
         `}
         </script>
@@ -53,7 +53,7 @@ const Wykonawstwo = () => {
         {/* HERO */}
         <section className="hero-sectionW">
           <div className="hero-contentW">
-            <h1>Profesjonalne usługi dekarskie w Szczecinie – dachy płaskie i papa termozgrzewalna</h1>
+            <h1>Profesjonalne usługi dekarskie w Szczecinie – dachy płaskie i papa termozgrzewalna SBS</h1>
             <p className="hero-subtitle">Kompleksowe usługi dekarskie w Szczecinie i okolicach</p>
             <div className="hero-cta">
               <PhoneLink className="cta-button" itemProp="telephone">
@@ -66,18 +66,18 @@ const Wykonawstwo = () => {
         {/* INTRO */}
         <section className="intro-dekarskie">
           <div className="intro-content">
-            <h2>Twoi zaufani dekarze w Szczecinie – kompleksowe remonty i montaż dachów</h2>
+            <h2>Twoi zaufani dekarze w Szczecinie – kompleksowe remonty i montaż dachów płaskich</h2>
             <p>
               Jako specjaliści od <strong>usług dekarskich w Szczecinie</strong> i okolicach, koncentrujemy się na
               zapewnieniu <strong>szczelnych i trwałych dachów</strong>. Nasze 15-letnie doświadczenie obejmuje zarówno{' '}
-              <strong>montaż papy termozgrzewalnej</strong> i nowoczesnych <strong>membran PVC/EPDM</strong> na{' '}
+              <strong>montaż papy termozgrzewalnej SBS</strong> i <strong>papy termozgrzewalnej SBS w systemie dwuwarstwowym</strong> na{' '}
               <strong>dachach płaskich</strong>, jak i zaawansowane <strong>docieplenia</strong>. Potrzebujesz szybkiej{' '}
               <strong>naprawy dachu w Szczecinie</strong>? Zapewniamy fachową diagnozę przecieków i ekspresowe usunięcie
               awarii. Wybierając nas, stawiasz na najwyższą jakość i gwarancję bezpieczeństwa Twojego dachu.
             </p>
             <div className="intro-highlights">
-              <span>Papa termozgrzewalna</span>
-              <span>Docieplanie dachów</span>
+              <span>Papa termozgrzewalna SBS</span>
+              <span>Docieplanie dachów płaskich</span>
               <span>Naprawa przecieków</span>
               <span>Bezpłatna wycena</span>
             </div>
@@ -86,35 +86,34 @@ const Wykonawstwo = () => {
 
         {/* SERVICES */}
         <section className="services-overview">
-          <h2>Usługi dekarskie Szczecin – kompleksowa oferta</h2>
+          <h2>Usługi dekarskie Szczecin – kompleksowa oferta dla dachów płaskich</h2>
           <p className="section-intro">
-            Jako doświadczona firma dekarska z wieloletnią tradycją, oferujemy kompleksowe rozwiązania dla Twojego dachu:
+            Jako doświadczona firma dekarska z wieloletnią tradycją, oferujemy kompleksowe rozwiązania dla Twojego dachu płaskiego:
           </p>
           <div className="services-grid">
             <div className="service-card">
               <h3>Pokrycia dachowe</h3>
               <ul>
-                <li>Papa termozgrzewalna</li>
-                <li>PVC</li>
-                <li>EPDM</li>
+                <li>Papa podkładowa SBS</li>
+                <li>Papa nawierzchniowa SBS łupkowa</li>
+                <li>Płyty PIR i styropapa do ociepleń</li>
               </ul>
             </div>
             <div className="service-card">
-              <h3>Termoizolacje</h3>
+              <h3>Termoizolacje dachów płaskich</h3>
               <ul>
-                <li>Docieplanie poddaszy</li>
-                <li>Izolacja styropianem</li>
-                <li>Systemy z wełny mineralnej</li>
-                <li>Izolacje nakrokwiowe</li>
+                <li>Docieplanie płytami PIR</li>
+                <li>Izolacja styropapą</li>
+                <li>Systemy z wełny mineralnej twardej</li>
               </ul>
             </div>
             <div className="service-card">
               <h3>Naprawy i renowacje</h3>
               <ul>
                 <li>Usuwanie przecieków</li>
-                <li>Wymiana poszycia</li>
-                <li>Renowacja starych dachów</li>
-                <li>Konserwacja dachów</li>
+                <li>Wymiana poszycia dachowego</li>
+                <li>Renowacja starych dachów płaskich</li>
+                <li>Konserwacja dachów płaskich</li>
               </ul>
             </div>
           </div>
@@ -122,24 +121,37 @@ const Wykonawstwo = () => {
 
         {/* TECHNOLOGIES */}
         <section className="technologies-section">
-          <h2>Materiały i technologie dekarskie – ICOPAL, ROCKWOOL, FAKRO</h2>
-          <p className="section-intro">Pracujemy wyłącznie na materiałach renomowanych producentów:</p>
+          <h2>Materiały i technologie dekarskie – papa SBS i termoizolacja</h2>
+          <p className="section-intro">Dobieramy materiały renomowanych producentów do rodzaju dachu i zakresu prac:</p>
           <div className="tech-grid">
             <div className="tech-card">
               <div className="tech-icon" aria-hidden="true"></div>
               <h3>ICOPAL</h3>
-              <p className="tech-description">Wiodący producent papy w Polsce</p>
+              <p className="tech-description">Wiodący producent papy termozgrzewalnej SBS w Polsce</p>
+            </div>
+
+            <div className="tech-card">
+              <div className="tech-icon" aria-hidden="true"></div>
+              <h3>Swisspor</h3>
+              <p className="tech-description">Papa SBS do trwałych pokryć dachów płaskich</p>
+            </div>
+
+            <div className="tech-card">
+              <div className="tech-icon" aria-hidden="true"></div>
+              <h3>Nexxler</h3>
+              <p className="tech-description">Systemy pap termozgrzewalnych do nowych pokryć i remontów</p>
+            </div>
+
+            <div className="tech-card">
+              <div className="tech-icon" aria-hidden="true"></div>
+              <h3>Izobud</h3>
+              <p className="tech-description">Materiały do wykonywania szczelnych warstw dachowych</p>
             </div>
 
             <div className="tech-card">
               <div className="tech-icon" aria-hidden="true"></div>
               <h3>ROCKWOOL</h3>
-              <p className="tech-description">Wełna mineralna najwyższej jakości</p>
-            </div>
-            <div className="tech-card">
-              <div className="tech-icon" aria-hidden="true"></div>
-              <h3>FAKRO</h3>
-              <p className="tech-description">Nowoczesne okna dachowe</p>
+              <p className="tech-description">Wełna mineralna najwyższej jakości do termoizolacji</p>
             </div>
           </div>
         </section>
@@ -178,7 +190,7 @@ const Wykonawstwo = () => {
             <div className="advantage-card">
               <div className="advantage-icon" aria-hidden="true"></div>
               <h3>Doświadczenie</h3>
-              <p>Ponad 15 lat na rynku usług dekarskich</p>
+              <p>Ponad 15 lat na rynku usług dekarskich dla dachów płaskich</p>
             </div>
             <div className="advantage-card">
               <div className="advantage-icon" aria-hidden="true"></div>
@@ -200,19 +212,19 @@ const Wykonawstwo = () => {
 
         {/* PROJECTS */}
         <section className="projects-showcase">
-          <h2>Przykłady realizacji dachów płaskich i skośnych w Szczecinie</h2>
+          <h2>Realizujemy projekty dachów płaskich dla B2B i mniejszych obiektów</h2>
           <p className="section-intro">
             Zobacz przykłady naszych prac w Szczecinie i województwie zachodniopomorskim:
           </p>
           <div className="projects-grid">
             <div className="project-card">
-              <img src={jeden} alt="Realizacja 1 - Dach" className="project-image" />
+              <img src={jeden} alt="Realizacja 1 - Dach płaski z papą SBS" className="project-image" />
             </div>
             <div className="project-card">
-              <img src={dwa} alt="Realizacja 2 - Dach" className="project-image" />
+              <img src={dwa} alt="Realizacja 2 - Remont dachu płaskiego" className="project-image" />
             </div>
             <div className="project-card">
-              <img src={trzy} alt="Realizacja 3 - Dach" className="project-image" />
+              <img src={trzy} alt="Realizacja 3 - Ocieplenie dachu płaskiego" className="project-image" />
             </div>
           </div>
           <Link to="/realizacje" className="see-more-button">

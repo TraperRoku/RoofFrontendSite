@@ -177,6 +177,11 @@
     margin-bottom: 1rem;
 }
 
+.cta-section h2,
+.cta-section p {
+    color: #ffffff;
+}
+
 .cta-section p {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.1rem;

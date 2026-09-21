@@ -1,426 +1,377 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600;700&display=swap');
+@import './styles/design-system.css';
 
-/* SEO Content Section */
+/* ============================================================
+   GLOBAL LAYOUT - Homepage & Content Pages (non-landings)
+   ============================================================ */
+
+main {
+  padding-top: 65px;
+}
+
+.see-more-button,
+.see-more-button {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  background: var(--color-navy-800);
+  color: var(--color-white) !important;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.see-more-button:hover {
+  background: var(--color-navy-900);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   HOMEPAGE — TRUST STRIP B2B (widoczne zaraz po hero)
+   ============================================================ */
+
+.home-trust-strip {
+  padding: var(--space-8) 0;
+  background: var(--color-navy-800);
+  color: var(--color-white);
+}
+
+.home-trust-strip .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
+}
+
+.home-trust-strip__label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--color-slate-400);
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.home-trust-strip__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
+}
+
+.home-trust-strip__item {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.home-trust-strip__item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(230, 57, 70, 0.4);
+  transform: translateY(-2px);
+}
+
+.home-trust-strip__icon {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-2);
+}
+
+.home-trust-strip__item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--color-white);
+  margin-bottom: 4px;
+}
+
+.home-trust-strip__item span {
+  font-size: 0.8rem;
+  color: var(--color-slate-400);
+  font-weight: 500;
+}
+
+.home-trust-strip__badges {
+  max-width: 780px;
+  margin: var(--space-8) auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.home-trust-strip__badge {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-slate-300);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(230, 57, 70, 0.12);
+  border: 1px solid rgba(230, 57, 70, 0.25);
+  border-radius: 100px;
+}
+
+/* ============================================================
+   SEO CONTENT SECTION — od nowa, z właściwymi klasami
+   zamiast nth-child selectorów (łamali się przy zmianie kolejności)
+   ============================================================ */
 
 .seo-content {
-    padding: 8rem 5%;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    position: relative;
-    overflow: hidden;
+  padding: var(--space-20) 0;
+  background: var(--color-slate-50);
 }
-
-.seo-content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 30% 20%, rgba(231, 76, 60, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-}
-
 
 .seo-content .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-5);
 }
 
-/* =============================================
-   POPRAWKA: responsywny nagłówek SEO
-   Wcześniej był inline fontSize: '2.2rem' który
-   nie reagował na media queries — teraz klasa CSS
-   ============================================= */
+.seo-intro {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
 .seo-main-heading {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 2.2rem;
-    color: #2c3e50;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 1.8rem;
-    word-break: break-word;
-    overflow-wrap: break-word;
-    padding: 0 10px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 3.5vw, 2.3rem);
+  color: var(--color-navy-800);
+  margin-bottom: var(--space-6);
+  line-height: 1.2;
 }
 
-/* Main heading */
-.seo-content h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 2.2rem;
-    color: #2c3e50;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-    margin-bottom: 1.8rem;
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    word-break: break-word;
-    overflow-wrap: break-word;
+.seo-lead {
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.75;
+  color: var(--color-slate-700);
+  max-width: 980px;
+  margin: 0 auto;
 }
 
-.seo-content h2:after {
-    content: '';
-    position: absolute;
-    width: 80px;
-    height: 4px;
-    background: #e74c3c;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+.seo-lead strong {
+  color: var(--color-accent-500);
+  font-weight: 700;
 }
 
-/* Intro paragraph */
-.seo-content > div > div:first-child p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #34495e;
-    font-weight: 400;
-    text-align: center;
-    max-width: 1050px;
-    margin: 0 auto;
+/* Qualifier banner dla home */
+.seo-qualifier {
+  max-width: 860px;
+  margin: var(--space-6) auto 0;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-accent-50);
+  border: 1.5px solid var(--color-accent-500);
+  border-radius: var(--radius-md);
+  color: var(--color-accent-600);
+  font-weight: 700;
+  font-family: var(--font-heading);
+  text-align: center;
+  font-size: 0.95rem;
 }
 
-.seo-content strong {
-    color: #e74c3c;
-    font-weight: 700;
-    padding: 0 2px;
+.seo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: var(--space-8);
+  margin-bottom: var(--space-20);
 }
 
-/* Services Grid */
-.seo-content > div > div:nth-child(2) {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
-    margin-bottom: 50px;
+.seo-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--color-accent-500);
+  position: relative;
 }
 
-.seo-content > div > div:nth-child(2) > div {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    overflow: hidden;
+.seo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-slate-300);
 }
 
-.seo-content > div > div:nth-child(2) > div::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #e74c3c, #c0392b);
+.seo-card h3 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--color-navy-800);
+  margin-bottom: var(--space-4);
 }
 
-.seo-content > div > div:nth-child(2) > div:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+.seo-card h3 a {
+  color: var(--color-navy-800);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.seo-content h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: #e74c3c;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.seo-card h3 a:hover {
+  color: var(--color-accent-500);
 }
 
-.seo-content > div > div:nth-child(2) > div > p {
-    font-family: 'Open Sans', sans-serif;
-    color: #34495e;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 15px;
-    font-weight: 400;
+.seo-card > p {
+  color: var(--color-slate-600);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-5);
 }
 
-.seo-content ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.seo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.seo-content li {
-    font-family: 'Open Sans', sans-serif;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-    position: relative;
-    padding-left: 20px;
-    line-height: 1.6;
+.seo-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 10px;
+  font-size: 0.92rem;
+  color: var(--color-slate-700);
+  line-height: 1.55;
 }
 
-.seo-content li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 6px;
-    width: 10px;
-    height: 10px;
-    background: #e74c3c;
-    border-radius: 50%;
+.seo-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: var(--color-accent-500);
+  border-radius: 50%;
 }
 
-/* FAQ Section */
-.seo-content > div > div:nth-child(3) {
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    margin-bottom: 50px;
-    position: relative;
-    overflow: hidden;
+/* FAQ */
+.seo-faq {
+  background: var(--color-white);
+  border: 1px solid var(--color-slate-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-12);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-16);
 }
 
-.seo-content > div > div:nth-child(3)::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #e74c3c, #c0392b);
+.seo-faq > h2 {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  color: var(--color-navy-800);
+  position: relative;
+  padding-bottom: var(--space-5);
 }
 
-.seo-content > div > div:nth-child(3) h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    font-size: 2rem;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.seo-faq > h2::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 4px;
+  background: var(--color-accent-500);
+  border-radius: 2px;
 }
 
-.seo-content > div > div:nth-child(3) h2:after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background: #e74c3c;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
+.seo-faq-list {
+  max-width: 820px;
+  margin: 0 auto var(--space-8);
 }
 
-.seo-content > div > div:nth-child(3) > div > div {
-    margin-bottom: 25px;
-    padding: 20px;
-    border-left: 4px solid #e74c3c;
-    background: #f8f9fa;
-    border-radius: 0 8px 8px 0;
-    transition: all 0.3s ease;
+.seo-faq-item {
+  margin-bottom: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  border-left: 4px solid var(--color-accent-500);
+  background: var(--color-slate-50);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  transition: all 0.25s ease;
 }
 
-.seo-content > div > div:nth-child(3) > div > div:hover {
-    background: #ecf0f1;
-    transform: translateX(5px);
+.seo-faq-item:hover {
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  transform: translateX(4px);
 }
 
-.seo-content > div > div:nth-child(3) h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #e74c3c;
-    margin-bottom: 10px;
-    font-size: 1.1rem;
+.seo-faq-item h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-navy-800);
+  margin-bottom: var(--space-2);
+  font-size: 1.02rem;
 }
 
-.seo-content > div > div:nth-child(3) p {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    color: #34495e;
-    margin: 0;
-    font-size: 0.95rem;
+.seo-faq-item p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: var(--color-slate-700);
 }
 
-/* Location section */
-.seo-content > div > div:nth-child(4) {
-    text-align: center;
-    margin-bottom: 40px;
+.seo-faq .see-more-button {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
 }
 
-.seo-content > div > div:nth-child(4) h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-    color: #2c3e50;
-    margin-bottom: 20px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+/* Area section */
+.seo-area {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto;
 }
 
-.seo-content > div > div:nth-child(4) p {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #34495e;
-    max-width: 800px;
-    margin: 0 auto;
+.seo-area h2 {
+  text-align: center;
+  margin-bottom: var(--space-5);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  color: var(--color-navy-800);
 }
 
-/* Guarantee section */
-.seo-content > div > div:nth-child(5) {
-    background: linear-gradient(135deg, #e8f5e8, #d5f4e6);
-    padding: 30px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(39, 174, 96, 0.1);
-    border: 2px solid rgba(39, 174, 96, 0.1);
+.seo-area p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-slate-700);
 }
 
-.seo-content > div > div:nth-child(5) h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: #27ae60;
-    margin-bottom: 15px;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.seo-content > div > div:nth-child(5) p {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #2c3e50;
-    font-size: 1rem;
-}
-
-.seo-content > div > div:nth-child(5) > div {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.seo-content > div > div:nth-child(5) > div > div {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    color: #27ae60;
-    font-size: 0.95rem;
-    padding: 8px 15px;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(39, 174, 96, 0.1);
-    transition: all 0.3s ease;
-}
-
-.seo-content > div > div:nth-child(5) > div > div:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .seo-content {
-        padding: 6rem 5%;
-    }
-    
-    .seo-content > div > div:nth-child(2) {
-        grid-template-columns: 1fr 1fr;
-    }
-    
-    .seo-content h2 {
-        font-size: 1.9rem;
-    }
-
-    .seo-main-heading {
-        font-size: 1.7rem;
-    }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    .seo-content {
-        padding: 5rem 3%;
-    }
-    
-    .seo-content h2 {
-        font-size: 1.7rem;
-    }
-
-    .seo-main-heading {
-        font-size: 1.5rem;
-        letter-spacing: 0.5px;
-    }
-    
-    .seo-content > div > div:nth-child(2) {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-        margin: 0 auto 50px auto;
-    }
-    
-    .seo-content > div > div:nth-child(2) > div {
-        padding: 25px;
-    }
-    
-    .seo-content > div > div:nth-child(3) {
-        padding: 30px 20px;
-    }
-    
-    .seo-content > div > div:nth-child(5) > div {
-        gap: 15px;
-    }
-    
-    .seo-content > div > div:nth-child(5) > div > div {
-        font-size: 0.9rem;
-        padding: 6px 12px;
-    }
+  .seo-content { padding: var(--space-12) 0; }
+  .seo-grid { gap: var(--space-5); grid-template-columns: 1fr; }
+  .seo-card { padding: var(--space-6); }
+  .seo-faq { padding: var(--space-8) var(--space-5); }
+  .seo-faq-item { padding: var(--space-4); }
+  .home-trust-strip { padding: var(--space-6) 0; }
+  .home-trust-strip__badges { margin-top: var(--space-6); }
 }
 
 @media (max-width: 480px) {
-    .seo-content h2 {
-        font-size: 1.4rem;
-    }
-
-    /* KLUCZOWA POPRAWKA: 1.2rem na najmniejszych ekranach */
-    .seo-main-heading {
-        font-size: 1.2rem;
-        letter-spacing: 0;
-        padding: 0 5px;
-    }
-    
-    .seo-content > div > div:first-child p,
-    .seo-content > div > div:nth-child(4) p {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
-    
-    .seo-content > div > div:nth-child(2) > div {
-        padding: 20px;
-    }
-    
-    .seo-content h3 {
-        font-size: 1.2rem;
-    }
-    
-    .seo-content > div > div:nth-child(3) h2 {
-        font-size: 1.6rem;
-    }
-    
-    .seo-content > div > div:nth-child(4) h2 {
-        font-size: 1.6rem;
-    }
-    
-    .seo-content > div > div:nth-child(5) h3 {
-        font-size: 1.3rem;
-    }
+  .seo-qualifier { font-size: 0.85rem; padding: var(--space-3) var(--space-4); }
+  .home-trust-strip__grid { grid-template-columns: 1fr 1fr; gap: var(--space-3); }
+  .home-trust-strip__item { padding: var(--space-4) var(--space-3); }
+  .home-trust-strip__item strong { font-size: 0.9rem; }
+  .home-trust-strip__item span { font-size: 0.7rem; }
 }
 
-/* =============================================
-   MOBILE GLOBAL PATCH
-   ============================================= */
+/* ============================================================
+   MOBILE GLOBAL PATCH — sticky call bar offset
+   ============================================================ */
 
 @media (max-width: 992px) {
   footer,
@@ -440,6 +391,6 @@
 
 @media (max-width: 768px) {
   .seo-content {
-    padding: 3rem 1rem calc(58px + 2rem) !important;
+    padding-bottom: calc(58px + var(--space-12)) !important;
   }
 }

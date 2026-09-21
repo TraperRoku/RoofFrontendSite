@@ -10,11 +10,11 @@ const services = [
     src: imgFix, 
     alt: 'Profesjonalna naprawa dachów płaskich w Szczecinie',
     title: 'Dachy płaskie i papa termozgrzewalna',
-    description: 'Specjalizacja: naprawy i renowacje dachów płaskich. Głównie pracujemy z papą termozgrzewalna - mamy duże doświadczenie z tego materiału.',
+    description: 'Specjalizacja: naprawy i renowacje dachów płaskich. Głównie pracujemy z papą termozgrzewalną SBS — mamy duże doświadczenie z tym materiałem. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.',
     features: [
       'Natychmiastowa naprawa przecieków',
       'Pełna wymiana pokrycia',
-      'Zielone dachy i tarasy'
+      'Odbiór techniczny z protokołem'
     ]
   },
   { 
@@ -47,8 +47,8 @@ function Service() {
         <h2>Dlaczego warto wybrać nasze usługi dekarskie?</h2>
         <p className="service-intro">
           <strong>Łączymy 15 lat doświadczenia z nowoczesnymi technologiami.</strong>
-          Specjalizujemy się głównie w <span className="highlight">papie termozgrzewnej premium</span> - mamy ogromne doświadczenie z tego materiału.
-          Dodatkowo oferujemy rozwiązania z membran EPDM i PVC dla specjalnych zastosowań.
+          Specjalizujemy się głównie w <span className="highlight">papie termozgrzewalnej SBS</span> - mamy duże doświadczenie z tym materiałem.
+          Naszą główną specjalizacją są systemy z papy termozgrzewalnej SBS. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.
           Każdy dach wykonujemy z najwyższą dbałością o szczegóły.
         </p>        <div className="service-gif-wrapper">
           <img src={roofBuildGif} alt="zgifowany dach z papą termozgrzewalną" className="service-gif" />

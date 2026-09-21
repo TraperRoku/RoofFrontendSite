@@ -4,6 +4,34 @@ import PhoneLink from '../components/PhoneLink';
 
 const reviews = [
   {
+    initial: 'K',
+    name: 'Konrad',
+    rating: 5,
+    date: '3 miesiące temu',
+    text: 'Mieliśmy przyjemność współpracować na dużej inwestycji w Szczecinie. Ekipa bardzo sprawnie działająca i znająca się na swoim fachu!',
+  },
+  {
+    initial: 'J',
+    name: 'Jakub',
+    rating: 5,
+    date: '3 miesiące temu',
+    text: 'Polecam serdecznie firmę Bezpieczny Dach. Bardzo przydały się usługi wysięgnika, by sprawnie i bezpiecznie załatwić problem przy szczycie dachu.',
+  },
+  {
+    initial: 'M',
+    name: 'Michał',
+    rating: 5,
+    date: '3 miesiące temu',
+    text: 'Firmę Bezpieczny Dach znalazłem sam w wyszukiwarce, bez żadnego polecenia czy rekomendacji. Tym razem był to strzał w dziesiątkę.',
+  },
+  {
+    initial: 'M',
+    name: 'Maciej',
+    rating: 5,
+    date: '4 miesiące temu',
+    text: 'Polecam w 100%. Wszystko zostało zrobione bardzo starannie i zgodnie z ustaleniami.',
+  },
+  {
     initial: 'F',
     name: 'Filip',
     rating: 5,
@@ -42,6 +70,9 @@ const reviews = [
 ];
 
 const trustedClients = [
+  { name: 'Atlas Ward', desc: 'Generalny Wykonawca' },
+  { name: 'MG Project', desc: 'Generalny Wykonawca' },
+  { name: 'DUNA', desc: 'Generalny Wykonawca' },
   { name: 'TBS Goleniów', desc: 'Towarzystwo Budownictwa Społecznego' },
   { name: 'Durable', desc: 'Serwis dachów — Przecław, Szczecin' },
   { name: 'Jednostka Wojskowa', desc: 'Szczecin — WSM' },
@@ -106,7 +137,7 @@ function Testimonials() {
         <div className="trusted-block">
           <h3>Zaufali nam</h3>
           <p className="trusted-subtitle">
-            Realizujemy zlecenia zarówno dla klientów indywidualnych, jak i firm oraz instytucji.
+            Realizujemy zlecenia B2B: wspólnoty mieszkaniowe, zarządcy nieruchomości, hale magazynowe, generalni wykonawcy, instytucje publiczne. Mamy na koncie 700+ zrealizowanych projektów B2B.
           </p>
           <div className="trusted-grid">
             {trustedClients.map((c, i) => (

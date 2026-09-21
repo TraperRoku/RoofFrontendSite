@@ -8,10 +8,6 @@ import PhoneLink from '../PhoneLink';
 
 import dach1 from '../photos_to_deploy/8.webp';
 import dach2 from '../photos_to_deploy/9.webp';
-import dach3 from '../photos_to_deploy/3.webp';
-import dach4 from '../photos_to_deploy/23.webp';
-
-import dach6 from '../realizacje/thumbs/73f.webp'; 
 import dach7 from '../photos_to_deploy/14.webp';
 
 
@@ -20,8 +16,8 @@ function DachyPlaskie(){
   return (
     <>
       <Helmet>
-        <title>Dachy płaskie Szczecin i Goleniów — remonty, papa termozgrzewalna, EPDM, PVC | Bezpieczny Dach</title>
-        <meta name="description" content="Profesjonalne dachy płaskie w Szczecinie i Goleniowie: remonty, papa termozgrzewalna, systemy EPDM i PVC, uszczelnianie. Fachowy dekarz z 15-letnim doświadczeniem. Darmowa wycena — 518 144 882" />
+        <title>Dachy płaskie Szczecin i Goleniów — remonty, papa termozgrzewalna SBS | Bezpieczny Dach</title>
+        <meta name="description" content="Profesjonalne dachy płaskie w Szczecinie i Goleniowie: remonty, papa termozgrzewalna SBS, naprawy i uszczelnianie, ocieplenia. Fachowy dekarz z 15-letnim doświadczeniem. Zlecenia od 150 m². Darmowa wizja — 518 144 882" />
         
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
         <meta name="googlebot" content="index, follow"/>
@@ -30,7 +26,7 @@ function DachyPlaskie(){
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="Dachy płaskie w Szczecinie - profesjonalne remonty"/>
-        <meta property="og:description" content="Kompleksowe usługi dekarskie w Szczecinie. Remonty dachów płaskich, papa termozgrzewalna, systemy EPDM i PVC. 15 lat doświadczenia."/>
+        <meta property="og:description" content="Kompleksowe usługi dekarskie w Szczecinie. Remonty dachów płaskich, papa termozgrzewalna SBS, naprawy i ocieplenia. 15 lat doświadczenia."/>
         <meta property="og:image" content={dach1}/>
         <meta property="og:url" content="https://www.bezpiecznydach.pl/dachy-plaskie"/>
         <meta property="og:locale" content="pl_PL"/>
@@ -38,7 +34,7 @@ function DachyPlaskie(){
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:title" content="Dachy płaskie w Szczecinie - remonty i papa"/>
-        <meta name="twitter:description" content="Profesjonalne usługi dekarskie w Szczecinie. Remonty dachów płaskich, papa termozgrzewalna, systemy EPDM i PVC."/>
+        <meta name="twitter:description" content="Profesjonalne usługi dekarskie w Szczecinie. Remonty dachów płaskich, papa termozgrzewalna SBS, naprawy i ocieplenia."/>
         <meta name="twitter:image" content={dach1}/>
         
         {/* Local Business Schema */}
@@ -62,9 +58,9 @@ function DachyPlaskie(){
               "latitude": "53.4285",
               "longitude": "14.5528"
             },
-            "openingHours": "Mo-Su 07:00-20:00",
+            "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-14:00"],
             "priceRange": "$$",
-            "description": "Profesjonalne usługi dekarskie w Szczecinie. Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej. 15 lat doświadczenia.",
+            "description": "Profesjonalne usługi dekarskie w Szczecinie. Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej SBS. 15 lat doświadczenia.",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Usługi dekarskie Szczecin",
@@ -73,40 +69,24 @@ function DachyPlaskie(){
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Dachy płaskie Szczecin",
-                    "description": "Montaż i remont dachów płaskich w Szczecinie"
+                    "name": "Papa termozgrzewalna SBS Szczecin",
+                    "description": "Profesjonalny montaż papy termozgrzewalnej SBS w systemie dwuwarstwowym"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "Papa termozgrzewalna Szczecin",
-                    "description": "Profesjonalny montaż papy termozgrzewalnej"
+                    "name": "Naprawa i uszczelnianie dachów płaskich Szczecin",
+                    "description": "Awaryjna naprawa przecieków dachowych i uszczelnianie"
                   }
                 },
                 {
                   "@type": "Offer",
                   "itemOffered": {
                     "@type": "Service",
-                    "name": "System balastowy na dach płaski Szczecin",
-                    "description": "Nowoczesne systemy balastowe na dachy płaskie"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Naprawa dachów Szczecin",
-                    "description": "Awaryjna naprawa przecieków dachowych w 24H"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Wymiana dachu Szczecin",
-                    "description": "Kompleksowa wymiana pokryć dachowych"
+                    "name": "Ocieplenie dachów płaskich Szczecin",
+                    "description": "Termomodernizacja i docieplanie dachów płaskich płytami PIR, styropapą i wełną"
                   }
                 }
               ]
@@ -133,10 +113,10 @@ function DachyPlaskie(){
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "Jakie są rodzaje dachów płaskich?",
+                "name": "Jakie materiały stosujecie na dachach płaskich?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Najpopularniejsze to: papa termozgrzewalna (tradycyjna), membrana EPDM (elastyczna) i membrana PVC (wytrzymała). Każda ma swoje zalety – doradzimy najlepsze rozwiązanie dla Twojego budynku."
+                  "text": "Jedynym materiałem, z którym pracujemy, jest papa termozgrzewalna SBS. Stosujemy ją w systemie dwuwarstwowym z podkładem i warstwą nawierzchniową. To sprawdzone od dziesięcioleci rozwiązanie dla obiektów przemysłowych i wspólnot mieszkaniowych."
                 }
               },
               {
@@ -149,31 +129,31 @@ function DachyPlaskie(){
               },
               {
                 "@type": "Question",
-                "name": "Jak długo trwa montaż dachu płaskiego?",
+                "name": "Jak długo trwa montaż dachu płaskiego papą SBS?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Montaż papą termozgrzewalną trwa 1-3 dni w zależności od powierzchni. Najpierw przygotowujemy podłoże, potem kładziemy papę w zgranym procesem termicznym."
+                  "text": "Montaż papą termozgrzewalną SBS trwa 1-3 dni w zależności od powierzchni. Najpierw przygotowujemy podłoże, potem kładziemy papę podkładową i nawierzchniową w zgranym procesie termicznym."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Czy dach płaski jest odporny na przecieki?",
+                "name": "Czy dach płaski z papą SBS jest odporny na przecieki?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Tak, gdy wykonany prawidłowo. Nowoczesne papy i membrany są odporne na wilgoć. Ważne jest prawidłowe wykonanie i regularna konserwacja – czyszczenie rynien i inspekcja."
+                  "text": "Tak, gdy wykonany prawidłowo w systemie dwuwarstwowym. Papa termozgrzewalna SBS jest odporna na wilgoć i zmiany temperatur. Ważne jest prawidłowe wykonanie i regularna konserwacja – czyszczenie rynien i inspekcja."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Czy mogę użyć dachu płaskiego na taras?",
+                "name": "Czy pracujecie z małymi obiektami poniżej 150 m²?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Tak! Specjalizujemy się w dachach zielonych i tarasach dachowych. Możemy przygotować dach płaski do funkcji użytkowej – ze wzmocnieniem konstrukcji i bezpieczną izolacją."
+                  "text": "Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów."
                 }
               },
               {
                 "@type": "Question",
-                "name": "Jak często trzeba konserwować dach płaski?",
+                "name": "Jak często trzeba konserwować dach płaski z papą SBS?",
                 "acceptedAnswer": {
                   "@type": "Answer",
                   "text": "Rekomendujemy roczną inspekcję i czyszczenie rynien. Profilaktyka przedłuża żywotność dachu i zapobiega drogim naprawom. Oferujemy usługi serwisowe w Szczecinie i Goleniowie."
@@ -191,7 +171,7 @@ function DachyPlaskie(){
         <section className="hero-section3">
           <div className="hero-content3">
             <h1>Dachy płaskie w Szczecinie – profesjonalne wykonawstwo i remonty</h1>
-            <p className="hero-subtitlee3">Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej. 15 lat doświadczenia w branży. Darmowa wycena.</p>
+            <p className="hero-subtitlee3">Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej SBS. 15 lat doświadczenia w branży. Darmowa wycena.</p>
             <div className="hero-cta">
              <PhoneLink className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
 
@@ -208,6 +188,10 @@ function DachyPlaskie(){
           </div>
         </section>
 
+        <section style={{backgroundColor: '#fff7f5', color: '#7f1d1d', border: '1px solid #f3b5ab', borderRadius: '8px', padding: '16px 24px', textAlign: 'center', fontWeight: '600', fontSize: '16px'}}>
+          <p style={{margin: 0}}>Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.</p>
+        </section>
+
         <section className="benefits-section">
           <h2>Dlaczego wybrać naszą firmę</h2>
           <div className="benefits-grid">
@@ -219,12 +203,12 @@ function DachyPlaskie(){
             <div className="benefit-card">
               <div className="benefit-icon" aria-hidden="true"></div>
               <h3>Materiały najwyższej jakości</h3>
-              <p>Używamy papę termozgrzewalną, membrany EPDM i PVC od sprawdzonych producentów. Każdy projekt jest wykonany z dbałością o szczegóły i trwałość.</p>
+              <p>Używamy wyłącznie papy termozgrzewalnej SBS od sprawdzonych producentów (ICOPAL, Swisspor, Nexxler, Izobud). Każdy projekt jest wykonany z dbałością o szczegóły i trwałość.</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-icon" aria-hidden="true"></div>
               <h3>15 lat doświadczenia w branży</h3>
-              <p>Ponad tysiąc zrealizowanych projektów. Nasz zespół dekszy zna każdy aspekt remontu dachów płaskich – od diagnozy do wykończenia.</p>
+              <p>700+ zrealizowanych projektów B2B. Nasz zespół dekarski zna każdy aspekt remontu dachów płaskich – od diagnozy do wykończenia.</p>
             </div>
           </div>
         </section>
@@ -236,32 +220,12 @@ function DachyPlaskie(){
             <div className="gallery-item">
               <img 
                 src={dach2} 
-                alt="Remont dachu - wymiana pokrycia" 
+                alt="Remont dachu - wymiana pokrycia z papą termozgrzewalną SBS" 
                 loading="lazy"
                 width="400"
                 height="300"
               />
               <p><strong>Remont dachu</strong> – wymiana pokrycia</p>
-            </div>
-            <div className="gallery-item">
-              <img 
-                src={dach3} 
-                alt="Montaż membrany EPDM na dachu płaskim" 
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <p><strong>System membranowy</strong> – EPDM</p>
-            </div>
-            <div className="gallery-item">
-              <img 
-                src={dach4} 
-                alt="Zielony taras na dachu płaskim" 
-                loading="lazy"
-                width="400"
-                height="300"
-              />
-              <p><strong>Zielony taras</strong> – praktyczne i estetyczne</p>
             </div>
           
           </div>
@@ -283,51 +247,25 @@ function DachyPlaskie(){
             <div className="system-image">
               <img 
                 src={dach7} 
-                alt="Papa termozgrzewalna Szczecin - profesjonalny montaż przez doświadczonych dekarzy" 
+                alt="Papa termozgrzewalna SBS Szczecin - profesjonalny montaż przez doświadczonych dekarzy" 
                 loading="lazy"
                 width="500"
                 height="350"
               />
             </div>
             <div className="system-content">
-              <h3>Papa termozgrzewalna</h3>
-              <p><strong>Sprawdzone i popularne rozwiązanie</strong>. Papa termozgrzewalna sprawdza się gdy:</p>
+              <h3>Papa termozgrzewalna SBS</h3>
+              <p><strong>Sprawdzone i popularne rozwiązanie</strong>. Papa termozgrzewalna SBS sprawdza się gdy:</p>
               <ul>
                 <li>Szukasz niezawodnego, budżetowego systemu</li>
                 <li>Chcesz materiał o sprawdzonej żywotności</li>
                 <li>Realizacja powinna być szybka</li>
                 <li>Planujesz powiększyć pokrycie lub wykonać naprawę</li>
               </ul>
-              <p className="system-cta"><strong>Papa termozgrzewalna</strong> – skonsultuj z nami: <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
+              <p className="system-cta"><strong>Papa termozgrzewalna SBS</strong> – skonsultuj z nami: <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
             </div>
           </div>
       
-         
-           
-
-          <div className="system-card reverse">
-            <div className="system-image">
-              <img 
-                src={dach6} 
-                alt="Dachy płaskie Szczecin - membrana PVC w wykonaniu najlepszego dekarza" 
-                loading="lazy"
-                width="500"
-                height="350"
-              />
-            </div>
-            <div className="system-content">
-              <h3>Membrana PVC – rozwiązanie premium</h3>
-              <p><strong>Dla klientów szukających najwyższej klasy</strong>. Membrana PVC to dobry wybór gdy:</p>
-              <ul>
-                <li>Planujesz taras lub zielony dach</li>
-                <li>Potrzebujesz maksymalnej odporności na UV i uszkodzenia</li>
-                <li>Chcesz połączyć uszczelnianie dachu z izolacją termiczną</li>
-                <li>Szukasz rozwiązania na wiele lat</li>
-              </ul>
-              <p className="system-cta"><strong>Membrana PVC z izolacją</strong> – zainteresowany? 
-              <PhoneLink itemProp="telephone">518 144 882</PhoneLink></p>
-            </div>
-          </div>
 
           <div className="system-card">
             
@@ -353,7 +291,7 @@ function DachyPlaskie(){
             <p>Realizujemy projekty dla mieszkańców dzielnic: Centrum, Pogodno, Gumieńce, Żelechowa, Skolwin, Dąbie i wielu innych. Obsługujemy również miasta i gminy w województwie: Police, Goleniów, Stargard, Dobra i pozostałe tereny Zachodniopomorskiego.</p>
             <ul>
               <li>Dachy płaskie</li>
-              <li>Kładzienie papy termozgrzewalnej</li>
+              <li>Kładzienie papy termozgrzewalnej SBS</li>
               <li>Naprawa i uszczelnianie dachów</li>
               <li>Remonty i wymiana pokrycia</li>
               <li>Izolacja i docieplanie</li>
@@ -365,8 +303,8 @@ function DachyPlaskie(){
           <h2>Dlaczego nas wybierają</h2>
           <div className="guarantee-content">
             <div className="guarantee-badge">
-              <div className="guarantee-years">1000+</div>
-              <div className="guarantee-text">Zrealizowanych projektów</div>
+              <div className="guarantee-years">700+</div>
+              <div className="guarantee-text">projektów B2B</div>
             </div>
             <div className="guarantee-text-content">
               <p><strong>Pracujemy w oparciu o cztery filary</strong>:</p>
@@ -386,27 +324,27 @@ function DachyPlaskie(){
           <h2>Często zadawane pytania</h2>
           <div className="faq-grid">
             <div className="faq-item">
-              <h3>Ile kosztuje papa termozgrzewalna?</h3>
-              <p>Cena papy termozgrzewalnej zależy od typu materiału i metrażu dachu. Oferujemy darmową wycenę – zadzwoń lub wypełnij formularz kontaktowy.</p>
+              <h3>Ile kosztuje papa termozgrzewalna SBS?</h3>
+              <p>Cena papy termozgrzewalnej SBS zależy od typu materiału i metrażu dachu. Oferujemy darmową wycenę – zadzwoń lub wypełnij formularz kontaktowy.</p>
             </div>
             <div className="faq-item">
-              <h3>Jak długo trwa montaż membrany EPDM?</h3>
-              <p>Montaż membrany trwa zazwyczaj 1-3 dni w zależności od powierzchni i skomplikowania dachu. Termin ustalamy indywidualnie w trakcie konsultacji.</p>
+              <h3>Jak długo trwa montaż papy termozgrzewalnej SBS?</h3>
+              <p>Montaż papy SBS trwa zazwyczaj 1-3 dni w zależności od powierzchni i skomplikowania dachu. Termin ustalamy indywidualnie w trakcie konsultacji.</p>
             </div>
             <div className="faq-item">
-              <h3>Czy pracujecie w weekendy?</h3>
-              <p>Tak, dostępni jesteśmy 7 dni w tygodniu. W przypadku awarii reaktywność jest dla nas priorytetem.</p>
+              <h3>Jakie są godziny pracy firmy?</h3>
+              <p>Godziny pracy: Poniedziałek – Piątek 07:00 – 18:00, Sobota 08:00 – 14:00. Dla pilnych zgłoszeń od 150 m² — wyjazd w ciągu 24 godzin roboczych.</p>
             </div>
             <div className="faq-item">
               <h3>Jak przebiega proces remontu dachu?</h3>
-              <p>Remont zaczyna się od bezpłatnej wyceny i pomiarów. Następnie opracowujemy projekt, demontujemy stary dach i montujemy nowe pokrycie. Pracujemy zgodnie z ustalonym harmonogramem i standardami branżowymi.</p>
+              <p>Remont zaczyna się od bezpłatnej wyceny i pomiarów. Następnie opracowujemy projekt, demontujemy stary dach i montujemy nowe pokrycie z papą SBS. Pracujemy zgodnie z ustalonym harmonogramem i standardami branżowymi.</p>
             </div>
           </div>
         </section>
 
         <section className="contact-cta">
           <h2>Skontaktuj się z nami</h2>
-          <p>Doradcy dostępni od 7:00 do 20:00, siedem dni w tygodniu</p>
+          <p>Doradcy dostępni w godzinach pracy: Pon-Pt 07:00-18:00, Sob 08:00-14:00</p>
           <p><strong>Darmowa wycena • Konsultacja bez zobowiązań • Profesjonalne podejście</strong></p>
           <div className="cta-buttons">
             <PhoneLink className="cta-button-primary" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>

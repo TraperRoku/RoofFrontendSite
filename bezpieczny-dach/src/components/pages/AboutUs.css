@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600;700&display=swap');
 
 .o-nas-container {
-    max-width: 80%;
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 40px 0;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     color: #333;
     overflow-x: hidden;
-    width: 100%;
+    width: calc(100% - 32px);
     box-sizing: border-box;
 }
 
@@ -26,7 +26,7 @@
 }
 
 /* Hero Section */
-.hero-section2 {
+.o-nas-container .hero-section {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -45,14 +45,17 @@
     box-sizing: border-box;
 }
 
-.hero-image {
+.o-nas-container .hero-image {
     flex: 1;
-    min-width: 300px;
+    min-width: 0;
 }
 
-.hero-image img {
+.o-nas-container .hero-image img {
     width: 100%;
-    height: auto;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    background: #eef2f5;
     display: block;
 }
 
@@ -119,7 +122,10 @@
 
 .story-image img {
     width: 100%;
-    height: auto;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+    background: #eef2f5;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -253,7 +259,10 @@
 
 .team-image img {
     width: 100%;
-    height: auto;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    background: #eef2f5;
     border-radius: 10px;
 }
 
@@ -431,7 +440,10 @@
 
 .equipment-image img {
     width: 100%;
-    height: auto;
+    height: 410px;
+    object-fit: cover;
+    object-position: center;
+    background: #eef2f5;
     border-radius: 10px;
 }
 
@@ -450,6 +462,7 @@
     font-size: 1.1rem;
     margin-bottom: 25px;
     line-height: 1.7;
+    color: #ffffff;
 }
 
 .equipment-text ul {
@@ -461,6 +474,7 @@
     padding: 10px 0;
     position: relative;
     padding-left: 45px;
+    color: #ffffff;
 }
 
 .equipment-text li:before {
@@ -470,7 +484,7 @@
     top: 8px;
     width: 10px;
     height: 10px;
-    background: #2c3e50;
+    background: #e74c3c;
     border-radius: 2px;
     display: block;
 
@@ -631,7 +645,10 @@
 
 .why-us-image img {
     width: 100%;
-    height: auto;
+    height: 430px;
+    object-fit: cover;
+    object-position: center;
+    background: #eef2f5;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
@@ -744,9 +761,33 @@
     .hero-section h1 {
         font-size: 1.8rem;
     }
+
+    .o-nas-container .hero-section {
+        flex-direction: column;
+    }
+
+    .o-nas-container .hero-content2,
+    .o-nas-container .hero-image {
+        width: 100%;
+        min-width: 0;
+    }
     
     .hero-subtitle {
         font-size: 1rem;
+    }
+
+    .o-nas-container .hero-image img {
+        height: 280px;
+    }
+
+    .story-image img,
+    .equipment-image img,
+    .why-us-image img {
+        height: 260px;
+    }
+
+    .team-image img {
+        height: 300px;
     }
     
     .hero-content, .story-text, .certificates-text, .equipment-text {

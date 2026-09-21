@@ -17,11 +17,7 @@ function HeroSection() {
           <h1>
             <span className="highlight-seo">Dekarz Szczecin:</span>
             <br />
-            Dachy płaskie
-            <br />
-            Papa termozgrzewalna
-            <br />
-            EPDM i PVC
+            Dachy płaskie — tylko papa termozgrzewalna SBS
           </h1>
 
           {/* Numer widoczny w hero na mobile */}

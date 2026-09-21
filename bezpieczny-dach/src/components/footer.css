@@ -5,6 +5,10 @@
     padding: 40px 0 20px;
     font-family: 'Arial', sans-serif;
     border-top: 4px solid #e74c3c;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  box-sizing: border-box;
   }
   
   .footer-content {
@@ -24,13 +28,13 @@
   }
   
   .footer-section h3 {
-    color: #e74c3c;
+    color: #ff6b57 !important;
     font-size: 1.5rem;
     margin-bottom: 15px;
   }
   
   .footer-section h4 {
-    color: #e74c3c;
+    color: #ff6b57 !important;
     font-size: 1.2rem;
     margin-bottom: 15px;
     border-bottom: 1px solid #34495e;
@@ -38,6 +42,7 @@
   }
   
   .footer-section p {
+    color: #ecf0f1 !important;
     line-height: 1.6;
     margin: 10px 0;
     font-size: 1rem;
@@ -56,7 +61,18 @@
     border-top: 1px solid #34495e;
     margin-top: 20px;
     font-size: 0.9rem;
+    color: #ecf0f1;
 
+  }
+
+  .footer-bottom p {
+    color: #ecf0f1 !important;
+    margin: 0;
+  }
+
+  .footer a,
+  .footer a:visited {
+    color: #ffffff !important;
   }
   
   /* Responsywność */

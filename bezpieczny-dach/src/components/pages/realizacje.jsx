@@ -31,8 +31,8 @@ function Realizacje() {
           id: i,
           thumb: thumb.default,
           full: full.default,
-          title: `Papa termozgrzewalna membrana EPDM realizacja ${i} Szczecin`,
-          alt: `Papa termozgrzewalna docieplenie dachu płaskiego membrana EPDM montaż realizacja ${i} Szczecin - Bezpieczny Dach`
+          title: `Papa termozgrzewalna SBS — realizacja ${i} — Szczecin`,
+          alt: `Papa termozgrzewalna SBS docieplenie dachu płaskiego realizacja ${i} Szczecin — Bezpieczny Dach`
         };
       } catch (err) {
         console.warn(`Nie można załadować zdjęcia ${i}`);

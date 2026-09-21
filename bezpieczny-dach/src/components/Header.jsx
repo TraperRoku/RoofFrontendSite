@@ -55,9 +55,9 @@ function Header() {
                 {/* Logo */}
                 <div className="logo-section">
                     <Link to="/" className="logo-link" onClick={closeMenu}>
-                        <img src={logo} alt="Dekarska Pomoc - Dachy płaskie Szczecin" className="logo" />
+                        <img src={logo} alt="Bezpieczny Dach — dachy płaskie Szczecin" className="logo" />
                         <div className="logo-text">
-                            <span className="company-name">Dekarska Pomoc</span>
+                            <span className="company-name">Bezpieczny Dach</span>
                             <span className="tagline">Dachy płaskie Szczecin</span>
                         </div>
                     </Link>
@@ -68,13 +68,14 @@ function Header() {
                     <div className="nav-primary">
                         <Link to="/" className="nav-link" onClick={closeMenu}>Strona główna</Link>
                         <Link to="/dachy-plaskie" className="nav-link featured" onClick={closeMenu}>Dachy płaskie</Link>
-                        <Link to="/papa-termozgrzewalna" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
+                        <Link to="/krycie-papa-termozgrzewalna" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
+                        <Link to="/remont-dachu-z-papy" className="nav-link featured" onClick={closeMenu}>Remonty dachów</Link>
                         <Link to="/wykonawstwo" className="nav-link" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" className="nav-link" onClick={closeMenu}>Realizacje</Link>
                         <Link to="/#contact" className="nav-link" onClick={closeMenu}>Kontakt</Link>
                     </div>
                     <div className="nav-secondary">
-                        <Link to="/docieplanie-dachow" className="nav-link-small" onClick={closeMenu}>Izolacja</Link>
+                        <Link to="/ocieplenie-dachu-plaskiego" className="nav-link-small" onClick={closeMenu}>Izolacja</Link>
                         <Link to="/o-nas" className="nav-link-small" onClick={closeMenu}>O nas</Link>
                         <Link to="/faq" className="nav-link-small" onClick={closeMenu}>Baza wiedzy</Link>
                     </div>
@@ -94,7 +95,7 @@ function Header() {
                             href="https://www.facebook.com/profile.php?id=61575175164575"
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="Facebook - Dekarska Pomoc Szczecin"
+                            aria-label="Facebook — Bezpieczny Dach Szczecin"
                             className="social-link"
                             onClick={closeMenu}
                         >
@@ -146,14 +147,15 @@ function Header() {
                         <h4>Główne usługi</h4>
                         <Link to="/" onClick={closeMenu}>Strona główna</Link>
                         <Link to="/dachy-plaskie" onClick={closeMenu} className="featured">Dachy płaskie Szczecin</Link>
-                        <Link to="/papa-termozgrzewalna" onClick={closeMenu} className="featured">Papa termozgrzewalna</Link>
+                        <Link to="/krycie-papa-termozgrzewalna" onClick={closeMenu} className="featured">Papa termozgrzewalna</Link>
+                        <Link to="/remont-dachu-z-papy" onClick={closeMenu} className="featured">Remonty dachów</Link>
                         <Link to="/wykonawstwo" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>
                         <Link to="/#contact" onClick={closeMenu}>Kontakt</Link>
                     </div>
                     <div className="mobile-nav-group">
                         <h4>Informacje</h4>
-                        <Link to="/docieplanie-dachow" onClick={closeMenu}>Izolacja dachów</Link>
+                        <Link to="/ocieplenie-dachu-plaskiego" onClick={closeMenu}>Izolacja dachów</Link>
                         <Link to="/o-nas" onClick={closeMenu}>O nas</Link>
                         <Link to="/faq" onClick={closeMenu}>Baza wiedzy</Link>
                     </div>

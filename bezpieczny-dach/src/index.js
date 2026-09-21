@@ -5,7 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-document.title = "Bezpieczny Dach – Fachowa Naprawa Dachów Szczecin i okolice";
+document.title = "Bezpieczny Dach — Dachy płaskie i papa SBS — Szczecin i województwo zachodniopomorskie";
 
 
 

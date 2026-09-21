@@ -214,6 +214,11 @@
   font-size: 2.2rem;
   margin-bottom: 20px;
   font-weight: 700;
+  color: #ffffff;
+}
+
+.contact-cta h2::after {
+  background: #e74c3c;
 }
 
 .contact-cta p {

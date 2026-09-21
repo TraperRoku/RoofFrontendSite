@@ -36,7 +36,8 @@ function Footer() {
         <div className="footer-section">
           <h4>Godziny otwarcia</h4>
           <p>
-            Całodobowo 00:00 - 24:00<br />
+            Poniedziałek – Piątek: 07:00 – 18:00<br />
+            Sobota: 08:00 – 14:00
           </p>
         </div>
       </div>

@@ -11,7 +11,7 @@ function RepairSection() {
         <div className="intro-text">
           <p>
             <strong>Bezpieczny Dach</strong> oferuje kompleksowe naprawy dachów w Szczecinie i okolicach. 
-            Działamy na rynku od 15 lat, zapewniając najwyższą jakość usług dekarskich dla klientów indywidualnych i firm.
+            Działamy na rynku od 15 lat, zapewniając najwyższą jakość usług dekarskich dla wspólnot mieszkaniowych, zarządców nieruchomości, generalnych wykonawców i instytucji publicznych.
           </p>
         </div>
         
@@ -62,8 +62,8 @@ function RepairSection() {
             <div className="benefit-card">
               <div className="benefit-icony" aria-hidden="true"></div>
               <div className="benefit-content">
-                <h3>Obsługa awarii 24/7</h3>
-                <p>Szybka pomoc w przypadku nagłych uszkodzeń dachu – nawet w weekendy</p>
+                <h3>Reakcja w 24h roboczych</h3>
+                <p>Wyjazd na obiekt w ciągu 24 godzin roboczych dla zleceń od 150 m².</p>
               </div>
             </div>
           </div>
