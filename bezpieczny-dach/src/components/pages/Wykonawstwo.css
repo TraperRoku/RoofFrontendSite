@@ -269,21 +269,23 @@ h2::after {
 
 .see-more-button {
   display: inline-block;
-  padding: 20px 40px;              /* większy padding */
-  font-size: 1.25rem;              /* większy tekst */
-  color: #e74c3c;
+  padding: 14px 28px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #ffffff !important;
+  background: #e74c3c !important;
   text-decoration: none;
   font-weight: bold;
-  border: 3px solid #e74c3c;       /* grubsza ramka */
-  border-radius: 60px;             /* bardziej okrągły */
+  border: 2px solid #e74c3c;
+  border-radius: 6px;
   transition: all 0.3s ease;
   text-align: center;
 }
 
 
 .see-more-button:hover {
-  background: #e74c3c;
-  color: white;
+  background: #c0392b !important;
+  color: #ffffff !important;
 }
 
 /* CTA */
