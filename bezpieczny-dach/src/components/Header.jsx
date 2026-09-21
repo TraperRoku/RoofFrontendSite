@@ -68,6 +68,7 @@ function Header() {
                     <div className="nav-primary">
                         <Link to="/" className="nav-link" onClick={closeMenu}>Strona główna</Link>
                         <Link to="/dachy-plaskie" className="nav-link featured" onClick={closeMenu}>Dachy płaskie</Link>
+                        <Link to="/naprawa-dachu-plaskiego" className="nav-link featured" onClick={closeMenu}>Naprawa dachu</Link>
                         <Link to="/krycie-papa-termozgrzewalna" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
                         <Link to="/remont-dachu-z-papy" className="nav-link featured" onClick={closeMenu}>Remonty dachów</Link>
                         <Link to="/wykonawstwo" className="nav-link" onClick={closeMenu}>Usługi dekarskie</Link>
@@ -141,6 +142,7 @@ function Header() {
                         <h4>Główne usługi</h4>
                         <Link to="/" onClick={closeMenu}>Strona główna</Link>
                         <Link to="/dachy-plaskie" onClick={closeMenu} className="featured">Dachy płaskie Szczecin</Link>
+                        <Link to="/naprawa-dachu-plaskiego" onClick={closeMenu} className="featured">Naprawa dachu</Link>
                         <Link to="/krycie-papa-termozgrzewalna" onClick={closeMenu} className="featured">Papa termozgrzewalna</Link>
                         <Link to="/remont-dachu-z-papy" onClick={closeMenu} className="featured">Remonty dachów</Link>
                         <Link to="/wykonawstwo" onClick={closeMenu}>Usługi dekarskie</Link>
