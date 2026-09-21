@@ -280,6 +280,39 @@
   .nav-link { font-size: 0.8rem; }
 }
 
+@media (max-width: 1300px) and (min-width: 993px) {
+  .header-container {
+    grid-template-columns: 235px minmax(0, 1fr) auto;
+    padding: 0 0.75rem;
+  }
+
+  .logo-section {
+    min-width: 235px;
+  }
+
+  .nav-primary {
+    gap: 0.3rem;
+  }
+
+  .nav-link {
+    padding: 0.45rem 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .nav-secondary {
+    gap: 0.7rem;
+  }
+
+  .phone-number {
+    font-size: 1.45rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .header-actions {
+    gap: 0.45rem;
+  }
+}
+
 @media (max-width: 992px) {
   .desktop-nav, .header-actions { display: none; }
   .header-container { grid-template-columns: auto auto; gap: 1rem; }

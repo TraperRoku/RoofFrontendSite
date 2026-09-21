@@ -3,7 +3,9 @@ import React, { useState, useRef } from 'react';
 import { Helmet } from 'react-helmet';
 
 import PhoneLink from '../PhoneLink';
-import LandingHeader, { StickyCallBar, LandingFooter } from '../LandingHeader';
+import Header from '../Header';
+import Footer from '../footer';
+import { StickyCallBar } from '../LandingHeader';
 
 import {
   canonical,
@@ -280,7 +282,7 @@ function NaprawaDachuPlaskiego() {
         </script>
       </Helmet>
 
-      <LandingHeader subtitle="Naprawa dachów płaskich · Szczecin" />
+      <Header />
 
       <main className="landing landing--naprawa">
 
@@ -564,7 +566,7 @@ function NaprawaDachuPlaskiego() {
 
       </main>
 
-      <LandingFooter />
+      <Footer />
       <StickyCallBar showAfter={400} formHref="#wycena" />
     </>
   );
