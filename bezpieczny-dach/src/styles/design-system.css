@@ -343,7 +343,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* Standardowy header jest wyższy od dawnego nagłówka landingów. */
-.landing--naprawa .landing-hero {
+.landing .landing-hero {
   padding-top: calc(var(--space-16) + var(--space-8));
 }
 
