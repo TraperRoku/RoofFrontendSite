@@ -89,7 +89,7 @@ function ONas(){
             </div>
           </div>
           <div className="hero-image">
-            <img src={zespol1} alt="Doświadczony zespół dekarzy w Szczecinie, gotowy do prac dachowych" />
+            <img src={zespol1} alt="Doświadczony zespół dekarzy specjalistów od dachów płaskich i papy termozgrzewalnej SBS Szczecin" />
           </div>
         </section>
 
@@ -103,7 +103,7 @@ function ONas(){
               </p>
             </div>
             <div className="story-image">
-              <img src={zespol2} alt="Historia firmy dekarskiej" />
+              <img src={zespol2} alt="15 lat doświadczenia w montażu papy termozgrzewalnej SBS na dachach płaskich województwa zachodniopomorskiego" />
             </div>
           </div>
         </section>
@@ -157,7 +157,7 @@ function ONas(){
               </div>
             </div>
             <div className="team-image">
-              <img src={zespol3} alt="Nasz doświadczony zespół dekarzy" />
+              <img src={zespol3} alt="Ekipa dekarska Bezpieczny Dach — specjaliści od renowacji i uszczelniania dachów płaskich B2B" />
             </div>
           </div>
         </section>
@@ -198,7 +198,7 @@ function ONas(){
        
             </div>
             <div className="certificates-image">
-              <img src={certyfikat1} alt="Certyfikaty i uprawnienia firmy dekarskiej" />
+              <img src={certyfikat1} alt="Certyfikaty autoryzowanego wykonawcy papy termozgrzewalnej SBS ICOPAL Swisspor Nexxler" />
             </div>
           </div>
         </section>
@@ -243,7 +243,7 @@ function ONas(){
         <section className="equipment-section">
           <div className="equipment-content">
             <div className="equipment-image">
-              <img src={narzedzia} alt="Profesjonalny sprzęt dekarski" />
+              <img src={narzedzia} alt="Profesjonalny sprzęt do zgrzewania papy termozgrzewalnej SBS i systemów dachów płaskich" />
             </div>
             <div className="equipment-text">
               <h2>NOWOCZESNY SPRZĘT</h2>
@@ -265,7 +265,7 @@ function ONas(){
           <h2>Dlaczego warto nas wybrać?</h2>
           <div className="why-us-content">
             <div className="why-us-image">
-              <img src={realizacja1} alt="Nasze realizacje dachowe" />
+              <img src={realizacja1} alt="Gotowy dach płaski z dwuwarstwową papą termozgrzewalną SBS — realizacja B2B Szczecin" />
             </div>
             <div className="why-us-list">
               <div className="why-us-item">

@@ -180,7 +180,7 @@ function DachyPlaskie(){
           <div className="hero-image">
             <img 
               src={dach1} 
-              alt="Dekarz Szczecin - profesjonalny montaż dachu płaskiego z papą termozgrzewalną" 
+              alt="Profesjonalny montaż papy termozgrzewalnej SBS na dachu płaskim hali produkcyjnej Szczecin" 
               loading="eager"
               width="800"
               height="600"
@@ -220,7 +220,7 @@ function DachyPlaskie(){
             <div className="gallery-item">
               <img 
                 src={dach2} 
-                alt="Remont dachu - wymiana pokrycia z papą termozgrzewalną SBS" 
+                alt="Kompleksowy remont dachu płaskiego — wymiana izolacji i pokrycia z papą SBS Szczecin" 
                 loading="lazy"
                 width="400"
                 height="300"
@@ -247,7 +247,7 @@ function DachyPlaskie(){
             <div className="system-image">
               <img 
                 src={dach7} 
-                alt="Papa termozgrzewalna SBS Szczecin - profesjonalny montaż przez doświadczonych dekarzy" 
+                alt="Dwuwarstwowa papa termozgrzewalna SBS — krycie dachu płaskiego przez autoryzowaną ekipę Szczecin" 
                 loading="lazy"
                 width="500"
                 height="350"

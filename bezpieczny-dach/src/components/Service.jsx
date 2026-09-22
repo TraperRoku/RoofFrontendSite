@@ -8,7 +8,7 @@ import roofBuildGif from '../components/photos/roofBuild.gif';
 const services = [
   { 
     src: imgFix, 
-    alt: 'Profesjonalna naprawa dachów płaskich w Szczecinie',
+    alt: 'Kompleksowa naprawa i renowacja dachów płaskich z papą termozgrzewalną SBS Szczecin',
     title: 'Dachy płaskie i papa termozgrzewalna',
     description: 'Specjalizacja: naprawy i renowacje dachów płaskich. Głównie pracujemy z papą termozgrzewalną SBS — mamy duże doświadczenie z tym materiałem. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.',
     features: [
@@ -19,7 +19,7 @@ const services = [
   },
   { 
     src: imgBuild, 
-    alt: 'Montaż systemów rynnowych w Szczecinie',
+    alt: 'Montaż systemów odwodnienia dachów płaskich — wpusty, rynny, rury spustowe Szczecin',
     title: 'Systemy rynnowe',
     description: 'Bezpieczne odprowadzanie wody: montujemy systemy od sprawdzonych producentów, odporne na intensywne opady.',
     features: [
@@ -29,7 +29,7 @@ const services = [
   },
   { 
     src: imgPut, 
-    alt: 'Profesjonalna konserwacja dachów Szczecin',
+    alt: 'Przegląd i konserwacja dachów płaskich — kontrola szczelności papy SBS dla wspólnot i zarządców',
     title: 'Przeglądy dachów',
     description: 'Lepsze zapobieganie niż naprawa: nasze przeglądy wykrywają usterki zanim przerodzą się w kosztowne naprawy.',
     features: [
@@ -51,7 +51,7 @@ function Service() {
           Naszą główną specjalizacją są systemy z papy termozgrzewalnej SBS. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.
           Każdy dach wykonujemy z najwyższą dbałością o szczegóły.
         </p>        <div className="service-gif-wrapper">
-          <img src={roofBuildGif} alt="zgifowany dach z papą termozgrzewalną" className="service-gif" />
+          <img src={roofBuildGif} alt="Animacja montażu dwuwarstwowej papy termozgrzewalnej SBS na dachu płaskim" className="service-gif" />
         </div>      </div>
 
       <div className="service-grid">

@@ -122,7 +122,7 @@ function DocieplanieDachow() {
           <h2>Materiały izolacyjne do dachów płaskich</h2>
           <div className="types-grid">
             <div className="type-card">
-              <img src={wełna} alt="Wełna mineralna do izolacji dachów płaskich" />
+              <img src={wełna} alt="Wełna mineralna twarda ROCKWOOL do termoizolacji dachów płaskich — systemy B2B" />
               <h3>Wełna mineralna</h3>
               <ul>
                 <li>Doskonała izolacja akustyczna</li>
@@ -132,7 +132,7 @@ function DocieplanieDachow() {
             </div>
           
             <div className="type-card">
-             <img src={pur} alt="Styropian do izolacji dachów płaskich"  />
+             <img src={pur} alt="Płyty PIR o wysokiej izolacyjności — docieplanie dachów płaskich i styropapa"  />
               <h3>Styropian – ekonomiczny wybór</h3>
       <ul>
         <li>Dobry stosunek ceny do jakości</li>

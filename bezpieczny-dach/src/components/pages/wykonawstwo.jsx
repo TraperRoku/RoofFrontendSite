@@ -218,13 +218,13 @@ const Wykonawstwo = () => {
           </p>
           <div className="projects-grid">
             <div className="project-card">
-              <img src={jeden} alt="Realizacja 1 - Dach płaski z papą SBS" className="project-image" />
+              <img src={jeden} alt="Zgrzewanie papy nawierzchniowej SBS na dachu hali produkcyjnej w Szczecinie" className="project-image" />
             </div>
             <div className="project-card">
-              <img src={dwa} alt="Realizacja 2 - Remont dachu płaskiego" className="project-image" />
+              <img src={dwa} alt="Renowacja i uszczelnianie dachu płaskiego na budynku wspólnoty mieszkaniowej Goleniów" className="project-image" />
             </div>
             <div className="project-card">
-              <img src={trzy} alt="Realizacja 3 - Ocieplenie dachu płaskiego" className="project-image" />
+              <img src={trzy} alt="Termoizolacja dachu płaskiego płytami PIR i montaż papy podkładowej SBS — obiekt przemysłowy" className="project-image" />
             </div>
           </div>
           <Link to="/realizacje" className="see-more-button">

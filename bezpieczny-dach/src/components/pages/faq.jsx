@@ -210,7 +210,7 @@ function FAQ() {
           <div className="hero-image">
             <img 
               src={images.hero} 
-              alt="Eksperci od dachów płaskich - Bezpieczny Dach Szczecin"
+              alt="Eksperci od dachów płaskich i papy termozgrzewalnej SBS — Bezpieczny Dach Szczecin"
               width="800"
               height="600"
               loading="eager"
