@@ -60,7 +60,7 @@ function DachyPlaskie(){
             },
             "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-14:00"],
             "priceRange": "$$",
-            "description": "Profesjonalne usługi dekarskie w Szczecinie. Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej SBS. 15 lat doświadczenia.",
+            "description": "Profesjonalne usługi dekarskie w Szczecinie. Wykonujemy dachy płaskie z papy termozgrzewalnej SBS i membran PVC oraz prowadzimy remonty. 15 lat doświadczenia.",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Usługi dekarskie Szczecin",
@@ -116,7 +116,7 @@ function DachyPlaskie(){
                 "name": "Jakie materiały stosujecie na dachach płaskich?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Jedynym materiałem, z którym pracujemy, jest papa termozgrzewalna SBS. Stosujemy ją w systemie dwuwarstwowym z podkładem i warstwą nawierzchniową. To sprawdzone od dziesięcioleci rozwiązanie dla obiektów przemysłowych i wspólnot mieszkaniowych."
+                  "text": "Wykonujemy pokrycia z papy termozgrzewalnej SBS oraz membran PVC. Dobór technologii zależy od konstrukcji dachu, stanu podłoża i wymagań obiektu."
                 }
               },
               {
@@ -203,7 +203,7 @@ function DachyPlaskie(){
             <div className="benefit-card">
               <div className="benefit-icon" aria-hidden="true"></div>
               <h3>Materiały najwyższej jakości</h3>
-              <p>Używamy wyłącznie papy termozgrzewalnej SBS od sprawdzonych producentów (ICOPAL, Swisspor, Nexxler, Izobud). Każdy projekt jest wykonany z dbałością o szczegóły i trwałość.</p>
+              <p>W zależności od projektu wykonujemy pokrycia z papy termozgrzewalnej SBS lub membrany PVC. Dobieramy materiały do podłoża, przeznaczenia obiektu i wymagań danego systemu.</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-icon" aria-hidden="true"></div>
@@ -291,7 +291,7 @@ function DachyPlaskie(){
             <p>Realizujemy projekty dla mieszkańców dzielnic: Centrum, Pogodno, Gumieńce, Żelechowa, Skolwin, Dąbie i wielu innych. Obsługujemy również miasta i gminy w województwie: Police, Goleniów, Stargard, Dobra i pozostałe tereny Zachodniopomorskiego.</p>
             <ul>
               <li>Dachy płaskie</li>
-              <li>Kładzienie papy termozgrzewalnej SBS</li>
+              <li>Krycie papą termozgrzewalną SBS i membraną PVC</li>
               <li>Naprawa i uszczelnianie dachów</li>
               <li>Remonty i wymiana pokrycia</li>
               <li>Izolacja i docieplanie</li>

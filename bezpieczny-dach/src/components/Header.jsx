@@ -70,6 +70,7 @@ function Header() {
                         <Link to="/dachy-plaskie" className="nav-link featured" onClick={closeMenu}>Dachy płaskie</Link>
                         <Link to="/naprawa-dachu-plaskiego" className="nav-link featured" onClick={closeMenu}>Naprawa dachu</Link>
                         <Link to="/krycie-papa-termozgrzewalna" className="nav-link featured" onClick={closeMenu}>Papa Termozgrzewalna</Link>
+                        <Link to="/membrana-pvc" className="nav-link featured" onClick={closeMenu}>Membrana PVC</Link>
                         <Link to="/remont-dachu-z-papy" className="nav-link featured" onClick={closeMenu}>Remonty dachów</Link>
                         <Link to="/realizacje" className="nav-link" onClick={closeMenu}>Realizacje</Link>
                     </div>
@@ -84,12 +85,10 @@ function Header() {
 
                 {/* Contact & Social */}
                 <div className="header-actions">
-                    <div className="contact-info">
-                        <PhoneLink className="phone-number" onClick={closeMenu} >
-                            <FontAwesomeIcon icon={faPhone} />
-                            518 144 882
-                            </PhoneLink>
-                    </div>
+                    <PhoneLink className="phone-number" onClick={closeMenu}>
+                        <FontAwesomeIcon icon={faPhone} />
+                        518 144 882
+                    </PhoneLink>
                     <div className="social-links">
                         <a
                             href="https://www.facebook.com/profile.php?id=61575175164575"
@@ -143,6 +142,7 @@ function Header() {
                         <Link to="/dachy-plaskie" onClick={closeMenu} className="featured">Dachy płaskie Szczecin</Link>
                         <Link to="/naprawa-dachu-plaskiego" onClick={closeMenu} className="featured">Naprawa dachu</Link>
                         <Link to="/krycie-papa-termozgrzewalna" onClick={closeMenu} className="featured">Papa termozgrzewalna</Link>
+                        <Link to="/membrana-pvc" onClick={closeMenu} className="featured">Membrana PVC</Link>
                         <Link to="/remont-dachu-z-papy" onClick={closeMenu} className="featured">Remonty dachów</Link>
                         <Link to="/wykonawstwo" onClick={closeMenu}>Usługi dekarskie</Link>
                         <Link to="/realizacje" onClick={closeMenu}>Realizacje</Link>

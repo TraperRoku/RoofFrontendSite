@@ -45,6 +45,7 @@ const Realizacje            = lazy(() => import('./components/pages/realizacje')
 
 const NaprawaDachuPlaskiego = lazy(() => import('./components/pages/naprawa-dachu-plaskiego'));
 const KryciePapaTermo       = lazy(() => import('./components/pages/krycie-papa-termozgrzewalna'));
+const MembranaPVC           = lazy(() => import('./components/pages/membrana-pvc'));
 const RemontDachuZPapy      = lazy(() => import('./components/pages/remont-dachu-z-papy'));
 const OcieplenieDachuPlask  = lazy(() => import('./components/pages/ocieplenie-dachu-plaskiego'));
 
@@ -398,6 +399,7 @@ function App() {
           {/* Landingi dedykowane Google Ads */}
           <Route path="/naprawa-dachu-plaskiego"     element={<NaprawaDachuPlaskiego />} />
           <Route path="/krycie-papa-termozgrzewalna" element={<KryciePapaTermo />} />
+          <Route path="/membrana-pvc"                element={<MembranaPVC />} />
           <Route path="/remont-dachu-z-papy"         element={<RemontDachuZPapy />} />
           <Route path="/ocieplenie-dachu-plaskiego"  element={<OcieplenieDachuPlask />} />
 

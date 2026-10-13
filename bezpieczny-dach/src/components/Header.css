@@ -108,15 +108,20 @@
 .header-actions {
   display: flex; align-items: center; gap: 1rem; justify-self: end;
 }
-.contact-info { display: flex; flex-direction: column; align-items: flex-end; gap: 0.25rem; }
+.header .contact-info {
+  display: flex; align-items: center; justify-content: center;
+  height: 40px;
+}
 .phone-label {
   font-family: 'Open Sans', sans-serif; font-size: 0.72rem;
   color: var(--text-dark); letter-spacing: 0.5px;
   text-transform: uppercase; font-weight: 600;
   line-height: 1.2;
 }
-.phone-number {
-  font-size: 2rem; line-height: 1; padding: 0.4rem 0.75rem;
+.header .phone-number {
+  display: flex; align-items: center; gap: 0.5rem;
+  height: 40px; box-sizing: border-box;
+  font-size: 1rem; line-height: 1; padding: 0 0.75rem;
   background: rgba(255, 87, 34, 0.1); border-radius: 8px;
   border: 2px solid transparent; transition: var(--transition); white-space: nowrap;
   color: var(--accent); text-decoration: none; font-family: 'Montserrat', sans-serif; font-weight: 700;
@@ -307,8 +312,8 @@
   }
 
   .phone-number {
-    font-size: 1.45rem;
-    padding: 0.35rem 0.5rem;
+    font-size: 1rem;
+    padding: 0 0.5rem;
   }
 
   .header-actions {
