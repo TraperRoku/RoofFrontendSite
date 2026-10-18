@@ -1,5 +1,6 @@
 // src/components/ContactSection.jsx
 import React, { useState, useRef } from 'react';
+import PhoneLink from './PhoneLink';
 import {
   FORMSPREE_URL,
   GTAG_FORM_CONVERSION,
@@ -103,9 +104,9 @@ function ContactSection() {
         </p>
 
         <div className="contact-info">
-          <p><strong>Telefon:</strong> {PHONE_DISPLAY}</p>
-          <p><strong>E-mail:</strong> {EMAIL}</p>
-        </div>
+  <p><strong>Telefon:</strong> <PhoneLink /></p>
+  <p><strong>E-mail:</strong> {EMAIL}</p>
+</div>
 
         {/* aria-live, żeby czytnik ekranu ogłosił wynik wysyłki */}
         <div

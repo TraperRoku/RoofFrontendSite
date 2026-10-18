@@ -15,6 +15,7 @@ import {
  * drugi raz. fireConversion() ma dodatkowo 5-sekundową deduplikację
  * na wypadek podwójnego tapnięcia na telefonie.
  */
+// POPRAWIONA WERSJA:
 function PhoneLink({ children, className, onClick: extraOnClick, ...props }) {
   const handleClick = (e) => {
     if (extraOnClick) extraOnClick(e);
@@ -22,10 +23,8 @@ function PhoneLink({ children, className, onClick: extraOnClick, ...props }) {
     fireConversion({
       sendTo: GTAG_PHONE_CONVERSION,
       value: 1.0,
-      phone: PHONE_E164,
       label: 'phone_click',
     });
-    // Nie wołamy preventDefault — link tel: ma zadziałać natychmiast.
   };
 
   return (
