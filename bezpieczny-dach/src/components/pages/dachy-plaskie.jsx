@@ -16,8 +16,8 @@ function DachyPlaskie(){
   return (
     <>
       <Helmet>
-        <title>Dachy płaskie Szczecin i Goleniów — remonty, papa termozgrzewalna SBS | Bezpieczny Dach</title>
-        <meta name="description" content="Profesjonalne dachy płaskie w Szczecinie i Goleniowie: remonty, papa termozgrzewalna SBS, naprawy i uszczelnianie, ocieplenia. Fachowy dekarz z 15-letnim doświadczeniem. Zlecenia od 150 m². Darmowa wizja — 518 144 882" />
+        <title>Dachy płaskie Szczecin i Goleniów — papa SBS, membrany PVC i EPDM | Bezpieczny Dach</title>
+        <meta name="description" content="Profesjonalne dachy płaskie w Szczecinie i Goleniowie: pokrycia z papy SBS oraz membran PVC i EPDM, remonty, naprawy i ocieplenia. 15 lat doświadczenia. Darmowa wycena — 518 144 882" />
         
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
         <meta name="googlebot" content="index, follow"/>
@@ -26,15 +26,15 @@ function DachyPlaskie(){
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="Dachy płaskie w Szczecinie - profesjonalne remonty"/>
-        <meta property="og:description" content="Kompleksowe usługi dekarskie w Szczecinie. Remonty dachów płaskich, papa termozgrzewalna SBS, naprawy i ocieplenia. 15 lat doświadczenia."/>
+        <meta property="og:description" content="Kompleksowe usługi dekarskie w Szczecinie. Dachy płaskie z papą SBS oraz membranami PVC i EPDM, remonty, naprawy i ocieplenia."/>
         <meta property="og:image" content={dach1}/>
         <meta property="og:url" content="https://www.bezpiecznydach.pl/dachy-plaskie"/>
         <meta property="og:locale" content="pl_PL"/>
         
         {/* Twitter Meta Tags */}
         <meta name="twitter:card" content="summary_large_image"/>
-        <meta name="twitter:title" content="Dachy płaskie w Szczecinie - remonty i papa"/>
-        <meta name="twitter:description" content="Profesjonalne usługi dekarskie w Szczecinie. Remonty dachów płaskich, papa termozgrzewalna SBS, naprawy i ocieplenia."/>
+        <meta name="twitter:title" content="Dachy płaskie w Szczecinie - papa SBS, PVC i EPDM"/>
+        <meta name="twitter:description" content="Profesjonalne dachy płaskie w Szczecinie: papa SBS, membrany PVC i EPDM, remonty, naprawy i ocieplenia."/>
         <meta name="twitter:image" content={dach1}/>
         
         {/* Local Business Schema */}
@@ -60,7 +60,7 @@ function DachyPlaskie(){
             },
             "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-14:00"],
             "priceRange": "$$",
-            "description": "Profesjonalne usługi dekarskie w Szczecinie. Wykonujemy dachy płaskie z papy termozgrzewalnej SBS i membran PVC oraz prowadzimy remonty. 15 lat doświadczenia.",
+            "description": "Profesjonalne usługi dekarskie w Szczecinie. Wykonujemy dachy płaskie z papy termozgrzewalnej SBS oraz membran PVC i EPDM, a także prowadzimy remonty.",
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Usługi dekarskie Szczecin",
@@ -71,6 +71,14 @@ function DachyPlaskie(){
                     "@type": "Service",
                     "name": "Papa termozgrzewalna SBS Szczecin",
                     "description": "Profesjonalny montaż papy termozgrzewalnej SBS w systemie dwuwarstwowym"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Membrany dachowe PVC i EPDM Szczecin",
+                    "description": "Wykonawstwo pokryć dachów płaskich z membran PVC i EPDM"
                   }
                 },
                 {
@@ -116,7 +124,7 @@ function DachyPlaskie(){
                 "name": "Jakie materiały stosujecie na dachach płaskich?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Wykonujemy pokrycia z papy termozgrzewalnej SBS oraz membran PVC. Dobór technologii zależy od konstrukcji dachu, stanu podłoża i wymagań obiektu."
+                  "text": "Wykonujemy pokrycia z papy termozgrzewalnej SBS oraz membran PVC i EPDM. Dobór technologii zależy od konstrukcji dachu, stanu podłoża i wymagań obiektu."
                 }
               },
               {
@@ -171,7 +179,7 @@ function DachyPlaskie(){
         <section className="hero-section3">
           <div className="hero-content3">
             <h1>Dachy płaskie w Szczecinie – profesjonalne wykonawstwo i remonty</h1>
-            <p className="hero-subtitlee3">Specjalizujemy się w dachach płaskich, remoncie i kładzeniu papy termozgrzewalnej SBS. 15 lat doświadczenia w branży. Darmowa wycena.</p>
+            <p className="hero-subtitlee3">Wykonujemy dachy płaskie z papy termozgrzewalnej SBS oraz membran PVC i EPDM. Zajmujemy się również remontami i naprawami. Darmowa wycena.</p>
             <div className="hero-cta">
              <PhoneLink className="cta-button" itemProp="telephone">Zadzwoń: 518 144 882</PhoneLink>
 
@@ -203,7 +211,7 @@ function DachyPlaskie(){
             <div className="benefit-card">
               <div className="benefit-icon" aria-hidden="true"></div>
               <h3>Materiały najwyższej jakości</h3>
-              <p>W zależności od projektu wykonujemy pokrycia z papy termozgrzewalnej SBS lub membrany PVC. Dobieramy materiały do podłoża, przeznaczenia obiektu i wymagań danego systemu.</p>
+              <p>W zależności od projektu wykonujemy pokrycia z papy termozgrzewalnej SBS oraz membran PVC i EPDM. Dobieramy materiały do podłoża, przeznaczenia obiektu i wymagań danego systemu.</p>
             </div>
             <div className="benefit-card">
               <div className="benefit-icon" aria-hidden="true"></div>
@@ -291,7 +299,7 @@ function DachyPlaskie(){
             <p>Realizujemy projekty dla mieszkańców dzielnic: Centrum, Pogodno, Gumieńce, Żelechowa, Skolwin, Dąbie i wielu innych. Obsługujemy również miasta i gminy w województwie: Police, Goleniów, Stargard, Dobra i pozostałe tereny Zachodniopomorskiego.</p>
             <ul>
               <li>Dachy płaskie</li>
-              <li>Krycie papą termozgrzewalną SBS i membraną PVC</li>
+              <li>Krycie papą termozgrzewalną SBS oraz membranami PVC i EPDM</li>
               <li>Naprawa i uszczelnianie dachów</li>
               <li>Remonty i wymiana pokrycia</li>
               <li>Izolacja i docieplanie</li>

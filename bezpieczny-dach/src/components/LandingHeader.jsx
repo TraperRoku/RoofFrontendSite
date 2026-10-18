@@ -11,7 +11,7 @@ import logo from './photos/logo.webp';
  * to telefon i formularz. Nazwa marki jest IDENTYCZNA z tą w reklamach
  * ("Bezpieczny Dach"), zgodnie z nazwą firmy w głównym Headerze.
  */
-export function LandingHeader({ subtitle = 'Dachy płaskie · papa termozgrzewalna' }) {
+export function LandingHeader({ subtitle = 'Dachy płaskie · papa SBS · membrany PVC i EPDM' }) {
   return (
     <header className="landing-header">
       <div className="landing-header__inner">

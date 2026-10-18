@@ -18,7 +18,7 @@ const localBusinessSchema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Bezpieczny Dach Szczecin | Profesjonalna Firma Dekarska", // Pełniejsza nazwa dla SEO
-    "description": "Profesjonalne usługi dekarskie w Szczecinie. Specjalizacja w dachach płaskich: papa termozgrzewalna SBS, naprawy, remonty i ocieplenia. 15 lat doświadczenia, 700+ zrealizowanych projektów B2B.",
+    "description": "Profesjonalne usługi dekarskie w Szczecinie. Dachy płaskie z papą termozgrzewalną SBS oraz membranami PVC i EPDM, naprawy, remonty i ocieplenia. 15 lat doświadczenia, 700+ zrealizowanych projektów B2B.",
     "url": "https://www.bezpiecznydach.pl/o-nas",
     "image": "https://www.bezpiecznydach.pl/favicon.ico",
     "telephone": "+48518144882",
@@ -204,14 +204,15 @@ function ONas(){
         </section>
 */}
         <section className="expertise-section">
-           <h2>SPECJALIZACJA DEKARSKA: WYŁĄCZNIE DACHY PŁASKIE</h2>
-              <p className="expertise-subtitle">Naszą główną specjalizacją są systemy z papy termozgrzewalnej SBS. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.</p>
+           <h2>SPECJALIZACJA DEKARSKA: DACHY PŁASKIE</h2>
+              <p className="expertise-subtitle">Wykonujemy pokrycia z papy termozgrzewalnej SBS oraz membran PVC i EPDM. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.</p>
           
           <div className="expertise-grid">
             <div className="expertise-card">
               <h3>Dachy Płaskie</h3>
               <ul>
                 <li>Papa termozgrzewalna SBS dwuwarstwowa</li>
+                <li>Pokrycia z membran PVC i EPDM</li>
                 <li>Naprawy i uszczelnianie przecieków</li>
                 <li>Ocieplenie styropapą / płytami PIR / wełną twardą</li>
                 <li>Odbiór techniczny z dokumentacją powykonawczą</li>

@@ -148,12 +148,13 @@ function SEOContent() {
 
         <div className="seo-intro">
           <h2 className="seo-main-heading">
-            Dachy płaskie i papa termozgrzewalna — Szczecin i województwo zachodniopomorskie
+            Dachy płaskie — papa SBS oraz membrany PVC i EPDM — Szczecin i województwo zachodniopomorskie
           </h2>
           <p className="seo-lead">
             Jesteśmy specjalistyczną firmą dekarską z <strong>15-letnim doświadczeniem</strong>,
             która pracuje <strong>wyłącznie na dachach płaskich</strong>. Kryjemy, remontujemy,
-            naprawiamy i ocieplamy pokrycia z papy termozgrzewalnej SBS na halach produkcyjnych
+            naprawiamy i ocieplamy dachy płaskie. Wykonujemy pokrycia z papy termozgrzewalnej SBS
+            oraz membran PVC i EPDM na halach produkcyjnych
             i magazynowych, blokach mieszkaniowych, obiektach użyteczności publicznej oraz
             kontraktach dla generalnych wykonawców.
           </p>
@@ -330,7 +331,7 @@ function HomePage() {
       <Helmet>
         <html lang="pl" />
         <title>
-          Dachy płaskie i papa termozgrzewalna SBS — Szczecin | {BUSINESS.legalName}
+          Dachy płaskie — papa SBS, membrany PVC i EPDM — Szczecin | {BUSINESS.legalName}
         </title>
         <meta
           name="description"
@@ -352,7 +353,7 @@ function HomePage() {
         <meta property="og:url" content={canonical('/')} />
         <meta
           property="og:title"
-          content={`Dachy płaskie i papa termozgrzewalna — Szczecin | ${BUSINESS.legalName}`}
+          content={`Dachy płaskie — papa SBS, membrany PVC i EPDM — Szczecin | ${BUSINESS.legalName}`}
         />
         <meta
           property="og:description"

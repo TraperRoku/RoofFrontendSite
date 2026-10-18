@@ -14,10 +14,10 @@ const Wykonawstwo = () => {
   return (
     <>
       <Helmet>
-        <title>Usługi dekarskie Szczecin - papa, remonty dachów | Bezpieczny Dach</title>
+        <title>Usługi dekarskie Szczecin - dachy płaskie i remonty | Bezpieczny Dach</title>
         <meta
           name="description"
-          content="Kompleksowe usługi dekarskie w Szczecinie: papa termozgrzewalna SBS, remonty i ocieplenia dachów płaskich, naprawy. Bezpłatna wizja lokalna i fachowe doradztwo dla inwestycji od 150 m²."
+          content="Kompleksowe usługi dekarskie w Szczecinie: pokrycia dachów płaskich papą SBS oraz membranami PVC i EPDM, remonty, ocieplenia i naprawy. Bezpłatna wizja lokalna i fachowe doradztwo dla inwestycji od 150 m²."
         />
 
         <link rel="canonical" href="https://www.bezpiecznydach.pl/wykonawstwo" />
@@ -40,8 +40,8 @@ const Wykonawstwo = () => {
             },
             "openingHours": ["Mo-Fr 07:00-18:00", "Sa 08:00-14:00"],
             "priceRange": "$$$",
-            "description": "Profesjonalne usługi dekarskie w Szczecinie. Dachy płaskie, papa termozgrzewalna SBS i docieplenia.",
-            "serviceType": ["Usługi dekarskie", "Papa termozgrzewalna SBS", "Docieplanie dachów płaskich"]
+            "description": "Profesjonalne usługi dekarskie w Szczecinie. Dachy płaskie z papą SBS oraz membranami PVC i EPDM, remonty i docieplenia.",
+            "serviceType": ["Usługi dekarskie", "Papa termozgrzewalna SBS", "Membrany PVC i EPDM", "Docieplanie dachów płaskich"]
           }
         `}
         </script>
@@ -53,7 +53,7 @@ const Wykonawstwo = () => {
         {/* HERO */}
         <section className="hero-sectionW">
           <div className="hero-contentW">
-            <h1>Profesjonalne usługi dekarskie w Szczecinie – dachy płaskie i papa termozgrzewalna SBS</h1>
+            <h1>Profesjonalne usługi dekarskie w Szczecinie – dachy płaskie, papa SBS i membrany PVC oraz EPDM</h1>
             <p className="hero-subtitle">Kompleksowe usługi dekarskie w Szczecinie i okolicach</p>
             <div className="hero-cta">
               <PhoneLink className="cta-button" itemProp="telephone">
@@ -70,13 +70,14 @@ const Wykonawstwo = () => {
             <p>
               Jako specjaliści od <strong>usług dekarskich w Szczecinie</strong> i okolicach, koncentrujemy się na
               zapewnieniu <strong>szczelnych i trwałych dachów</strong>. Nasze 15-letnie doświadczenie obejmuje zarówno{' '}
-              <strong>montaż papy termozgrzewalnej SBS</strong> i <strong>papy termozgrzewalnej SBS w systemie dwuwarstwowym</strong> na{' '}
+              <strong>montaż papy termozgrzewalnej SBS oraz membran PVC i EPDM</strong> na{' '}
               <strong>dachach płaskich</strong>, jak i zaawansowane <strong>docieplenia</strong>. Potrzebujesz szybkiej{' '}
               <strong>naprawy dachu w Szczecinie</strong>? Zapewniamy fachową diagnozę przecieków i ekspresowe usunięcie
               awarii. Wybierając nas, stawiasz na najwyższą jakość i gwarancję bezpieczeństwa Twojego dachu.
             </p>
             <div className="intro-highlights">
               <span>Papa termozgrzewalna SBS</span>
+              <span>Membrany PVC i EPDM</span>
               <span>Docieplanie dachów płaskich</span>
               <span>Naprawa przecieków</span>
               <span>Bezpłatna wycena</span>
@@ -96,6 +97,7 @@ const Wykonawstwo = () => {
               <ul>
                 <li>Papa podkładowa SBS</li>
                 <li>Papa nawierzchniowa SBS łupkowa</li>
+                <li>Membrany dachowe PVC i EPDM</li>
                 <li>Płyty PIR i styropapa do ociepleń</li>
               </ul>
             </div>
@@ -121,7 +123,7 @@ const Wykonawstwo = () => {
 
         {/* TECHNOLOGIES */}
         <section className="technologies-section">
-          <h2>Materiały i technologie dekarskie – papa SBS i termoizolacja</h2>
+          <h2>Materiały i technologie dekarskie – papa SBS, membrany i termoizolacja</h2>
           <p className="section-intro">Dobieramy materiały renomowanych producentów do rodzaju dachu i zakresu prac:</p>
           <div className="tech-grid">
             <div className="tech-card">

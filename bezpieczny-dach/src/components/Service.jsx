@@ -9,8 +9,8 @@ const services = [
   { 
     src: imgFix, 
     alt: 'Kompleksowa naprawa i renowacja dachów płaskich z papą termozgrzewalną SBS Szczecin',
-    title: 'Dachy płaskie i papa termozgrzewalna',
-    description: 'Specjalizacja: naprawy i renowacje dachów płaskich. Głównie pracujemy z papą termozgrzewalną SBS — mamy duże doświadczenie z tym materiałem. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.',
+    title: 'Dachy płaskie — papa SBS i membrany',
+    description: 'Wykonujemy pokrycia z papy termozgrzewalnej SBS oraz membran PVC i EPDM. Dobieramy technologię do dachu i wymagań inwestycji. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.',
     features: [
       'Natychmiastowa naprawa przecieków',
       'Pełna wymiana pokrycia',
@@ -47,8 +47,8 @@ function Service() {
         <h2>Dlaczego warto wybrać nasze usługi dekarskie?</h2>
         <p className="service-intro">
           <strong>Łączymy 15 lat doświadczenia z nowoczesnymi technologiami.</strong>
-          Specjalizujemy się głównie w <span className="highlight">papie termozgrzewalnej SBS</span> - mamy duże doświadczenie z tym materiałem.
-          Naszą główną specjalizacją są systemy z papy termozgrzewalnej SBS. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.
+          Wykonujemy pokrycia z <span className="highlight">papy termozgrzewalnej SBS oraz membran PVC i EPDM</span>.
+          Dobieramy technologię do konstrukcji dachu i wymagań inwestycji. Główny profil działalności to zlecenia pow. 150 m² (hale, wspólnoty). Wykonujemy również mniejsze dachy i garaże w miarę dostępności wolnych terminów.
           Każdy dach wykonujemy z najwyższą dbałością o szczegóły.
         </p>        <div className="service-gif-wrapper">
           <img src={roofBuildGif} alt="Animacja montażu dwuwarstwowej papy termozgrzewalnej SBS na dachu płaskim" className="service-gif" />

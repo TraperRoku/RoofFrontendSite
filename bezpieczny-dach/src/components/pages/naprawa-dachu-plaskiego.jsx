@@ -60,7 +60,7 @@ const FAQ_ITEMS = [
 /* ------------------------------------------------------------------ */
 /* Galeria — UZUPEŁNIJ ścieżkami swoich zdjęć.                         */
 /* Pusta tablica = sekcja się nie renderuje, build nie pęka.           */
-/* Trzymaj tu WYŁĄCZNIE dachy płaskie z papy — żadnej blachodachówki,  */
+/* Trzymaj tu dachy płaskie — żadnej blachodachówki,                    */
 /* więźby ani poddaszy, bo to rozjeżdża trafność z reklamą.            */
 /* ------------------------------------------------------------------ */
 

@@ -32,7 +32,7 @@ export const EMAIL = 'bezpiecznydach@gmail.com';
 
 export const BUSINESS = {
   legalName: 'Bezpieczny Dach',
-  name: 'Bezpieczny Dach — dachy płaskie i papa termozgrzewalna',
+  name: 'Bezpieczny Dach — dachy płaskie, papa SBS i membrany PVC oraz EPDM',
   streetAddress: 'Mosty 9D',
   addressLocality: 'Mosty',
   postalCode: '72-132',
