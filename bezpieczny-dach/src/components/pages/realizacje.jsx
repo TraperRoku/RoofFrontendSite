@@ -271,7 +271,7 @@ function Realizacje() {
           <div className="hero-contentR">
             <h1>Galeria zrealizowanych projektów — dekarz Szczecin</h1>
             <p className="hero-subtitle">
-              Zobacz przykłady naszych prac - <strong>papa termozgrzewalna</strong> i profesjonalne{' '}
+              Zobacz przykłady naszych prac - <strong>papy termozgrzewalne i membrany PVC</strong> oraz profesjonalne{' '}
               <strong>docieplenia dachów płaskich</strong> w Szczecinie i okolicach.
             </p>
           </div>
@@ -279,7 +279,7 @@ function Realizacje() {
 
         {/* Galeria */}
         <section className="gallery-section">
-          <h2>NASZE PRACE: MONTAŻ PAPY I DOCIEPLENIA DACHÓW</h2>
+          <h2>NASZE PRACE: MONTAŻ PAP I MEMBRAN ORAZ DOCIEPLENIA DACHÓW</h2>
           <p className="gallery-description">
             Kliknij w zdjęcie, aby je powiększyć. Wszystkie projekty zrealizowane przez firmę Bezpieczny Dach.
           </p>
