@@ -32,6 +32,8 @@ export const EMAIL = 'bezpiecznydach@gmail.com';
 
 export const BUSINESS = {
   legalName: 'Bezpieczny Dach',
+  nip: '856-194-11-93',
+  regon: '542786593',
   name: 'Bezpieczny Dach — dachy płaskie, papa SBS i membrany PVC oraz EPDM',
   streetAddress: 'Mosty 9D',
   addressLocality: 'Mosty',

@@ -98,6 +98,9 @@ export function LandingFooter() {
       <p className="landing-footer__hours">
         Pon–Pt 7:00–18:00 · Sob 8:00–14:00
       </p>
+      <p className="landing-footer__identifiers">
+        NIP: {BUSINESS.nip} · REGON: {BUSINESS.regon}
+      </p>
       <p className="landing-footer__copy">
         © {new Date().getFullYear()} {BUSINESS.legalName}
       </p>

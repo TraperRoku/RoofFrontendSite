@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './footer.css';
 import PhoneLink from '../components/PhoneLink';  // ← dodaj
+import { BUSINESS } from '../seo/site';
 function Footer() {
   return (
     <footer className="footer">
@@ -44,6 +45,7 @@ function Footer() {
       
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} Bezpieczny Dach. Wszelkie prawa zastrzeżone.</p>
+        <p>NIP: {BUSINESS.nip} · REGON: {BUSINESS.regon}</p>
       </div>
     </footer>
   );
